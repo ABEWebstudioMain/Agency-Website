@@ -1,9 +1,9 @@
 const integrations = {
-  isSanityEnabled: true,
-  isStripeEnabled: true,
-  isAlgoliaEnabled: true,
-  isMailchimpEnabled: true,
-  isAuthEnabled: true,
+  isSanityEnabled: !!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  isStripeEnabled: !!process.env.STRIPE_SECRET_KEY,
+  isAlgoliaEnabled: !!process.env.NEXT_PUBLIC_ALGOLIA_PROJECT_ID,
+  isMailchimpEnabled: !!process.env.MAILCHIMP_API_KEY,
+  isAuthEnabled: true, // Always enabled, but with fallback for development
 };
 
 const messages = {

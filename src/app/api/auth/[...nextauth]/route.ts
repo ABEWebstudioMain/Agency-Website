@@ -6,6 +6,11 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import GitHubProvider from "next-auth/providers/github";
 import GoogleProvider from "next-auth/providers/google";
 
+// Generate a fallback secret for development
+const generateSecret = () => {
+  return process.env.SECRET || 'fallback-secret-for-development-' + Math.random().toString(36);
+};
+
 const authOptions: NextAuthOptions = {
   pages: {
     signIn: "/auth/signin",
@@ -13,8 +18,9 @@ const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  adapter: PrismaAdapter(prisma),
-  secret: process.env.SECRET,
+  // Only use Prisma adapter if DATABASE_URL is configured
+  ...(process.env.DATABASE_URL && { adapter: PrismaAdapter(prisma) }),
+  secret: generateSecret(),
   providers: [
     CredentialsProvider({
       name: "credentials",
@@ -31,6 +37,19 @@ const authOptions: NextAuthOptions = {
         // check to see if email and password is there
         if (!credentials?.email || !credentials?.password) {
           throw new Error("Please enter an email and password");
+        }
+
+        // Skip database check if no DATABASE_URL is configured
+        if (!process.env.DATABASE_URL) {
+          // For development without database
+          if (credentials.email === "demo@example.com" && credentials.password === "demo") {
+            return {
+              id: "1",
+              email: "demo@example.com",
+              name: "Demo User",
+            };
+          }
+          throw new Error("Invalid credentials");
         }
 
         // check to see if user exists
@@ -60,15 +79,16 @@ const authOptions: NextAuthOptions = {
       },
     }),
 
-    GoogleProvider({
+    // Only include OAuth providers if credentials are configured
+    ...(process.env.GOOGLE_CLIENT_ID && process.env.GOOGLE_CLIENT_SECRET ? [GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID as string,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-    }),
+    })] : []),
 
-    GitHubProvider({
+    ...(process.env.GITHUB_CLIENT_ID && process.env.GITHUB_CLIENT_SECRET ? [GitHubProvider({
       clientId: process.env.GITHUB_CLIENT_ID as string,
       clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
-    }),
+    })] : []),
   ],
 
   // debug: process.env.NODE_ENV === "development",
