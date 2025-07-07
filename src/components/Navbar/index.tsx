@@ -4,7 +4,6 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/lib/i18n";
 import { navbarData } from "@/static-data/navbar";
 import { onScroll } from "@/utils/scrollActive";
-import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -18,7 +17,6 @@ export default function Navbar() {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
 
-  const { data: session } = useSession();
   const router = useRouter();
   const { t } = useTranslation(router.locale as any);
 
@@ -149,73 +147,9 @@ export default function Navbar() {
                 </ul>
               </nav>
             </div>
-            <div className="absolute bottom-0 left-0 flex w-full items-center justify-center space-x-3 self-end p-5 lg:hidden">
-              {session ? (
-                <>
-                  <p className="text-dark-text whitespace-nowrap dark:text-white">
-                    {session?.user?.name}
-                  </p>
-                  <button
-                    aria-label="SignOut"
-                    onClick={() => signOut()}
-                    className="text-dark-text hover:text-primary whitespace-nowrap font-medium"
-                  >
-                    Sign Out
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link
-                    href="/auth/signin"
-                    className="bg-primary font-heading hover:bg-primary/90 w-full whitespace-nowrap rounded-sm px-6 py-3 text-center text-white lg:w-auto"
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href="/auth/signup"
-                    className="font-heading hover:bg-primary/90 w-full whitespace-nowrap rounded-sm bg-[#222C40] px-6 py-3 text-center text-white lg:w-auto"
-                  >
-                    Sign Up
-                  </Link>
-                </>
-              )}
-            </div>
           </div>
 
           <div className="flex items-center space-x-3">
-            {/* Desktop Auth Buttons */}
-            <div className="hidden lg:flex lg:items-center lg:space-x-3">
-              {session ? (
-                <>
-                  <p className="text-dark-text whitespace-nowrap text-sm dark:text-white">
-                    {session?.user?.name}
-                  </p>
-                  <button
-                    aria-label="SignOut"
-                    onClick={() => signOut()}
-                    className="text-dark-text hover:text-primary whitespace-nowrap text-sm font-medium dark:text-white"
-                  >
-                    Sign Out
-                  </button>
-                </>
-              ) : (
-                <>
-                  <Link
-                    href="/auth/signin"
-                    className="bg-primary font-heading hover:bg-primary/90 whitespace-nowrap rounded-sm px-4 py-2 text-sm text-white"
-                  >
-                    Sign In
-                  </Link>
-                  <Link
-                    href="/auth/signup"
-                    className="font-heading hover:bg-primary/90 whitespace-nowrap rounded-sm bg-[#222C40] px-4 py-2 text-sm text-white"
-                  >
-                    Sign Up
-                  </Link>
-                </>
-              )}
-            </div>
-
             {/* Search and Theme Toggle */}
             <div className="flex items-center justify-end">
               <button

@@ -9,7 +9,6 @@ import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
-import AuthProvider from "../context/AuthContext";
 import ToasterContext from "../context/ToastContext";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -42,12 +41,10 @@ export default function RootLayout({
           attribute="class"
           defaultTheme="dark"
         >
-          <AuthProvider>
-            <ToasterContext />
-            <Navbar />
-            {children}
-            <Footer />
-          </AuthProvider>
+          <ToasterContext />
+          <Navbar />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
