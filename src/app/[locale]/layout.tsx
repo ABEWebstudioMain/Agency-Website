@@ -7,28 +7,29 @@ import Navbar from "@/components/Navbar";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 import { useEffect } from "react";
 import ToasterContext from "../context/ToastContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function RootLayout({
+export default function LocaleLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const router = useRouter();
+  const params = useParams();
+  const locale = params.locale as string;
   
   useEffect(() => {
     // Set HTML lang attribute based on current locale
     if (typeof document !== 'undefined') {
-      document.documentElement.lang = router.locale || 'en';
+      document.documentElement.lang = locale || 'en';
     }
-  }, [router.locale]);
+  }, [locale]);
 
   return (
-    <html lang={router.locale || 'en'} suppressHydrationWarning>
+    <html lang={locale || 'en'} suppressHydrationWarning>
       <body className={inter.className}>
         <NextTopLoader
           color="#006BFF"

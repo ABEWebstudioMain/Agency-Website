@@ -4,7 +4,7 @@ import markdownToHtml from "@/app/libs/markdownToHtml";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 };
 
 export async function generateMetadata(props: Props) {
@@ -41,7 +41,7 @@ export async function generateMetadata(props: Props) {
 }
 
 const DocsPost = async (props: Props) => {
-  const { slug } = await props.params;
+  const { slug, locale } = await props.params;
   const post = getPostBySlug(slug, ["title", "author", "content"]);
 
   if (!post) {
@@ -54,7 +54,7 @@ const DocsPost = async (props: Props) => {
     type: "docs",
     title: post?.title,
     htmlString: content,
-    pageUrl: `${process.env.SITE_URL}/docs/${slug}`,
+    pageUrl: `${process.env.SITE_URL}/${locale}/docs/${slug}`,
     imageURL: "",
   });
 

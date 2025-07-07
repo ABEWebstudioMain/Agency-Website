@@ -4,7 +4,7 @@ import { getEmployeeBySlug, getAllEmployeeSlugs } from "@/data/employees";
 import EmployeeProfile from "@/components/Team/EmployeeProfile";
 
 type Props = {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 };
 
 export async function generateStaticParams() {
