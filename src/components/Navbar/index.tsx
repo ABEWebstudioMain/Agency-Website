@@ -56,22 +56,22 @@ export default function Navbar() {
       >
         <div className="flex w-full flex-wrap px-5 lg:flex-nowrap lg:items-center lg:px-5 xl:px-10 2xl:px-20">
           <div className="z-99 relative max-w-[250px] pr-4 lg:w-full lg:max-w-[220px] xl:max-w-[280px]">
-            <Link href="/" className="inline-block">
+            <div className="relative h-[50px] w-[215px]">
+            <Link href="/">
               <Image
-                src="/images/logo/logo-dark.svg"
+                src="/images/logo/logo-white.png"
                 alt="logo"
-                width={215}
-                height={50}
-                className="hidden dark:block"
+                fill
+                className="hidden dark:block object-contain"
               />
               <Image
-                src="/images/logo/logo-light.svg"
+                src="/images/logo/logo-primary.png"
                 alt="logo"
-                width={215}
-                height={50}
-                className="dark:hidden"
+                fill
+                className="dark:hidden object-contain"
               />
             </Link>
+            </div>
           </div>
 
           <div
