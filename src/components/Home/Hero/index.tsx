@@ -7,44 +7,52 @@ export default function Hero() {
   return (
     <section
       id='home'
-      className='relative z-40 overflow-hidden pb-24 pt-32 sm:pt-40 lg:pb-[120px] lg:pt-[200px]'
+      className='relative z-40 flex min-h-screen w-screen items-center overflow-hidden'
     >
-      <div className='px-4 xl:container'>
-        <div className='-mx-4 flex flex-wrap items-center'>
+      <div className='w-full px-4 xl:container'>
+        <div className='-mx-4 flex flex-wrap items-center min-h-screen'>
           <div className='w-full px-3 lg:w-1/2'>
-            <div className='mx-auto mb-12 max-w-[530px] text-center lg:mb-0 lg:ml-0 lg:text-left'>
-              <span className='bg-primary/5 font-heading text-primary mb-8 inline-block rounded-full px-5 py-[10px] text-base dark:bg-white/10 dark:text-white'>
-                <span className='bg-primary mr-2 inline-block h-2 w-2 rounded-full'></span>
-                Next.js Starter for Business
+            <div className='mx-auto max-w-[600px] text-center lg:mx-0 lg:text-left'>
+              <span className='bg-primary/5 font-heading text-primary mb-8 inline-block rounded-full px-6 py-3 text-base font-medium dark:bg-white/10 dark:text-white'>
+                <span className='bg-primary mr-3 inline-block h-2 w-2 rounded-full'></span>
+                Digital Solutions Agency
               </span>
-              <h1 className='font-heading mb-5 text-2xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white'>
-                Next.js Boilerplate for Your{" "}
+              
+              <h1 className='font-heading mb-6 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl dark:text-white'>
+                <span className='text-dark dark:text-white'>58Solutions –</span>
+                <br />
+                <span className='text-primary'>Digital Solutions for</span>
+                <br />
+                <span className='text-dark dark:text-white'>Your{" "}</span>
                 <Typewriter
-                  words={["Startup", "SaaS", "Business", "Agency"]}
+                  words={["Vision", "Launch", "Growth"]}
                   cursor
                   loop={0}
                   cursorStyle='|'
-                  typeSpeed={70}
-                  deleteSpeed={50}
-                  delaySpeed={1000}
+                  typeSpeed={100}
+                  deleteSpeed={80}
+                  delaySpeed={2000}
+                  cursorColor='#4A6CF7'
                 />
               </h1>
-              <p className='text-dark-text mb-12 text-base'>
-                Handcrafted Next.js starter for your next - Startup, Business,
-                Agency or SaaS Website. Comes with refreshing design,
-                integrations and everything you need to kickstart your next web
-                project.
+              
+              <p className='text-dark-text mb-10 text-lg leading-relaxed lg:text-xl'>
+                We specialize in custom software development, scalable SaaS solutions, 
+                and enterprise applications. Our expert team delivers cutting-edge web 
+                applications and digital transformation strategies that drive measurable 
+                business growth and innovation.
               </p>
-              <div className='flex flex-wrap items-center justify-center lg:justify-start'>
+              
+              <div className='flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0 lg:justify-start'>
                 <a
                   href='#features'
-                  className='bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-[10px] text-base text-white md:px-8 md:py-[14px]'
+                  className='bg-primary font-heading hover:bg-primary/90 group inline-flex w-full items-center justify-center rounded-sm px-8 py-4 text-base font-semibold text-white transition-all duration-300 sm:w-auto md:px-10 md:py-5 md:text-lg'
                 >
-                  Get Started
-                  <span className='pl-3'>
+                  Start Your Project
+                  <span className='ml-3 transition-transform duration-300 group-hover:translate-x-1'>
                     <svg
-                      width='16'
-                      height='16'
+                      width='20'
+                      height='20'
                       viewBox='0 0 16 16'
                       fill='none'
                       xmlns='http://www.w3.org/2000/svg'
@@ -56,11 +64,12 @@ export default function Hero() {
                     </svg>
                   </span>
                 </a>
+                
                 <a
                   href='#about'
-                  className='font-heading text-dark hover:text-primary dark:hover:text-primary inline-flex items-center rounded-sm px-8 py-[14px] text-base dark:text-white'
+                  className='font-heading text-dark hover:text-primary dark:hover:text-primary group inline-flex w-full items-center justify-center rounded-sm border-2 border-transparent px-8 py-4 text-base font-semibold transition-all duration-300 hover:border-primary/20 hover:bg-primary/5 sm:w-auto dark:text-white md:px-10 md:py-5 md:text-lg'
                 >
-                  <span className='pr-3'>
+                  <span className='mr-3 transition-transform duration-300 group-hover:scale-110'>
                     <svg
                       width='24'
                       height='24'
@@ -70,32 +79,52 @@ export default function Hero() {
                       <path d='M19.376 12.416L8.777 19.482C8.70171 19.5321 8.61423 19.5608 8.52389 19.5652C8.43355 19.5695 8.34373 19.5492 8.264 19.5065C8.18427 19.4639 8.1176 19.4003 8.07111 19.3228C8.02462 19.2452 8.00005 19.1564 8 19.066V4.934C8.00005 4.84356 8.02462 4.75482 8.07111 4.67724C8.1176 4.59966 8.18427 4.53615 8.264 4.49346C8.34373 4.45077 8.43355 4.43051 8.52389 4.43483C8.61423 4.43915 8.70171 4.46789 8.777 4.518L19.376 11.584C19.4445 11.6297 19.5006 11.6915 19.5395 11.7641C19.5783 11.8367 19.5986 11.9177 19.5986 12C19.5986 12.0823 19.5783 12.1633 19.5395 12.2359C19.5006 12.3085 19.4445 12.3703 19.376 12.416Z' />
                     </svg>
                   </span>
-                  How it Work
+                  Our Expertise
                 </a>
+              </div>
+              
+              {/* Key Stats */}
+              <div className='mt-12 grid grid-cols-3 gap-6 border-t border-stroke pt-8 dark:border-white/10'>
+                <div className='text-center lg:text-left'>
+                  <div className='font-heading text-2xl font-bold text-primary md:text-3xl'>50+</div>
+                  <div className='text-dark-text text-sm font-medium'>Projects Delivered</div>
+                </div>
+                <div className='text-center lg:text-left'>
+                  <div className='font-heading text-2xl font-bold text-primary md:text-3xl'>99%</div>
+                  <div className='text-dark-text text-sm font-medium'>Client Satisfaction</div>
+                </div>
+                <div className='text-center lg:text-left'>
+                  <div className='font-heading text-2xl font-bold text-primary md:text-3xl'>24/7</div>
+                  <div className='text-dark-text text-sm font-medium'>Support Available</div>
+                </div>
               </div>
             </div>
           </div>
+          
           <div className='w-full px-4 lg:w-1/2'>
-            <div className='wow fadeInRight relative z-30 mx-auto h-[560px] w-full max-w-[700px] lg:ml-0'>
+            <div className='relative z-30 mx-auto h-[500px] w-full max-w-[700px] lg:ml-0 lg:h-[600px]'>
               <div className='absolute right-0 top-0 lg:w-11/12'>
                 <Image
                   src='/images/hero/image-2.png'
-                  alt='hero-image'
+                  alt='58Solutions - Digital Solutions'
                   className='object-cover aspect-[1.08]'
                   width={560}
                   height={520}
+                  priority
                 />
               </div>
               <div className='absolute bottom-0 left-0 z-10'>
                 <Image
                   src='/images/hero/image-1.jpg'
                   className='object-cover'
-                  alt='hero-image'
+                  alt='Custom Software Development'
                   width={350}
                   height={420}
                 />
                 <div className='border-primary/10 bg-primary/5 absolute -right-6 -top-6 -z-10 h-full w-full border backdrop-blur-[6px] dark:border-white/10 dark:bg-white/10'></div>
               </div>
+              
+              {/* Floating Elements */}
               <div className='absolute bottom-0 left-0'>
                 <svg
                   width='72'
@@ -130,6 +159,7 @@ export default function Hero() {
                   />
                 </svg>
               </div>
+              
               <div className='absolute bottom-0 left-1/2'>
                 <svg
                   width='120'
@@ -165,6 +195,8 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      
+      {/* Background Elements */}
       <div className='bg-noise-pattern absolute bottom-0 left-0 -z-10 h-full w-full bg-cover bg-center opacity-10 dark:opacity-40'></div>
       <div className='absolute right-0 top-0 -z-10'>
         <svg

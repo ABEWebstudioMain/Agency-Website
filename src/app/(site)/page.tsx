@@ -14,9 +14,9 @@ import { integrations, messages } from "../../../integrations.config";
 const siteName = process.env.SITE_NAME;
 
 export const metadata: Metadata = {
-  title: `58Solution - Digitale Lösungen für moderne Unternehmen | ${siteName}`,
+  title: `58Solutions - Digital Solutions for Your Vision, Launch & Growth | ${siteName}`,
   description:
-    "58Solution ist Ihr Partner für starke Online-Präsenzen – von der Unternehmenswebsite bis zur individuellen Webplattform. Modernes Design, skalierbare Technologie und ein Fokus auf Nutzererlebnis helfen Ihnen, digital durchzustarten.",
+    "58Solutions specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth.",
 };
 
 
