@@ -1,3 +1,5 @@
+"use client";
+
 import { Employee } from "@/types/employee";
 import Image from "next/image";
 import Link from "next/link";

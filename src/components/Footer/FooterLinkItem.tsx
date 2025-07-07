@@ -1,3 +1,5 @@
+"use client";
+
 import { FooterLink } from "@/types/footer";
 import Link from "next/link";
 import { useParams } from "next/navigation";

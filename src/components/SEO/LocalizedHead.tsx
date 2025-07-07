@@ -1,3 +1,5 @@
+"use client";
+
 import Head from 'next/head';
 import { useParams, usePathname } from 'next/navigation';
 import { i18n, type Locale } from '@/lib/i18n/config';
