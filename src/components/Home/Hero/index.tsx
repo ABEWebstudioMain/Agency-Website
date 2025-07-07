@@ -1,13 +1,14 @@
 "use client";
 
-import { useTranslation } from "@/lib/i18n";
 import Image from "next/image";
-import { useRouter } from "next/router";
+import { useParams } from "next/navigation";
 import { Typewriter } from "react-simple-typewriter";
+import { useTranslation } from "@/lib/i18n";
 
 export default function Hero() {
-  const router = useRouter();
-  const { t } = useTranslation(router.locale as any);
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
 
   return (
     <section

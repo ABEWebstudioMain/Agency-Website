@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { useRouter } from 'next/router';
+import { useParams, usePathname } from 'next/navigation';
 import { i18n, type Locale } from '@/lib/i18n/config';
 
 interface LocalizedHeadProps {
@@ -17,12 +17,12 @@ export default function LocalizedHead({
   ogImage = '/images/og-image.jpg',
   noindex = false,
 }: LocalizedHeadProps) {
-  const router = useRouter();
-  const currentLocale = router.locale as Locale;
-  const { asPath } = router;
+  const params = useParams();
+  const pathname = usePathname();
+  const currentLocale = params.locale as Locale;
 
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://58solutions.com';
-  const canonicalUrl = `${baseUrl}${currentLocale === i18n.defaultLocale ? '' : `/${currentLocale}`}${asPath}`;
+  const canonicalUrl = `${baseUrl}${pathname}`;
 
   return (
     <Head>
@@ -45,13 +45,13 @@ export default function LocalizedHead({
           key={locale}
           rel="alternate"
           hrefLang={locale}
-          href={`${baseUrl}${locale === i18n.defaultLocale ? '' : `/${locale}`}${asPath}`}
+          href={`${baseUrl}/${locale}${pathname.replace(`/${currentLocale}`, '')}`}
         />
       ))}
       <link
         rel="alternate"
         hrefLang="x-default"
-        href={`${baseUrl}${asPath}`}
+        href={`${baseUrl}/en${pathname.replace(`/${currentLocale}`, '')}`}
       />
       
       {/* Open Graph */}
