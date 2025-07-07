@@ -1,6 +1,6 @@
 export default function CallToAction() {
   return (
-    <section id="cta" className="pt-14 sm:pt-20 lg:pt-[130px]">
+    <section id="cta" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="drop-shadow-light relative overflow-hidden bg-cover bg-center px-10 py-[60px] sm:px-[70px] dark:drop-shadow-none">
           <div className="bg-noise-pattern absolute left-0 top-0 -z-10 h-full w-full bg-cover bg-center opacity-10 dark:opacity-40"></div>

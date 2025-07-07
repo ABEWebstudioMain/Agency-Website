@@ -4,7 +4,7 @@ import SingleTeam from "./SingleTeam";
 
 export default function Team() {
   return (
-    <section id="team" className="pt-14 sm:pt-20 lg:pt-[130px]">
+    <section id="team" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <SectionTitle
           mainTitle="OUR TEAM"

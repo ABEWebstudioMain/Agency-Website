@@ -6,7 +6,7 @@ import FooterNewsletter from "./FooterNewsletter";
 
 export default function Footer() {
   return (
-    <footer className="pt-14 sm:pt-20 lg:pt-[130px]">
+    <footer className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-3/12">

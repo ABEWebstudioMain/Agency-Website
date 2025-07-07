@@ -8,7 +8,7 @@ import SingleTestimonial from "./SingleTestimonial";
 
 export default function Testimonials() {
   return (
-    <section id="testimonial" className="pt-14 sm:pt-20 lg:pt-[130px]">
+    <section id="testimonial" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <SectionTitle
           mainTitle="TESTIMONIAL"

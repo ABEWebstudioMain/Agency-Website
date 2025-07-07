@@ -61,38 +61,23 @@ layer(base);
 }
 
 @utility header {
-  @apply py-5;
+  @apply py-0;
 }
 
 @utility sticky-navbar {
-  @apply fixed! z-999 bg-white/80! py-2! transition! dark:bg-dark!;
+  @apply fixed! z-999 bg-white/95! transition! dark:bg-dark/95!;
   backdrop-filter: blur(5px);
   box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
 
-  & .navbar > li > a {
-    @apply lg:py-5;
-  }
-
-  & .navbar > li > button {
-    @apply lg:py-5;
+  & + * {
+    @apply pt-20;
   }
 }
 
 @utility navbar {
-  & > li > a {
-    @apply lg:py-7;
-  }
-
+  & > li > a,
   & > li > button {
-    @apply lg:py-7;
-  }
-
-  .sticky-navbar & > li > a {
-    @apply lg:py-5;
-  }
-
-  .sticky-navbar & > li > button {
-    @apply lg:py-5;
+    @apply py-2 lg:py-3 transition-colors duration-200;
   }
 }
 

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Brands() {
   return (
-    <section className='pt-14 sm:pt-20 lg:pt-24'>
+    <section className='pt-16 sm:pt-20 lg:pt-[100px]'>
       <div className='px-4 xl:container'>
         <SectionTitle
           title='Trusted by Global Brands'

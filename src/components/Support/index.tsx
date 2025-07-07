@@ -1,6 +1,6 @@
 export default function Support() {
   return (
-    <section id="support" className="pt-14 sm:pt-20 lg:pt-[130px]">
+    <section id="support" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="-mx-4 flex flex-wrap justify-center">
           <div className="w-full px-4 xl:w-10/12">
@@ -136,7 +136,7 @@ export default function Support() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-[780px] pt-[130px]">
+        <div className="mx-auto max-w-[780px] pt-20 lg:pt-[100px]">
           <form
             className=""
             action="https://formbold.com/s/unique_form_id"

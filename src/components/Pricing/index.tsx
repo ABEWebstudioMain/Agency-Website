@@ -5,7 +5,7 @@ import SinglePricing from "./SinglePricing";
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="pt-14 sm:pt-20 lg:pt-[130px]">
+    <section id="pricing" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <SectionTitle
           mainTitle="PRICING PLANS"

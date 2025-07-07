@@ -52,32 +52,32 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`header absolute left-0 top-0 w-full ${stickyMenu ? "sticky-navbar" : ""}`}
+        className={`header absolute left-0 top-0 w-full z-50 ${stickyMenu ? "sticky-navbar" : ""}`}
       >
-        <div className="flex w-full flex-wrap px-5 lg:flex-nowrap lg:items-center lg:px-5 xl:px-10 2xl:px-20">
-          <div className="z-99 relative max-w-[250px] pr-4 lg:w-full lg:max-w-[220px] xl:max-w-[280px]">
-            <div className="relative h-[50px] w-[215px]">
+        <div className="flex w-full items-center justify-between px-5 py-4 lg:px-5 xl:px-10 2xl:px-20">
+          <div className="flex items-center">
+            <div className="relative h-[45px] w-[180px] lg:h-[50px] lg:w-[200px]">
             <Link href="/">
               <Image
                 src="/images/logo/logo-white.png"
                 alt="logo"
                 fill
-                className="hidden dark:block object-contain"
+                className="hidden dark:block object-contain object-left"
               />
               <Image
                 src="/images/logo/logo-primary.png"
                 alt="logo"
                 fill
-                className="dark:hidden object-contain"
+                className="dark:hidden object-contain object-left"
               />
             </Link>
             </div>
           </div>
 
           <div
-            className={`menu-wrapper dark:bg-dark fixed left-0 top-0 z-50 h-screen w-full justify-center bg-white p-5 lg:visible lg:static lg:flex lg:h-auto lg:justify-start lg:bg-transparent lg:p-0 lg:opacity-100 dark:lg:bg-transparent ${navigationOpen ? "show" : ""}`}
+            className={`menu-wrapper dark:bg-dark fixed left-0 top-0 z-40 h-screen w-full justify-center bg-white p-5 lg:visible lg:static lg:flex lg:h-auto lg:flex-1 lg:justify-center lg:bg-transparent lg:p-0 lg:opacity-100 dark:lg:bg-transparent ${navigationOpen ? "show" : ""}`}
           >
-            <div className="w-full self-center">
+            <div className="w-full self-center lg:flex lg:justify-center">
               <nav>
                 <ul className="navbar flex flex-col items-center justify-center space-y-5 text-center lg:flex-row lg:justify-start lg:space-x-6 lg:space-y-0 xl:space-x-10">
                   {navbarData.map((item) => (
@@ -145,7 +145,7 @@ export default function Navbar() {
                 </ul>
               </nav>
             </div>
-            <div className="absolute bottom-0 left-0 flex w-full items-center justify-between space-x-5 self-end p-5 lg:static lg:w-auto lg:self-center lg:p-0">
+            <div className="absolute bottom-0 left-0 flex w-full items-center justify-center space-x-3 self-end p-5 lg:hidden">
               {session ? (
                 <>
                   <p className="text-dark-text whitespace-nowrap dark:text-white">
@@ -178,11 +178,45 @@ export default function Navbar() {
             </div>
           </div>
 
-          <div className="absolute right-5 top-1/2 z-50 flex -translate-y-1/2 items-center lg:static lg:ml-4 lg:translate-y-0 xl:ml-6">
+          <div className="flex items-center space-x-3">
+            {/* Desktop Auth Buttons */}
+            <div className="hidden lg:flex lg:items-center lg:space-x-3">
+              {session ? (
+                <>
+                  <p className="text-dark-text whitespace-nowrap text-sm dark:text-white">
+                    {session?.user?.name}
+                  </p>
+                  <button
+                    aria-label="SignOut"
+                    onClick={() => signOut()}
+                    className="text-dark-text hover:text-primary whitespace-nowrap text-sm font-medium dark:text-white"
+                  >
+                    Sign Out
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/auth/signin"
+                    className="bg-primary font-heading hover:bg-primary/90 whitespace-nowrap rounded-sm px-4 py-2 text-sm text-white"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    href="/auth/signup"
+                    className="font-heading hover:bg-primary/90 whitespace-nowrap rounded-sm bg-[#222C40] px-4 py-2 text-sm text-white"
+                  >
+                    Sign Up
+                  </Link>
+                </>
+              )}
+            </div>
+
+            {/* Search and Theme Toggle */}
             <div className="flex items-center justify-end">
               <button
                 onClick={() => setSearchModalOpen(true)}
-                className="text-dark-text hidden h-10 w-10 items-center justify-center rounded-full sm:flex dark:text-white"
+                className="text-dark-text hidden h-9 w-9 items-center justify-center rounded-full sm:flex dark:text-white"
               >
                 <svg
                   width="24"
@@ -210,14 +244,15 @@ export default function Navbar() {
                 </svg>
               </button>
 
-              <div className="relative flex h-10 w-10 items-center justify-center">
+              <div className="relative flex h-9 w-9 items-center justify-center">
                 <ThemeToggler />
               </div>
             </div>
 
+            {/* Mobile Menu Toggle */}
             <button
               onClick={navigationHandler}
-              className="text-dark-text relative z-50 flex h-10 w-10 items-center justify-center lg:hidden dark:text-white"
+              className="text-dark-text relative z-50 flex h-9 w-9 items-center justify-center lg:hidden dark:text-white"
             >
               {navigationOpen ? (
                 <svg
