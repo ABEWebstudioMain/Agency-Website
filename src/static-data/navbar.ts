@@ -27,6 +27,12 @@ export const navbarData: NavbarItem[] = [
   },
   {
     id: crypto.randomUUID(),
+    title: "Team",
+    href: "/team",
+    external: false
+  },
+  {
+    id: crypto.randomUUID(),
     title: "Pages",
     submenu: [
       {
