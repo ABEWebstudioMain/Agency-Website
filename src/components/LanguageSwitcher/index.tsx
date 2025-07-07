@@ -1,16 +1,21 @@
 "use client";
 
-import { useRouter } from 'next/router';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useState, useRef, useEffect } from 'react';
 import { localeNames, localeFlags, type Locale } from '@/lib/i18n/config';
 
 export default function LanguageSwitcher() {
   const router = useRouter();
+  const params = useParams();
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const currentLocale = router.locale as Locale;
-  const { locales, asPath } = router;
+  const currentLocale = params.locale as Locale;
+  const locales = ['en', 'de'];
+  
+  // Remove current locale from pathname to get the base path
+  const basePath = pathname.replace(`/${currentLocale}`, '') || '/';
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -26,7 +31,7 @@ export default function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (locale: string) => {
-    router.push(asPath, asPath, { locale });
+    router.push(`/${locale}${basePath}`);
     setIsOpen(false);
   };
 
@@ -53,7 +58,7 @@ export default function LanguageSwitcher() {
 
       {isOpen && (
         <div className="absolute right-0 top-full z-50 mt-2 min-w-[140px] rounded-sm border border-stroke bg-white py-2 shadow-lg dark:border-[#2E333D] dark:bg-[#1D232D]">
-          {locales?.map((locale) => (
+          {locales.map((locale) => (
             <button
               key={locale}
               onClick={() => handleLanguageChange(locale)}

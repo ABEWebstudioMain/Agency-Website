@@ -6,7 +6,7 @@ import { navbarData } from "@/static-data/navbar";
 import { onScroll } from "@/utils/scrollActive";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import GlobalSearchModal from "../GlobalSearch";
 import ThemeToggler from "./ThemeToggler";
@@ -17,10 +17,12 @@ export default function Navbar() {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [searchModalOpen, setSearchModalOpen] = useState(false);
 
-  const router = useRouter();
-  const { t } = useTranslation(router.locale as any);
+  const params = useParams();
+  const pathname = usePathname();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
 
-  const pathUrl = router.asPath;
+  const pathUrl = pathname;
 
   const navigationHandler = () => {
     setNavigationOpen(!navigationOpen);
@@ -93,9 +95,7 @@ export default function Navbar() {
                             item?.href
                               ? item?.external
                                 ? item.href
-                                : item?.href
-                                  ? `/${item.href}`
-                                  : "/"
+                                : `/${locale}${item.href}`
                               : "/"
                           }
                           target={item?.external ? "_blank" : ""}
@@ -130,7 +130,7 @@ export default function Navbar() {
                               {item?.submenu.map((item) => (
                                 <li key={item?.id}>
                                   <Link
-                                    href={item?.href}
+                                    href={`/${locale}${item?.href}`}
                                     onClick={navigationHandler}
                                     className={`font-heading inline-flex items-center justify-center text-center text-base ${pathUrl === item?.href ? "text-primary dark:text-white" : "text-dark-text hover:text-primary dark:hover:text-white"}`}
                                   >
