@@ -14,10 +14,11 @@ import { integrations, messages } from "../../../integrations.config";
 const siteName = process.env.SITE_NAME;
 
 export const metadata: Metadata = {
-  title: `Next.js Starter for Business Sites | ${siteName}`,
+  title: `58Solution - Digitale Lösungen für moderne Unternehmen | ${siteName}`,
   description:
-    "Next.js starter for your next - Startup, Business, Agency or SaaS Website. Comes with refreshing design, integrations and everything you need to kickstart your next web project",
+    "58Solution ist Ihr Partner für starke Online-Präsenzen – von der Unternehmenswebsite bis zur individuellen Webplattform. Modernes Design, skalierbare Technologie und ein Fokus auf Nutzererlebnis helfen Ihnen, digital durchzustarten.",
 };
+
 
 export default function Home() {
   return (
