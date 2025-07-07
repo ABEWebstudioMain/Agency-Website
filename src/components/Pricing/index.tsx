@@ -1,9 +1,13 @@
 import Link from "next/link";
+import { useParams } from "next/navigation";
 import { pricingData } from "../../../stripe/pricingData";
 import SectionTitle from "../Common/SectionTitle";
 import SinglePricing from "./SinglePricing";
 
 export default function Pricing() {
+  const params = useParams();
+  const locale = params.locale as string;
+
   return (
     <section id="pricing" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
@@ -78,7 +82,7 @@ export default function Pricing() {
             Looking for a company solution?
           </h3>
           <Link
-            href="/support"
+            href={`/${locale}/support`}
             className="text-base text-dark-text underline-offset-2 duration-200 hover:text-primary hover:underline"
           >
             Contact our team to get a quote.

@@ -277,7 +277,7 @@ export default function EmployeeProfile({ employee }: EmployeeProfileProps) {
         <div className="px-4 xl:container">
           <div className="text-center">
             <Link
-              href="/team"
+              href={`/${locale}/team`}
               className="inline-flex items-center rounded-sm bg-primary px-8 py-3 font-heading text-base text-white hover:bg-primary/90"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">

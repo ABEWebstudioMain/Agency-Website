@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function FooterAbout() {
+  const params = useParams();
+  const locale = params.locale as string;
+
   return (
     <div className="mb-20 max-w-[330px]">
-      <Link href="/" className="mb-6 inline-block">
+      <Link href={`/${locale}`} className="mb-6 inline-block">
         <Image
           src="/images/logo/logo-dark.svg"
           alt="logo"

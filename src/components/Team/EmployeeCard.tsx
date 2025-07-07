@@ -1,16 +1,20 @@
 import { Employee } from "@/types/employee";
 import Image from "next/image";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 interface EmployeeCardProps {
   employee: Employee;
 }
 
 export default function EmployeeCard({ employee }: EmployeeCardProps) {
+  const params = useParams();
+  const locale = params.locale as string;
+
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/3">
       <div className="group mx-auto mb-10 max-w-[370px] text-center">
-        <Link href={`/team/${employee.slug}`} className="block">
+        <Link href={`/${locale}/team/${employee.slug}`} className="block">
           <div className="aspect-360/370 relative mb-8 overflow-hidden rounded-sm">
             <Image
               src={employee.photo}

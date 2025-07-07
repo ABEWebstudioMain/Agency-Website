@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
 export default function Error() {
+  const params = useParams();
+  const locale = params.locale as string;
+
   return (
     <section className="pt-[120px] lg:pt-[240px]">
       <div className="px-4 xl:container">
@@ -18,7 +22,7 @@ export default function Error() {
               or does not exist.
             </p>
             <Link
-              href="/"
+              href={`/${locale}`}
               className="inline-flex items-center justify-center rounded-sm bg-primary px-8 py-[14px] text-sm font-semibold text-white"
             >
               {" "}
