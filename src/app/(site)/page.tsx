@@ -6,23 +6,30 @@ import Hero from "@/components/Home/Hero";
 import Portfolio from "@/components/Home/Portfolio";
 import Testimonials from "@/components/Home/Testimonials";
 import Pricing from "@/components/Pricing";
+import LocalizedHead from "@/components/SEO/LocalizedHead";
 import Support from "@/components/Support";
 import Team from "@/components/Team";
-import { Metadata } from "next";
-import { integrations, messages } from "../../../integrations.config";
+import { useTranslation } from "@/lib/i18n";
+import { GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import { integrations } from "../../../integrations.config";
 
-const siteName = process.env.SITE_NAME;
+interface HomePageProps {
+  locale: string;
+  translations: any;
+}
 
-export const metadata: Metadata = {
-  title: `58Solutions - Digital Solutions for Your Vision, Launch & Growth | ${siteName}`,
-  description:
-    "58Solutions specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth.",
-};
+export default function Home({ locale, translations }: HomePageProps) {
+  const router = useRouter();
+  const { t } = useTranslation(locale as any);
 
-
-export default function Home() {
   return (
     <>
+      <LocalizedHead
+        title={t('common.meta.title')}
+        description={t('common.meta.description')}
+        keywords="58Solutions, software development, SaaS, web applications, digital transformation"
+      />
       <Hero />
       <Features />
       <About />
@@ -36,3 +43,13 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async ({ locale }) => {
+  const { getI18nProps } = await import('@/lib/i18n');
+  
+  return {
+    props: {
+      ...getI18nProps(locale),
+    },
+  };
+};
