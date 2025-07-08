@@ -1,77 +1,31 @@
-# Installing and Configuring Next.js Boilerplate Templates
+# 🧠 58Solutions – Interactive Team Portfolio
 
-Installing boilerplate templates are different than ordinary templates, you have to follow the steps strictly without
-skipping any of them.
-
-1. [Installation](https://nextjstemplates.com/docs/boilerplate#installation)
-2. [Databases Setup](https://nextjstemplates.com/docs/database)
-3. [Authentication](https://nextjstemplates.com/docs/authentication)
-4. [Sanity Integration](https://nextjstemplates.com/docs/sanity)
-5. [Markdown Integration](https://nextjstemplates.com/docs/markdown)
-6. [Stripe Integration](https://nextjstemplates.com/docs/stripe)
-7. [Algolia Integration](https://nextjstemplates.com/docs/algolia)
-8. [MailChimp Integration](https://nextjstemplates.com/docs/mailchimp)
-9. [SMTP Configuration](https://nextjstemplates.com/docs/resend)
+This project is a modern, fully responsive landing page for **58Solutions** (formerly known as 58Agents).  
+Built with **Next.js**, **TypeScript**, and **Tailwind CSS**, it showcases the team and their services in a clean and structured way.
 
 ---
 
-### Useful Links
+## 🎯 Features
 
-- [Discord Community](https://pimjo.com/community)
-- [Support](https://nextjstemplates.com/support)
-- [Twitter](https://x.com/nextjstemplate)
+- ✨ Custom landing page design – pixel-perfect and design-aligned
+- 🧑‍💻 Interactive employee CVs with role-specific data
+- 📚 Clickable skill sections that reveal detailed technical documentation
+- 🖼️ Dummy data included for preview and development
+- 🔍 Searchable and filterable profiles (planned)
+- ⚙️ Modular codebase with reusable components
 
-### Installation
+---
 
-Before moving to all the other integrations, make sure to install the dependencies.
+## 🧪 Tech Stack
 
-```bash copy
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+---
+
+## 🚀 Getting Started
+
+```bash
 npm install
-
-```
-
-### Start the Developent Server
-
-When all integrations are done, then you can start the project on the developement server
-
-```bash copy
 npm run dev
-```
-
-It’ll start the template on http://localhost:3000
-
-### Deploying on PaaS
-
-If you are using a GitHub repo then you can go with free-of-cost and easy-to-use options
-like[Vercel](https://vercel.com/), or[Netlify](https://netlify.com/) they offer decent-free tiers for Next.js hosting.
-
-Make sure to edit build command like this when deploying to Vercel.
-
-![prisma-vercel](https://nextjstemplates.com/docs/prisma-vercel.png)
-
-Follow the steps below to complete the installation, if you get stuck feel free to open a [support ticket](/support), we
-will get back to you ASAP.
-
-### Update Logs
-
-**March 2025 v2.1**
-
-- Upgraded to Tailwind v4 and latest release of Next.js 15
-- Fix peer dependency errors during installation
-- Using tailwind-typography plugin for docs pages
-- Refactor checkbox on auth pages
-- Improved markup, fix hydration errors and all known issues.
-
-**November 2024 v2.0**
-
-- Upgraded to Next.js 15
-
-**November 2024 v1.4**
-
-- Integrated integration enable disable features
-- Integrated Zod for Form validation
-- Added Stripe webhook endpoint
-
-**May 2024 v1.3**
-
-- Fixed Sanity Revalidation issue
