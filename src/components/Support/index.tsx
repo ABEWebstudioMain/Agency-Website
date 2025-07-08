@@ -1,11 +1,14 @@
+"use client";
+
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
+
 export default function Support() {
-  return (
   const params = useParams();
   const locale = params.locale as string;
   const { t } = useTranslation(locale as any);
 
+  return (
     <section id="support" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="-mx-4 flex flex-wrap justify-center">
@@ -284,5 +287,4 @@ export default function Support() {
       </div>
     </section>
   );
-"use client";
 }

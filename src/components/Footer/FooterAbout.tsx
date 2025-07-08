@@ -1,12 +1,14 @@
 "use client";
 
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import Image from "next/image";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 
 export default function FooterAbout() {
   const params = useParams();
   const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
 
   return (
     <div className="mb-20 max-w-[330px]">

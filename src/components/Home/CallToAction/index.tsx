@@ -1,11 +1,14 @@
+"use client";
+
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
+
 export default function CallToAction() {
-  return (
   const params = useParams();
   const locale = params.locale as string;
   const { t } = useTranslation(locale as any);
 
+  return (
     <section id="cta" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="drop-shadow-light relative overflow-hidden bg-cover bg-center px-10 py-[60px] sm:px-[70px] dark:drop-shadow-none">
@@ -91,5 +94,4 @@ export default function CallToAction() {
       </div>
     </section>
   );
-"use client";
 }

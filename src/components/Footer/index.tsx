@@ -1,3 +1,5 @@
+"use client";
+
 import { footerLinks, footerLinksTwo } from "@/static-data/footer";
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
@@ -92,4 +94,3 @@ export default function Footer() {
     </footer>
   );
 }
-"use client";

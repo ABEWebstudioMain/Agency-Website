@@ -1,3 +1,5 @@
+"use client";
+
 import { teamData } from "@/static-data/team";
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
@@ -27,4 +29,3 @@ export default function Team() {
     </section>
   );
 }
-"use client";

@@ -1,3 +1,5 @@
+"use client";
+
 import SectionTitle from "../Common/SectionTitle";
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
@@ -78,4 +80,3 @@ export default function About() {
     </section>
   );
 }
-"use client";

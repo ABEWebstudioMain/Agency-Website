@@ -1,8 +1,9 @@
+"use client";
+
 import SectionTitle from "../Common/SectionTitle";
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import Image from "next/image";
-
 
 export default function Brands() {
   const params = useParams();
@@ -128,4 +129,3 @@ export default function Brands() {
     </section>
   );
 }
-"use client";
