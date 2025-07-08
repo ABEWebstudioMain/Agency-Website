@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import { pricingData } from "../../../stripe/pricingData";
 import SectionTitle from "../Common/SectionTitle";
 import SinglePricing from "./SinglePricing";
@@ -9,6 +10,7 @@ import SinglePricing from "./SinglePricing";
 export default function Pricing() {
   const params = useParams();
   const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
 
   return (
     <section id="pricing" className="pt-16 sm:pt-20 lg:pt-[100px]">
