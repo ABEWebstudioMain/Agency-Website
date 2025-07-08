@@ -1,5 +1,11 @@
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 export default function CallToAction() {
   return (
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
     <section id="cta" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="drop-shadow-light relative overflow-hidden bg-cover bg-center px-10 py-[60px] sm:px-[70px] dark:drop-shadow-none">
@@ -62,10 +68,10 @@ export default function CallToAction() {
             <div className="w-full px-4 lg:w-2/3">
               <div className="mx-auto mb-10 max-w-[550px] text-center lg:mb-0 lg:ml-0 lg:text-left">
                 <h2 className="font-heading text-dark mb-4 text-xl font-semibold leading-tight sm:text-[38px] dark:text-white">
-                  Looking for a collaboration? Get Started Today!
+                  {t('common.callToAction.title')}
                 </h2>
                 <p className="text-dark-text text-base">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  {t('common.callToAction.description')}
                 </p>
               </div>
             </div>
@@ -76,7 +82,7 @@ export default function CallToAction() {
                   className="bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white"
                 >
                   {" "}
-                  Get Started Now{" "}
+                  {t('common.callToAction.button')}{" "}
                 </a>
               </div>
             </div>
@@ -85,4 +91,5 @@ export default function CallToAction() {
       </div>
     </section>
   );
+"use client";
 }

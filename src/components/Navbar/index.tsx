@@ -2,7 +2,6 @@
 
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/lib/i18n";
-import { navbarData } from "@/static-data/navbar";
 import { onScroll } from "@/utils/scrollActive";
 import Image from "next/image";
 import Link from "next/link";
@@ -23,6 +22,64 @@ export default function Navbar() {
   const { t } = useTranslation(locale as any);
 
   const pathUrl = pathname;
+
+  // Dynamic navbar data with translations
+  const navbarData = [
+    {
+      id: crypto.randomUUID(),
+      title: t('common.navigation.features'),
+      href: "#features",
+      external: false
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.navigation.about'),
+      href: "#about",
+      external: false
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.navigation.portfolio'),
+      href: "#portfolio",
+      external: false
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.navigation.pricing'),
+      href: "#pricing",
+      external: false
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.navigation.team'),
+      href: "/team",
+      external: false
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.navigation.pages'),
+      submenu: [
+        {
+          id: crypto.randomUUID(),
+          title: t('common.navigation.home'),
+          href: "/",
+          external: false
+        },
+        {
+          id: crypto.randomUUID(),
+          title: t('common.navigation.docs'),
+          href: "/docs",
+          external: false
+        },
+        {
+          id: crypto.randomUUID(),
+          title: t('common.navigation.support'),
+          href: "/support",
+          external: false
+        },
+      ]
+    }
+  ];
 
   const navigationHandler = () => {
     setNavigationOpen(!navigationOpen);

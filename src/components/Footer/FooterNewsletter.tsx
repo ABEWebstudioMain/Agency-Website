@@ -1,9 +1,15 @@
 "use client";
 import axios from "axios";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import { useState } from "react";
 import toast from "react-hot-toast";
 
 export default function FooterNewsletter() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   const [email, setEmail] = useState("");
 
   const handleSubmit = async (e: any) => {
@@ -33,10 +39,10 @@ export default function FooterNewsletter() {
   return (
     <div className="mb-20">
       <h3 className="font-heading text-dark mb-9 text-2xl font-medium dark:text-white">
-        Newsletter
+        {t('common.footer.newsletter')}
       </h3>
       <p className="font-heading text-dark-text mb-6 text-base">
-        Subscribe to receive future updates
+        {t('common.footer.newsletterDescription')}
       </p>
       <form onSubmit={handleSubmit} className="relative">
         <input
@@ -44,7 +50,7 @@ export default function FooterNewsletter() {
           name="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email address"
+          placeholder={t('common.footer.emailPlaceholder')}
           className="text-dark-text outline-hidden focus:border-primary placeholder:text-dark-text w-full rounded-sm border py-3 pl-5 pr-12 text-base dark:border-transparent dark:bg-[#2C3443]"
         />
 

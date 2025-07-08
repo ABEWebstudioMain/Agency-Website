@@ -1,14 +1,20 @@
 import SectionTitle from "../Common/SectionTitle";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import Image from "next/image";
 
 
 export default function Brands() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   return (
     <section className='pt-16 sm:pt-20 lg:pt-[100px]'>
       <div className='px-4 xl:container'>
         <SectionTitle
-          title='Trusted by Global Brands'
-          paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.'
+          title={t('common.brands.title')}
+          paragraph={t('common.brands.description')}
         />
         <div className='border-b pb-24 dark:border-[#2E333D]'>
           <div className='-mx-4 flex flex-wrap'>
@@ -122,3 +128,4 @@ export default function Brands() {
     </section>
   );
 }
+"use client";

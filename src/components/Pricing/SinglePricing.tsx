@@ -1,10 +1,16 @@
 "use client";
 import axios from "axios";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import toast from "react-hot-toast";
 import { integrations, messages } from "../../../integrations.config";
 import SingleOffer from "./SingleOffer";
 
 export default function SinglePricing({ price }: any) {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   const handleSubscription = async (e: any) => {
     e.preventDefault();
 
@@ -87,7 +93,7 @@ export default function SinglePricing({ price }: any) {
           onClick={handleSubscription}
           className={`inline-flex items-center rounded-sm px-8 py-[14px] font-heading text-base text-white duration-200 ${price?.nickname === "Professional" ? "bg-primary hover:bg-primary/90" : "bg-dark hover:bg-dark/90"}`}
         >
-          Join This Plan
+          {t('common.pricing.joinPlan')}
           <span className="pl-3">
             <svg
               width="16"

@@ -1,10 +1,16 @@
 import { footerLinks, footerLinksTwo } from "@/static-data/footer";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import FooterAbout from "./FooterAbout";
 import FooterBottom from "./FooterBottom";
 import FooterLinkItem from "./FooterLinkItem";
 import FooterNewsletter from "./FooterNewsletter";
 
 export default function Footer() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   return (
     <footer className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
@@ -16,7 +22,7 @@ export default function Footer() {
           <div className="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
             <div className="mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
-                Company
+                {t('common.footer.company')}
               </h3>
 
               <ul className="space-y-4">
@@ -30,7 +36,7 @@ export default function Footer() {
           <div className="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
             <div className="mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
-                Support
+                {t('common.footer.support')}
               </h3>
 
               <ul className="space-y-4">
@@ -44,13 +50,13 @@ export default function Footer() {
           <div className="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-2/12">
             <div className="mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
-                Get in touch
+                {t('common.footer.getInTouch')}
               </h3>
 
               <div className="space-y-7">
                 <div>
                   <p className="font-heading text-base text-dark-text">
-                    Toll Free Customer Care
+                    {t('common.footer.tollFree')}
                   </p>
                   <a
                     href="tel:+(1) 123 456 7890"
@@ -62,7 +68,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-heading text-base text-dark-text">
-                    Need live support?
+                    {t('common.footer.liveSupport')}
                   </p>
                   <a
                     href="mailto:support@domain.com"
@@ -86,3 +92,4 @@ export default function Footer() {
     </footer>
   );
 }
+"use client";

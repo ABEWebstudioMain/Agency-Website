@@ -1,27 +1,34 @@
 "use client";
 
 import { useState } from "react";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import TabPanel from "./TabPanel";
 
-const tabButtons = [
-  {
-    id: crypto.randomUUID(),
-    title: "About Us",
-    value: "about"
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Our Mission",
-    value: "mission"
-  },
-  {
-    id: crypto.randomUUID(),
-    title: "Our Vision",
-    value: "vision"
-  }
-];
 
 export default function AboutContent() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
+  const tabButtons = [
+    {
+      id: crypto.randomUUID(),
+      title: t('common.about.tabs.about'),
+      value: "about"
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.about.tabs.mission'),
+      value: "mission"
+    },
+    {
+      id: crypto.randomUUID(),
+      title: t('common.about.tabs.vision'),
+      value: "vision"
+    }
+  ];
+
   const [activeTab, setActiveTab] = useState<string>(tabButtons[0].value);
 
   return (
@@ -40,31 +47,27 @@ export default function AboutContent() {
       <div className='w-full'>
         {activeTab === "about" && (
           <TabPanel
-            title='DB, Auth, Stripe, Sanity, and More'
+            title={t('common.about.content.about.title')}
             image1='/images/about/image-1.jpg'
             image1Alt='about image 1'
             image2='/images/about/image-2.jpg'
             image2Alt='about image 2'
           >
             <p className='mb-6 text-base text-dark-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              condimentum sapien ac leo cursus dignissim. In ac lectus vel orci
-              accumsan ultricies at in libero accumsan.
+              {t('common.about.content.about.description')}
             </p>
             <p className='mb-6 text-base text-dark-text'>
-              Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis
-              nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.
+              {t('common.about.content.about.description')}
             </p>
             <p className='text-base text-dark-text'>
-              Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis
-              nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.
+              {t('common.about.content.about.description')}
             </p>
           </TabPanel>
         )}
 
         {activeTab === "mission" && (
           <TabPanel
-            title='Built-with Latest Tools and Technologies'
+            title={t('common.about.content.mission.title')}
             image1='/images/about/image-1.jpg'
             image1Alt='about image 1'
             image2='/images/about/image-2.jpg'
@@ -72,41 +75,27 @@ export default function AboutContent() {
             leftContent
           >
             <p className='mb-6 text-base text-dark-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              condimentum sapien ac leo cursus dignissim. In ac lectus vel orci
-              accumsan ultricies at in libero accumsan.
+              {t('common.about.content.mission.description')}
             </p>
             <p className='mb-6 text-base text-dark-text'>
-              Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis
-              nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.
-            </p>
-            <p className='text-base text-dark-text'>
-              Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis
-              nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.
+              {t('common.about.content.mission.description')}
             </p>
           </TabPanel>
         )}
 
         {activeTab === "vision" && (
           <TabPanel
-            title='High-quality Premium Design with Everything You Need'
+            title={t('common.about.content.vision.title')}
             image1='/images/about/image-1.jpg'
             image1Alt='about image 1'
             image2='/images/about/image-2.jpg'
             image2Alt='about image 2'
           >
             <p className='mb-6 text-base text-dark-text'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
-              condimentum sapien ac leo cursus dignissim. In ac lectus vel orci
-              accumsan ultricies at in libero accumsan.
+              {t('common.about.content.vision.description')}
             </p>
             <p className='mb-6 text-base text-dark-text'>
-              Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis
-              nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.
-            </p>
-            <p className='text-base text-dark-text'>
-              Phasellus ex massa, facilisis ac vestibulum eget, ultrices quis
-              nulla. Integer vitae magna lacus. Sed venenatis auctor dolor.
+              {t('common.about.content.vision.description')}
             </p>
           </TabPanel>
         )}

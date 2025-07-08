@@ -1,14 +1,20 @@
 import SectionTitle from "../Common/SectionTitle";
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import AboutContent from "./AboutContent";
 
 export default function About() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   return (
     <section id="about" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <SectionTitle
-          mainTitle="ABOUT US"
-          title="Know Details About Our Company"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+          mainTitle={t('common.about.mainTitle')}
+          title={t('common.about.title')}
+          paragraph={t('common.about.description')}
         />
 
         <div className=" relative z-10 overflow-hidden rounded-sm px-8 pb-8 pt-0 md:px-[70px] md:pb-[70px] lg:px-[60px] lg:pb-[60px] xl:px-[70px] xl:pb-[70px]">
@@ -72,3 +78,4 @@ export default function About() {
     </section>
   );
 }
+"use client";

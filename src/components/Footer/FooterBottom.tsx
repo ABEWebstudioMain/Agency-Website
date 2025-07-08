@@ -1,4 +1,13 @@
+"use client";
+
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
+
 export default function FooterBottom() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   return (
     <div className="dark:border-[#2E333D] md:border-t">
       <div className="-mx-4 flex flex-wrap py-5 md:py-7">
@@ -27,7 +36,7 @@ export default function FooterBottom() {
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div>
             <p className="text-center font-heading text-base text-dark-text lg:text-right">
-              © {new Date().getFullYear()} Startup. All rights reserved
+              © {new Date().getFullYear()} 58Solutions. {t('common.footer.copyright')}
             </p>
           </div>
         </div>

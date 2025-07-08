@@ -1,19 +1,25 @@
 "use client";
 import SectionTitle from "@/components/Common/SectionTitle";
+import { useTranslation } from "@/lib/i18n";
 import { testimonialData } from "@/static-data/testimonial-data";
+import { useParams } from "next/navigation";
 import "swiper/css";
 import { Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SingleTestimonial from "./SingleTestimonial";
 
 export default function Testimonials() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   return (
     <section id="testimonial" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <SectionTitle
-          mainTitle="TESTIMONIAL"
-          title="What Our Clients Say About Us"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+          mainTitle={t('common.testimonials.mainTitle')}
+          title={t('common.testimonials.title')}
+          paragraph={t('common.testimonials.description')}
         />
 
         <div className="w-full px-4">

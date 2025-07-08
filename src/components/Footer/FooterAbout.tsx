@@ -28,7 +28,7 @@ export default function FooterAbout() {
       </Link>
 
       <p className="mb-10 text-base text-dark-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        {t('common.footer.description')}
       </p>
       <div className="flex items-center space-x-5">
         <a

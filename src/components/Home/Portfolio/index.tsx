@@ -1,12 +1,18 @@
 "use client";
 
 import SectionTitle from "@/components/Common/SectionTitle";
+import { useTranslation } from "@/lib/i18n";
 import { portfolioData } from "@/static-data/portfolio";
 import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SinglePortfolio from "./SinglePortfolio";
 
 export default function Portfolio() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
   const [activeTag, setActiveTag] = useState("All");
   const [items, setItems]         = useState(portfolioData);
 
@@ -33,9 +39,9 @@ export default function Portfolio() {
     >
       <div className='px-4 xl:container'>
         <SectionTitle
-          mainTitle='PORTFOLIO'
-          title='Gallery, Previews and Portfolio'
-          paragraph='Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.'
+          mainTitle={t('common.portfolio.mainTitle')}
+          title={t('common.portfolio.title')}
+          paragraph={t('common.portfolio.description')}
         />
 
         <div className='w-full'>
@@ -44,7 +50,7 @@ export default function Portfolio() {
               className={`${activeTag === "All" ? "active" : ""} font-heading text-dark whitespace-nowrap px-5 text-base dark:text-white`}
               onClick={() => filterItems("All")}
             >
-              All
+              {t('common.portfolio.all')}
             </button>
             {allTag.map((tag) => (
               <button
@@ -65,7 +71,7 @@ export default function Portfolio() {
               href='#'
               className='bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-8 py-[14px] text-base text-white'
             >
-              See More Projects
+              {t('common.portfolio.seeMore')}
               <span className='pl-3'>
                 <svg
                   width='16'

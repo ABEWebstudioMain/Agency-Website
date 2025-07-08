@@ -14,9 +14,9 @@ export default function Pricing() {
     <section id="pricing" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <SectionTitle
-          mainTitle="PRICING PLANS"
-          title="Affordable Pricing With Simple Plans"
-          paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+          mainTitle={t('common.pricing.mainTitle')}
+          title={t('common.pricing.title')}
+          paragraph={t('common.pricing.description')}
         />
 
         <div className="relative z-10 flex flex-wrap justify-center overflow-hidden rounded-sm drop-shadow-light dark:drop-shadow-none">
@@ -81,13 +81,13 @@ export default function Pricing() {
 
         <div className="pt-12 text-center">
           <h3 className="mb-5 font-heading text-xl font-medium text-dark dark:text-white sm:text-3xl">
-            Looking for a company solution?
+            {t('common.pricing.companyTitle')}
           </h3>
           <Link
             href={`/${locale}/support`}
             className="text-base text-dark-text underline-offset-2 duration-200 hover:text-primary hover:underline"
           >
-            Contact our team to get a quote.
+            {t('common.pricing.contactTeam')}
           </Link>
         </div>
       </div>

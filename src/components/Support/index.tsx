@@ -1,5 +1,11 @@
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 export default function Support() {
   return (
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+
     <section id="support" className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
         <div className="-mx-4 flex flex-wrap justify-center">
@@ -9,14 +15,13 @@ export default function Support() {
                 <div className="relative mb-12 max-w-[500px] pt-6 md:mb-14 lg:pt-16">
                   <span className="title left-0! translate-x-0!">
                     {" "}
-                    SUPPORT{" "}
+                    {t('common.support.mainTitle')}{" "}
                   </span>
                   <h2 className="font-heading text-dark mb-5 text-3xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white">
-                    Need Any Help? Say hello
+                    {t('common.support.title')}
                   </h2>
                   <p className="text-dark-text text-base">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit
-                    Donec vitae tortor aliquam ante.
+                    {t('common.support.description')}
                   </p>
                 </div>
               </div>
@@ -39,7 +44,7 @@ export default function Support() {
               <div className="w-full px-4 md:w-1/2 lg:w-1/4">
                 <div className="mb-6">
                   <h3 className="font-heading text-dark mb-2 text-base sm:text-xl dark:text-white">
-                    Email Address
+                    {t('common.support.email')}
                   </h3>
                   <p className="text-dark-text text-base font-medium">
                     support@startup.com
@@ -49,7 +54,7 @@ export default function Support() {
               <div className="w-full px-4 md:w-1/2 lg:w-1/4">
                 <div className="mb-6">
                   <h3 className="font-heading text-dark mb-2 text-base sm:text-xl dark:text-white">
-                    Phone Number
+                    {t('common.support.phone')}
                   </h3>
                   <p className="text-dark-text text-base font-medium">
                     +009 8754 3433 223
@@ -59,7 +64,7 @@ export default function Support() {
               <div className="w-full px-4 md:w-1/2 lg:w-1/4">
                 <div className="mb-6">
                   <h3 className="font-heading text-dark mb-2 text-base sm:text-xl dark:text-white">
-                    Office Location
+                    {t('common.support.location')}
                   </h3>
                   <p className="text-dark-text text-base font-medium">
                     76/A, Green valle, Califonia USA.
@@ -150,13 +155,13 @@ export default function Support() {
                     className="font-heading text-dark mb-3 block text-base dark:text-white"
                   >
                     {" "}
-                    Your Name{" "}
+                    {t('common.support.form.name')}{" "}
                   </label>
                   <input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Full Name"
+                    placeholder={t('common.support.form.name')}
                     className="text-dark placeholder-dark-text outline-hidden focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium dark:border-[#2C3443] dark:text-white dark:focus:border-white"
                   />
                 </div>
@@ -168,13 +173,13 @@ export default function Support() {
                     className="font-heading text-dark mb-3 block text-base dark:text-white"
                   >
                     {" "}
-                    Email Address{" "}
+                    {t('common.support.form.email')}{" "}
                   </label>
                   <input
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Email Address"
+                    placeholder={t('common.support.form.email')}
                     className="text-dark placeholder-dark-text outline-hidden focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium dark:border-[#2C3443] dark:text-white dark:focus:border-white"
                   />
                 </div>
@@ -186,13 +191,13 @@ export default function Support() {
                     className="font-heading text-dark mb-3 block text-base dark:text-white"
                   >
                     {" "}
-                    Phone (Optional){" "}
+                    {t('common.support.form.phone')}{" "}
                   </label>
                   <input
                     type="text"
                     name="phone"
                     id="phone"
-                    placeholder="Phone Number"
+                    placeholder={t('common.support.form.phone')}
                     className="text-dark placeholder-dark-text outline-hidden focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium dark:border-[#2C3443] dark:text-white dark:focus:border-white"
                   />
                 </div>
@@ -204,13 +209,13 @@ export default function Support() {
                     className="font-heading text-dark mb-3 block text-base dark:text-white"
                   >
                     {" "}
-                    Subject{" "}
+                    {t('common.support.form.subject')}{" "}
                   </label>
                   <input
                     type="text"
                     name="subject"
                     id="subject"
-                    placeholder="Type Subject"
+                    placeholder={t('common.support.form.subject')}
                     className="text-dark placeholder-dark-text outline-hidden focus:border-primary w-full border-b bg-transparent py-5 text-base font-medium dark:border-[#2C3443] dark:text-white dark:focus:border-white"
                   />
                 </div>
@@ -222,13 +227,13 @@ export default function Support() {
                     className="font-heading text-dark mb-3 block text-base dark:text-white"
                   >
                     {" "}
-                    Message{" "}
+                    {t('common.support.form.message')}{" "}
                   </label>
                   <textarea
                     rows={4}
                     name="message"
                     id="message"
-                    placeholder="Type Message"
+                    placeholder={t('common.support.form.message')}
                     className="text-dark placeholder-dark-text outline-hidden focus:border-primary w-full resize-none border-b bg-transparent py-5 text-base font-medium dark:border-[#2C3443] dark:text-white dark:focus:border-white"
                   ></textarea>
                 </div>
@@ -263,15 +268,14 @@ export default function Support() {
                   </span>
 
                   <span>
-                    I have read the terms of the Service & I accept Privacy
-                    Policy
+                    {t('common.support.form.terms')}
                   </span>
                 </label>
               </div>
 
               <div className="w-full px-4">
                 <button className="bg-primary font-heading hover:bg-primary/90 flex w-full items-center justify-center rounded-sm px-8 py-[14px] text-base text-white">
-                  Send Message
+                  {t('common.support.form.send')}
                 </button>
               </div>
             </div>
@@ -280,4 +284,5 @@ export default function Support() {
       </div>
     </section>
   );
+"use client";
 }
