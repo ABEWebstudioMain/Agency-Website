@@ -10,6 +10,7 @@ import Hero from "@/components/Home/Hero";
 import Portfolio from "@/components/Home/Portfolio";
 import SuccessSnapshot from "@/components/Home/SuccessSnapshot";
 import Testimonials from "@/components/Home/Testimonials";
+import Timeline from "@/components/Home/Timeline";
 import TrustSignals from "@/components/Home/TrustSignals";
 import Pricing from "@/components/Pricing";
 import Support from "@/components/Support";
@@ -46,6 +47,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Timeline />
       <Challenges />
       <Difference />
       <CoreServices />
