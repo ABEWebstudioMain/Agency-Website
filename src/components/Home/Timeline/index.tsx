@@ -170,18 +170,21 @@ export default function Timeline() {
 
         <div className="relative mx-auto max-w-6xl">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 top-0 -translate-x-1/2 bg-stroke dark:bg-[#2E333D]" style={{ height: 'calc(100% - 120px)', width: '1px' }}>
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 bg-stroke dark:bg-[#2E333D]" style={{ height: 'calc(100% - 200px)', width: '1px' }}>
             {/* Progress Indicator */}
             <div 
               className="absolute top-0 w-full bg-primary transition-all duration-300 ease-out"
-              style={{ height: `${scrollProgress * 100}%` }}
+              style={{ height: `${Math.min(scrollProgress * 100, 85)}%` }}
             />
           </div>
 
           {/* Animated Progress Ball */}
           <div 
-            className="absolute left-1/2 z-10 -translate-x-1/2 transition-all duration-300 ease-out"
-            style={{ top: `${scrollProgress * 100}%` }}
+            className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 ease-out"
+            style={{ 
+              top: `${Math.min(scrollProgress * 85, 80)}%`,
+              zIndex: 5
+            }}
           >
             <div className="relative">
               {/* Outer glow ring */}
@@ -203,7 +206,7 @@ export default function Timeline() {
                 {/* Time Label */}
                 <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2">
                   <div className={`rounded-full px-4 py-2 font-heading text-sm font-medium shadow-md transition-all duration-300 ${
-                    activeStep === index 
+                    activeStep >= index 
                       ? 'bg-primary text-white scale-110' 
                       : 'bg-white text-dark dark:bg-[#1D232D] dark:text-white'
                   }`}>
@@ -215,7 +218,7 @@ export default function Timeline() {
                   {/* Pain Point (Left) */}
                   <div className="lg:text-right">
                     <div className={`rounded-sm border-l-4 border-orange-400 bg-orange-50 p-6 transition-all duration-300 dark:bg-orange-900/10 lg:p-8 ${
-                      activeStep === index ? 'shadow-md border-orange-500' : 'shadow-sm'
+                      activeStep >= index ? 'shadow-md border-orange-500' : 'shadow-sm'
                     } h-full flex flex-col`}>
                       <div className="mb-4 flex items-center lg:justify-end">
                         <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/30 lg:order-2 lg:ml-3 lg:mr-0">
@@ -234,7 +237,7 @@ export default function Timeline() {
                   {/* Solution (Right) */}
                   <div>
                     <div className={`rounded-sm border-l-4 border-primary bg-primary/5 p-6 transition-all duration-300 dark:bg-primary/10 lg:p-8 ${
-                      activeStep === index ? 'shadow-md border-primary bg-primary/10 dark:bg-primary/15' : 'shadow-sm'
+                      activeStep >= index ? 'shadow-md border-primary bg-primary/10 dark:bg-primary/15' : 'shadow-sm'
                     } h-full flex flex-col`}>
                       <div className="mb-4 flex items-center">
                         <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
@@ -255,7 +258,7 @@ export default function Timeline() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="relative mt-24 text-center lg:mt-32 pt-8">
+          <div className="relative mt-32 text-center lg:mt-40 pt-12">
             {/* Visual separator from timeline */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-stroke to-transparent dark:via-[#2E333D]"></div>
             
