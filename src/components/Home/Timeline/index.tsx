@@ -170,7 +170,7 @@ export default function Timeline() {
 
         <div className="relative mx-auto max-w-6xl">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 top-16 w-px -translate-x-1/2 bg-stroke dark:bg-[#2E333D]" style={{ height: 'calc(100% - 12rem)' }}>
+          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-stroke dark:bg-[#2E333D]">
             {/* Progress Indicator */}
             <div 
               className="absolute top-0 w-full bg-primary transition-all duration-300 ease-out"
@@ -180,10 +180,8 @@ export default function Timeline() {
 
           {/* Animated Progress Ball */}
           <div 
-            className="absolute left-1/2 z-10 -translate-x-1/2 transition-all duration-100 ease-out"
-            style={{ 
-              top: `${64 + (scrollProgress * (timelineRef.current ? timelineRef.current.offsetHeight - 192 : 400))}px`
-            }}
+            className="absolute left-1/2 z-20 -translate-x-1/2 transition-all duration-300 ease-out"
+            style={{ top: `${scrollProgress * 100}%` }}
           >
             <div className="relative">
               {/* Outer glow ring */}
@@ -213,12 +211,12 @@ export default function Timeline() {
                   </div>
                 </div>
 
-                <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 lg:items-stretch">
+                <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
                   {/* Pain Point (Left) */}
                   <div className="lg:text-right">
                     <div className={`rounded-sm border-l-4 border-orange-400 bg-orange-50 p-6 transition-all duration-300 dark:bg-orange-900/10 lg:p-8 ${
                       activeStep === index ? 'shadow-md border-orange-500' : 'shadow-sm'
-                    } h-full flex flex-col`}>
+                    }`}>
                       <div className="mb-4 flex items-center lg:justify-end">
                         <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/30 lg:order-2 lg:ml-3 lg:mr-0">
                           {step.painPoint.icon}
@@ -227,7 +225,7 @@ export default function Timeline() {
                           {step.painPoint.title}
                         </h3>
                       </div>
-                      <p className="text-base text-dark-text leading-relaxed flex-1">
+                      <p className="text-base text-dark-text leading-relaxed">
                         {step.painPoint.description}
                       </p>
                     </div>
@@ -237,7 +235,7 @@ export default function Timeline() {
                   <div>
                     <div className={`rounded-sm border-l-4 border-primary bg-primary/5 p-6 transition-all duration-300 dark:bg-primary/10 lg:p-8 ${
                       activeStep === index ? 'shadow-md border-primary bg-primary/10 dark:bg-primary/15' : 'shadow-sm'
-                    } h-full flex flex-col`}>
+                    }`}>
                       <div className="mb-4 flex items-center">
                         <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
                           {step.solution.icon}
@@ -246,7 +244,7 @@ export default function Timeline() {
                           {step.solution.title}
                         </h3>
                       </div>
-                      <p className="text-base text-dark-text leading-relaxed flex-1">
+                      <p className="text-base text-dark-text leading-relaxed">
                         {step.solution.description}
                       </p>
                     </div>
