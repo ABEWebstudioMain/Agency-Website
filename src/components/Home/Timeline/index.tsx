@@ -156,7 +156,7 @@ export default function Timeline() {
   }, [timelineSteps.length]);
 
   return (
-    <section ref={timelineRef} className="relative py-16 sm:py-20 lg:py-[100px]">
+    <section ref={timelineRef} className="relative py-16 sm:py-20 lg:py-[100px] overflow-hidden">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
           <span className="title">THE JOURNEY</span>
@@ -170,7 +170,7 @@ export default function Timeline() {
 
         <div className="relative mx-auto max-w-6xl">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 top-0 h-full w-px -translate-x-1/2 bg-stroke dark:bg-[#2E333D]">
+          <div className="absolute left-1/2 top-0 -translate-x-1/2 bg-stroke dark:bg-[#2E333D]" style={{ height: 'calc(100% - 120px)', width: '1px' }}>
             {/* Progress Indicator */}
             <div 
               className="absolute top-0 w-full bg-primary transition-all duration-300 ease-out"
@@ -180,7 +180,7 @@ export default function Timeline() {
 
           {/* Animated Progress Ball */}
           <div 
-            className="absolute left-1/2 z-20 -translate-x-1/2 transition-all duration-300 ease-out"
+            className="absolute left-1/2 z-10 -translate-x-1/2 transition-all duration-300 ease-out"
             style={{ top: `${scrollProgress * 100}%` }}
           >
             <div className="relative">
@@ -201,7 +201,7 @@ export default function Timeline() {
                 }`}
               >
                 {/* Time Label */}
-                <div className="absolute left-1/2 top-0 z-10 -translate-x-1/2 -translate-y-1/2">
+                <div className="absolute left-1/2 top-0 z-20 -translate-x-1/2 -translate-y-1/2">
                   <div className={`rounded-full px-4 py-2 font-heading text-sm font-medium shadow-md transition-all duration-300 ${
                     activeStep === index 
                       ? 'bg-primary text-white scale-110' 
@@ -211,12 +211,12 @@ export default function Timeline() {
                   </div>
                 </div>
 
-                <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
+                <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 lg:items-stretch">
                   {/* Pain Point (Left) */}
                   <div className="lg:text-right">
                     <div className={`rounded-sm border-l-4 border-orange-400 bg-orange-50 p-6 transition-all duration-300 dark:bg-orange-900/10 lg:p-8 ${
                       activeStep === index ? 'shadow-md border-orange-500' : 'shadow-sm'
-                    }`}>
+                    } h-full flex flex-col`}>
                       <div className="mb-4 flex items-center lg:justify-end">
                         <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/30 lg:order-2 lg:ml-3 lg:mr-0">
                           {step.painPoint.icon}
@@ -225,7 +225,7 @@ export default function Timeline() {
                           {step.painPoint.title}
                         </h3>
                       </div>
-                      <p className="text-base text-dark-text leading-relaxed">
+                      <p className="text-base text-dark-text leading-relaxed flex-grow">
                         {step.painPoint.description}
                       </p>
                     </div>
@@ -235,7 +235,7 @@ export default function Timeline() {
                   <div>
                     <div className={`rounded-sm border-l-4 border-primary bg-primary/5 p-6 transition-all duration-300 dark:bg-primary/10 lg:p-8 ${
                       activeStep === index ? 'shadow-md border-primary bg-primary/10 dark:bg-primary/15' : 'shadow-sm'
-                    }`}>
+                    } h-full flex flex-col`}>
                       <div className="mb-4 flex items-center">
                         <div className="mr-3 flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20">
                           {step.solution.icon}
@@ -244,7 +244,7 @@ export default function Timeline() {
                           {step.solution.title}
                         </h3>
                       </div>
-                      <p className="text-base text-dark-text leading-relaxed">
+                      <p className="text-base text-dark-text leading-relaxed flex-grow">
                         {step.solution.description}
                       </p>
                     </div>
@@ -255,7 +255,10 @@ export default function Timeline() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="mt-16 text-center lg:mt-24">
+          <div className="relative mt-24 text-center lg:mt-32 pt-8">
+            {/* Visual separator from timeline */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-stroke to-transparent dark:via-[#2E333D]"></div>
+            
             <div className="mx-auto max-w-2xl rounded-sm bg-primary/5 p-8 dark:bg-primary/10">
               <h3 className="mb-4 font-heading text-2xl font-semibold text-dark dark:text-white">
                 Ready for a Different Experience?
