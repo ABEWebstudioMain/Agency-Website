@@ -170,7 +170,7 @@ export default function Timeline() {
 
         <div className="relative mx-auto max-w-6xl">
           {/* Timeline Line */}
-          <div className="absolute left-1/2 top-16 h-[calc(100%-8rem)] w-px -translate-x-1/2 bg-stroke dark:bg-[#2E333D]">
+          <div className="absolute left-1/2 top-16 w-px -translate-x-1/2 bg-stroke dark:bg-[#2E333D]" style={{ height: 'calc(100% - 12rem)' }}>
             {/* Progress Indicator */}
             <div 
               className="absolute top-0 w-full bg-primary transition-all duration-300 ease-out"
@@ -180,8 +180,10 @@ export default function Timeline() {
 
           {/* Animated Progress Ball */}
           <div 
-            className="absolute left-1/2 z-10 -translate-x-1/2 transition-all duration-300 ease-out"
-            style={{ top: `${64 + (scrollProgress * (100 - 16))}px` }}
+            className="absolute left-1/2 z-10 -translate-x-1/2 transition-all duration-100 ease-out"
+            style={{ 
+              top: `${64 + (scrollProgress * (timelineRef.current ? timelineRef.current.offsetHeight - 192 : 400))}px`
+            }}
           >
             <div className="relative">
               {/* Outer glow ring */}
