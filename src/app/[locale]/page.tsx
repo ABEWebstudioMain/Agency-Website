@@ -1,10 +1,16 @@
 import About from "@/components/About";
 import Brands from "@/components/Brands";
 import CallToAction from "@/components/Home/CallToAction";
+import Challenges from "@/components/Home/Challenges";
+import CoreServices from "@/components/Home/CoreServices";
+import Difference from "@/components/Home/Difference";
 import Features from "@/components/Home/Features";
+import FinalCTA from "@/components/Home/FinalCTA";
 import Hero from "@/components/Home/Hero";
 import Portfolio from "@/components/Home/Portfolio";
+import SuccessSnapshot from "@/components/Home/SuccessSnapshot";
 import Testimonials from "@/components/Home/Testimonials";
+import TrustSignals from "@/components/Home/TrustSignals";
 import Pricing from "@/components/Pricing";
 import Support from "@/components/Support";
 import Team from "@/components/Team";
@@ -40,6 +46,11 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Challenges />
+      <Difference />
+      <CoreServices />
+      <SuccessSnapshot />
+      <TrustSignals />
       <Features />
       <About />
       <Team />
@@ -48,7 +59,7 @@ export default function Home() {
       <Brands />
       <Pricing />
       <Support />
-      <CallToAction />
+      <FinalCTA />
     </>
   );
 }
