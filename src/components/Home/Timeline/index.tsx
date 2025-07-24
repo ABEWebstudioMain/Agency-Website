@@ -183,7 +183,7 @@ export default function Timeline() {
             className="absolute left-1/2 -translate-x-1/2 transition-all duration-300 ease-out"
             style={{ 
               top: `${Math.min(scrollProgress * 85, 80)}%`,
-              zIndex: 5
+              zIndex: 1
             }}
           >
             <div className="relative">
