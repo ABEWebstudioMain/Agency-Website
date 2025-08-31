@@ -27,9 +27,9 @@ export default function CaseStudiesOverview() {
     : caseStudies.filter(study => study.serviceCategory === selectedCategory);
 
   return (
-    <div className="pt-24 md:pt-28 lg:pt-32">
+    <div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 py-20 sm:py-24 lg:py-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
         
         <div className="px-4 xl:container">
@@ -52,43 +52,16 @@ export default function CaseStudiesOverview() {
         </div>
       </section>
 
-      {/* Featured Success Stories */}
+      {/* Case Studies with Filters */}
       <section className="py-20 sm:py-24 lg:py-32">
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-6xl">
             <div className="mb-20 text-center lg:mb-24">
               <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-dark sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight dark:text-white">
-                Featured <span className="text-primary">Success Stories</span>
+                <span className="text-primary">Case Studies</span> & Success Stories
               </h2>
               <p className="mx-auto max-w-2xl text-lg leading-relaxed text-dark-text lg:text-xl lg:leading-relaxed">
-                While specific client names may be withheld for confidentiality, the impact speaks for itself
-              </p>
-            </div>
-
-            <div className="space-y-16 lg:space-y-20">
-              {featuredStudies.map((study, index) => (
-                <CaseStudyCard 
-                  key={study.id} 
-                  study={study} 
-                  featured={true}
-                  reverse={index % 2 === 1}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* All Case Studies */}
-      <section className="bg-gray-50 py-20 sm:py-24 lg:py-32 dark:bg-[#1A1D23]">
-        <div className="px-4 xl:container">
-          <div className="mx-auto max-w-6xl">
-            <div className="mb-20 text-center lg:mb-24">
-              <h2 className="mb-6 font-heading text-3xl font-bold leading-tight text-dark sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight dark:text-white">
-                All <span className="text-primary">Case Studies</span>
-              </h2>
-              <p className="mx-auto max-w-2xl text-lg leading-relaxed text-dark-text lg:text-xl lg:leading-relaxed">
-                Browse our complete collection of client success stories by service category
+                Browse our complete collection of client success stories and transformations by service category
               </p>
             </div>
 
@@ -98,12 +71,12 @@ export default function CaseStudiesOverview() {
               onCategoryChange={setSelectedCategory}
             />
 
-            <div className="grid gap-8 md:grid-cols-2 lg:gap-12 xl:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
               {filteredStudies.map((study) => (
                 <CaseStudyCard 
                   key={study.id} 
                   study={study} 
-                  featured={false}
+                  featured={true}
                 />
               ))}
             </div>
@@ -129,7 +102,7 @@ export default function CaseStudiesOverview() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-24 sm:py-28 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-24 sm:py-28 lg:py-32">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">

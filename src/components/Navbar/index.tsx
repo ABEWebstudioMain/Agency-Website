@@ -79,9 +79,9 @@ export default function Navbar() {
       <header
         className={`header absolute left-0 top-0 w-full z-50 ${stickyMenu ? "sticky-navbar" : ""}`}
       >
-        <div className="flex w-full items-center justify-between px-5 py-4 lg:px-5 xl:px-10 2xl:px-20">
+        <div className={`flex w-full items-center justify-between px-5 py-4 lg:px-5 xl:px-10 2xl:px-20 transition-all duration-300 ${!stickyMenu ? "bg-transparent" : ""}`}>
           <div className="flex items-center">
-            <div className="relative h-[60px] w-[280px] lg:h-[80px] lg:w-[320px]">
+            <div className="relative h-[70px] w-[320px] lg:h-[90px] lg:w-[380px]">
             <Link href="/">
               <img
                 src="/images/logo/unit05_logo_white_tighter.svg"
