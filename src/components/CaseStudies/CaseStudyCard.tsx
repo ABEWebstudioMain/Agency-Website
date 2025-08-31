@@ -84,30 +84,25 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
               {study.subtitle}
             </h4>
           </Link>
+
+          <p className="mb-6 text-base leading-relaxed text-dark-text line-clamp-3">
+            {study.challengeSnapshot}
+          </p>
           
-          <div className="mb-8 space-y-6">
-            <div>
-              <h5 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">Challenge:</h5>
-              <p className="text-base leading-relaxed text-dark-text">{study.challengeSnapshot}</p>
-            </div>
-            <div>
-              <h5 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">Solution:</h5>
-              <p className="text-base leading-relaxed text-dark-text">{study.solutionSnapshot}</p>
-            </div>
-            <div>
-              <h5 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">Impact:</h5>
-              <p className="text-base font-semibold leading-relaxed text-primary">{study.impactSnapshot}</p>
-            </div>
+          <div className="mb-6 rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
+            <p className="text-center text-sm font-semibold leading-relaxed text-primary">
+              {study.impactSnapshot}
+            </p>
           </div>
           
-          <div className="mb-8 flex flex-wrap gap-3">
+          <div className="mb-6 flex flex-wrap justify-center gap-3">
             <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
               {study.metrics.primaryMetric}
             </span>
-            {study.metrics.secondaryMetrics.slice(0, 2).map((metric, index) => (
+            {study.metrics.secondaryMetrics.slice(0, 1).map((metric, index) => (
               <span
                 key={index}
-                className="rounded-full bg-gray-200 px-3 py-2 text-sm font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300"
+                className="rounded-full bg-green-100 px-3 py-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200"
               >
                 {metric}
               </span>
@@ -151,26 +146,22 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           <h4 className="mb-5 font-heading text-base font-medium leading-relaxed text-primary lg:text-lg">
             {study.subtitle}
           </h4>
-          
-          <p className="mb-6 text-sm leading-relaxed text-dark-text line-clamp-3 lg:text-base">
+
+          <p className="mb-6 text-sm leading-relaxed text-dark-text line-clamp-2 lg:text-base">
             {study.challengeSnapshot}
           </p>
-          
-          <div className="mb-6 rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
-            <div className="flex items-center justify-center min-h-[60px]">
-              <p className="text-center text-sm font-semibold leading-relaxed text-green-700 dark:text-green-300 lg:text-base">
-                {study.impactSnapshot}
-              </p>
-            </div>
+
+          <div className="mb-6 rounded-lg bg-green-50 p-4 dark:bg-green-900/15">
+            <p className="text-center text-sm font-semibold leading-relaxed text-green-700 dark:text-green-300">
+              {study.impactSnapshot}
+            </p>
           </div>
-          
-          <div className="flex flex-wrap items-center gap-4">
-            <div className="flex items-center justify-center min-h-[44px]">
-              <span className="rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-800 dark:bg-green-900/30 dark:text-green-200">
-                {study.metrics.primaryMetric}
-              </span>
-            </div>
-            <span className="font-medium text-primary transition-colors group-hover:text-primary/80">
+
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
+              {study.metrics.primaryMetric}
+            </span>
+            <span className="font-medium text-primary transition-colors group-hover:text-primary/80 text-sm">
               Read More →
             </span>
           </div>
