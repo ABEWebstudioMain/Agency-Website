@@ -92,29 +92,18 @@ export default function Hero() {
                   src='/images/illustrations/undraw_visionary-technology_f6b3.svg'
                   alt="Visionary technology and innovation illustration"
                   className='w-full h-auto object-contain aspect-[1.08]'
-                  style={{ 
-                    filter: 'brightness(0) saturate(100%)',
-                    background: 'linear-gradient(45deg, #4a6cf7 0%, #ffffff 50%, #4a6cf7 100%)',
-                    WebkitMask: 'url(/images/illustrations/undraw_visionary-technology_f6b3.svg) no-repeat center',
-                    mask: 'url(/images/illustrations/undraw_visionary-technology_f6b3.svg) no-repeat center',
-                    WebkitMaskSize: 'contain',
-                    maskSize: 'contain'
-                  }}
                 />
               </div>
               <div className='absolute bottom-0 left-0 z-10'>
                 <img
                   src='/images/illustrations/undraw_website-builder_4go7.svg'
                   alt="Website development and software engineering illustration"
-                  className='w-full h-auto object-contain'
+                  className='w-full h-auto object-contain aspect-[1.08]'
                   style={{ 
                     maxWidth: '350px', 
                     maxHeight: '420px',
-                    filter: 'brightness(0) saturate(100%)',
                     background: 'linear-gradient(135deg, #4a6cf7 0%, #ffffff 50%, #4a6cf7 100%)',
-                    WebkitMask: 'url(/images/illustrations/undraw_website-builder_4go7.svg) no-repeat center',
                     mask: 'url(/images/illustrations/undraw_website-builder_4go7.svg) no-repeat center',
-                    WebkitMaskSize: 'contain',
                     maskSize: 'contain'
                   }}
                 />

@@ -18,14 +18,6 @@ export default function TabPanel({
               src={image1} 
               alt={`${image1Alt || "image alt text"}`} 
               className="w-full h-full object-contain"
-              style={{ 
-                filter: 'brightness(0) saturate(100%)',
-                background: 'linear-gradient(45deg, #4a6cf7 0%, #ffffff 50%, #4a6cf7 100%)',
-                WebkitMask: `url(${image1}) no-repeat center`,
-                mask: `url(${image1}) no-repeat center`,
-                WebkitMaskSize: 'contain',
-                maskSize: 'contain'
-              }}
             />
           </div>
 
@@ -34,14 +26,6 @@ export default function TabPanel({
               src={image2} 
               alt={`${image2Alt || "image alt text"}`} 
               className="w-full h-full object-contain"
-              style={{ 
-                filter: 'brightness(0) saturate(100%)',
-                background: 'linear-gradient(135deg, #4a6cf7 0%, #ffffff 50%, #4a6cf7 100%)',
-                WebkitMask: `url(${image2}) no-repeat center`,
-                mask: `url(${image2}) no-repeat center`,
-                WebkitMaskSize: 'contain',
-                maskSize: 'contain'
-              }}
             />
           </div>
           <div className="absolute right-0 top-24 z-40">
