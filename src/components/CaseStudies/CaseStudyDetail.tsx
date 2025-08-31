@@ -234,7 +234,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 </div>
                 
                 <blockquote className="mb-8 text-lg leading-relaxed text-dark-text lg:text-xl lg:leading-relaxed">
-                  "{localizedStudy.fullContent.clientEndorsement.quote}"
+                  &quot;{localizedStudy.fullContent.clientEndorsement.quote}&quot;
                 </blockquote>
                 
                 <div className="text-center">

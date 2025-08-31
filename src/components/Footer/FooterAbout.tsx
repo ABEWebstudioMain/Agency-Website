@@ -3,6 +3,7 @@
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function FooterAbout() {
@@ -13,15 +14,19 @@ export default function FooterAbout() {
   return (
     <div className="mb-20">
       <Link href={`/${locale}`} className="mb-6 inline-block">
-        <img
+        <Image
           src="/images/logo/unit05-logo-white.svg"
           alt="Unit05 Logo"
-          className="hidden dark:block h-[60px] w-[240px] object-contain object-left transition-all duration-200 hover:scale-105"
+          width={240}
+          height={60}
+          className="hidden dark:block object-contain object-left transition-all duration-200 hover:scale-105"
         />
-        <img
+        <Image
           src="/images/logo/unit05-logo-black.svg"
           alt="Unit05 Logo"
-          className="dark:hidden h-[60px] w-[240px] object-contain object-left transition-all duration-200 hover:scale-105"
+          width={240}
+          height={60}
+          className="dark:hidden object-contain object-left transition-all duration-200 hover:scale-105"
         />
       </Link>
 

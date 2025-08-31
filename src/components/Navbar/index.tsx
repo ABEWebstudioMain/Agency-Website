@@ -4,6 +4,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/lib/i18n";
 import { onScroll } from "@/utils/scrollActive";
 import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -83,14 +84,18 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="relative h-[50px] w-[200px] lg:h-[60px] lg:w-[240px]">
             <Link href="/">
-              <img
+              <Image
                 src="/images/logo/unit05-logo-white.svg"
                 alt="Unit05 Logo"
+                width={240}
+                height={60}
                 className="hidden dark:block h-full w-full object-contain object-left transition-all duration-200 hover:scale-105"
               />
-              <img
+              <Image
                 src="/images/logo/unit05-logo-black.svg"
                 alt="Unit05 Logo"
+                width={240}
+                height={60}
                 className="dark:hidden h-full w-full object-contain object-left transition-all duration-200 hover:scale-105"
               />
             </Link>

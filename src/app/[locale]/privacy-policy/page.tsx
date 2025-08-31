@@ -52,7 +52,7 @@ export default async function PrivacyPolicyPage(props: Props) {
                 <div className="rounded-sm bg-white p-8 shadow-sm dark:bg-[#1D232D] lg:p-12">
                   <div className="mb-8">
                     <p className="text-base text-dark-text">
-                      Unsere Datenschutzerklärung wurde zuletzt am <strong className="text-dark dark:text-white">05. Januar 2024</strong> aktualisiert. Sie regelt die Datenschutzbestimmungen unserer Website unter <strong className="text-primary">58agents.com</strong> und die von uns bereitgestellten Tools (die "Website\" oder der "Service").
+                      Unsere Datenschutzerklärung wurde zuletzt am <strong className="text-dark dark:text-white">05. Januar 2024</strong> aktualisiert. Sie regelt die Datenschutzbestimmungen unserer Website unter <strong className="text-primary">58agents.com</strong> und die von uns bereitgestellten Tools (die "Website\" oder der \"Service").
                     </p>
                   </div>
 

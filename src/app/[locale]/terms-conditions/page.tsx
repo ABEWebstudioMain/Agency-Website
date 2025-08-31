@@ -52,7 +52,7 @@ export default async function TermsConditionsPage(props: Props) {
                 <div className="rounded-sm bg-white p-8 shadow-sm dark:bg-[#1D232D] lg:p-12">
                   <div className="mb-8">
                     <p className="text-base text-dark-text leading-relaxed">
-                      Wir, die <strong className="text-dark dark:text-white">58agents GmbH</strong> (nachfolgend "58agents" oder "wir") freuen uns, Sie auf unserer Website begrüßen zu dürfen. 58agents ist ein Beratungs- und IT-Dienstleistungsunternehmen. Diese allgemeinen Geschäftsbedingungen sind die ausschließliche Vertragsgrundlage für alle von 58agents angebotenen und erbrachten IT- und Beratungsdienstleistungen.
+                      Wir, die <strong className="text-dark dark:text-white">58agents GmbH</strong> (nachfolgend &quot;58agents&quot; oder &quot;wir&quot;) freuen uns, Sie auf unserer Website begrüßen zu dürfen. 58agents ist ein Beratungs- und IT-Dienstleistungsunternehmen. Diese allgemeinen Geschäftsbedingungen sind die ausschließliche Vertragsgrundlage für alle von 58agents angebotenen und erbrachten IT- und Beratungsdienstleistungen.
                     </p>
                   </div>
 
@@ -83,13 +83,13 @@ export default async function TermsConditionsPage(props: Props) {
                     </h2>
                     <div className="space-y-4 text-base text-dark-text leading-relaxed">
                       <p>
-                        Diese allgemeinen Geschäftsbedingungen sind die ausschließliche Vertragsgrundlage für alle Dienstleistungen und Beratungen (nachfolgend "Dienstleistungen"), die von 58agents angeboten und erbracht werden. Abweichende Bestimmungen des Kunden gelten nicht, auch wenn diesen von 58agents nicht widersprochen wird.
+                        Diese allgemeinen Geschäftsbedingungen sind die ausschließliche Vertragsgrundlage für alle Dienstleistungen und Beratungen (nachfolgend &quot;Dienstleistungen&quot;), die von 58agents angeboten und erbracht werden. Abweichende Bestimmungen des Kunden gelten nicht, auch wenn diesen von 58agents nicht widersprochen wird.
                       </p>
                       <p>
                         Die Allgemeinen Geschäftsbedingungen gelten auch für alle zukünftigen Vertragsverhältnisse, auch wenn in Ergänzungsverträgen nicht ausdrücklich darauf verwiesen wird. Verweise auf die Gültigkeit gesetzlicher Bestimmungen haben nur klarstellende Bedeutung. Auch ohne eine solche Klarstellung gelten daher die gesetzlichen Bestimmungen, sofern sie in diesen Allgemeinen Geschäftsbedingungen nicht direkt geändert oder ausdrücklich ausgeschlossen werden.
                       </p>
                       <p>
-                        Für alle Angebote von 58agents gelten immer diese AGB – es sei denn, die Gültigkeit dieser AGB wird im Angebot ausdrücklich ausgeschlossen. Individuelle Vereinbarungen im Dienstleistungsvertrag haben immer Vorrang vor den Regelungen dieser AGB.
+                        Für alle Angebote von 58agents gelten immer diese AGB &ndash; es sei denn, die Gültigkeit dieser AGB wird im Angebot ausdrücklich ausgeschlossen. Individuelle Vereinbarungen im Dienstleistungsvertrag haben immer Vorrang vor den Regelungen dieser AGB.
                       </p>
                     </div>
                   </div>
@@ -250,7 +250,7 @@ export default async function TermsConditionsPage(props: Props) {
                   </h2>
                   <div className="space-y-4 text-base text-dark-text leading-relaxed">
                     <p>
-                      These general terms and conditions are the exclusive contractual basis for all services and consulting (hereinafter "services") offered and provided by 58agents. Deviating provisions of the client shall not apply, even if these are not contradicted by 58agents.
+                      These general terms and conditions are the exclusive contractual basis for all services and consulting (hereinafter &quot;services&quot;) offered and provided by 58agents. Deviating provisions of the client shall not apply, even if these are not contradicted by 58agents.
                     </p>
                     <p>
                       The General Terms and Conditions of Business also apply to all future contractual relationships, even if this is not expressly referred to in supplementary contracts. References to the validity of legal regulations have only clarifying meaning. Even without such a clarification, the statutory provisions shall therefore apply, unless they are directly amended or expressly excluded in these General Terms and Conditions.
