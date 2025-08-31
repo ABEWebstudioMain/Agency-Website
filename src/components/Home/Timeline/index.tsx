@@ -1,5 +1,45 @@
+          const timelineSteps = [
+    {
+      id: 1,
+      time: t('common.timeline.steps.week1.time'),
+      painPoint: {
+        title: t('common.timeline.steps.week1.painPoint.title'),
+        description: t('common.timeline.steps.week1.painPoint.description'),
+        icon: (
+          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
+          </svg>
+        ),
+      },
+      solution: {
+        title: t('common.timeline.steps.week1.solution.title'),
+        description: t('common.timeline.steps.week1.solution.description'),
+        icon: (
           <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-primary">
-            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c-1.1 0-2-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
+          </svg>
+        ),
+      },
+    },
+    {
+      id: 2,
+      time: t('common.timeline.steps.month1.time'),
+      painPoint: {
+        title: t('common.timeline.steps.month1.painPoint.title'),
+        description: t('common.timeline.steps.month1.painPoint.description'),
+        icon: (
+          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
+          </svg>
+        ),
+      },
+      solution: {
+        title: t('common.timeline.steps.month1.solution.title'),
+        description: t('common.timeline.steps.month1.solution.description'),
+        icon: (
+          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-primary">
+            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z" />
           </svg>
         ),
       },
@@ -72,43 +112,3 @@
       },
     },
   ];
-          </svg>
-            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" />
-        ),
-          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-primary">
-      },
-        icon: (
-    },
-        description: t('common.timeline.steps.week1.solution.description'),
-    {
-        title: t('common.timeline.steps.week1.solution.title'),
-      id: 2,
-      solution: {
-      time: t('common.timeline.steps.month1.time'),
-      },
-      painPoint: {
-        ),
-        title: t('common.timeline.steps.month1.painPoint.title'),
-          </svg>
-        description: t('common.timeline.steps.month1.painPoint.description'),
-            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" />
-        icon: (
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z" />
-        icon: (
-          </svg>
-        description: t('common.timeline.steps.week1.painPoint.description'),
-        ),
-        title: t('common.timeline.steps.week1.painPoint.title'),
-      },
-      painPoint: {
-      solution: {
-      time: t('common.timeline.steps.week1.time'),
-        title: t('common.timeline.steps.month1.solution.title'),
-      id: 1,
-        description: t('common.timeline.steps.month1.solution.description'),
-    {
-        icon: (
-  const timelineSteps = [
