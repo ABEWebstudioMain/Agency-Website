@@ -68,8 +68,8 @@ export default function ImprintPage() {
                   <div className="space-y-2 text-base text-dark-text">
                     <p>
                       <strong className="text-dark dark:text-white">Phone:</strong>{" "}
-                      <a href="tel:+496971163636" className="text-primary hover:text-primary/80">
-                        +49 69 71 16 36 36
+                      <a href="tel:+4915737262541" className="text-primary hover:text-primary/80">
+                        +49 157 37262541
                       </a>
                     </p>
                     <p>

@@ -61,11 +61,11 @@ export default function Footer() {
                     Phone
                   </p>
                   <a
-                    href="tel:+496971163636"
+                    href="tel:+4915737262541"
                     className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
                   >
                     {" "}
-                    +49 69 71 16 36 36{" "}
+                    +49 157 37262541{" "}
                   </a>
                 </div>
                 <div>
@@ -100,10 +100,6 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-5/12 xl:w-3/12">
-            <FooterNewsletter />
           </div>
         </div>
 

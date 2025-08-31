@@ -75,10 +75,10 @@ export default function Support() {
               Speak directly with our team
             </p>
             <a
-              href="tel:+4969123456789"
+              href="tel:+4915737262541"
               className="font-medium text-primary hover:text-primary/80"
             >
-              +49 69 123 456 789
+              +49 157 37262541
             </a>
           </div>
 
@@ -352,7 +352,7 @@ export default function Support() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="mailto:hey@58agents.com"
+              href="mailto:hello@58solutions.com"
               className="inline-flex items-center rounded-sm border border-primary px-6 py-3 font-heading text-base font-medium text-primary transition-colors hover:bg-primary hover:text-white"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
@@ -361,7 +361,7 @@ export default function Support() {
               Email Us
             </a>
             <a
-              href="tel:+496971163636"
+              href="tel:+4915737262541"
               className="inline-flex items-center rounded-sm bg-primary px-6 py-3 font-heading text-base font-medium text-white transition-colors hover:bg-primary/90"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
