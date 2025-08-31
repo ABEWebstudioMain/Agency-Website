@@ -344,33 +344,6 @@ export default function Support() {
           </div>
         </div>
         */}
-
-        {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <p className="mb-4 text-base text-dark-text">
-            Prefer to talk directly? Schedule a free consultation call.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="mailto:hello@58solutions.com"
-              className="inline-flex items-center rounded-sm border border-primary px-6 py-3 font-heading text-base font-medium text-primary transition-colors hover:bg-primary hover:text-white"
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
-                <path d="M14 2H2c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1zM2 3h12l-6 4L2 3zm0 10V4.5l6 4 6-4V13H2z"/>
-              </svg>
-              Email Us
-            </a>
-            <a
-              href="tel:+4915737262541"
-              className="inline-flex items-center rounded-sm bg-primary px-6 py-3 font-heading text-base font-medium text-white transition-colors hover:bg-primary/90"
-            >
-              <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
-                <path d="M3.654 1.328l-.8 1.388a.5.5 0 00.098.608l1.85 1.85a.5.5 0 00.707 0l.8-.8a.5.5 0 01.707 0l3.182 3.182a.5.5 0 010 .707l-.8.8a.5.5 0 000 .707l1.85 1.85a.5.5 0 00.608.098l1.388-.8A.5.5 0 0013 10.5V13a3 3 0 01-3 3H6a3 3 0 01-3-3V3a3 3 0 013-3h2.5a.5.5 0 01.354.854l-.8 1.388a.5.5 0 01-.608.098L5.596 1.49a.5.5 0 00-.608.098z"/>
-              </svg>
-              Call Now
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );
