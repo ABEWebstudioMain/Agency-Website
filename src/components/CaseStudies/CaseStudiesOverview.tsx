@@ -131,49 +131,53 @@ export default function CaseStudiesOverview() {
       {/* CTA Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-24 sm:py-28 lg:py-32">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
-            <span className="tracking-wide">SUCCESS STORIES</span>
         <div className="px-4 xl:container">
-          <h1 className="mb-8 font-heading text-4xl font-bold leading-tight text-dark sm:text-5xl sm:leading-tight md:text-6xl md:leading-tight dark:text-white">
+          <div className="relative mx-auto max-w-4xl text-center">
+            <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
+              <span className="tracking-wide">SUCCESS STORIES</span>
+            </div>
             <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
               Ready to See Similar Results?
-          <div className="mx-auto max-w-3xl space-y-6 text-lg text-dark-text leading-relaxed lg:text-xl lg:leading-relaxed">
-            <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-              Discover how 58agents can drive digital transformation for your business.
-            </p>
-            
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
-              <a
-                href={`/${locale}#contact`}
-                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
-              >
-                Schedule Your Free Consultation
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+            </h2>
+            <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
+              <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
+                Discover how 58agents can drive digital transformation for your business.
+              </p>
+              
+              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+                <a
+                  href={`/${locale}#contact`}
+                  className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
-                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
-                </svg>
-              </a>
-              <a
-                href={`/${locale}/team`}
-                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
-              >
-                Meet Our Experts
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                  Schedule Your Free Consultation
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                  >
+                    <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                  </svg>
+                </a>
+                <a
+                  href={`/${locale}/team`}
+                  className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
-                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
-                </svg>
-              </a>
-            </div>
-            
-            <div className="mt-8 text-sm leading-relaxed text-white/80">
-              Free consultation • No commitment • Expert advice
+                  Meet Our Experts
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                  >
+                    <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                  </svg>
+                </a>
+              </div>
+              
+              <div className="mt-8 text-sm leading-relaxed text-white/80">
+                Free consultation • No commitment • Expert advice
+              </div>
             </div>
           </div>
         </div>
