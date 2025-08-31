@@ -164,16 +164,20 @@ export default function SuccessSnapshot() {
                       
                       {/* Metrics Row */}
                       <div className="mb-8 flex flex-wrap justify-center gap-3">
-                        <span className="rounded-full bg-primary/10 px-4 py-2 text-center text-sm font-medium text-primary">
-                          {study.metrics.primaryMetric}
-                        </span>
-                        {study.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
-                          <span
-                            key={metricIndex}
-                            className="rounded-full bg-stroke/30 px-3 py-1 text-center text-sm font-medium text-dark-text dark:bg-white/10"
-                          >
-                            {metric}
+                        <div className="flex items-center justify-center min-h-[40px] rounded-full bg-primary/15 px-4 py-2">
+                          <span className="text-center text-sm font-medium text-primary">
+                            {study.metrics.primaryMetric}
                           </span>
+                        </div>
+                        {study.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
+                          <div
+                            key={metricIndex}
+                            className="flex items-center justify-center min-h-[40px] rounded-full bg-green-100 px-3 py-1 dark:bg-green-900/30"
+                          >
+                            <span className="text-center text-sm font-medium text-green-800 dark:text-green-200">
+                              {metric}
+                            </span>
+                          </div>
                         ))}
                       </div>
                       
