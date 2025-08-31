@@ -16,7 +16,7 @@ export default function TrustSignals() {
       name: "Sarah M.",
       role: "Head of Operations",
       company: "European Logistics Provider",
-      avatar: "/images/testimonial/image-1.jpg"
+      avatar: "/images/illustrations/undraw_profile_pic.svg"
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ export default function TrustSignals() {
       name: "Marcus W.",
       role: "CTO",
       company: "FinTech Startup",
-      avatar: "/images/hero/image-1.jpg"
+      avatar: "/images/illustrations/undraw_profile_pic.svg"
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ export default function TrustSignals() {
       name: "Lisa C.",
       role: "IT Director",
       company: "Enterprise SaaS Provider",
-      avatar: "/images/team/image-2.jpg"
+      avatar: "/images/illustrations/undraw_profile_pic.svg"
     }
   ];
 
@@ -81,12 +81,11 @@ export default function TrustSignals() {
               
               <div className="flex items-center">
                 <div className="mr-4 h-12 w-12 overflow-hidden rounded-full">
-                  <Image
+                  <img
                     src={testimonial.avatar}
                     alt={testimonial.name}
-                    width={48}
-                    height={48}
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain bg-gray-100 dark:bg-gray-800"
+                    style={{ filter: 'hue-rotate(220deg) saturate(1.2)' }}
                   />
                 </div>
                 <div>

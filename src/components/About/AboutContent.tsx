@@ -14,10 +14,10 @@ export default function AboutContent() {
       {/* About Section - Left Aligned */}
       <TabPanel
         title="Your Agile Partner for Digital Excellence"
-        image1='/images/about/image-1.jpg'
-        image1Alt='about image 1'
-        image2='/images/about/image-2.jpg'
-        image2Alt='about image 2'
+        image1='/images/illustrations/undraw_global-team_8jok.svg'
+        image1Alt='Global team collaboration illustration'
+        image2='/images/illustrations/undraw_lightbulb-moment_16av.svg'
+        image2Alt='Innovation and ideas illustration'
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
@@ -85,10 +85,10 @@ export default function AboutContent() {
       {/* Mission Section - Right Aligned */}
       <TabPanel
         title="Less Ghost Work, More Value"
-        image1='/images/about/image-1.jpg'
-        image1Alt='about image 1'
-        image2='/images/about/image-2.jpg'
-        image2Alt='about image 2'
+        image1='/images/illustrations/undraw_mind-map_i9bv.svg'
+        image1Alt='Strategic planning and process optimization illustration'
+        image2='/images/illustrations/undraw_designing-components_kb05.svg'
+        image2Alt='Efficient workflow and component design illustration'
         leftContent={true}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
@@ -123,10 +123,10 @@ export default function AboutContent() {
       {/* Vision Section - Left Aligned */}
       <TabPanel
         title="Your Digital Future, Realized"
-        image1='/images/about/image-1.jpg'
-        image1Alt='about image 1'
-        image2='/images/about/image-2.jpg'
-        image2Alt='about image 2'
+        image1='/images/illustrations/undraw_data-analysis_b7cp.svg'
+        image1Alt='Data analysis and digital transformation illustration'
+        image2='/images/illustrations/undraw_metrics_5v8d.svg'
+        image2Alt='Performance metrics and growth illustration'
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
