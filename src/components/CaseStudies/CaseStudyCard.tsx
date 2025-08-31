@@ -66,8 +66,8 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
 
   if (featured) {
     return (
-      <div className="group">
-        <div className="rounded-lg bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D] lg:p-12">
+      <div className="group h-full">
+        <div className="flex h-full flex-col rounded-lg bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D] lg:p-12">
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
@@ -85,11 +85,11 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
             </h4>
           </Link>
 
-          <p className="mb-6 text-base leading-relaxed text-dark-text line-clamp-3">
+          <p className="mb-6 flex-grow text-base leading-relaxed text-dark-text line-clamp-3">
             {study.challengeSnapshot}
           </p>
           
-          <div className="mb-6 rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
+          <div className="mb-6 mt-auto rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
             <p className="text-center text-sm font-semibold leading-relaxed text-primary">
               {study.impactSnapshot}
             </p>
@@ -109,29 +109,31 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
             ))}
           </div>
           
-          <Link
-            href={`/${locale}/case-studies/${study.slug}`}
-            className="group inline-flex items-center font-heading text-base font-semibold text-primary transition-all hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30"
-          >
-            Read the Full Story
-            <svg
-              width="16"
-              height="16"
-              viewBox="0 0 16 16"
-              className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+          <div className="mt-auto">
+            <Link
+              href={`/${locale}/case-studies/${study.slug}`}
+              className="group inline-flex items-center font-heading text-base font-semibold text-primary transition-all hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
-              <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
-            </svg>
-          </Link>
+              Read the Full Story
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+              >
+                <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="group">
+    <div className="group h-full">
       <Link href={`/${locale}/case-studies/${study.slug}`} className="block">
-        <div className="h-full rounded-lg bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:bg-[#2C3443] lg:p-8">
+        <div className="flex h-full flex-col rounded-lg bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:bg-[#2C3443] lg:p-8">
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
@@ -147,17 +149,17 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
             {study.subtitle}
           </h4>
 
-          <p className="mb-6 text-sm leading-relaxed text-dark-text line-clamp-2 lg:text-base">
+          <p className="mb-6 flex-grow text-sm leading-relaxed text-dark-text line-clamp-2 lg:text-base">
             {study.challengeSnapshot}
           </p>
 
-          <div className="mb-6 rounded-lg bg-green-50 p-4 dark:bg-green-900/15">
+          <div className="mb-6 mt-auto rounded-lg bg-green-50 p-4 dark:bg-green-900/15">
             <p className="text-center text-sm font-semibold leading-relaxed text-green-700 dark:text-green-300">
               {study.impactSnapshot}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center justify-between gap-4">
+          <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
             <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
               {study.metrics.primaryMetric}
             </span>
