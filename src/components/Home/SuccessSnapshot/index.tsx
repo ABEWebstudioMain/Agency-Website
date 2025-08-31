@@ -1,18 +1,38 @@
 "use client";
 
-import { getFeaturedCaseStudies } from "@/data/caseStudies";
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-export default function SuccessSnapshot() {
+interface CaseStudy {
+  id: string;
+  title: string;
+  subtitle: string;
+  industry: string;
+  serviceCategory: string;
+  duration: string;
+  teamSize: string;
+  challengeSnapshot: string;
+  solutionSnapshot: string;
+  impactSnapshot: string;
+  metrics: {
+    primaryMetric: string;
+    secondaryMetrics: string[];
+  };
+  slug: string;
+}
+
+interface SuccessSnapshotProps {
+  featuredStudies: CaseStudy[];
+}
+
+export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProps) {
   const params = useParams();
   const locale = params.locale as string;
   const { t } = useTranslation(locale as any);
   
   const [currentSlide, setCurrentSlide] = useState(0);
-  const featuredStudies = getFeaturedCaseStudies();
 
   // Auto-advance slides
   useEffect(() => {

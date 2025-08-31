@@ -7,6 +7,7 @@ import Timeline from "@/components/Home/Timeline";
 import TrustSignals from "@/components/Home/TrustSignals";
 import Support from "@/components/Support";
 import Team from "@/components/Team";
+import { getFeaturedCaseStudies } from "@/data/caseStudies";
 import { Metadata } from "next";
 
 type Props = {
@@ -36,13 +37,15 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 }
 
 export default function Home() {
+  const featuredStudies = getFeaturedCaseStudies();
+
   return (
     <>
       <Hero />
       <Timeline />
       <Difference />
       <ServicePillars />
-      <SuccessSnapshot />
+      <SuccessSnapshot featuredStudies={featuredStudies} />
       <TrustSignals />
       <About />
       <Team />
