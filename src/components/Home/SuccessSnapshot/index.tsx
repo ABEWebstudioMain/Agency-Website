@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function SuccessSnapshot() {
   const params = useParams();
