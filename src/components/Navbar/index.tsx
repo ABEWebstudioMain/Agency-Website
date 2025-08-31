@@ -81,7 +81,7 @@ export default function Navbar() {
       >
         <div className={`flex w-full items-center justify-between px-5 py-4 lg:px-5 xl:px-10 2xl:px-20 transition-all duration-300 ${!stickyMenu ? "bg-transparent" : ""}`}>
           <div className="flex items-center">
-            <div className="relative h-[70px] w-[320px] lg:h-[90px] lg:w-[380px]">
+            <div className="relative h-[50px] w-[200px] lg:h-[60px] lg:w-[240px]">
             <Link href="/">
               <img
                 src="/images/logo/unit05-logo-white.svg"
