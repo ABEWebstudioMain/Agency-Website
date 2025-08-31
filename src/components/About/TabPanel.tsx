@@ -18,7 +18,7 @@ export default function TabPanel({
               src={image1} 
               alt={`${image1Alt || "image alt text"}`} 
               className="w-full h-full object-contain"
-              style={{ filter: 'hue-rotate(220deg) saturate(1.2)' }}
+              style={{ filter: 'hue-rotate(200deg) saturate(1.5) brightness(0.8)' }}
             />
           </div>
 
@@ -27,10 +27,8 @@ export default function TabPanel({
               src={image2} 
               alt={`${image2Alt || "image alt text"}`} 
               className="w-full h-full object-contain"
-              style={{ filter: 'hue-rotate(220deg) saturate(1.2)' }}
+              style={{ filter: 'hue-rotate(200deg) saturate(1.5) brightness(0.8)' }}
             />
-
-            <div className="border-primary/10 bg-primary/5 absolute -left-5 -top-5 -z-10 h-full w-full border backdrop-blur-[6px] dark:border-white/10 dark:bg-white/10"></div>
           </div>
           <div className="absolute right-0 top-24 z-40">
             <svg
