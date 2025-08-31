@@ -190,14 +190,12 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                           </span>
                         </div>
                         {study.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
-                          <div
+                          <span
                             key={metricIndex}
-                            className="flex items-center justify-center min-h-[40px] rounded-full bg-green-100 px-3 py-1 dark:bg-green-900/30"
+                            className="rounded-full bg-stroke/30 px-3 py-1 text-sm font-medium text-dark-text dark:bg-white/10"
                           >
-                            <span className="text-center text-sm font-medium text-green-800 dark:text-green-200">
-                              {metric}
-                            </span>
-                          </div>
+                            {metric}
+                          </span>
                         ))}
                       </div>
                       

@@ -162,9 +162,9 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                         {result.metric}
                       </div>
                     </div>
-                    <div className="flex items-center min-h-[60px]">
+                <div key={index} className="rounded-lg bg-primary/8 p-6 dark:bg-primary/15 lg:p-8">
                       <p className="text-base text-dark-text lg:text-lg">
-                        {result.description}
+                    <div className="font-heading text-2xl font-bold text-primary lg:text-3xl">
                       </p>
                     </div>
                   </div>
