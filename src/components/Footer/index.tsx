@@ -58,7 +58,7 @@ export default function Footer() {
               <div className="space-y-7">
                 <div>
                   <p className="font-heading text-base text-dark-text">
-                    Phone
+                    {t('common.footer.phone')}
                   </p>
                   <a
                     href="tel:+4915737262541"
@@ -70,7 +70,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-heading text-base text-dark-text">
-                    Email
+                    {t('common.footer.email')}
                   </p>
                   <a
                     href="mailto:hey@58agents.com"
@@ -82,7 +82,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="font-heading text-base text-dark-text">
-                    Address
+                    {t('common.footer.address')}
                   </p>
                   <div className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary">
                     Unit05 GmbH<br />
@@ -95,7 +95,7 @@ export default function Footer() {
                     href={`/${locale}/imprint`}
                     className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
                   >
-                    Imprint
+                    {t('common.footer.imprint')}
                   </a>
                 </div>
               </div>

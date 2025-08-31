@@ -29,14 +29,13 @@ export default function Support() {
         {/* Header Section */}
         <div className="relative mx-auto mb-16 max-w-4xl text-center">
           <span className="mb-4 inline-block rounded-full bg-primary/10 px-6 py-2 text-sm font-medium text-primary dark:bg-primary/20">
-            GET IN TOUCH
+            {t('common.contact.mainTitle')}
           </span>
           <h2 className="mb-6 font-heading text-4xl font-bold text-dark sm:text-5xl md:text-6xl dark:text-white">
-            Ready to Transform Your Business?
+            {t('common.contact.title')}
           </h2>
           <p className="mx-auto max-w-2xl text-lg text-dark-text leading-relaxed">
-            Let&apos;s discuss your project and explore how our expertise can drive your digital transformation. 
-            Get a personalized consultation tailored to your specific needs.
+            {t('common.contact.description')}
           </p>
         </div>
 
@@ -49,16 +48,16 @@ export default function Support() {
               </svg>
             </div>
             <h3 className="mb-2 font-heading text-lg font-medium text-dark dark:text-white">
-              Email Us
+              {t('common.contact.cards.email.title')}
             </h3>
             <p className="mb-3 text-sm text-dark-text">
-              Get in touch via email
+              {t('common.contact.cards.email.description')}
             </p>
             <a
               href="mailto:hello@58solutions.com"
               className="font-medium text-primary hover:text-primary/80"
             >
-              hello@58solutions.com
+              {t('common.contact.cards.email.value')}
             </a>
           </div>
 
@@ -69,16 +68,16 @@ export default function Support() {
               </svg>
             </div>
             <h3 className="mb-2 font-heading text-lg font-medium text-dark dark:text-white">
-              Call Us
+              {t('common.contact.cards.phone.title')}
             </h3>
             <p className="mb-3 text-sm text-dark-text">
-              Speak directly with our team
+              {t('common.contact.cards.phone.description')}
             </p>
             <a
               href="tel:+4915737262541"
               className="font-medium text-primary hover:text-primary/80"
             >
-              +49 157 37262541
+              {t('common.contact.cards.phone.value')}
             </a>
           </div>
 
@@ -89,10 +88,10 @@ export default function Support() {
               </svg>
             </div>
             <h3 className="mb-2 font-heading text-lg font-medium text-dark dark:text-white">
-              Schedule Appointment
+              {t('common.contact.cards.schedule.title')}
             </h3>
             <p className="mb-3 text-sm text-dark-text">
-              Book a consultation call
+              {t('common.contact.cards.schedule.description')}
             </p>
             <a
               href="#"
@@ -100,7 +99,7 @@ export default function Support() {
               rel="noopener noreferrer"
               className="font-medium text-primary hover:text-primary/80 transition-colors"
             >
-              Schedule Meeting
+              {t('common.contact.cards.schedule.value')}
             </a>
           </div>
         </div>
