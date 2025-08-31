@@ -19,11 +19,13 @@ export default function EmployeeProfile({ employee }: EmployeeProfileProps) {
   const service = selectedService ? employee.services.find(s => s.id === selectedService) : null;
 
   return (
-    <div className="pt-24 md:pt-28 lg:pt-32">
+    <div>
       {/* Header Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 py-20 dark:from-primary/10 dark:to-primary/20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:to-primary/20">
+        <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
+        
         <div className="px-4 xl:container">
-          <div className="-mx-4 flex flex-wrap items-center">
+          <div className="relative -mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/3">
               <div className="relative mx-auto mb-8 aspect-square w-full max-w-[300px] overflow-hidden rounded-sm lg:mb-0">
                 <Image

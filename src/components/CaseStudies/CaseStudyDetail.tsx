@@ -29,11 +29,13 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
   };
 
   return (
-    <div className="pt-24 md:pt-28 lg:pt-32">
+    <div>
       {/* Header Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 py-20 dark:from-primary/10 dark:to-primary/20">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:to-primary/20">
+        <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
+        
         <div className="px-4 xl:container">
-          <div className="mx-auto max-w-4xl text-center">
+          <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
               <span className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
                 {study.industry}

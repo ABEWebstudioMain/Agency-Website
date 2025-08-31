@@ -56,13 +56,21 @@ export default function TeamOverview({ employees }: TeamOverviewProps) {
   };
 
   return (
-    <section className="pt-16 sm:pt-20 lg:pt-[100px]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
+      <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
+      
       <div className="px-4 xl:container">
-        <SectionTitle
-          mainTitle="OUR TEAM"
-          title="Meet Our Expert Team Members"
-          paragraph="Discover the talented professionals behind Unit05. Each team member brings unique expertise and passion to deliver exceptional digital solutions."
-        />
+        <div className="relative mx-auto mb-16 max-w-4xl text-center lg:mb-20">
+          <div className="mb-6 inline-block rounded-full bg-primary/10 px-6 py-2 text-sm font-medium text-primary dark:bg-primary/20">
+            OUR TEAM
+          </div>
+          <h1 className="mb-8 font-heading text-4xl font-bold text-dark sm:text-5xl md:text-6xl dark:text-white">
+            Meet Our <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Expert Team</span> Members
+          </h1>
+          <p className="mx-auto max-w-3xl text-lg text-dark-text leading-relaxed">
+            Discover the talented professionals behind Unit05. Each team member brings unique expertise and passion to deliver exceptional digital solutions.
+          </p>
+        </div>
 
         <TeamFilters
           allSkills={allSkills}
@@ -103,6 +111,10 @@ export default function TeamOverview({ employees }: TeamOverviewProps) {
           </div>
         )}
       </div>
+    </section>
+    
+    <section className="py-16 sm:py-20 lg:py-24">
+      <div className="px-4 xl:container">
     </section>
   );
 }

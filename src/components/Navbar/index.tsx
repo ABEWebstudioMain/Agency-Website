@@ -52,7 +52,7 @@ export default function Navbar() {
 
   // Sticky menu
   const handleStickyMenu = () => {
-    if (window.scrollY >= 80 || pathUrl !== `/${locale}`) {
+    if (window.scrollY >= 80) {
       setStickyMenu(true);
     } else {
       setStickyMenu(false);

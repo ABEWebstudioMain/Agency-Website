@@ -12,8 +12,6 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <div className="pt-24 md:pt-28 lg:pt-32">
-      <TeamOverview employees={employees} />
-    </div>
+    <TeamOverview employees={employees} />
   );
 }

@@ -277,7 +277,7 @@ export default function DevSecOpsService() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 py-20 sm:py-24 lg:py-32 pt-24 md:pt-28 lg:pt-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
         
         <div className="px-4 xl:container">
