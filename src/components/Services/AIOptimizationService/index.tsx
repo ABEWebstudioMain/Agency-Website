@@ -373,9 +373,9 @@ export default function AIOptimizationService() {
               {approachSteps.map((step, index) => (
                 <div 
                   key={index} 
-                  className={`relative mb-12 transition-all duration-500 md:w-1/2 ${
+                  className={`relative mb-12 transition-all duration-500 ${
                     index % 2 === 0 ? 'md:pr-8' : 'md:ml-auto md:pl-8'
-                  } ${activeStep === index ? 'scale-105' : 'scale-100'}`}
+                  } ${activeStep === index ? 'scale-105' : 'scale-100'} md:w-1/2`}
                 >
                   <div className={`absolute top-6 size-6 rounded-full transition-all duration-300 ${
                     activeStep === index 
@@ -392,34 +392,34 @@ export default function AIOptimizationService() {
                       ? 'bg-white shadow-lg dark:bg-[#2C3443]' 
                       : 'bg-white/80 dark:bg-[#2C3443]/80'
                   }`}>
-                    <div className="mb-4 flex items-center justify-between">
+                    <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                       <div className="flex items-center">
                         <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                           {step.icon}
                         </div>
-                        <div className="text-sm font-medium text-primary">
+                        <div className="text-sm font-medium text-primary whitespace-nowrap">
                           Step {index + 1}
                         </div>
                       </div>
-                      <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary whitespace-nowrap">
                         {step.duration}
                       </span>
                     </div>
                     
-                    <h3 className="mb-3 font-heading text-xl font-medium text-dark dark:text-white">
+                    <h3 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white lg:text-xl">
                       {step.title}
                     </h3>
-                    <p className="mb-4 text-base text-dark-text leading-relaxed">
+                    <p className="mb-4 text-sm text-dark-text leading-relaxed lg:text-base">
                       {step.description}
                     </p>
                     
                     <div className="space-y-2">
-                      <h4 className="text-sm font-medium text-dark dark:text-white">Key Deliverables:</h4>
+                      <h4 className="text-xs font-medium text-dark dark:text-white lg:text-sm">Key Deliverables:</h4>
                       <div className="flex flex-wrap gap-2">
                         {step.deliverables.map((deliverable, i) => (
                           <span
                             key={i}
-                            className="rounded-full bg-primary/5 px-3 py-1 text-xs font-medium text-primary border border-primary/20"
+                            className="rounded-full bg-primary/5 px-2 py-1 text-xs font-medium text-primary border border-primary/20 lg:px-3"
                           >
                             {deliverable}
                           </span>
@@ -575,27 +575,22 @@ export default function AIOptimizationService() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-24 sm:py-28 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-20 sm:py-24">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
         
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
-            <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
-              <span className="tracking-wide">AI TRANSFORMATION</span>
-            </div>
-            <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
+            <h2 className="mb-6 font-heading text-3xl font-bold text-white sm:text-4xl">
               Ready to Unlock Your Business&apos;s AI Potential?
             </h2>
-            <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
-              <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-                Let&apos;s explore how smart automation can transform your operations and empower your team.
-              </p>
-            </div>
+            <p className="mb-8 text-lg text-white/90">
+              Let&apos;s explore how smart automation can transform your operations.
+            </p>
             
-            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+            <div className="flex flex-wrap items-center justify-center gap-4">
               <Link
                 href={`/${locale}#contact`}
-                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="group inline-flex items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg"
               >
                 Schedule a Free Consultation
                 <svg
@@ -609,7 +604,7 @@ export default function AIOptimizationService() {
               </Link>
               <Link
                 href={`/${locale}/team`}
-                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="group inline-flex items-center rounded-sm border-2 border-white/20 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/40 hover:bg-white/10"
               >
                 Meet Our AI Experts
                 <svg
@@ -623,8 +618,8 @@ export default function AIOptimizationService() {
               </Link>
             </div>
             
-            <div className="mt-8 text-sm leading-relaxed text-white/80">
-              Free consultation • No commitment • Expert advice
+            <div className="mt-8 text-sm text-white/80">
+              Free consultation • No commitment • Expert AI advice
             </div>
           </div>
         </div>
