@@ -26,7 +26,7 @@ export default function Navbar() {
   // Dynamic navbar data with translations
   const navbarData = useMemo(() => ([
     {
-      id: "services",
+      id: "#services",
       title: "Services",
       href: "#services",
       external: false,
@@ -37,10 +37,10 @@ export default function Navbar() {
         { id: "/services/ai-optimization",             title: "AI Optimization",            href: "/services/ai-optimization",             external: false },
       ]
     },
-    { id: "about",       title: t("common.navigation.about"), href: "#about",        external: false },
+    { id: "#about",      title: t("common.navigation.about"), href: "#about",        external: false },
     { id: "/case-studies", title: "Case Studies",              href: "/case-studies", external: false },
-    { id: "/team",         title: "Team",                      href: "/team",         external: false },
-    { id: "contact",       title: "Contact",                   href: "#contact",      external: false },
+    { id: "#team",         title: "Team",                      href: "#team",         external: false },
+    { id: "#contact",      title: "Contact",                   href: "#contact",      external: false },
   ]), [t]);
 
   const navigationHandler = () => {
