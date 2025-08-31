@@ -21,16 +21,7 @@ export default function Team() {
         />
 
         <div className="-mx-4 flex flex-wrap justify-center">
-          {/* First Row - Dominik alone, centered */}
-          <div className="w-full px-4 md:w-1/2 lg:w-1/4 mb-8">
-            <SingleTeam team={teamData[0]} />
-          </div>
-          
-          {/* Force line break */}
-          <div className="w-full"></div>
-          
-          {/* Second Row - Other four team members */}
-          {teamData.slice(1).map((team) => (
+          {teamData.map((team) => (
             <SingleTeam key={team?.id} team={team} />
           ))}
         </div>

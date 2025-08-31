@@ -2,24 +2,6 @@ import { Team } from "@/types/team";
 
 export const teamData: Team[] = [
   {
-    id: "team-member-dominik",
-    name: "Dominik H.",
-    designation: "DevOps Engineer",
-    image: "/images/team/dominik.webp",
-    socialLinks: [
-      {
-        id: "dominik-linkedin",
-        name: "Linkedin",
-        link: "/"
-      },
-      {
-        id: "dominik-twitter",
-        name: "Twitter",
-        link: "/"
-      }
-    ]
-  },
-  {
     id: "team-member-bilal",
     name: "Bilal E.",
     designation: "Senior Software Engineer",
@@ -32,6 +14,24 @@ export const teamData: Team[] = [
       },
       {
         id: "bilal-twitter",
+        name: "Twitter",
+        link: "/"
+      }
+    ]
+  },
+  {
+    id: "team-member-dominik",
+    name: "Dominik H.",
+    designation: "DevOps Engineer",
+    image: "/images/team/dominik.webp",
+    socialLinks: [
+      {
+        id: "dominik-linkedin",
+        name: "Linkedin",
+        link: "/"
+      },
+      {
+        id: "dominik-twitter",
         name: "Twitter",
         link: "/"
       }
