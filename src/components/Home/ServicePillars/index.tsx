@@ -87,7 +87,7 @@ export default function ServicePillars() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-[100px]">
+    <section id="services" className="py-16 sm:py-20 lg:py-[100px]">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
           <span className="title">OUR 4 PILLARS OF IMPACT</span>
