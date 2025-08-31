@@ -81,17 +81,17 @@ export default function Navbar() {
       >
         <div className="flex w-full items-center justify-between px-5 py-4 lg:px-5 xl:px-10 2xl:px-20">
           <div className="flex items-center">
-            <div className="relative h-[45px] w-[180px] lg:h-[50px] lg:w-[200px]">
+            <div className="relative h-[50px] w-[200px] lg:h-[60px] lg:w-[240px]">
             <Link href="/">
               <img
                 src="/images/logo/unit05_logo_white_tighter.svg"
                 alt="Unit05 Logo"
-                className="hidden dark:block h-full w-full object-contain object-left"
+                className="hidden dark:block h-full w-full object-contain object-left transition-all duration-200 hover:scale-105"
               />
               <img
                 src="/images/logo/unit05_logo_black_tighter.svg"
                 alt="Unit05 Logo"
-                className="dark:hidden h-full w-full object-contain object-left"
+                className="dark:hidden h-full w-full object-contain object-left transition-all duration-200 hover:scale-105"
               />
             </Link>
             </div>

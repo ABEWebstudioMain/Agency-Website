@@ -16,21 +16,17 @@ export default function FooterAbout() {
         <img
           src="/images/logo/unit05_logo_white_tighter.svg"
           alt="Unit05 Logo"
-          width={160}
-          height={37}
-          className="hidden dark:block object-contain object-left"
+          className="hidden dark:block h-[45px] w-[180px] object-contain object-left transition-all duration-200 hover:scale-105"
         />
         <img
           src="/images/logo/unit05_logo_black_tighter.svg"
           alt="Unit05 Logo"
-          width={160}
-          height={37}
-          className="dark:hidden object-contain object-left"
+          className="dark:hidden h-[45px] w-[180px] object-contain object-left transition-all duration-200 hover:scale-105"
         />
       </Link>
 
       <p className="mb-10 text-base text-dark-text leading-relaxed max-w-[280px]">
-        Unit05 GmbH - Your strategic partner for digital transformation and innovative software solutions.
+        Unit05 - Your strategic partner for digital transformation and innovative software solutions.
       </p>
       <div className="flex items-center space-x-5">
         <a
