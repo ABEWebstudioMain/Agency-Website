@@ -157,16 +157,20 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           </p>
           
           <div className="mb-6 rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
-            <p className="text-center text-sm font-semibold leading-relaxed text-primary lg:text-base">
-              {study.impactSnapshot}
-            </p>
+            <div className="flex items-center justify-center min-h-[48px]">
+              <p className="text-sm font-semibold leading-relaxed text-primary lg:text-base">
+                {study.impactSnapshot}
+              </p>
+            </div>
           </div>
           
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <span className="rounded-full bg-primary/15 px-4 py-2 text-center text-sm font-semibold text-primary dark:bg-primary/25">
-              {study.metrics.primaryMetric}
-            </span>
-            <span className="text-center font-medium text-primary transition-colors group-hover:text-primary/80">
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center justify-center min-h-[40px]">
+              <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
+                {study.metrics.primaryMetric}
+              </span>
+            </div>
+            <span className="font-medium text-primary transition-colors group-hover:text-primary/80">
               Read More →
             </span>
           </div>

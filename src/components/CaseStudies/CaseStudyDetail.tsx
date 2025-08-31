@@ -156,13 +156,17 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </h3>
               <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
                 {study.fullContent.quantifiableResults.map((result, index) => (
-                  <div key={index} className="text-center rounded-lg bg-primary/8 p-6 dark:bg-primary/15 lg:p-8">
-                    <div className="mb-4 font-heading text-2xl font-bold leading-tight text-primary lg:text-3xl lg:leading-tight">
-                      {result.metric}
+                  <div key={index} className="rounded-lg bg-primary/8 p-6 dark:bg-primary/15 lg:p-8">
+                    <div className="mb-4 text-center">
+                      <div className="font-heading text-2xl font-bold leading-tight text-primary lg:text-3xl lg:leading-tight">
+                        {result.metric}
+                      </div>
                     </div>
-                    <p className="text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
-                      {result.description}
-                    </p>
+                    <div className="flex items-center justify-center min-h-[60px]">
+                      <p className="text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
+                        {result.description}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>
