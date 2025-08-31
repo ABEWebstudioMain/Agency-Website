@@ -56,6 +56,7 @@ export default function TeamOverview({ employees }: TeamOverviewProps) {
   };
 
   return (
+    <>
     <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
       <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
       
@@ -115,6 +116,8 @@ export default function TeamOverview({ employees }: TeamOverviewProps) {
     
     <section className="py-16 sm:py-20 lg:py-24">
       <div className="px-4 xl:container">
+      </div>
     </section>
+    </>
   );
 }
