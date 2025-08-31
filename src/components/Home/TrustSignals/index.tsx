@@ -62,7 +62,7 @@ export default function TrustSignals() {
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.id}
-              className="rounded-sm bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md dark:bg-[#1D232D] lg:p-8"
+              className="flex h-full flex-col rounded-sm bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md dark:bg-[#1D232D] lg:p-8"
             >
               <div className="mb-6">
                 <svg
@@ -75,11 +75,11 @@ export default function TrustSignals() {
                 </svg>
               </div>
               
-              <blockquote className="mb-6 text-base text-dark-text leading-relaxed">
+              <blockquote className="mb-6 flex-grow text-base text-dark-text leading-relaxed">
                 &quot;{testimonial.quote}&quot;
               </blockquote>
               
-              <div className="flex items-center">
+              <div className="mt-auto w-full text-center">
                 <div className="w-full text-center">
                   <div className="font-heading text-base font-medium text-dark dark:text-white">
                     {testimonial.name}
