@@ -166,7 +166,7 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           
           <div className="flex flex-wrap items-center gap-4">
             <div className="flex items-center justify-center min-h-[44px]">
-              <span className="rounded-full bg-green-100 px-4 py-2 text-center text-sm font-semibold text-green-800 dark:bg-green-900/30 dark:text-green-200">
+              <span className="rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-800 dark:bg-green-900/30 dark:text-green-200">
                 {study.metrics.primaryMetric}
               </span>
             </div>

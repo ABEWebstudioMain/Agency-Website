@@ -204,8 +204,8 @@ export default function SuccessSnapshot() {
                           Get Similar Results
                         </Link>
                       </div>
-                    </div>
-                  </div>
+            <div className="flex items-center justify-center min-h-[40px] rounded-full bg-green-100 px-4 py-2 dark:bg-green-900/30">
+              <span className="text-center text-sm font-medium text-green-800 dark:text-green-200">
                 </div>
               ))}
             </div>
