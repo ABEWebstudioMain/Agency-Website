@@ -24,7 +24,7 @@ export default function Team() {
           {/* First Row - Dominik alone */}
           <div className="w-full px-4 mb-8">
             <div className="flex justify-center">
-              <div className="w-full md:w-1/2 lg:w-1/3 px-4">
+              <div className="w-full md:w-1/2 lg:w-1/4 px-4">
                 <SingleTeam team={teamData[0]} />
               </div>
             </div>
