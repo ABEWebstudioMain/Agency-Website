@@ -1,0 +1,292 @@
+"use client";
+
+import { CaseStudy } from "@/data/caseStudies";
+import Image from "next/image";
+import Link from "next/link";
+import { useParams } from "next/navigation";
+
+interface CaseStudyDetailProps {
+  study: CaseStudy;
+}
+
+export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
+  const params = useParams();
+  const locale = params.locale as string;
+
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case 'custom-software':
+        return 'bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-200';
+      case 'devsecops':
+        return 'bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-200';
+      case 'cloud-migration':
+        return 'bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-200';
+      case 'ai-optimization':
+        return 'bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-200';
+      default:
+        return 'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200';
+    }
+  };
+
+  return (
+    <div className="pt-24 md:pt-28 lg:pt-32">
+      {/* Header Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 py-20 dark:from-primary/10 dark:to-primary/20">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-4xl text-center">
+            <div className="mb-6 flex flex-wrap items-center justify-center gap-4">
+              <span className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
+                {study.industry}
+              </span>
+              <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/80 dark:text-white">
+                {study.duration}
+              </span>
+              <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/80 dark:text-white">
+                {study.teamSize}
+              </span>
+            </div>
+            
+            <h1 className="mb-4 font-heading text-3xl font-bold text-dark sm:text-4xl md:text-5xl dark:text-white">
+              {study.title}
+            </h1>
+            <h2 className="mb-8 font-heading text-xl font-medium text-primary sm:text-2xl">
+              {study.subtitle}
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      {/* Client & Challenge */}
+      <section className="py-16 sm:py-20 lg:py-24">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-16">
+              <h2 className="mb-8 font-heading text-3xl font-bold text-dark dark:text-white">
+                The Client & Their Challenge
+              </h2>
+              
+              <div className="grid gap-8 lg:grid-cols-2">
+                <div>
+                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                    Client Profile
+                  </h3>
+                  <p className="text-base text-dark-text leading-relaxed">
+                    {study.fullContent.clientProfile}
+                  </p>
+                </div>
+                
+                <div>
+                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                    The Problem
+                  </h3>
+                  <p className="text-base text-dark-text leading-relaxed">
+                    {study.fullContent.problemDescription}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Solution */}
+      <section className="bg-stroke/5 py-16 sm:py-20 lg:py-24 dark:bg-[#1D232D]">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 font-heading text-3xl font-bold text-dark dark:text-white">
+              Our Agile Solution
+            </h2>
+            
+            <div className="mb-8">
+              <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                Our Approach
+              </h3>
+              <p className="mb-6 text-base text-dark-text leading-relaxed">
+                {study.fullContent.approach}
+              </p>
+              
+              <div className="mb-6">
+                <h4 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white">
+                  Key Technologies Used
+                </h4>
+                <div className="flex flex-wrap gap-2">
+                  {study.fullContent.keyTechnologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                Specific Actions Taken
+              </h3>
+              <ul className="space-y-3">
+                {study.fullContent.specificActions.map((action, index) => (
+                  <li key={index} className="flex items-start text-base text-dark-text">
+                    <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                    </svg>
+                    {action}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Results & Impact */}
+      <section className="py-16 sm:py-20 lg:py-24">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 font-heading text-3xl font-bold text-dark dark:text-white">
+              The Tangible Impact & Results
+            </h2>
+            
+            {/* Quantifiable Results */}
+            <div className="mb-12">
+              <h3 className="mb-6 font-heading text-xl font-medium text-dark dark:text-white">
+                Measurable Success
+              </h3>
+              <div className="grid gap-6 md:grid-cols-2">
+                {study.fullContent.quantifiableResults.map((result, index) => (
+                  <div key={index} className="rounded-sm bg-primary/5 p-6 dark:bg-primary/10">
+                    <div className="mb-2 font-heading text-2xl font-bold text-primary">
+                      {result.metric}
+                    </div>
+                    <p className="text-base text-dark-text">
+                      {result.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            {/* Qualitative Benefits */}
+            <div className="mb-12">
+              <h3 className="mb-6 font-heading text-xl font-medium text-dark dark:text-white">
+                Additional Benefits
+              </h3>
+              <ul className="space-y-3">
+                {study.fullContent.qualitativeBenefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start text-base text-dark-text">
+                    <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                    </svg>
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            {/* Client Endorsement */}
+            {study.fullContent.clientEndorsement && (
+              <div className="rounded-sm bg-white p-8 shadow-sm dark:bg-[#2C3443]">
+                <div className="mb-6">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    className="fill-current text-primary/20"
+                  >
+                    <path d="M10 8C6.686 8 4 10.686 4 14c0 3.314 2.686 6 6 6h2v8h8V14c0-3.314-2.686-6-6-6H10zm12 0c-3.314 0-6 2.686-6 6v14h8v-8h2c3.314 0 6-2.686 6-6s-2.686-6-6-6h-4z"/>
+                  </svg>
+                </div>
+                
+                <blockquote className="mb-6 text-lg text-dark-text leading-relaxed">
+                  &quot;{study.fullContent.clientEndorsement.quote}&quot;
+                </blockquote>
+                
+                <div>
+                  <div className="font-heading text-base font-medium text-dark dark:text-white">
+                    {study.fullContent.clientEndorsement.author}
+                  </div>
+                  <div className="text-sm text-dark-text">
+                    {study.fullContent.clientEndorsement.position}
+                  </div>
+                  <div className="text-sm text-primary">
+                    {study.fullContent.clientEndorsement.company}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-20 sm:py-24">
+        <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
+        
+        <div className="px-4 xl:container">
+          <div className="relative mx-auto max-w-4xl text-center">
+            <h2 className="mb-6 font-heading text-3xl font-bold text-white sm:text-4xl">
+              Ready to See Similar Results?
+            </h2>
+            <p className="mb-8 text-lg text-white/90">
+              Discover how 58agents can drive digital transformation for your business.
+            </p>
+            
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href={`/${locale}#contact`}
+                className="group inline-flex items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg"
+              >
+                Schedule Your Free Consultation
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                >
+                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                </svg>
+              </a>
+              <a
+                href={`/${locale}/team`}
+                className="group inline-flex items-center rounded-sm border-2 border-white/20 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/40 hover:bg-white/10"
+              >
+                Meet Our Experts
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                >
+                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                </svg>
+              </a>
+            </div>
+            
+            <div className="mt-8 text-sm text-white/80">
+              Free consultation • No commitment • Expert advice
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Back Navigation */}
+      <section className="border-t py-12 dark:border-[#2E333D]">
+        <div className="px-4 xl:container">
+          <div className="text-center">
+            <Link
+              href={`/${locale}/case-studies`}
+              className="inline-flex items-center rounded-sm bg-stroke/20 px-6 py-3 font-heading text-base text-dark transition-all hover:bg-stroke/40 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
+                <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
+              </svg>
+              Back to All Case Studies
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

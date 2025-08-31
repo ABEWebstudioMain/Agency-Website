@@ -1,0 +1,10 @@
+.dockerignore
+.gitignore
+.editorconfig
+.eslintrc.json
+.prettierrc
+README.md
+node_modules/
+Dockerfile
+.git/
+.env*

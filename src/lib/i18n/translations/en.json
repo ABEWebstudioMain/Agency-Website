@@ -1,0 +1,163 @@
+{
+  "common": {
+    "navigation": {
+      "features": "Features",
+      "about": "About",
+      "portfolio": "Portfolio",
+      "pricing": "Pricing",
+      "team": "Team",
+      "pages": "Pages",
+      "home": "Home",
+      "docs": "Docs",
+      "support": "Support",
+      "signIn": "Sign In",
+      "signUp": "Sign Up",
+      "signOut": "Sign Out"
+    },
+    "hero": {
+      "badge": "58Solutions - Digital Solutions Agency",
+      "title": "Digital Solutions for Your",
+      "rotatingWords": ["Vision", "Launch", "Growth"],
+      "description": "We specialize in custom software development, scalable SaaS solutions, and enterprise applications. Our expert team delivers cutting-edge web applications and digital transformation strategies that drive measurable business growth.",
+      "getStarted": "Get Started",
+      "ourExpertise": "Our Expertise"
+    },
+    "features": {
+      "mainTitle": "FEATURE",
+      "title": "Essential Integrations with Modern Design",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
+      "items": {
+        "saas": {
+          "title": "Crafted for SaaS Business",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        },
+        "design": {
+          "title": "High-quality Design",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        },
+        "components": {
+          "title": "UI Components and Pages",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        },
+        "integrations": {
+          "title": "All Essential Integrations",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        },
+        "customizable": {
+          "title": "Fully Customizable",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        },
+        "updates": {
+          "title": "Regular Updates",
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        }
+      }
+    },
+    "about": {
+      "mainTitle": "ABOUT US",
+      "title": "Your Agile Partner for Digital Excellence",
+      "description": "We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results.",
+      "tabs": {
+        "about": "About Us",
+        "mission": "Our Philosophy", 
+        "vision": "Our Vision"
+      },
+      "content": {
+        "about": {
+          "title": "Your Agile Partner for Digital Excellence",
+          "description": "At 58agents, we believe that exceptional IT consulting doesn't require a bloated organization. It demands deep expertise, agile execution, and a transparent partnership built on trust."
+        },
+        "mission": {
+          "title": "Less Ghost Work, More Value",
+          "description": "We offer direct access to senior talent, agile workflows, and network-powered solutions without the inefficiencies of large consultancies."
+        },
+        "vision": {
+          "title": "Your Digital Future, Realized",
+          "description": "We're driven by the opportunity to empower businesses to thrive in the digital age through strategically impactful solutions."
+        }
+      }
+    },
+    "team": {
+      "mainTitle": "OUR TEAM",
+      "title": "Meet With Our Creative Dedicated Team",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
+      "overview": {
+        "title": "Meet Our Expert Team Members",
+        "description": "Discover the talented professionals behind 58Solutions. Each team member brings unique expertise and passion to deliver exceptional digital solutions.",
+        "filterTitle": "Filter Team Members",
+        "clearFilters": "Clear All Filters",
+        "skills": "Skills",
+        "services": "Services",
+        "showing": "Showing",
+        "of": "of",
+        "teamMembers": "team members",
+        "noResults": {
+          "title": "No team members found",
+          "description": "Try adjusting your filters to see more results."
+        }
+      }
+    },
+    "portfolio": {
+      "mainTitle": "PORTFOLIO",
+      "title": "Gallery, Previews and Portfolio",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
+      "all": "All",
+      "seeMore": "See More Projects"
+    },
+    "testimonials": {
+      "mainTitle": "TESTIMONIAL",
+      "title": "What Our Clients Say About Us",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+    },
+    "brands": {
+      "title": "Trusted by Global Brands",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+    },
+    "pricing": {
+      "mainTitle": "PRICING PLANS",
+      "title": "Affordable Pricing With Simple Plans",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
+      "companyTitle": "Looking for a company solution?",
+      "contactTeam": "Contact our team to get a quote.",
+      "joinPlan": "Join This Plan"
+    },
+    "support": {
+      "mainTitle": "SUPPORT",
+      "title": "Need Any Help? Say hello",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Donec vitae tortor aliquam ante.",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "location": "Office Location",
+      "form": {
+        "name": "Your Name",
+        "email": "Email Address",
+        "phone": "Phone (Optional)",
+        "subject": "Subject",
+        "message": "Message",
+        "terms": "I have read the terms of the Service & I accept Privacy Policy",
+        "send": "Send Message"
+      }
+    },
+    "callToAction": {
+      "title": "Looking for a collaboration? Get Started Today!",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "button": "Get Started Now"
+    },
+    "footer": {
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "company": "Company",
+      "support": "Support",
+      "getInTouch": "Get in touch",
+      "newsletter": "Newsletter",
+      "newsletterDescription": "Subscribe to receive future updates",
+      "emailPlaceholder": "Email address",
+      "tollFree": "Toll Free Customer Care",
+      "liveSupport": "Need live support?",
+      "copyright": "All rights reserved"
+    },
+    "meta": {
+      "title": "58Solutions - Digital Solutions for Your Vision, Launch & Growth",
+      "description": "58Solutions specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth."
+    }
+  }
+}

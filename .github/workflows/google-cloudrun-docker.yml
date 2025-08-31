@@ -1,0 +1,83 @@
+name: Build and Deploy to Cloud Run
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+env:
+  # Branch name:
+  BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
+  # GCP project id
+  PROJECT_ID: ${{ vars.GCP_PROJECT_ID }}
+  # GCP region used generally (e.g. Cloud Run and Artifact Registry)
+  REGION: ${{ vars.GCP_REGION }}
+  # GCP Artifact Registry Host
+  REGISTRY: "-docker.pkg.dev"
+  # GCP Artifact Registry Repository
+  REPOSITORY: ${{ vars.GCP_ARTIFACT_REGISTRY_REPOSITORY_NAME }}
+  # GCP Artifact Registry Repository Imae
+  IMAGE: ${{ vars.GCP_ARTIFACT_REGISTRY_IMAGE_NAME }}
+  # GCP Cloud Run service name
+  SERVICE: ${{ vars.GCP_CLOUD_RUN_SERVICE_NAME }}
+
+jobs:
+  deploy:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repository
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Authenticate Github Actions against GCP
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v2'
+        with:
+          token_format: 'access_token'
+          workload_identity_provider: '${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}'
+          service_account: '${{ secrets.GCP_SERVICE_ACCOUNT_NAME }}'
+
+      # Authenticate Docker to Google Cloud Artifact Registry
+      - name: Docker Auth
+        id: docker-auth
+        uses: 'docker/login-action@v3'
+        with:
+          registry: '${{ env.REGION }}-docker.pkg.dev'
+          username: 'oauth2accesstoken'
+          password: '${{ steps.auth.outputs.access_token }}'
+
+      # Build application as Docker container image
+      - name: Build and push container image
+        id: docker-build
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            "${{ env.REGION }}${{ env.REGISTRY }}/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}:${{ env.BRANCH_NAME }}-${{ github.sha }}"
+          build-args: |
+            NEXT_PUBLIC_COOKIE_FIRST=${{ vars.NEXT_PUBLIC_COOKIE_FIRST }}
+            NEXT_PUBLIC_RECAPTCHA_WEB=${{ vars.NEXT_PUBLIC_RECAPTCHA_WEB }} 
+            NEXT_PUBLIC_GTM_ID=${{ vars.NEXT_PUBLIC_GTM_ID }} 
+
+      # Deploy the Docker container image to Cloud Run
+      - name: Deploy to Cloud Run
+        id: 'deploy'
+        uses: 'google-github-actions/deploy-cloudrun@v2'
+        with:
+          service: ${{ env.SERVICE }}
+          region: ${{ env.REGION }}
+          image: ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ env.IMAGE }}:${{ env.BRANCH_NAME }}-${{ github.sha }}
+          env_vars: |
+            AWS_SES_REGION=${{ secrets.AWS_SES_REGION }}
+            AWS_SES_ACCESS_KEY_ID=${{ secrets.AWS_SES_ACCESS_KEY_ID }}
+            AWS_SES_SECRET_ACCESS_KEY=${{ secrets.AWS_SES_SECRET_ACCESS_KEY }}
+            RECAPTCHA_SECRET=${{ secrets.RECAPTCHA_SECRET }}
+
+      - name: Show Output
+        run: echo ${{ steps.deploy.outputs.url }}
