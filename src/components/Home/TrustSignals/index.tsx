@@ -82,7 +82,7 @@ export default function TrustSignals() {
               <div className="flex items-center">
                 <div className="mr-4 h-12 w-12 overflow-hidden rounded-full">
                   <Image
-                    src='https://illustrations.undraw.co/svg/profile_pic.svg'
+                    src='https://undraw.co/illustrations/profile_pic'
                     alt={testimonial.name}
                     width={48}
                     height={48}
