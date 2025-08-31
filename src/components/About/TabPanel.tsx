@@ -10,11 +10,9 @@ export default function TabPanel({
   children,
 }: any) {
   return (
-    <div
-      className={`-mx-4 flex w-full flex-wrap items-center pt-[70px] ${leftContent ? "flex-row-reverse" : ""}`}
-    >
+    <div className={`-mx-4 flex w-full flex-wrap items-center ${leftContent ? "flex-row-reverse" : ""}`}>
       <div className="w-full px-4 lg:w-1/2">
-        <div className="relative z-30 mb-14 h-[490px] max-w-[600px] lg:mb-0">
+        <div className="relative z-30 mb-14 h-[490px] max-w-[600px] lg:mb-0 mx-auto lg:mx-0">
           <div className="aspect-86/121 absolute left-0 top-0 w-full max-w-[344px]">
             <Image src={image1} alt={`${image1Alt || "image alt text"}`} fill />
           </div>
@@ -61,7 +59,7 @@ export default function TabPanel({
         </div>
       </div>
       <div className="w-full px-4 lg:w-1/2">
-        <div className="max-w-[565px] lg:ml-auto">
+        <div className={`max-w-[565px] ${leftContent ? 'lg:mr-auto' : 'lg:ml-auto'}`}>
           <h2 className="font-heading text-dark mb-8 text-2xl font-bold sm:text-[40px] sm:leading-[50px] dark:text-white">
             {title}
           </h2>
