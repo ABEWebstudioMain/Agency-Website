@@ -9,6 +9,24 @@ export default function FooterBottom() {
   const locale = params.locale as string;
   const { t } = useTranslation(locale as any);
 
+  const getLocalizedText = (key: string) => {
+    const translations = {
+      en: {
+        'Privacy Policy': 'Privacy Policy',
+        'Terms & Conditions': 'Terms & Conditions',
+        'Support': 'Support',
+        'Imprint': 'Imprint'
+      },
+      de: {
+        'Privacy Policy': 'Datenschutzerklärung',
+        'Terms & Conditions': 'AGB',
+        'Support': 'Support',
+        'Imprint': 'Impressum'
+      }
+    };
+    return translations[locale as keyof typeof translations]?.[key as keyof typeof translations['en']] || key;
+  };
+
   return (
     <div className="dark:border-[#2E333D] md:border-t">
       <div className="-mx-4 flex flex-wrap py-5 md:py-7">
@@ -18,31 +36,31 @@ export default function FooterBottom() {
               href="#"
               className="font-heading text-base text-dark-text hover:text-primary"
             >
-              English
+              {locale === 'de' ? 'Deutsch' : 'English'}
             </a>
             <Link
               href={`/${locale}/privacy-policy`}
               className="font-heading text-base text-dark-text hover:text-primary"
             >
-              Privacy Policy
+              {getLocalizedText('Privacy Policy')}
             </Link>
             <a
               href={`/${locale}/terms-conditions`}
               className="font-heading text-base text-dark-text hover:text-primary"
             >
-              Terms & Conditions
+              {getLocalizedText('Terms & Conditions')}
             </a>
             <a
               href="#"
               className="font-heading text-base text-dark-text hover:text-primary"
             >
-              Support
+              {getLocalizedText('Support')}
             </a>
             <a
               href={`/${locale}/imprint`}
               className="font-heading text-base text-dark-text hover:text-primary"
             >
-              Imprint
+              {getLocalizedText('Imprint')}
             </a>
           </div>
         </div>

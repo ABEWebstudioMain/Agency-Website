@@ -29,146 +29,148 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   };
 }
 
-export default function ImprintPage() {
-  return (
-    <div className="pt-24 md:pt-28 lg:pt-32">
-      <section className="py-16 sm:py-20 lg:py-24">
-        <div className="px-4 xl:container">
-          <div className="mx-auto max-w-4xl">
-            <div className="mb-12 text-center">
-              <h1 className="mb-6 font-heading text-4xl font-bold text-dark sm:text-5xl dark:text-white">
-                Imprint
-              </h1>
-              <p className="text-lg text-dark-text">
-                Legal information according to German law
-              </p>
-            </div>
+export default async function ImprintPage(props: Props) {
+  const params = await props.params;
+  const locale = params.locale;
 
-            <div className="prose prose-lg max-w-none dark:prose-invert">
-              <div className="rounded-sm bg-white p-8 shadow-sm dark:bg-[#1D232D] lg:p-12">
-                <h2 className="mb-6 font-heading text-2xl font-bold text-dark dark:text-white">
-                  Information provided according to Sec. 5 German Telemedia Act (TMG)
-                </h2>
-                
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Company Information
-                  </h3>
-                  <div className="space-y-2 text-base text-dark-text">
-                    <p><strong className="text-dark dark:text-white">58agents GmbH</strong></p>
-                    <p>Kleiner Hirschgraben 8</p>
-                    <p>60311 Frankfurt am Main</p>
+  if (locale === 'de') {
+    return (
+      <div className="pt-24 md:pt-28 lg:pt-32">
+        <section className="py-16 sm:py-20 lg:py-24">
+          <div className="px-4 xl:container">
+            <div className="mx-auto max-w-4xl">
+              <div className="mb-12 text-center">
+                <h1 className="mb-6 font-heading text-4xl font-bold text-dark sm:text-5xl dark:text-white">
+                  Impressum
+                </h1>
+                <p className="text-lg text-dark-text">
+                  Rechtliche Informationen nach deutschem Recht
+                </p>
+              </div>
+
+              <div className="prose prose-lg max-w-none dark:prose-invert">
+                <div className="rounded-sm bg-white p-8 shadow-sm dark:bg-[#1D232D] lg:p-12">
+                  <h2 className="mb-6 font-heading text-2xl font-bold text-dark dark:text-white">
+                    Angaben gemäß § 5 TMG
+                  </h2>
+                  
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Unternehmensinformationen
+                    </h3>
+                    <div className="space-y-2 text-base text-dark-text">
+                      <p><strong className="text-dark dark:text-white">58agents GmbH</strong></p>
+                      <p>Kleiner Hirschgraben 8</p>
+                      <p>60311 Frankfurt am Main</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Contact
-                  </h3>
-                  <div className="space-y-2 text-base text-dark-text">
-                    <p>
-                      <strong className="text-dark dark:text-white">Phone:</strong>{" "}
-                      <a href="tel:+4915737262541" className="text-primary hover:text-primary/80">
-                        +49 157 37262541
-                      </a>
-                    </p>
-                    <p>
-                      <strong className="text-dark dark:text-white">Email:</strong>{" "}
-                      <a href="mailto:hey@58agents.com" className="text-primary hover:text-primary/80">
-                        hey@58agents.com
-                      </a>
-                    </p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Kontakt
+                    </h3>
+                    <div className="space-y-2 text-base text-dark-text">
+                      <p>
+                        <strong className="text-dark dark:text-white">Telefon:</strong>{" "}
+                        <a href="tel:+4915737262541" className="text-primary hover:text-primary/80">
+                          +49 157 37262541
+                        </a>
+                      </p>
+                      <p>
+                        <strong className="text-dark dark:text-white">E-Mail:</strong>{" "}
+                        <a href="mailto:hey@58agents.com" className="text-primary hover:text-primary/80">
+                          hey@58agents.com
+                        </a>
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Register entry
-                  </h3>
-                  <div className="space-y-2 text-base text-dark-text">
-                    <p><strong className="text-dark dark:text-white">Registering court:</strong> Amtsgericht Frankfurt am Main</p>
-                    <p><strong className="text-dark dark:text-white">Registration number:</strong> HRB 119868</p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Registereintrag
+                    </h3>
+                    <div className="space-y-2 text-base text-dark-text">
+                      <p><strong className="text-dark dark:text-white">Registergericht:</strong> Amtsgericht Frankfurt am Main</p>
+                      <p><strong className="text-dark dark:text-white">Registernummer:</strong> HRB 119868</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    VAT
-                  </h3>
-                  <div className="text-base text-dark-text">
-                    <p><strong className="text-dark dark:text-white">VAT Id number according to Sec. 27 a German Value Added Tax Act:</strong> DE336494144</p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Umsatzsteuer
+                    </h3>
+                    <div className="text-base text-dark-text">
+                      <p><strong className="text-dark dark:text-white">Umsatzsteuer-Identifikationsnummer nach § 27 a Umsatzsteuergesetz:</strong> DE336494144</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Responsible for contents acc. to Sec. 55, para. 2 German Federal Broadcasting Agreement (RstV)
-                  </h3>
-                  <div className="space-y-2 text-base text-dark-text">
-                    <p><strong className="text-dark dark:text-white">Stefan Wellensiek</strong></p>
-                    <p>Kleiner Hirschgraben 8</p>
-                    <p>60311 Frankfurt am Main</p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
+                    </h3>
+                    <div className="space-y-2 text-base text-dark-text">
+                      <p><strong className="text-dark dark:text-white">Stefan Wellensiek</strong></p>
+                      <p>Kleiner Hirschgraben 8</p>
+                      <p>60311 Frankfurt am Main</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Dispute resolution
-                  </h3>
-                  <div className="text-base text-dark-text">
-                    <p>We do not take part in online dispute resolutions at consumer arbitration boards.</p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Streitschlichtung
+                    </h3>
+                    <div className="text-base text-dark-text">
+                      <p>Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.</p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Liability for Contents
-                  </h3>
-                  <div className="space-y-4 text-base text-dark-text leading-relaxed">
-                    <p>
-                      As service providers, we are liable for own contents of these websites according to Sec. 7, paragraph 1 German Telemedia Act (TMG). However, according to Sec. 8 to 10 German Telemedia Act (TMG), service providers are not obligated to permanently monitor submitted or stored information or to search for evidences that indicate illegal activities.
-                    </p>
-                    <p>
-                      Legal obligations to removing information or to blocking the use of information remain unchallenged. In this case, liability is only possible at the time of knowledge about a specific violation of law. Illegal contents will be removed immediately at the time we get knowledge of them.
-                    </p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Haftung für Inhalte
+                    </h3>
+                    <div className="space-y-4 text-base text-dark-text leading-relaxed">
+                      <p>
+                        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht unter der Verpflichtung, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                      </p>
+                      <p>
+                        Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div className="mb-8">
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Liability for Links
-                  </h3>
-                  <div className="space-y-4 text-base text-dark-text leading-relaxed">
-                    <p>
-                      Our offer includes links to external third party websites. We have no influence on the contents of those websites, therefore we cannot guarantee for those contents. Providers or administrators of linked websites are always responsible for their own contents.
-                    </p>
-                    <p>
-                      The linked websites had been checked for possible violations of law at the time of the establishment of the link. Illegal contents were not detected at the time of the linking. A permanent monitoring of the contents of linked websites cannot be imposed without reasonable indications that there has been a violation of law. Illegal links will be removed immediately at the time we get knowledge of them.
-                    </p>
+                  <div className="mb-8">
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Haftung für Links
+                    </h3>
+                    <div className="space-y-4 text-base text-dark-text leading-relaxed">
+                      <p>
+                        Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+                      </p>
+                      <p>
+                        Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                      </p>
+                    </div>
                   </div>
-                </div>
 
-                <div>
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
-                    Copyright
-                  </h3>
-                  <div className="space-y-4 text-base text-dark-text leading-relaxed">
-                    <p>
-                      Contents and compilations published on these websites by the providers are subject to German copyright laws. Reproduction, editing, distribution as well as the use of any kind outside the scope of the copyright law require a written permission of the author or originator. Downloads and copies of these websites are permitted for private use only.
-                    </p>
-                    <p>
-                      The commercial use of our contents without permission of the originator is prohibited.
-                    </p>
-                    <p>
-                      Copyright laws of third parties are respected as long as the contents on these websites do not originate from the provider. Contributions of third parties on this site are indicated as such. However, if you notice any violations of copyright law, please inform us. Such contents will be removed immediately.
-                    </p>
+                  <div>
+                    <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                      Urheberrecht
+                    </h3>
+                    <div className="space-y-4 text-base text-dark-text leading-relaxed">
+                      <p>
+                        Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+                      </p>
+                      <p>
+                        Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
-  );
+        </section>
+      </div>
+    );
+  }
 }
