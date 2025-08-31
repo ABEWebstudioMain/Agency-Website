@@ -50,7 +50,7 @@ export const caseStudies: CaseStudy[] = [
     impactSnapshot: 'Achieved a 40% reduction in manual data entry and accelerated order processing by 35%, significantly improving operational speed and accuracy.',
     serviceCategory: 'custom-software',
     featured: true,
-    image: '/images/portfolio/image-1.jpg',
+    image: 'https://illustrations.undraw.co/svg/logistics.svg',
     fullContent: {
       clientProfile: 'A large, multinational logistics provider specializing in complex supply chain management across Europe, handling thousands of shipments daily through multiple distribution centers.',
       problemDescription: 'Their legacy systems involved extensive manual data transfer between disparate applications, leading to bottlenecks, human errors, and significant delays in processing orders. This lack of integration created a fragmented view of operations and hindered their ability to scale efficiently. Staff spent 60% of their time on manual data entry rather than strategic work.',
@@ -113,7 +113,7 @@ export const caseStudies: CaseStudy[] = [
     impactSnapshot: 'Reduced deployment time from days to hours and significantly improved security posture, enabling faster, more secure releases.',
     serviceCategory: 'devsecops',
     featured: true,
-    image: '/images/portfolio/image-2.jpg',
+    image: 'https://illustrations.undraw.co/svg/security.svg',
     fullContent: {
       clientProfile: 'A rapidly growing FinTech company providing digital payment solutions across European markets, serving over 100,000 active users with strict regulatory compliance requirements.',
       problemDescription: 'Their development team faced significant challenges with manual deployment processes taking 2-3 days, inconsistent environments causing frequent bugs, and growing security concerns as they scaled. Regulatory compliance requirements added complexity to their release process, often causing additional delays.',
@@ -176,7 +176,7 @@ export const caseStudies: CaseStudy[] = [
     impactSnapshot: 'Reduced infrastructure operational costs by 45% and gained unprecedented scalability to support 300% user growth.',
     serviceCategory: 'cloud-migration',
     featured: true,
-    image: '/images/portfolio/image-3.jpg',
+    image: 'https://illustrations.undraw.co/svg/cloud_hosting.svg',
     fullContent: {
       clientProfile: 'An established enterprise SaaS provider serving B2B clients across multiple industries, with a growing user base requiring enhanced scalability and performance.',
       problemDescription: 'Their on-premise infrastructure was becoming increasingly expensive to maintain and lacked the flexibility to handle rapid user growth. Scaling required significant upfront hardware investments with long lead times, and disaster recovery was complex and costly.',

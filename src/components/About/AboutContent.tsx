@@ -14,10 +14,10 @@ export default function AboutContent() {
       {/* About Section - Left Aligned */}
       <TabPanel
         title="Your Agile Partner for Digital Excellence"
-        image1='/images/about/image-1.jpg'
-        image1Alt='about image 1'
-        image2='/images/about/image-2.jpg'
-        image2Alt='about image 2'
+        image1='https://illustrations.undraw.co/svg/team_collaboration.svg'
+        image1Alt='Team collaboration illustration'
+        image2='https://illustrations.undraw.co/svg/business_plan.svg'
+        image2Alt='Business planning illustration'
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
@@ -85,10 +85,10 @@ export default function AboutContent() {
       {/* Mission Section - Right Aligned */}
       <TabPanel
         title="Less Ghost Work, More Value"
-        image1='/images/about/image-1.jpg'
-        image1Alt='about image 1'
-        image2='/images/about/image-2.jpg'
-        image2Alt='about image 2'
+        image1='https://illustrations.undraw.co/svg/agile.svg'
+        image1Alt='Agile development illustration'
+        image2='https://illustrations.undraw.co/svg/process.svg'
+        image2Alt='Efficient process illustration'
         leftContent={true}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
@@ -123,10 +123,10 @@ export default function AboutContent() {
       {/* Vision Section - Left Aligned */}
       <TabPanel
         title="Your Digital Future, Realized"
-        image1='/images/about/image-1.jpg'
-        image1Alt='about image 1'
-        image2='/images/about/image-2.jpg'
-        image2Alt='about image 2'
+        image1='https://illustrations.undraw.co/svg/innovation.svg'
+        image1Alt='Innovation illustration'
+        image2='https://illustrations.undraw.co/svg/growth.svg'
+        image2Alt='Business growth illustration'
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>

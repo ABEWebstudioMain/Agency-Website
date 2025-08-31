@@ -14,11 +14,11 @@ export default function TabPanel({
       <div className="w-full px-4 lg:w-1/2">
         <div className="relative z-30 mb-14 h-[490px] max-w-[600px] lg:mb-0 mx-auto lg:mx-0">
           <div className="aspect-86/121 absolute left-0 top-0 w-full max-w-[344px]">
-            <Image src={image1} alt={`${image1Alt || "image alt text"}`} fill />
+            <Image src='https://illustrations.undraw.co/svg/team_collaboration.svg' alt="Team collaboration illustration" fill />
           </div>
 
           <div className="aspect-53/66 absolute right-0 top-1/2 z-10 w-full max-w-[315px] -translate-y-1/2">
-            <Image src={image2} alt={`${image2Alt || "image alt text"}`} fill />
+            <Image src='https://illustrations.undraw.co/svg/business_plan.svg' alt="Business planning illustration" fill />
 
             <div className="border-primary/10 bg-primary/5 absolute -left-5 -top-5 -z-10 h-full w-full border backdrop-blur-[6px] dark:border-white/10 dark:bg-white/10"></div>
           </div>
