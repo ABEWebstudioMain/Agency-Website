@@ -227,22 +227,27 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-24 sm:py-28 lg:py-32">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-24 sm:py-28 lg:py-32">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
         
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
+            <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
+              <span className="tracking-wide">SUCCESS STORIES</span>
+            </div>
             <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
               Ready to See Similar Results?
             </h2>
-            <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-              Discover how Unit05 can drive digital transformation for your business.
-            </p>
+            <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
+              <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
+                Discover how Unit05 can drive digital transformation for your business.
+              </p>
+            </div>
             
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <a
                 href={`/${locale}#contact`}
-                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-semibold text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 Schedule Your Free Consultation
                 <svg
@@ -256,7 +261,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </a>
               <a
                 href={`/${locale}/team`}
-                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 Meet Our Experts
                 <svg
