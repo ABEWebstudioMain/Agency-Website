@@ -27,20 +27,20 @@ export default function Navbar() {
   const navbarData = useMemo(() => ([
     {
       id: "#services",
-      title: "Services",
+      title: t("common.navigation.services"),
       href: "#services",
       external: false,
       submenu: [
-        { id: "/services/custom-software-development", title: "Custom Software Development", href: "/services/custom-software-development", external: false },
-        { id: "/services/devsecops-platforms",         title: "DevSecOps Platforms",        href: "/services/devsecops-platforms",         external: false },
-        { id: "/services/cloud-migrations",            title: "Cloud Migrations",           href: "/services/cloud-migrations",            external: false },
-        { id: "/services/ai-optimization",             title: "AI Optimization",            href: "/services/ai-optimization",             external: false },
+        { id: "/services/custom-software-development", title: t("common.services.customSoftware.title"), href: "/services/custom-software-development", external: false },
+        { id: "/services/devsecops-platforms",         title: t("common.services.devsecops.title"),        href: "/services/devsecops-platforms",         external: false },
+        { id: "/services/cloud-migrations",            title: t("common.services.cloudMigrations.title"),           href: "/services/cloud-migrations",            external: false },
+        { id: "/services/ai-optimization",             title: t("common.services.aiOptimization.title"),            href: "/services/ai-optimization",             external: false },
       ]
     },
     { id: "#about",      title: t("common.navigation.about"), href: "#about",        external: false },
-    { id: "/case-studies", title: "Case Studies",              href: "/case-studies", external: false },
-    { id: "#team",         title: "Team",                      href: "#team",         external: false },
-    { id: "#contact",      title: "Contact",                   href: "#contact",      external: false },
+    { id: "/case-studies", title: t("common.navigation.caseStudies"),              href: "/case-studies", external: false },
+    { id: "#team",         title: t("common.navigation.team"),                      href: "#team",         external: false },
+    { id: "#contact",      title: t("common.navigation.contact"),                   href: "#contact",      external: false },
   ]), [t]);
 
   const navigationHandler = () => {
