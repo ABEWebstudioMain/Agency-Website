@@ -1,4 +1,14 @@
-          const timelineSteps = [
+'use client';
+
+import { useParams } from 'next/navigation';
+import { useTranslation } from '@/lib/i18n';
+
+export default function Timeline() {
+  const params = useParams();
+  const locale = params?.locale as string || 'en';
+  const { t } = useTranslation(locale);
+
+  const timelineSteps = [
     {
       id: 1,
       time: t('common.timeline.steps.week1.time'),
@@ -89,7 +99,7 @@
       },
     },
     {
-      id: 5,
+      id: 6,
       time: t('common.timeline.steps.month9.time'),
       painPoint: {
         title: t('common.timeline.steps.month9.painPoint.title'),
@@ -112,3 +122,69 @@
       },
     },
   ];
+
+  return (
+    <section className="relative z-10 py-16 md:py-20 lg:py-28">
+      <div className="container">
+        <div className="mx-auto mb-12 max-w-3xl text-center">
+          <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+            {t('common.timeline.title')}
+          </h2>
+          <p className="text-base !leading-relaxed text-body-color md:text-lg">
+            {t('common.timeline.subtitle')}
+          </p>
+        </div>
+
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-primary/20 via-primary to-primary/20 transform -translate-x-1/2 hidden md:block"></div>
+          
+          {timelineSteps.map((step, index) => (
+            <div key={step.id} className={`relative mb-16 md:mb-20 ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'}`}>
+              {/* Timeline dot */}
+              <div className="absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 hidden md:block"></div>
+              
+              <div className={`flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+                {/* Pain Point */}
+                <div className="flex-1">
+                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-800">
+                    <div className="flex items-center gap-3 mb-4">
+                      {step.painPoint.icon}
+                      <span className="text-sm font-medium text-orange-600 dark:text-orange-400">
+                        {step.time}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      {step.painPoint.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {step.painPoint.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Solution */}
+                <div className="flex-1">
+                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-800">
+                    <div className="flex items-center gap-3 mb-4">
+                      {step.solution.icon}
+                      <span className="text-sm font-medium text-primary">
+                        {t('common.timeline.solutionLabel')}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                      {step.solution.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {step.solution.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
