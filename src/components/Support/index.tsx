@@ -85,22 +85,28 @@ export default function Support() {
           <div className="group rounded-sm bg-white/80 p-8 text-center shadow-sm backdrop-blur-sm transition-all hover:shadow-lg dark:bg-[#1D232D]/80">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
               <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-primary">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
               </svg>
             </div>
             <h3 className="mb-2 font-heading text-lg font-medium text-dark dark:text-white">
-              Visit Us
+              Schedule Appointment
             </h3>
             <p className="mb-3 text-sm text-dark-text">
-              Near Frankfurt, Germany
+              Book a consultation call
             </p>
-            <span className="font-medium text-primary">
-              Frankfurt Metropolitan Area
-            </span>
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-medium text-primary hover:text-primary/80 transition-colors"
+            >
+              Schedule Meeting
+            </a>
           </div>
         </div>
 
-        {/* Contact Form */}
+        {/* Contact Form - Temporarily Deactivated */}
+        {/* 
         <div className="relative mx-auto max-w-4xl">
           <div className="rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">
             <div className="mb-8 text-center">
@@ -337,6 +343,7 @@ export default function Support() {
             </form>
           </div>
         </div>
+        */}
 
         {/* Bottom CTA */}
         <div className="mt-16 text-center">
@@ -345,7 +352,7 @@ export default function Support() {
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="mailto:hello@58solutions.com"
+              href="mailto:hey@58agents.com"
               className="inline-flex items-center rounded-sm border border-primary px-6 py-3 font-heading text-base font-medium text-primary transition-colors hover:bg-primary hover:text-white"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
