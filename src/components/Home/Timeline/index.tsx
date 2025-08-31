@@ -99,7 +99,7 @@ export default function Timeline() {
       },
     },
     {
-      id: 6,
+      id: 5,
       time: t('common.timeline.steps.month9.time'),
       painPoint: {
         title: t('common.timeline.steps.month9.painPoint.title'),
@@ -127,11 +127,12 @@ export default function Timeline() {
     <section className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="mx-auto mb-12 max-w-3xl text-center">
+          <span className="title">{t('common.timeline.mainTitle')}</span>
           <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
             {t('common.timeline.title')}
           </h2>
           <p className="text-base !leading-relaxed text-body-color md:text-lg">
-            {t('common.timeline.subtitle')}
+            {t('common.timeline.description')}
           </p>
         </div>
 
@@ -169,7 +170,7 @@ export default function Timeline() {
                     <div className="flex items-center gap-3 mb-4">
                       {step.solution.icon}
                       <span className="text-sm font-medium text-primary">
-                        {t('common.timeline.solutionLabel')}
+                        Unit05 Solution
                       </span>
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
@@ -183,6 +184,32 @@ export default function Timeline() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Section */}
+        <div className="mt-20 text-center">
+          <div className="mx-auto max-w-2xl rounded-xl bg-gradient-to-r from-primary/10 to-primary/5 p-8 dark:from-primary/20 dark:to-primary/10">
+            <h3 className="mb-4 font-heading text-2xl font-bold text-dark dark:text-white">
+              {t('common.timeline.cta.title')}
+            </h3>
+            <p className="mb-6 text-base text-dark-text leading-relaxed">
+              {t('common.timeline.cta.description')}
+            </p>
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-sm bg-primary px-8 py-4 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg"
+            >
+              {t('common.timeline.cta.button')}
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                className="ml-2 fill-current"
+              >
+                <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
