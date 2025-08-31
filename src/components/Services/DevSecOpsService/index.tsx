@@ -384,9 +384,9 @@ export default function DevSecOpsService() {
               {approachSteps.map((step, index) => (
                 <div 
                   key={index} 
-                  className={`relative mb-12 transition-all duration-500 md:w-1/2 ${
+                  className={`relative mb-12 transition-all duration-500 ${
                     index % 2 === 0 ? 'md:pr-8' : 'md:ml-auto md:pl-8'
-                  } ${activeStep === index ? 'scale-105' : 'scale-100'}`}
+                  } ${activeStep === index ? 'scale-105' : 'scale-100'} md:w-1/2`}
                 >
                   <div className={`absolute top-6 size-6 rounded-full transition-all duration-300 ${
                     activeStep === index 
@@ -403,34 +403,34 @@ export default function DevSecOpsService() {
                       ? 'bg-white shadow-lg dark:bg-[#2C3443]' 
                       : 'bg-white/80 dark:bg-[#2C3443]/80'
                   }`}>
-                    <div className="mb-4 flex items-center justify-between">
+                    <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                       <div className="flex items-center">
                         <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
                           {step.icon}
                         </div>
-                        <div className="text-sm font-medium text-primary">
+                        <div className="text-sm font-medium text-primary whitespace-nowrap">
                           Step {index + 1}
                         </div>
                       </div>
-                      <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary whitespace-nowrap">
                         {step.duration}
                       </span>
                     </div>
                     
-                    <h3 className="mb-3 font-heading text-xl font-medium text-dark dark:text-white">
+                    <h3 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white lg:text-xl">
                       {step.title}
                     </h3>
-                    <p className="mb-4 text-base text-dark-text leading-relaxed">
+                    <p className="mb-4 text-sm text-dark-text leading-relaxed lg:text-base">
                       {step.description}
                     </p>
                     
                     <div className="space-y-2">
-                      <h4 className="text-sm font-medium text-dark dark:text-white">Key Deliverables:</h4>
+                      <h4 className="text-xs font-medium text-dark dark:text-white lg:text-sm">Key Deliverables:</h4>
                       <div className="flex flex-wrap gap-2">
                         {step.deliverables.map((deliverable, i) => (
                           <span
                             key={i}
-                            className="rounded-full bg-primary/5 px-3 py-1 text-xs font-medium text-primary border border-primary/20"
+                            className="rounded-full bg-primary/5 px-2 py-1 text-xs font-medium text-primary border border-primary/20 lg:px-3"
                           >
                             {deliverable}
                           </span>

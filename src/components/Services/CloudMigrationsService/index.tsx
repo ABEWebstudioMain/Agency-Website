@@ -592,22 +592,27 @@ export default function CloudMigrationsService() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-20 sm:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-24 sm:py-28 lg:py-32">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
         
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 font-heading text-3xl font-bold text-white sm:text-4xl">
+            <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
+              <span className="tracking-wide">CLOUD TRANSFORMATION</span>
+            </div>
+            <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
               Ready to Unlock the Power of the Cloud?
             </h2>
-            <p className="mb-8 text-lg text-white/90">
-              Let&apos;s design a strategic cloud roadmap tailored for your business.
-            </p>
+            <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
+              <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
+                Let&apos;s design a strategic cloud roadmap tailored for your business.
+              </p>
+            </div>
             
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <Link
                 href={`/${locale}#contact`}
-                className="group inline-flex items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg"
+                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 Schedule a Free Consultation
                 <svg
@@ -621,7 +626,7 @@ export default function CloudMigrationsService() {
               </Link>
               <Link
                 href={`/${locale}/team`}
-                className="group inline-flex items-center rounded-sm border-2 border-white/20 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/40 hover:bg-white/10"
+                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 Meet Our Cloud Experts
                 <svg
@@ -635,7 +640,7 @@ export default function CloudMigrationsService() {
               </Link>
             </div>
             
-            <div className="mt-8 text-sm text-white/80">
+            <div className="mt-8 text-sm leading-relaxed text-white/80">
               Free consultation • No commitment • Expert cloud advice
             </div>
           </div>
