@@ -80,22 +80,7 @@ export default function TrustSignals() {
               </blockquote>
               
               <div className="flex items-center">
-                <div className="mr-4 h-12 w-12 overflow-hidden rounded-full">
-                  <img
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    className="h-full w-full object-contain bg-gray-100 dark:bg-gray-800"
-                    style={{ 
-                      filter: 'brightness(0) saturate(100%)',
-                      background: 'linear-gradient(45deg, #4a6cf7 0%, #ffffff 50%, #4a6cf7 100%)',
-                      WebkitMask: `url(${testimonial.avatar}) no-repeat center`,
-                      mask: `url(${testimonial.avatar}) no-repeat center`,
-                      WebkitMaskSize: 'contain',
-                      maskSize: 'contain'
-                    }}
-                  />
-                </div>
-                <div>
+                <div className="text-center">
                   <div className="font-heading text-base font-medium text-dark dark:text-white">
                     {testimonial.name}
                   </div>
