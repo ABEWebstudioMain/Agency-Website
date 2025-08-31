@@ -486,3 +486,5 @@ export default async function PrivacyPolicyPage(props: Props) {
                   </p>
                   <ul className="space-y-2 text-base text-dark-text">
                     <li className="flex
+  )
+}
