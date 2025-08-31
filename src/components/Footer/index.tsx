@@ -16,12 +16,12 @@ export default function Footer() {
   return (
     <footer className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-3/12">
+        <div className="-mx-4 flex flex-wrap justify-between">
+          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
             <FooterAbout />
           </div>
 
-          <div className="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
+          <div className="w-1/2 px-4 sm:w-1/3 lg:w-2/12">
             <div className="mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
                 {t('common.footer.company')}
@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-1/2 px-4 md:w-3/12 lg:w-3/12 xl:w-2/12">
+          <div className="w-1/2 px-4 sm:w-1/3 lg:w-2/12">
             <div className="mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
                 {t('common.footer.support')}
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full px-4 sm:w-1/2 md:w-5/12 lg:w-3/12 xl:w-2/12">
+          <div className="w-full px-4 sm:w-1/3 lg:w-3/12">
             <div className="mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
                 {t('common.footer.getInTouch')}

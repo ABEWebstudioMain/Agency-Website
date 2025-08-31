@@ -11,25 +11,25 @@ export default function FooterAbout() {
   const { t } = useTranslation(locale as any);
 
   return (
-    <div className="mb-20 max-w-[330px]">
+    <div className="mb-20">
       <Link href={`/${locale}`} className="mb-6 inline-block">
         <Image
           src="/images/logo/logo-white.png"
           alt="logo"
-          width={215}
-          height={50}
+          width={160}
+          height={37}
           className="hidden dark:block object-contain object-left"
         />
         <Image
           src="/images/logo/logo-primary.png"
           alt="logo"
-          width={215}
-          height={50}
+          width={160}
+          height={37}
           className="dark:hidden object-contain object-left"
         />
       </Link>
 
-      <p className="mb-10 text-base text-dark-text">
+      <p className="mb-10 text-base text-dark-text leading-relaxed max-w-[280px]">
         58agents GmbH - Your strategic partner for digital transformation and innovative software solutions.
       </p>
       <div className="flex items-center space-x-5">
