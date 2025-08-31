@@ -2,24 +2,6 @@ import { Team } from "@/types/team";
 
 export const teamData: Team[] = [
   {
-    id: "team-member-bilal",
-    name: "Bilal E.",
-    designation: "Senior Software Engineer",
-    image: "/images/team/bilal.webp",
-    socialLinks: [
-      {
-        id: "bilal-linkedin",
-        name: "Linkedin",
-        link: "/"
-      },
-      {
-        id: "bilal-twitter",
-        name: "Twitter",
-        link: "/"
-      }
-    ]
-  },
-  {
     id: "team-member-dominik",
     name: "Dominik H.",
     designation: "DevOps Engineer",
@@ -32,24 +14,6 @@ export const teamData: Team[] = [
       },
       {
         id: "dominik-twitter",
-        name: "Twitter",
-        link: "/"
-      }
-    ]
-  },
-  {
-    id: "team-member-jeremias",
-    name: "Jeremias B.",
-    designation: "Cloud Architect",
-    image: "/images/team/jeremias.webp",
-    socialLinks: [
-      {
-        id: "jeremias-linkedin",
-        name: "Linkedin",
-        link: "/"
-      },
-      {
-        id: "jeremias-twitter",
         name: "Twitter",
         link: "/"
       }
@@ -86,6 +50,42 @@ export const teamData: Team[] = [
       },
       {
         id: "toyah-twitter",
+        name: "Twitter",
+        link: "/"
+      }
+    ]
+  },
+  {
+    id: "team-member-bilal",
+    name: "Bilal E.",
+    designation: "Senior Software Engineer",
+    image: "/images/team/bilal.webp",
+    socialLinks: [
+      {
+        id: "bilal-linkedin",
+        name: "Linkedin",
+        link: "/"
+      },
+      {
+        id: "martin-twitter",
+        name: "Twitter",
+        link: "/"
+      }
+    ]
+  },
+  {
+    id: "team-member-jeremias",
+    name: "Jeremias B.",
+    designation: "Cloud Architect",
+    image: "/images/team/jeremias.webp",
+    socialLinks: [
+      {
+        id: "jeremias-linkedin",
+        name: "Linkedin",
+        link: "/"
+      },
+      {
+        id: "jeremias-twitter",
         name: "Twitter",
         link: "/"
       }

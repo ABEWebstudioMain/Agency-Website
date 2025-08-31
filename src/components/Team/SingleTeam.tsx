@@ -10,11 +10,11 @@ export default function SingleTeam({ team }: { team: Team }) {
   // Map team members to employee profiles
   const getEmployeeSlugForTeam = (teamId: string) => {
     const slugMap: { [key: string]: string } = {
-      "team-member-bilal": "sarah-johnson", // Using existing employee data
       "team-member-dominik": "michael-chen", // Using existing employee data
-      "team-member-jeremias": "emily-rodriguez", // Using existing employee data
       "team-member-martin": "sarah-johnson", // Fallback to existing
-      "team-member-toyah": "emily-rodriguez" // Fallback to existing
+      "team-member-toyah": "emily-rodriguez", // Fallback to existing
+      "team-member-bilal": "sarah-johnson", // Using existing employee data
+      "team-member-jeremias": "emily-rodriguez" // Using existing employee data
     };
     return slugMap[teamId] || "sarah-johnson";
   };
