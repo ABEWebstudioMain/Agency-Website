@@ -18,7 +18,7 @@ export default function TabPanel({
               src={image1} 
               alt={`${image1Alt || "image alt text"}`} 
               className="w-full h-full object-contain"
-              style={{ filter: 'hue-rotate(200deg) saturate(1.5) brightness(0.8)' }}
+              style={{ filter: 'hue-rotate(220deg) saturate(2) brightness(0.7) contrast(1.2)' }}
             />
           </div>
 
@@ -27,7 +27,7 @@ export default function TabPanel({
               src={image2} 
               alt={`${image2Alt || "image alt text"}`} 
               className="w-full h-full object-contain"
-              style={{ filter: 'hue-rotate(200deg) saturate(1.5) brightness(0.8)' }}
+              style={{ filter: 'hue-rotate(220deg) saturate(2) brightness(0.7) contrast(1.2)' }}
             />
           </div>
           <div className="absolute right-0 top-24 z-40">
