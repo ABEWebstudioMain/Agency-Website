@@ -2,7 +2,6 @@
 
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
-import { useTranslation } from "@/lib/i18n";
 
 export default function Difference() {
   const params = useParams();
