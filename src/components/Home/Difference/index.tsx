@@ -7,7 +7,6 @@ export default function Difference() {
   const params = useParams();
   const locale = params.locale as string;
   const { t } = useTranslation(locale as any);
-  const { t } = useTranslation(locale as any);
 
   const values = [
     {
