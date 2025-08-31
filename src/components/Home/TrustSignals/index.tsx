@@ -85,7 +85,14 @@ export default function TrustSignals() {
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="h-full w-full object-contain bg-gray-100 dark:bg-gray-800"
-                    style={{ filter: 'hue-rotate(240deg) saturate(3) brightness(0.6) contrast(1.5) sepia(0.8)' }}
+                    style={{ 
+                      filter: 'brightness(0) saturate(100%)',
+                      background: 'linear-gradient(45deg, #4a6cf7 0%, #ffffff 50%, #4a6cf7 100%)',
+                      WebkitMask: `url(${testimonial.avatar}) no-repeat center`,
+                      mask: `url(${testimonial.avatar}) no-repeat center`,
+                      WebkitMaskSize: 'contain',
+                      maskSize: 'contain'
+                    }}
                   />
                 </div>
                 <div>
