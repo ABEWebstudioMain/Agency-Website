@@ -3,7 +3,6 @@
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import Image from "next/image";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function FooterAbout() {

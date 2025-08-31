@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";

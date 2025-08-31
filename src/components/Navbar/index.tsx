@@ -4,7 +4,6 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { useTranslation } from "@/lib/i18n";
 import { onScroll } from "@/utils/scrollActive";
 import Image from "next/image";
-import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
