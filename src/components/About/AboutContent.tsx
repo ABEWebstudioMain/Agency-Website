@@ -95,7 +95,7 @@ export default function AboutContent() {
               <div key={index} className='flex items-center space-x-3'>
                 <div className='h-2 w-2 rounded-full bg-primary'></div>
                 <span className='text-sm font-medium text-dark dark:text-white'>{service}</span>
-             &quot;{t('common.about.content.section3.quote')}&quot;
+              </div>
             ))}
           </div>
         </div>
