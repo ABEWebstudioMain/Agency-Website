@@ -13,16 +13,16 @@ export default function FooterAbout() {
   return (
     <div className="mb-20">
       <Link href={`/${locale}`} className="mb-6 inline-block">
-        <Image
-          src="/images/logo/logo-white.png"
-          alt="logo"
+        <img
+          src="/images/logo/unit05_logo_white_tighter.svg"
+          alt="Unit05 Logo"
           width={160}
           height={37}
           className="hidden dark:block object-contain object-left"
         />
-        <Image
-          src="/images/logo/logo-primary.png"
-          alt="logo"
+        <img
+          src="/images/logo/unit05_logo_black_tighter.svg"
+          alt="Unit05 Logo"
           width={160}
           height={37}
           className="dark:hidden object-contain object-left"

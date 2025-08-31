@@ -83,17 +83,15 @@ export default function Navbar() {
           <div className="flex items-center">
             <div className="relative h-[45px] w-[180px] lg:h-[50px] lg:w-[200px]">
             <Link href="/">
-              <Image
-                src="/images/logo/logo-white.png"
-                alt="logo"
-                fill
-                className="hidden dark:block object-contain object-left"
+              <img
+                src="/images/logo/unit05_logo_white_tighter.svg"
+                alt="Unit05 Logo"
+                className="hidden dark:block h-full w-full object-contain object-left"
               />
-              <Image
-                src="/images/logo/logo-primary.png"
-                alt="logo"
-                fill
-                className="dark:hidden object-contain object-left"
+              <img
+                src="/images/logo/unit05_logo_black_tighter.svg"
+                alt="Unit05 Logo"
+                className="dark:hidden h-full w-full object-contain object-left"
               />
             </Link>
             </div>
