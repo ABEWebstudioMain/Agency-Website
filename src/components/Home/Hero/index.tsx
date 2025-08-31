@@ -89,7 +89,7 @@ export default function Hero() {
             <div className='wow fadeInRight relative z-30 mx-auto h-[560px] w-full max-w-[700px] lg:ml-0'>
               <div className='absolute right-0 top-0 lg:w-11/12'>
                 <Image
-                  src='https://undraw.co/illustrations/software_engineer'
+                  src='https://illustrations.undraw.co/svg/software_engineer.svg'
                   alt={t('common.hero.badge')}
                   className='object-cover aspect-[1.08]'
                   width={560}
@@ -98,7 +98,7 @@ export default function Hero() {
               </div>
               <div className='absolute bottom-0 left-0 z-10'>
                 <Image
-                  src='https://undraw.co/illustrations/programming'
+                  src='https://illustrations.undraw.co/svg/programming.svg'
                   className='object-cover'
                   alt={t('common.hero.title')}
                   width={350}
