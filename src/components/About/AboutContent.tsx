@@ -14,9 +14,9 @@ export default function AboutContent() {
       {/* About Section - Left Aligned */}
       <TabPanel
         title="Your Agile Partner for Digital Excellence"
-        image1='https://illustrations.undraw.co/svg/team_collaboration.svg'
+        image1='/images/about/image-1.jpg'
         image1Alt='Team collaboration illustration'
-        image2='https://illustrations.undraw.co/svg/business_plan.svg'
+        image2='/images/about/image-2.jpg'
         image2Alt='Business planning illustration'
         leftContent={false}
       >
@@ -85,9 +85,9 @@ export default function AboutContent() {
       {/* Mission Section - Right Aligned */}
       <TabPanel
         title="Less Ghost Work, More Value"
-        image1='https://undraw.co/illustrations/agile'
+        image1='/images/about/image-3.jpg'
         image1Alt='Agile development illustration'
-        image2='https://undraw.co/illustrations/process'
+        image2='/images/about/image-4.jpg'
         image2Alt='Efficient process illustration'
         leftContent={true}
       >
@@ -123,9 +123,9 @@ export default function AboutContent() {
       {/* Vision Section - Left Aligned */}
       <TabPanel
         title="Your Digital Future, Realized"
-        image1='https://undraw.co/illustrations/innovation'
+        image1='/images/about/image-5.jpg'
         image1Alt='Innovation illustration'
-        image2='https://undraw.co/illustrations/growth'
+        image2='/images/about/image-6.jpg'
         image2Alt='Business growth illustration'
         leftContent={false}
       >
