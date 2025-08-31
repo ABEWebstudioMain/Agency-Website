@@ -1,159 +1,250 @@
 {
   "common": {
     "navigation": {
-      "features": "Features",
+      "services": "Services",
       "about": "About",
-      "portfolio": "Portfolio",
-      "pricing": "Pricing",
+      "caseStudies": "Case Studies",
       "team": "Team",
-      "pages": "Pages",
+      "contact": "Contact",
       "home": "Home",
       "docs": "Docs",
-      "support": "Support",
-      "signIn": "Sign In",
-      "signUp": "Sign Up",
-      "signOut": "Sign Out"
+      "support": "Support"
     },
     "hero": {
-      "badge": "Unit05 - Digital Solutions Agency",
-      "title": "Digital Solutions for Your",
-      "rotatingWords": ["Vision", "Launch", "Growth"],
-      "description": "We specialize in custom software development, scalable SaaS solutions, and enterprise applications. Our expert team delivers cutting-edge web applications and digital transformation strategies that drive measurable business growth.",
-      "getStarted": "Get Started",
-      "ourExpertise": "Our Expertise"
+      "badge": "Unit05 - IT Experts",
+      "title": "We are Unit05. We Deliver",
+      "rotatingWords": ["Transparency", "Results", "Expertise"],
+      "description": "Lean team of senior IT experts. Fast, transparent partnerships. Extensive network. Fair prices, exceptional results.",
+      "getStarted": "Schedule a Free Consultation",
+      "ourExpertise": "Explore Our Solutions"
     },
-    "features": {
-      "mainTitle": "FEATURE",
-      "title": "Essential Integrations with Modern Design",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
-      "items": {
-        "saas": {
-          "title": "Crafted for SaaS Business",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+    "timeline": {
+      "mainTitle": "THE JOURNEY",
+      "title": "Traditional Consultancy vs. 58Solutions Approach",
+      "description": "See how our transparent, agile methodology contrasts with the typical frustrations of working with large consultancies.",
+      "cta": {
+        "title": "Ready for a Different Experience?",
+        "description": "Skip the frustration and work with a team that delivers transparency, expertise, and results from day one.",
+        "button": "Start Your Project Right"
+      }
+    },
+    "difference": {
+      "mainTitle": "THE UNIT05 DIFFERENCE",
+      "title": "Why Choose Unit05? Agile Expertise, Transparent Partnership.",
+      "description": "We combine deep technical expertise with transparent communication and agile delivery to become your trusted technology partner.",
+      "values": {
+        "experts": {
+          "title": "Highly Experienced Experts",
+          "description": "Direct access to senior, specialized talent who understand your unique business needs and deliver solutions that matter."
         },
-        "design": {
-          "title": "High-quality Design",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        "workflow": {
+          "title": "Agile & Efficient Workflow",
+          "description": "Fast-paced delivery and lean processes mean quicker results and no 'ghost work' — just dedicated, high-impact focus."
         },
-        "components": {
-          "title": "UI Components and Pages",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        "network": {
+          "title": "Network-Powered Solutions",
+          "description": "Seamlessly leverage our extended network of specialists to bridge any knowledge gaps and scale capabilities precisely when you need them."
         },
-        "integrations": {
-          "title": "All Essential Integrations",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        "partnership": {
+          "title": "Long-Term Strategic Partner",
+          "description": "We're committed to your sustained success, building trust and delivering ongoing value, not just one-off projects."
         },
-        "customizable": {
-          "title": "Fully Customizable",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
-        },
-        "updates": {
-          "title": "Regular Updates",
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor."
+        "pricing": {
+          "title": "Fair Pricing & Value",
+          "description": "Exceptional quality and tangible ROI delivered at transparent, competitive rates with no hidden surprises."
         }
       }
+    },
+    "servicePillars": {
+      "mainTitle": "OUR 4 PILLARS OF IMPACT",
+      "title": "Solutions Designed to Solve Your Biggest Challenges",
+      "description": "Each service pillar targets critical pain points with tailored strategies and senior expertise.",
+      "pillars": {
+        "customSoftware": {
+          "title": "Custom Software Development & Digitalization",
+          "benefit": "Streamline operations and unlock new revenue with bespoke digital solutions.",
+          "problems": [
+            "Eliminate manual workflows",
+            "Replace legacy systems",
+            "Adapt quickly to market changes"
+          ]
+        },
+        "devsecops": {
+          "title": "DevSecOps Platform Solutions",
+          "benefit": "Faster delivery with built-in security through automated DevSecOps pipelines.",
+          "problems": [
+            "Speed up deployments",
+            "Close security gaps",
+            "Scale consistently"
+          ]
+        },
+        "cloudMigrations": {
+          "title": "Cloud Migrations & Consultation",
+          "benefit": "Seamless, secure migration to scalable cloud environments.",
+          "problems": [
+            "Reduce on-premise costs",
+            "Increase flexibility",
+            "Simplify disaster recovery"
+          ]
+        },
+        "aiOptimization": {
+          "title": "AI-Powered Process Optimization & Automation",
+          "benefit": "Automate repetitive tasks and make smarter decisions with practical AI solutions.",
+          "problems": [
+            "Reduce manual workloads",
+            "Improve workflow efficiency",
+            "Unlock data insights"
+          ]
+        }
+      },
+      "learnMore": "Learn More",
+      "cta": {
+        "description": "Not sure which pillar fits best? We can combine them into a tailored solution.",
+        "button": "Get Custom Solution"
+      }
+    },
+    "successSnapshot": {
+      "mainTitle": "SUCCESS SNAPSHOT",
+      "title": "Our Impact in Action",
+      "description": "Real results from real partnerships. See how we've helped businesses transform their operations.",
+      "readFullStory": "Read the Full Story",
+      "getSimilarResults": "Get Similar Results",
+      "cta": {
+        "description": "Explore our complete collection of success stories and client transformations.",
+        "button": "View All Case Studies"
+      }
+    },
+    "trustSignals": {
+      "mainTitle": "TESTIMONIALS",
+      "title": "What Our Partners Say",
+      "description": "Don't just take our word for it. Here's what our clients say about working with Unit05."
     },
     "about": {
       "mainTitle": "ABOUT US",
       "title": "Your Agile Partner for Digital Excellence",
-      "description": "We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results.",
-      "tabs": {
-        "about": "About Us",
-        "mission": "Our Philosophy", 
-        "vision": "Our Vision"
-      },
-      "content": {
-        "about": {
-          "title": "Your Agile Partner for Digital Excellence",
-          "description": "At 58agents, we believe that exceptional IT consulting doesn't require a bloated organization. It demands deep expertise, agile execution, and a transparent partnership built on trust."
-        },
-        "mission": {
-          "title": "Less Ghost Work, More Value",
-          "description": "We offer direct access to senior talent, agile workflows, and network-powered solutions without the inefficiencies of large consultancies."
-        },
-        "vision": {
-          "title": "Your Digital Future, Realized",
-          "description": "We're driven by the opportunity to empower businesses to thrive in the digital age through strategically impactful solutions."
-        }
-      }
+      "description": "We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results."
     },
     "team": {
       "mainTitle": "OUR TEAM",
       "title": "Meet With Our Creative Dedicated Team",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
-      "overview": {
-        "title": "Meet Our Expert Team Members",
-        "description": "Discover the talented professionals behind Unit05. Each team member brings unique expertise and passion to deliver exceptional digital solutions.",
-        "filterTitle": "Filter Team Members",
-        "clearFilters": "Clear All Filters",
-        "skills": "Skills",
-        "services": "Services",
-        "showing": "Showing",
-        "of": "of",
-        "teamMembers": "team members",
-        "noResults": {
-          "title": "No team members found",
-          "description": "Try adjusting your filters to see more results."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+    },
+    "contact": {
+      "mainTitle": "GET IN TOUCH",
+      "title": "Ready to Transform Your Business?",
+      "description": "Let's discuss your project and explore how our expertise can drive your digital transformation. Get a personalized consultation tailored to your specific needs.",
+      "cards": {
+        "email": {
+          "title": "Email Us",
+          "description": "Get in touch via email",
+          "value": "hello@58solutions.com"
+        },
+        "phone": {
+          "title": "Call Us",
+          "description": "Speak directly with our team",
+          "value": "+49 157 37262541"
+        },
+        "schedule": {
+          "title": "Schedule Appointment",
+          "description": "Book a consultation call",
+          "value": "Schedule Meeting"
         }
+      },
+      "address": "Kleiner Hirschgraben 8<br />60311 Frankfurt am Main",
+      "whatHappensNext": {
+        "title": "What happens next?",
+        "description": "We'll review your inquiry and get back to you within 24 hours with a personalized proposal and next steps."
       }
-    },
-    "portfolio": {
-      "mainTitle": "PORTFOLIO",
-      "title": "Gallery, Previews and Portfolio",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
-      "all": "All",
-      "seeMore": "See More Projects"
-    },
-    "testimonials": {
-      "mainTitle": "TESTIMONIAL",
-      "title": "What Our Clients Say About Us",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
-    },
-    "brands": {
-      "title": "Trusted by Global Brands",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
-    },
-    "pricing": {
-      "mainTitle": "PRICING PLANS",
-      "title": "Affordable Pricing With Simple Plans",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
-      "companyTitle": "Looking for a company solution?",
-      "contactTeam": "Contact our team to get a quote.",
-      "joinPlan": "Join This Plan"
-    },
-    "support": {
-      "mainTitle": "SUPPORT",
-      "title": "Need Any Help? Say hello",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit Donec vitae tortor aliquam ante.",
-      "email": "Email Address",
-      "phone": "Phone Number",
-      "location": "Office Location",
-      "form": {
-        "name": "Your Name",
-        "email": "Email Address",
-        "phone": "Phone (Optional)",
-        "subject": "Subject",
-        "message": "Message",
-        "terms": "I have read the terms of the Service & I accept Privacy Policy",
-        "send": "Send Message"
-      }
-    },
-    "callToAction": {
-      "title": "Looking for a collaboration? Get Started Today!",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "button": "Get Started Now"
     },
     "footer": {
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "description": "Unit05 - Your strategic partner for digital transformation and innovative software solutions.",
       "company": "Company",
       "support": "Support",
       "getInTouch": "Get in touch",
-      "newsletter": "Newsletter",
-      "newsletterDescription": "Subscribe to receive future updates",
-      "emailPlaceholder": "Email address",
-      "tollFree": "Toll Free Customer Care",
-      "liveSupport": "Need live support?",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "imprint": "Imprint",
       "copyright": "All rights reserved"
+    },
+    "caseStudies": {
+      "mainTitle": "SUCCESS STORIES",
+      "title": "Our Impact: Real-World Solutions, Measurable Results",
+      "description": "At Unit05, we don't just promise results—we deliver them. Our commitment to agile expertise, transparent partnership, and efficient execution translates into tangible value for our clients.",
+      "subtitle": "Explore how our lean team of highly experienced IT professionals has helped businesses overcome complex challenges and achieve their strategic goals through custom software, DevSecOps platforms, cloud migrations, and AI optimization.",
+      "browseTitle": "Case Studies & Success Stories",
+      "browseDescription": "Browse our complete collection of client success stories and transformations by service category",
+      "filters": {
+        "all": "All Case Studies",
+        "customSoftware": "Custom Software",
+        "devsecops": "DevSecOps",
+        "cloudMigration": "Cloud Migration",
+        "aiOptimization": "AI Optimization"
+      },
+      "noResults": {
+        "title": "No case studies found",
+        "description": "Try selecting a different category to see more results.",
+        "button": "View All Case Studies"
+      },
+      "cta": {
+        "title": "Ready to See Similar Results?",
+        "description": "Discover how Unit05 can drive digital transformation for your business.",
+        "consultation": "Schedule Your Free Consultation",
+        "meetExperts": "Meet Our Experts",
+        "footer": "Free consultation • No commitment • Expert advice"
+      },
+      "backToAll": "Back to All Case Studies"
+    },
+    "services": {
+      "customSoftware": {
+        "title": "Custom Software Development & Digitalization",
+        "subtitle": "Build the Future: Custom Software & Digitalization",
+        "description": "Off-the-shelf solutions can only take you so far. When your business processes are unique, or your legacy systems are holding you back, custom software development and digitalization are the keys to unlocking true efficiency and innovation.",
+        "cta": "Start Your Digital Transformation",
+        "seeIfThisIsYou": "See If This Is You"
+      },
+      "devsecops": {
+        "title": "DevSecOps Platform Solutions",
+        "subtitle": "Secure Your Future: Advanced DevSecOps Platform Solutions",
+        "description": "In today's competitive landscape, rapid and secure software delivery isn't just an advantage—it's a necessity. DevSecOps Platform Solutions transform your development lifecycle by integrating security from the ground up, automating workflows, and building resilient cloud-native architectures.",
+        "cta": "Accelerate Your Deliveries"
+      },
+      "cloudMigrations": {
+        "title": "Cloud Migrations & Consultation",
+        "subtitle": "Navigate Your Cloud Journey: Seamless Migrations & Expert Consultation",
+        "description": "The cloud offers unparalleled scalability, flexibility, and cost efficiency, but migrating effectively requires expertise and a strategic approach.",
+        "cta": "Start Your Cloud Journey"
+      },
+      "aiOptimization": {
+        "title": "AI-Powered Process Optimization & Automation",
+        "subtitle": "Smart Efficiency: AI Solutions that Automate Tedious Tasks and Empower Your Team",
+        "description": "Many businesses are held back by repetitive, time-consuming tasks that drain resources and stifle innovation.",
+        "cta": "Unlock Your AI Potential"
+      },
+      "common": {
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "description": "If any of these sound familiar, you're in the right place"
+        },
+        "approach": {
+          "title": "How We Help:",
+          "description": "From concept to deployment, we partner with you every step of the way"
+        },
+        "benefits": {
+          "title": "Key Benefits You'll Achieve",
+          "description": "Transform your business with measurable results"
+        },
+        "whyChooseUs": {
+          "title": "Why Choose Unit05?",
+          "consultation": "Schedule a Free Consultation",
+          "meetExperts": "Meet Our Experts",
+          "footer": "Free consultation • No commitment • Expert advice"
+        },
+        "technologies": {
+          "title": "Technologies & Expertise"
+        },
+        "backToServices": "Back to All Services"
+      }
     },
     "meta": {
       "title": "Unit05 - Digital Solutions for Your Vision, Launch & Growth",

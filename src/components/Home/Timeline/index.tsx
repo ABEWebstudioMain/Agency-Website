@@ -184,12 +184,12 @@ export default function Timeline() {
     <section ref={timelineRef} className="relative py-16 sm:py-20 lg:py-[100px] overflow-hidden">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
-          <span className="title">THE JOURNEY</span>
+          <span className="title">{t('common.timeline.mainTitle')}</span>
           <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Traditional Consultancy vs. 58Solutions Approach
+            {t('common.timeline.title')}
           </h2>
           <p className="text-base text-dark-text">
-            See how our transparent, agile methodology contrasts with the typical frustrations of working with large consultancies.
+            {t('common.timeline.description')}
           </p>
         </div>
 
@@ -294,16 +294,16 @@ export default function Timeline() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-12 h-px bg-gradient-to-r from-transparent via-stroke to-transparent dark:via-[#2E333D]" />
             <div className="mx-auto max-w-2xl rounded-sm bg-primary/5 p-8 dark:bg-primary/10">
               <h3 className="mb-4 font-heading text-2xl font-semibold text-dark dark:text-white">
-                Ready for a Different Experience?
+                {t('common.timeline.cta.title')}
               </h3>
               <p className="mb-6 text-base text-dark-text">
-                Skip the frustration and work with a team that delivers transparency, expertise, and results from day one.
+                {t('common.timeline.cta.description')}
               </p>
               <a
                 href="#contact"
                 className="inline-flex items-center rounded-sm bg-primary px-8 py-3 font-heading text-base font-medium text-white transition-colors hover:bg-primary/90"
               >
-                Start Your Project Right
+                {t('common.timeline.cta.button')}
                 <svg width="16" height="16" viewBox="0 0 16 16" className="ml-2 fill-current">
                   <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
                 </svg>
