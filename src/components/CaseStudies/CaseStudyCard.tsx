@@ -114,7 +114,7 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
               href={`/${locale}/case-studies/${study.slug}`}
               className="group inline-flex items-center font-heading text-base font-semibold text-primary transition-all hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
-              Read the Full Story
+              {locale === 'de' ? 'Die ganze Geschichte lesen' : 'Read the Full Story'}
               <svg
                 width="16"
                 height="16"
@@ -164,7 +164,7 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
               {study.metrics.primaryMetric}
             </span>
             <span className="font-medium text-primary transition-colors group-hover:text-primary/80 text-sm">
-              Read More →
+              {locale === 'de' ? 'Mehr lesen →' : 'Read More →'}
             </span>
           </div>
         </div>

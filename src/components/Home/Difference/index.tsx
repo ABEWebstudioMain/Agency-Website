@@ -2,10 +2,12 @@
 
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
+import { useTranslation } from "@/lib/i18n";
 
 export default function Difference() {
   const params = useParams();
   const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
   const { t } = useTranslation(locale as any);
 
   const values = [
@@ -18,8 +20,8 @@ export default function Difference() {
           <circle cx="20" cy="20" r="4"/>
         </svg>
       ),
-      title: "Highly Experienced Experts",
-      description: "Direct access to senior, specialized talent who understand your unique business needs and deliver solutions that matter."
+      title: t('common.difference.values.experts.title'),
+      description: t('common.difference.values.experts.description')
     },
     {
       id: 2,
@@ -29,8 +31,8 @@ export default function Difference() {
           <path d="M15 20h10v2H15zM15 24h10v2H15zM15 28h6v2h-6z"/>
         </svg>
       ),
-      title: "Agile & Efficient Workflow",
-      description: "Fast-paced delivery and lean processes mean quicker results and no 'ghost work' — just dedicated, high-impact focus."
+      title: t('common.difference.values.workflow.title'),
+      description: t('common.difference.values.workflow.description')
     },
     {
       id: 3,
@@ -43,8 +45,8 @@ export default function Difference() {
           <path d="M14 22h2v2h-2zM22 18h2v2h-2z"/>
         </svg>
       ),
-      title: "Network-Powered Solutions",
-      description: "Seamlessly leverage our extended network of specialists to bridge any knowledge gaps and scale capabilities precisely when you need them."
+      title: t('common.difference.values.network.title'),
+      description: t('common.difference.values.network.description')
     },
     {
       id: 4,
@@ -54,8 +56,8 @@ export default function Difference() {
           <path d="M16 20l3 3 7-7"/>
         </svg>
       ),
-      title: "Long-Term Strategic Partner",
-      description: "We're committed to your sustained success, building trust and delivering ongoing value, not just one-off projects."
+      title: t('common.difference.values.partnership.title'),
+      description: t('common.difference.values.partnership.description')
     },
     {
       id: 5,
@@ -65,8 +67,8 @@ export default function Difference() {
           <path d="M20 8v12l8 4.8-1.2 2L18 22V8h2z"/>
         </svg>
       ),
-      title: "Fair Pricing & Value",
-      description: "Exceptional quality and tangible ROI delivered at transparent, competitive rates with no hidden surprises."
+      title: t('common.difference.values.pricing.title'),
+      description: t('common.difference.values.pricing.description')
     }
   ];
 
@@ -74,12 +76,12 @@ export default function Difference() {
     <section className="py-16 sm:py-20 lg:py-[100px]">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
-          <span className="title">THE UNIT05 DIFFERENCE</span>
+          <span className="title">{t('common.difference.mainTitle')}</span>
           <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Why Choose Unit05? Agile Expertise, Transparent Partnership.
+            {t('common.difference.title')}
           </h2>
           <p className="text-base text-dark-text">
-            We combine deep technical expertise with transparent communication and agile delivery to become your trusted technology partner.
+            {t('common.difference.description')}
           </p>
         </div>
 

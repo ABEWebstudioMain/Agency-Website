@@ -95,12 +95,12 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
     <section className="py-16 sm:py-20 lg:py-[100px]">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
-          <span className="title">SUCCESS SNAPSHOT</span>
+          <span className="title">{t('common.successSnapshot.mainTitle')}</span>
           <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Our Impact in Action
+            {t('common.successSnapshot.title')}
           </h2>
           <p className="text-base text-dark-text">
-            Real results from real partnerships. See how we&apos;ve helped businesses transform their operations.
+            {t('common.successSnapshot.description')}
           </p>
         </div>
 
@@ -207,7 +207,7 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                           href={`/${locale}/case-studies/${study.slug}`}
                           className="group inline-flex items-center rounded-sm bg-primary px-6 py-3 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg"
                         >
-                          Read the Full Story
+                          {t('common.successSnapshot.readFullStory')}
                           <svg
                             width="16"
                             height="16"
@@ -221,7 +221,7 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                           href={`/${locale}#contact`}
                           className="inline-flex items-center rounded-sm border-2 border-primary/20 px-6 py-3 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
                         >
-                          Get Similar Results
+                          {t('common.successSnapshot.getSimilarResults')}
                         </Link>
                       </div>
                     </div>
@@ -272,13 +272,13 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
         {/* Bottom CTA */}
         <div className="mt-16 text-center lg:mt-20">
           <p className="mb-6 text-base text-dark-text">
-            Explore our complete collection of success stories and client transformations.
+            {t('common.successSnapshot.cta.description')}
           </p>
           <Link
             href={`/${locale}/case-studies`}
             className="inline-flex items-center rounded-sm border-2 border-primary/20 px-8 py-3 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
           >
-            View All Case Studies
+            {t('common.successSnapshot.cta.button')}
             <svg
               width="16"
               height="16"

@@ -4,6 +4,7 @@ import { CaseStudy } from "@/data/caseStudies";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 
 interface CaseStudyDetailProps {
   study: CaseStudy;
@@ -12,6 +13,7 @@ interface CaseStudyDetailProps {
 export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
   const params = useParams();
   const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -64,13 +66,13 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
           <div className="mx-auto max-w-4xl">
             <div className="mb-20">
               <h2 className="mb-10 font-heading text-3xl font-bold leading-tight text-dark dark:text-white lg:text-4xl lg:leading-tight">
-                The Client & Their Challenge
+                {t('common.caseStudies.detail.clientChallenge')}
               </h2>
               
               <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
                 <div>
                   <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
-                    Client Profile
+                    {t('common.caseStudies.detail.clientProfile')}
                   </h3>
                   <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-[1.6]">
                     {study.fullContent.clientProfile}
@@ -79,7 +81,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 
                 <div>
                   <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
-                    The Problem
+                    {t('common.caseStudies.detail.theProblem')}
                   </h3>
                   <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-[1.6]">
                     {study.fullContent.problemDescription}
@@ -96,12 +98,12 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-10 font-heading text-3xl font-bold leading-tight text-dark dark:text-white lg:text-4xl lg:leading-tight">
-              Our Agile Solution
+              {t('common.caseStudies.detail.ourSolution')}
             </h2>
             
             <div className="mb-10">
               <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
-                Our Approach
+                {t('common.caseStudies.detail.ourApproach')}
               </h3>
               <p className="mb-8 text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
                 {study.fullContent.approach}
@@ -109,7 +111,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               
               <div className="mb-8">
                 <h4 className="mb-4 font-heading text-lg font-semibold leading-tight text-dark dark:text-white">
-                  Key Technologies Used
+                  {t('common.caseStudies.detail.keyTechnologies')}
                 </h4>
                 <div className="flex flex-wrap gap-3">
                   {study.fullContent.keyTechnologies.map((tech) => (
@@ -126,7 +128,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             
             <div>
               <h3 className="mb-6 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
-                Specific Actions Taken
+                {t('common.caseStudies.detail.specificActions')}
               </h3>
               <ul className="space-y-3">
                 {study.fullContent.specificActions.map((action, index) => (
@@ -148,13 +150,13 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl">
             <h2 className="mb-10 font-heading text-3xl font-bold leading-tight text-dark dark:text-white lg:text-4xl lg:leading-tight">
-              The Tangible Impact & Results
+              {t('common.caseStudies.detail.resultsImpact')}
             </h2>
             
             {/* Quantifiable Results */}
             <div className="mb-16">
               <h3 className="mb-8 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
-                Measurable Success
+                {t('common.caseStudies.detail.measurableSuccess')}
               </h3>
               <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
                 {study.fullContent.quantifiableResults.map((result, index) => (
@@ -177,7 +179,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             {/* Qualitative Benefits */}
             <div className="mb-16">
               <h3 className="mb-8 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
-                Additional Benefits
+                {t('common.caseStudies.detail.additionalBenefits')}
               </h3>
               <ul className="space-y-4">
                 {study.fullContent.qualitativeBenefits.map((benefit, index) => (
@@ -233,14 +235,14 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
-              <span className="tracking-wide">SUCCESS STORIES</span>
+              <span className="tracking-wide">{t('common.caseStudies.mainTitle')}</span>
             </div>
             <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
-              Ready to See Similar Results?
+              {t('common.caseStudies.cta.title')}
             </h2>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
               <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-                Discover how Unit05 can drive digital transformation for your business.
+                {t('common.caseStudies.cta.description')}
               </p>
             </div>
             
@@ -249,7 +251,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 href={`/${locale}#contact`}
                 className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                Schedule Your Free Consultation
+                {t('common.caseStudies.cta.consultation')}
                 <svg
                   width="16"
                   height="16"
@@ -263,7 +265,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 href={`/${locale}/team`}
                 className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                Meet Our Experts
+                {t('common.caseStudies.cta.meetExperts')}
                 <svg
                   width="16"
                   height="16"
@@ -276,7 +278,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             </div>
             
             <div className="mt-8 text-sm leading-relaxed text-white/80">
-              Free consultation • No commitment • Expert advice
+              {t('common.caseStudies.cta.footer')}
             </div>
           </div>
         </div>
@@ -293,7 +295,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
                 <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
               </svg>
-              Back to All Case Studies
+              {t('common.caseStudies.backToAll')}
             </Link>
           </div>
         </div>

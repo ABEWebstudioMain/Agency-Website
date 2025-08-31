@@ -48,12 +48,12 @@ export default function TrustSignals() {
     <section className="bg-gray-50 py-16 sm:py-20 lg:py-[100px] dark:bg-[#1A1D23]">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
-          <span className="title">TESTIMONIALS</span>
+          <span className="title">{t('common.trustSignals.mainTitle')}</span>
           <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
-            What Our Partners Say
+            {t('common.trustSignals.title')}
           </h2>
           <p className="text-base text-dark-text">
-            Don&apos;t just take our word for it. Here&apos;s what our clients say about working with Unit05.
+            {t('common.trustSignals.description')}
           </p>
         </div>
 
