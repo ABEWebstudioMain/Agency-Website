@@ -177,27 +177,33 @@ export default function SuccessSnapshot() {
                         <Link
                           href={`/${locale}/case-studies/${study.slug}`}
                           className="group inline-flex items-center rounded-sm bg-primary px-6 py-3 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg"
-                        >
+                <div className="flex items-center min-h-[60px]">
+                  <p className="text-sm text-dark-text leading-relaxed">{study.challengeSnapshot}</p>
+                </div>
                           Read the Full Story
                           <svg
                             width="16"
-                            height="16"
+                <div className="mb-3 flex items-center">
                             viewBox="0 0 16 16"
                             className="ml-2 fill-current transition-transform group-hover:translate-x-1"
                           >
                             <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
                           </svg>
                         </Link>
-                        
+                <div className="flex items-center min-h-[60px]">
+                  <p className="text-sm text-dark-text leading-relaxed">{study.solutionSnapshot}</p>
+                </div>
                         <Link
                           href={`/${locale}#contact`}
                           className="inline-flex items-center rounded-sm border-2 border-primary/20 px-6 py-3 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
-                        >
+                <div className="mb-3 flex items-center">
                           Get Similar Results
                         </Link>
                       </div>
                     </div>
                   </div>
+                <div className="flex items-center min-h-[60px]">
+                  <p className="text-sm font-medium text-primary leading-relaxed">{study.impactSnapshot}</p>
                 </div>
               ))}
             </div>
