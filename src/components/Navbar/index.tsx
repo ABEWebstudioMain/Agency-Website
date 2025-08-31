@@ -81,7 +81,7 @@ export default function Navbar() {
       >
         <div className="flex w-full items-center justify-between px-5 py-4 lg:px-5 xl:px-10 2xl:px-20">
           <div className="flex items-center">
-            <div className="relative h-[50px] w-[200px] lg:h-[60px] lg:w-[240px]">
+            <div className="relative h-[60px] w-[280px] lg:h-[80px] lg:w-[320px]">
             <Link href="/">
               <img
                 src="/images/logo/unit05_logo_white_tighter.svg"

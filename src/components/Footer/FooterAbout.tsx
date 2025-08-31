@@ -16,12 +16,12 @@ export default function FooterAbout() {
         <img
           src="/images/logo/unit05_logo_white_tighter.svg"
           alt="Unit05 Logo"
-          className="hidden dark:block h-[45px] w-[180px] object-contain object-left transition-all duration-200 hover:scale-105"
+          className="hidden dark:block h-[60px] w-[240px] object-contain object-left transition-all duration-200 hover:scale-105"
         />
         <img
           src="/images/logo/unit05_logo_black_tighter.svg"
           alt="Unit05 Logo"
-          className="dark:hidden h-[45px] w-[180px] object-contain object-left transition-all duration-200 hover:scale-105"
+          className="dark:hidden h-[60px] w-[240px] object-contain object-left transition-all duration-200 hover:scale-105"
         />
       </Link>
 
