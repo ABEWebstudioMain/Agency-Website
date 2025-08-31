@@ -102,7 +102,7 @@ export default function AboutContent() {
         
         <div className='mt-6 text-center'>
           <p className='text-sm font-medium text-primary'>
-            "{t('common.about.content.section3.quote')}"
+            &quot;{t('common.about.content.section3.quote')}&quot;
           </p>
         </div>
       </TabPanel>
