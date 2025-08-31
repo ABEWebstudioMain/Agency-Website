@@ -2,70 +2,91 @@ import { Team } from "@/types/team";
 
 export const teamData: Team[] = [
   {
-    id: "team-member-1",
-    name: "Olivia Andrium",
-    designation: "Project Manager",
-    image: "/images/hero/image-1.jpg",
+    id: "team-member-bilal",
+    name: "Bilal E.",
+    designation: "Senior Software Engineer",
+    image: "/images/team/bilal.webp",
     socialLinks: [
       {
-        id: "olivia-facebook",
-        name: "Facebook",
-        link: "/"
-      },
-      {
-        id: "olivia-twitter",
-        name: "Twitter",
-        link: "/"
-      },
-      {
-        id: "olivia-linkedin",
+        id: "bilal-linkedin",
         name: "Linkedin",
+        link: "/"
+      },
+      {
+        id: "bilal-twitter",
+        name: "Twitter",
         link: "/"
       }
     ]
   },
   {
-    id: "team-member-2",
-    name: "Jemse Kemorun",
-    designation: "Frontend Developer",
-    image: "/images/team/image-2.jpg",
+    id: "team-member-dominik",
+    name: "Dominik H.",
+    designation: "DevOps Engineer",
+    image: "/images/team/dominik.webp",
     socialLinks: [
       {
-        id: "jemse-facebook",
-        name: "Facebook",
-        link: "/"
-      },
-      {
-        id: "jemse-twitter",
-        name: "Twitter",
-        link: "/"
-      },
-      {
-        id: "jemse-linkedin",
+        id: "dominik-linkedin",
         name: "Linkedin",
+        link: "/"
+      },
+      {
+        id: "dominik-twitter",
+        name: "Twitter",
         link: "/"
       }
     ]
   },
   {
-    id: "team-member-3",
-    name: "Avi Pestarica",
-    designation: "Product Designer",
-    image: "/images/testimonial/image-1.jpg",
+    id: "team-member-jeremias",
+    name: "Jeremias B.",
+    designation: "Cloud Architect",
+    image: "/images/team/jeremias.webp",
     socialLinks: [
       {
-        id: "avi-facebook",
-        name: "Facebook",
+        id: "jeremias-linkedin",
+        name: "Linkedin",
         link: "/"
       },
       {
-        id: "avi-twitter",
+        id: "jeremias-twitter",
         name: "Twitter",
         link: "/"
+      }
+    ]
+  },
+  {
+    id: "team-member-martin",
+    name: "Martin P.",
+    designation: "Technical Lead",
+    image: "/images/team/martin.webp",
+    socialLinks: [
+      {
+        id: "martin-linkedin",
+        name: "Linkedin",
+        link: "/"
       },
       {
-        id: "avi-linkedin",
+        id: "martin-twitter",
+        name: "Twitter",
+        link: "/"
+      }
+    ]
+  },
+  {
+    id: "team-member-toyah",
+    name: "Toyah G.",
+    designation: "UX/UI Designer",
+    image: "/images/team/toyah.webp",
+    socialLinks: [
+      {
+        id: "toyah-linkedin",
         name: "Linkedin",
+        link: "/"
+      },
+      {
+        id: "toyah-twitter",
+        name: "Twitter",
         link: "/"
       }
     ]
