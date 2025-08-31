@@ -14,6 +14,32 @@ interface CaseStudyCardProps {
 export default function CaseStudyCard({ study, featured = false, reverse = false }: CaseStudyCardProps) {
   const params = useParams();
   const locale = params.locale as string;
+  
+  // Get localized content
+  const getLocalizedContent = (study: any) => {
+    if (locale === 'de' && study.de) {
+      return {
+        title: study.de.title,
+        subtitle: study.de.subtitle,
+        industry: study.de.industry,
+        challengeSnapshot: study.de.challengeSnapshot,
+        impactSnapshot: study.de.impactSnapshot,
+        metrics: study.de.metrics,
+        duration: study.de.duration
+      };
+    }
+    return {
+      title: study.title,
+      subtitle: study.subtitle,
+      industry: study.industry,
+      challengeSnapshot: study.challengeSnapshot,
+      impactSnapshot: study.impactSnapshot,
+      metrics: study.metrics,
+      duration: study.duration
+    };
+  };
+  
+  const localizedStudy = getLocalizedContent(study);
 
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -71,35 +97,35 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
-              <span className="ml-2">{study.industry}</span>
+              <span className="ml-2">{localizedStudy.industry}</span>
             </span>
-            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{study.duration}</span>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{localizedStudy.duration}</span>
           </div>
           
           <Link href={`/${locale}/case-studies/${study.slug}`}>
             <h3 className="mb-4 font-heading text-2xl font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white lg:text-3xl lg:leading-tight">
-              {study.title}
+              {localizedStudy.title}
             </h3>
             <h4 className="mb-6 font-heading text-lg font-medium leading-relaxed text-primary lg:text-xl">
-              {study.subtitle}
+              {localizedStudy.subtitle}
             </h4>
           </Link>
 
           <p className="mb-6 flex-grow text-base leading-relaxed text-dark-text line-clamp-3">
-            {study.challengeSnapshot}
+            {localizedStudy.challengeSnapshot}
           </p>
           
           <div className="mb-6 mt-auto rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
             <p className="text-center text-sm font-semibold leading-relaxed text-primary">
-              {study.impactSnapshot}
+              {localizedStudy.impactSnapshot}
             </p>
           </div>
           
           <div className="mb-6 flex flex-wrap justify-center gap-3">
             <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
-              {study.metrics.primaryMetric}
+              {localizedStudy.metrics.primaryMetric}
             </span>
-            {study.metrics.secondaryMetrics.slice(0, 1).map((metric, index) => (
+            {localizedStudy.metrics.secondaryMetrics.slice(0, 1).map((metric, index) => (
               <span
                 key={index}
                 className="rounded-full bg-green-100 px-3 py-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200"
@@ -137,31 +163,31 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
-              <span className="ml-2">{study.industry}</span>
+              <span className="ml-2">{localizedStudy.industry}</span>
             </span>
-            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{study.duration}</span>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{localizedStudy.duration}</span>
           </div>
           
           <h3 className="mb-3 font-heading text-xl font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white lg:text-2xl lg:leading-tight">
-            {study.title}
+            {localizedStudy.title}
           </h3>
           <h4 className="mb-5 font-heading text-base font-medium leading-relaxed text-primary lg:text-lg">
-            {study.subtitle}
+            {localizedStudy.subtitle}
           </h4>
 
           <p className="mb-6 flex-grow text-sm leading-relaxed text-dark-text line-clamp-2 lg:text-base">
-            {study.challengeSnapshot}
+            {localizedStudy.challengeSnapshot}
           </p>
 
           <div className="mb-6 mt-auto rounded-lg bg-green-50 p-4 dark:bg-green-900/15">
             <p className="text-center text-sm font-semibold leading-relaxed text-green-700 dark:text-green-300">
-              {study.impactSnapshot}
+              {localizedStudy.impactSnapshot}
             </p>
           </div>
 
           <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
             <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
-              {study.metrics.primaryMetric}
+              {localizedStudy.metrics.primaryMetric}
             </span>
             <span className="font-medium text-primary transition-colors group-hover:text-primary/80 text-sm">
               {locale === 'de' ? 'Mehr lesen →' : 'Read More →'}

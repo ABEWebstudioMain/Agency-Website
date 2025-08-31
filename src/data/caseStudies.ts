@@ -35,6 +35,40 @@ export interface CaseStudy {
   };
   duration: string;
   teamSize: string;
+  // Add German translations
+  de?: {
+    title: string;
+    subtitle: string;
+    clientType: string;
+    industry: string;
+    challengeSnapshot: string;
+    solutionSnapshot: string;
+    impactSnapshot: string;
+    fullContent: {
+      clientProfile: string;
+      problemDescription: string;
+      approach: string;
+      keyTechnologies: string[];
+      specificActions: string[];
+      quantifiableResults: {
+        metric: string;
+        description: string;
+      }[];
+      qualitativeBenefits: string[];
+      clientEndorsement?: {
+        quote: string;
+        author: string;
+        position: string;
+        company: string;
+      };
+    };
+    metrics: {
+      primaryMetric: string;
+      secondaryMetrics: string[];
+    };
+    duration: string;
+    teamSize: string;
+  };
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -99,7 +133,65 @@ export const caseStudies: CaseStudy[] = [
       secondaryMetrics: ['35% faster processing', '95% accuracy improvement', '25% capacity increase']
     },
     duration: '4 months',
-    teamSize: '3 senior developers'
+    teamSize: '3 senior developers',
+    de: {
+      title: 'Optimierung globaler Abläufe',
+      subtitle: 'Maßgeschneiderte Prozessautomatisierung für einen führenden Logistikanbieter',
+      clientType: 'Führender europäischer Logistikanbieter',
+      industry: 'Logistik & Supply Chain',
+      challengeSnapshot: 'Manuelle, fehleranfällige Datenflüsse zwischen verschiedenen Systemen führten zu Ineffizienzen und verzögerten Sendungen.',
+      solutionSnapshot: 'Entwicklung und Implementierung einer maßgeschneiderten Integrationsplattform und automatisierten Workflow-Engine.',
+      impactSnapshot: 'Erreichte eine 40%ige Reduzierung der manuellen Dateneingabe und beschleunigte die Auftragsbearbeitung um 35%, was die operative Geschwindigkeit und Genauigkeit erheblich verbesserte.',
+      fullContent: {
+        clientProfile: 'Ein großer, multinationaler Logistikanbieter, der sich auf komplexes Supply Chain Management in Europa spezialisiert hat und täglich Tausende von Sendungen über mehrere Verteilzentren abwickelt.',
+        problemDescription: 'Ihre Legacy-Systeme erforderten umfangreiche manuelle Datenübertragungen zwischen verschiedenen Anwendungen, was zu Engpässen, menschlichen Fehlern und erheblichen Verzögerungen bei der Auftragsbearbeitung führte. Dieser Mangel an Integration schuf eine fragmentierte Sicht auf die Abläufe und behinderte ihre Fähigkeit, effizient zu skalieren. Mitarbeiter verbrachten 60% ihrer Zeit mit manueller Dateneingabe anstatt mit strategischer Arbeit.',
+        approach: 'Unser kleines, engagiertes Team führte eine intensive 2-wöchige Entdeckungsphase durch und arbeitete eng mit ihrer operativen Führung zusammen, um kritische Workflows zu kartieren. Anschließend entwickelten wir eine maßgeschneiderte Integrationsplattform und eine automatisierte Workflow-Engine. Unsere agilen Entwicklungszyklen gewährleisteten schnelle Prototypenerstellung und kontinuierliches Feedback, eliminierten "Scheinarbeit" und hielten den Kunden während der 4-monatigen Implementierung vollständig eingebunden.',
+        keyTechnologies: ['Java', 'Spring Boot', 'REST APIs', 'PostgreSQL', 'AWS Lambda', 'Apache Kafka'],
+        specificActions: [
+          'Entwicklung maßgeschneiderter Konnektoren für ihre ERP- und WMS-Systeme',
+          'Aufbau eines zentralisierten Daten-Hubs mit Echtzeit-Synchronisation',
+          'Implementierung intelligenter Routing-Regeln zur Automatisierung der Sendungsbearbeitung',
+          'Erstellung umfassender Überwachungs- und Warnsysteme',
+          'Etablierung automatisierter Datenvalidierung und Fehlerbehandlung'
+        ],
+        quantifiableResults: [
+          {
+            metric: '40% Reduzierung der manuellen Dateneingabe',
+            description: 'Freisetzung von Mitarbeitern für strategischere Aufgaben und Reduzierung des operativen Overheads'
+          },
+          {
+            metric: '35% schnellere Auftragsbearbeitung',
+            description: 'Führte zu verbesserter Kundenzufriedenheit und schnellerer Abwicklung'
+          },
+          {
+            metric: '95% Verbesserung der Datengenauigkeit',
+            description: 'Eliminierung menschlicher Fehler und Reduzierung kostspieliger Nacharbeiten'
+          },
+          {
+            metric: '25% Steigerung der Auftragsvolumen-Kapazität',
+            description: 'Bewältigung von Wachstum ohne zusätzliche Personalkosten'
+          }
+        ],
+        qualitativeBenefits: [
+          'Erheblich gesteigerte Mitarbeiterzufriedenheit durch Reduzierung langweiliger Arbeit',
+          'Verbesserte operative Echtzeit-Sichtbarkeit für bessere Managemententscheidungen',
+          'Verbesserter Kundenservice durch schnellere Reaktionszeiten',
+          'Positionierung für beschleunigte digitale Transformation in anderen Abteilungen'
+        ],
+        clientEndorsement: {
+          quote: 'Das Unit05-Team verstand schnell unsere komplexen Bedürfnisse und lieferte eine außergewöhnliche Lösung mit bemerkenswerter Effizienz. Ihre Transparenz und direkte Kommunikation waren eine wohltuende Abwechslung im Vergleich zu unseren früheren Erfahrungen mit großen Beratungsunternehmen.',
+          author: 'Sarah M.',
+          position: 'Leiterin Operations',
+          company: 'Europäischer Logistikanbieter'
+        }
+      },
+      metrics: {
+        primaryMetric: '40% Reduzierung manueller Arbeit',
+        secondaryMetrics: ['35% schnellere Bearbeitung', '95% Genauigkeitsverbesserung', '25% Kapazitätssteigerung']
+      },
+      duration: '4 Monate',
+      teamSize: '3 Senior-Entwickler'
+    }
   },
   {
     id: '2',
@@ -162,7 +254,65 @@ export const caseStudies: CaseStudy[] = [
       secondaryMetrics: ['99.9% uptime', '75% faster security fixes', '50% fewer bugs']
     },
     duration: '3 months',
-    teamSize: '2 DevSecOps engineers'
+    teamSize: '2 DevSecOps engineers',
+    de: {
+      title: 'Aufbau sicherer Software-Bereitstellung',
+      subtitle: 'DevSecOps-Plattform für ein mittelständisches FinTech-Unternehmen',
+      clientType: 'Mittelständisches FinTech-Unternehmen',
+      industry: 'Finanztechnologie',
+      challengeSnapshot: 'Langsame Deployment-Zyklen und wachsende Sicherheitsbedenken behinderten die agile Produktentwicklung.',
+      solutionSnapshot: 'Entwicklung und Implementierung einer umfassenden DevSecOps-Plattform auf Kubernetes mit integrierten Sicherheits-Gates.',
+      impactSnapshot: 'Reduzierte Deployment-Zeit von Tagen auf Stunden und verbesserte die Sicherheitslage erheblich, was schnellere und sicherere Releases ermöglichte.',
+      fullContent: {
+        clientProfile: 'Ein schnell wachsendes FinTech-Unternehmen, das digitale Zahlungslösungen in europäischen Märkten anbietet und über 100.000 aktive Nutzer mit strengen regulatorischen Compliance-Anforderungen betreut.',
+        problemDescription: 'Ihr Entwicklungsteam stand vor erheblichen Herausforderungen mit manuellen Deployment-Prozessen, die 2-3 Tage dauerten, inkonsistenten Umgebungen, die häufige Bugs verursachten, und wachsenden Sicherheitsbedenken beim Skalieren. Regulatorische Compliance-Anforderungen erhöhten die Komplexität ihres Release-Prozesses und verursachten oft zusätzliche Verzögerungen.',
+        approach: 'Unsere DevSecOps-Spezialisten arbeiteten direkt mit ihren Entwicklungs- und Sicherheitsteams zusammen, um eine umfassende Plattformlösung zu entwickeln. Wir implementierten einen agilen Transformationsansatz und lieferten alle 2 Wochen funktionierende Inkremente, während wir ihre bestehenden Abläufe aufrechterhielten. Unsere transparente Methodik stellte sicher, dass alle Stakeholder den Fortschritt verstanden und sofortiges Feedback geben konnten.',
+        keyTechnologies: ['Kubernetes', 'Docker', 'Jenkins', 'Terraform', 'SonarQube', 'Vault', 'Prometheus', 'Grafana'],
+        specificActions: [
+          'Implementierung einer containerisierten Microservices-Architektur auf Kubernetes',
+          'Aufbau automatisierter CI/CD-Pipelines mit integriertem Sicherheits-Scanning',
+          'Etablierung von Infrastructure as Code mit Terraform',
+          'Integration umfassender Überwachungs- und Warnsysteme',
+          'Implementierung automatisierter Compliance-Prüfung und -Berichterstattung'
+        ],
+        quantifiableResults: [
+          {
+            metric: '90% Reduzierung der Deployment-Zeit',
+            description: 'Von 2-3 Tagen auf 2-3 Stunden für vollständige Produktions-Releases'
+          },
+          {
+            metric: '99,9% System-Uptime erreicht',
+            description: 'Dramatische Verbesserung der Plattform-Zuverlässigkeit und -Stabilität'
+          },
+          {
+            metric: '75% schnellere Behebung von Sicherheitslücken',
+            description: 'Automatisiertes Scanning und sofortiges Feedback in der Entwicklungs-Pipeline'
+          },
+          {
+            metric: '50% Reduzierung umgebungsbedingter Bugs',
+            description: 'Konsistente containerisierte Umgebungen über alle Phasen hinweg'
+          }
+        ],
+        qualitativeBenefits: [
+          'Moral des Entwicklungsteams erheblich verbessert durch Reduzierung manueller Arbeit',
+          'Erhöhtes Vertrauen in Releases durch automatisierte Tests und Sicherheitsprüfungen',
+          'Verbesserte Zusammenarbeit zwischen Entwicklungs-, Sicherheits- und Operations-Teams',
+          'Regulatorische Compliance wurde automatisiert statt manueller Overhead'
+        ],
+        clientEndorsement: {
+          quote: 'Die Arbeit mit Unit05 transformierte unseren gesamten Entwicklungsprozess. Ihre Expertise in DevSecOps und ihr direkter, praktischer Ansatz halfen uns, das zu erreichen, was wir für Jahre hielten, in nur wenigen Monaten.',
+          author: 'Marcus W.',
+          position: 'CTO',
+          company: 'FinTech Startup'
+        }
+      },
+      metrics: {
+        primaryMetric: '90% schnellere Deployments',
+        secondaryMetrics: ['99,9% Uptime', '75% schnellere Sicherheitsfixes', '50% weniger Bugs']
+      },
+      duration: '3 Monate',
+      teamSize: '2 DevSecOps-Ingenieure'
+    }
   },
   {
     id: '3',
@@ -225,7 +375,65 @@ export const caseStudies: CaseStudy[] = [
       secondaryMetrics: ['300% growth capacity', '99.99% uptime', '80% faster recovery']
     },
     duration: '6 months',
-    teamSize: '2 cloud architects'
+    teamSize: '2 cloud architects',
+    de: {
+      title: 'Nahtlose Cloud-Migration & Kostenoptimierung',
+      subtitle: 'Enterprise SaaS-Anbieter Migration zu AWS',
+      clientType: 'Enterprise SaaS-Anbieter',
+      industry: 'Software as a Service',
+      challengeSnapshot: 'Hohe On-Premise-Infrastrukturkosten und begrenzte Skalierbarkeit beschränkten das Wachstumspotenzial.',
+      solutionSnapshot: 'Durchführung einer phasenweisen, ausfallfreien Migration von Kernanwendungen zu AWS, gefolgt von Cloud-Kostenoptimierung.',
+      impactSnapshot: 'Reduzierte operative Infrastrukturkosten um 45% und gewann beispiellose Skalierbarkeit zur Unterstützung von 300% Nutzerwachstum.',
+      fullContent: {
+        clientProfile: 'Ein etablierter Enterprise SaaS-Anbieter, der B2B-Kunden in verschiedenen Branchen bedient, mit einer wachsenden Nutzerbasis, die verbesserte Skalierbarkeit und Leistung erfordert.',
+        problemDescription: 'Ihre On-Premise-Infrastruktur wurde zunehmend teuer in der Wartung und mangelte an Flexibilität, um schnelles Nutzerwachstum zu bewältigen. Skalierung erforderte erhebliche Vorab-Hardware-Investitionen mit langen Vorlaufzeiten, und Disaster Recovery war komplex und kostspielig.',
+        approach: 'Unsere Cloud-Architekten entwickelten eine umfassende Migrationsstrategie mit Fokus auf minimale Geschäftsunterbrechung. Wir implementierten einen phasenweisen Ansatz, migrierten zunächst nicht-kritische Systeme zur Validierung unseres Ansatzes und verlegten dann Kernanwendungen während geplanter Wartungsfenster. Unser transparentes Projektmanagement hielt alle Stakeholder während der 6-monatigen Migration informiert.',
+        keyTechnologies: ['AWS', 'Terraform', 'Docker', 'Kubernetes', 'RDS', 'CloudFormation', 'CloudWatch'],
+        specificActions: [
+          'Durchführung einer umfassenden Cloud-Readiness-Bewertung',
+          'Entwicklung einer widerstandsfähigen Multi-AZ-Architektur auf AWS',
+          'Implementierung von Infrastructure as Code für konsistente Deployments',
+          'Migration von Datenbanken ohne Datenverlust',
+          'Etablierung automatisierter Backup- und Disaster-Recovery-Verfahren'
+        ],
+        quantifiableResults: [
+          {
+            metric: '45% Reduzierung der Infrastrukturkosten',
+            description: 'Erhebliche Einsparungen durch optimierte Ressourcennutzung und Pay-as-you-use-Modell'
+          },
+          {
+            metric: '300% Nutzerwachstums-Kapazität',
+            description: 'Plattform skaliert jetzt problemlos für schnelle Nutzerbasis-Expansion'
+          },
+          {
+            metric: '99,99% Uptime erreicht',
+            description: 'Verbesserte Zuverlässigkeit durch AWS Managed Services und Redundanz'
+          },
+          {
+            metric: '80% schnellere Disaster Recovery',
+            description: 'Automatisierte Backup- und Recovery-Verfahren reduzieren Ausfallrisiko'
+          }
+        ],
+        qualitativeBenefits: [
+          'Entwicklungsteams erhielten Zugang zu modernen Cloud-nativen Services',
+          'Operations-Team von Hardware-Wartungsverantwortlichkeiten befreit',
+          'Verbesserte Sicherheitslage durch AWS-Sicherheitsdienste',
+          'Verbesserte Fähigkeit zu experimentieren und mit neuen Features zu innovieren'
+        ],
+        clientEndorsement: {
+          quote: 'Die Cloud-Migration war nahtlos und die Kosteneinsparungen waren sofort spürbar. Unit05 lieferte genau das, was sie versprachen, wann sie es versprachen, mit vollständiger Transparenz während des gesamten Prozesses.',
+          author: 'Lisa C.',
+          position: 'IT-Direktorin',
+          company: 'Enterprise SaaS-Anbieter'
+        }
+      },
+      metrics: {
+        primaryMetric: '45% Kostenreduzierung',
+        secondaryMetrics: ['300% Wachstumskapazität', '99,99% Uptime', '80% schnellere Recovery']
+      },
+      duration: '6 Monate',
+      teamSize: '2 Cloud-Architekten'
+    }
   }
 ];
 

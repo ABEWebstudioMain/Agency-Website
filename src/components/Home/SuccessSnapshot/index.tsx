@@ -33,6 +33,34 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
   const { t } = useTranslation(locale as any);
   
   const [currentSlide, setCurrentSlide] = useState(0);
+  
+  // Get localized content for case studies
+  const getLocalizedStudy = (study: any) => {
+    if (locale === 'de' && study.de) {
+      return {
+        title: study.de.title,
+        subtitle: study.de.subtitle,
+        industry: study.de.industry,
+        challengeSnapshot: study.de.challengeSnapshot,
+        solutionSnapshot: study.de.solutionSnapshot,
+        impactSnapshot: study.de.impactSnapshot,
+        metrics: study.de.metrics,
+        duration: study.de.duration,
+        teamSize: study.de.teamSize
+      };
+    }
+    return {
+      title: study.title,
+      subtitle: study.subtitle,
+      industry: study.industry,
+      challengeSnapshot: study.challengeSnapshot,
+      solutionSnapshot: study.solutionSnapshot,
+      impactSnapshot: study.impactSnapshot,
+      metrics: study.metrics,
+      duration: study.duration,
+      teamSize: study.teamSize
+    };
+  };
 
   // Auto-advance slides
   useEffect(() => {
@@ -114,6 +142,9 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
               {featuredStudies.map((study, index) => (
                 <div key={study.id} className="w-full flex-shrink-0">
                   <div className="mx-4">
+                    {(() => {
+                      const localizedStudy = getLocalizedStudy(study);
+                      return (
                     <div className="relative overflow-hidden rounded-sm bg-white p-8 shadow-lg dark:bg-[#1D232D] lg:p-12">
                       {/* Background Pattern */}
                       <div className="absolute right-0 top-0 h-32 w-32 opacity-5">
@@ -124,21 +155,21 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                       <div className="mb-4 flex items-center space-x-3">
                         <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
                           {getCategoryIcon(study.serviceCategory)}
-                          <span className="ml-2">{study.industry}</span>
+                          <span className="ml-2">{localizedStudy.industry}</span>
                         </span>
                         <span className="rounded-full bg-stroke/20 px-3 py-1 text-sm font-medium text-dark-text dark:bg-white/10">
-                          {study.duration}
+                          {localizedStudy.duration}
                         </span>
                         <span className="rounded-full bg-stroke/20 px-3 py-1 text-sm font-medium text-dark-text dark:bg-white/10">
-                          {study.teamSize}
+                          {localizedStudy.teamSize}
                         </span>
                       </div>
                       
                       <h3 className="mb-2 font-heading text-2xl font-bold text-dark dark:text-white lg:text-3xl">
-                        {study.title}
+                        {localizedStudy.title}
                       </h3>
                       <h4 className="mb-4 font-heading text-lg font-medium text-primary">
-                        {study.subtitle}
+                        {localizedStudy.subtitle}
                       </h4>
                       
                       {/* Three-column layout for Challenge/Solution/Impact */}
@@ -152,7 +183,7 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                             <h5 className="font-heading text-sm font-medium text-orange-800 dark:text-orange-200">Challenge</h5>
                           </div>
                           <div className="flex items-center min-h-[60px]">
-                            <p className="text-center text-sm text-dark-text leading-relaxed">{study.challengeSnapshot}</p>
+                            <p className="text-center text-sm text-dark-text leading-relaxed">{localizedStudy.challengeSnapshot}</p>
                           </div>
                         </div>
                         
@@ -165,7 +196,7 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                             <h5 className="font-heading text-sm font-medium text-blue-800 dark:text-blue-200">Solution</h5>
                           </div>
                           <div className="flex items-center min-h-[60px]">
-                            <p className="text-center text-sm text-dark-text leading-relaxed">{study.solutionSnapshot}</p>
+                            <p className="text-center text-sm text-dark-text leading-relaxed">{localizedStudy.solutionSnapshot}</p>
                           </div>
                         </div>
                         
@@ -177,7 +208,7 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                             <h5 className="font-heading text-sm font-medium text-green-800 dark:text-green-200">Impact</h5>
                           </div>
                           <div className="flex items-center min-h-[60px]">
-                            <p className="text-center text-sm font-medium text-primary leading-relaxed">{study.impactSnapshot}</p>
+                            <p className="text-center text-sm font-medium text-primary leading-relaxed">{localizedStudy.impactSnapshot}</p>
                           </div>
                         </div>
                       </div>
@@ -186,10 +217,10 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                       <div className="mb-8 flex flex-wrap justify-center gap-3">
                         <div className="flex items-center justify-center min-h-[40px] rounded-full bg-primary/15 px-4 py-2">
                           <span className="text-center text-sm font-medium text-primary">
-                            {study.metrics.primaryMetric}
+                            {localizedStudy.metrics.primaryMetric}
                           </span>
                         </div>
-                        {study.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
+                        {localizedStudy.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
                           <div
                             key={metricIndex}
                             className="flex items-center justify-center min-h-[40px] rounded-full bg-green-100 px-3 py-1 dark:bg-green-900/30"
@@ -225,6 +256,8 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                         </Link>
                       </div>
                     </div>
+                      );
+                    })()}
                   </div>
                 </div>
               ))}

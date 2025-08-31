@@ -14,6 +14,32 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
   const params = useParams();
   const locale = params.locale as string;
   const { t } = useTranslation(locale as any);
+  
+  // Get localized content
+  const getLocalizedContent = (study: any) => {
+    if (locale === 'de' && study.de) {
+      return {
+        title: study.de.title,
+        subtitle: study.de.subtitle,
+        industry: study.de.industry,
+        duration: study.de.duration,
+        teamSize: study.de.teamSize,
+        fullContent: study.de.fullContent,
+        metrics: study.de.metrics
+      };
+    }
+    return {
+      title: study.title,
+      subtitle: study.subtitle,
+      industry: study.industry,
+      duration: study.duration,
+      teamSize: study.teamSize,
+      fullContent: study.fullContent,
+      metrics: study.metrics
+    };
+  };
+  
+  const localizedStudy = getLocalizedContent(study);
 
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -40,21 +66,21 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
               <span className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
-                {study.industry}
+                {localizedStudy.industry}
               </span>
               <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/90 dark:text-white">
-                {study.duration}
+                {localizedStudy.duration}
               </span>
               <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/90 dark:text-white">
-                {study.teamSize}
+                {localizedStudy.teamSize}
               </span>
             </div>
             
             <h1 className="mb-6 font-heading text-3xl font-bold leading-tight text-dark sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
-              {study.title}
+              {localizedStudy.title}
             </h1>
             <h2 className="mb-8 font-heading text-xl font-medium leading-relaxed text-primary sm:text-2xl sm:leading-relaxed">
-              {study.subtitle}
+              {localizedStudy.subtitle}
             </h2>
           </div>
         </div>
@@ -75,7 +101,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                     {t('common.caseStudies.detail.clientProfile')}
                   </h3>
                   <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-[1.6]">
-                    {study.fullContent.clientProfile}
+                    {localizedStudy.fullContent.clientProfile}
                   </p>
                 </div>
                 
@@ -84,7 +110,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                     {t('common.caseStudies.detail.theProblem')}
                   </h3>
                   <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-[1.6]">
-                    {study.fullContent.problemDescription}
+                    {localizedStudy.fullContent.problemDescription}
                   </p>
                 </div>
               </div>
@@ -106,7 +132,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 {t('common.caseStudies.detail.ourApproach')}
               </h3>
               <p className="mb-8 text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
-                {study.fullContent.approach}
+                {localizedStudy.fullContent.approach}
               </p>
               
               <div className="mb-8">
@@ -114,7 +140,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                   {t('common.caseStudies.detail.keyTechnologies')}
                 </h4>
                 <div className="flex flex-wrap gap-3">
-                  {study.fullContent.keyTechnologies.map((tech) => (
+                  {localizedStudy.fullContent.keyTechnologies.map((tech) => (
                     <span
                       key={tech}
                       className="rounded-full bg-primary/15 px-4 py-2 text-center text-sm font-semibold text-primary dark:bg-primary/25"
@@ -131,7 +157,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 {t('common.caseStudies.detail.specificActions')}
               </h3>
               <ul className="space-y-3">
-                {study.fullContent.specificActions.map((action, index) => (
+                {localizedStudy.fullContent.specificActions.map((action, index) => (
                   <li key={index} className="flex items-start text-base text-dark-text leading-[1.5]">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
@@ -159,7 +185,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 {t('common.caseStudies.detail.measurableSuccess')}
               </h3>
               <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
-                {study.fullContent.quantifiableResults.map((result, index) => (
+                {localizedStudy.fullContent.quantifiableResults.map((result, index) => (
                   <div key={index} className="rounded-lg bg-green-50 p-6 dark:bg-green-900/15 lg:p-8">
                     <div className="mb-4">
                       <div className="font-heading text-2xl font-bold text-green-700 dark:text-green-300 lg:text-3xl">
@@ -182,7 +208,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 {t('common.caseStudies.detail.additionalBenefits')}
               </h3>
               <ul className="space-y-4">
-                {study.fullContent.qualitativeBenefits.map((benefit, index) => (
+                {localizedStudy.fullContent.qualitativeBenefits.map((benefit, index) => (
                   <li key={index} className="flex items-start text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
@@ -194,7 +220,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             </div>
             
             {/* Client Endorsement */}
-            {study.fullContent.clientEndorsement && (
+            {localizedStudy.fullContent.clientEndorsement && (
               <div className="rounded-lg bg-white p-8 shadow-sm dark:bg-[#2C3443] lg:p-10">
                 <div className="mb-8">
                   <svg
@@ -208,18 +234,18 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 </div>
                 
                 <blockquote className="mb-8 text-lg leading-relaxed text-dark-text lg:text-xl lg:leading-relaxed">
-                  &quot;{study.fullContent.clientEndorsement.quote}&quot;
+                  "{localizedStudy.fullContent.clientEndorsement.quote}"
                 </blockquote>
                 
                 <div className="text-center">
                   <div className="font-heading text-base font-medium text-dark dark:text-white">
-                    {study.fullContent.clientEndorsement.author}
+                    {localizedStudy.fullContent.clientEndorsement.author}
                   </div>
                   <div className="text-sm text-dark-text">
-                    {study.fullContent.clientEndorsement.position}
+                    {localizedStudy.fullContent.clientEndorsement.position}
                   </div>
                   <div className="text-sm text-primary">
-                    {study.fullContent.clientEndorsement.company}
+                    {localizedStudy.fullContent.clientEndorsement.company}
                   </div>
                 </div>
               </div>
