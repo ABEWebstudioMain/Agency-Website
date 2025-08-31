@@ -92,7 +92,7 @@ export default function Hero() {
                   src='/images/illustrations/undraw_visionary-technology_f6b3.svg'
                   alt="Visionary technology and innovation illustration"
                   className='w-full h-auto object-contain aspect-[1.08]'
-                  style={{ filter: 'hue-rotate(220deg) saturate(2) brightness(0.7) contrast(1.2)' }}
+                  style={{ filter: 'hue-rotate(240deg) saturate(3) brightness(0.6) contrast(1.5) sepia(0.8)' }}
                 />
               </div>
               <div className='absolute bottom-0 left-0 z-10'>
@@ -100,7 +100,7 @@ export default function Hero() {
                   src='/images/illustrations/undraw_website-builder_4go7.svg'
                   alt="Website development and software engineering illustration"
                   className='w-full h-auto object-contain'
-                  style={{ maxWidth: '350px', maxHeight: '420px', filter: 'hue-rotate(220deg) saturate(2) brightness(0.7) contrast(1.2)' }}
+                  style={{ maxWidth: '350px', maxHeight: '420px', filter: 'hue-rotate(240deg) saturate(3) brightness(0.6) contrast(1.5) sepia(0.8)' }}
                 />
               </div>
               <div className='absolute bottom-0 left-0'>

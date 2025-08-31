@@ -85,7 +85,7 @@ export default function TrustSignals() {
                     src={testimonial.avatar}
                     alt={testimonial.name}
                     className="h-full w-full object-contain bg-gray-100 dark:bg-gray-800"
-                    style={{ filter: 'hue-rotate(220deg) saturate(2) brightness(0.7) contrast(1.2)' }}
+                    style={{ filter: 'hue-rotate(240deg) saturate(3) brightness(0.6) contrast(1.5) sepia(0.8)' }}
                   />
                 </div>
                 <div>
