@@ -19,6 +19,13 @@ export default function SingleTeam({ team }: { team: Team }) {
                 fill
                 className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
+              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="flex items-center justify-center space-x-3">
+                  {team?.socialLinks.map((social) => (
+                    <SocialButton key={social?.id} social={social} />
+                  ))}
+                </div>
+              </div>
             </div>
             <div>
               <h3 className="font-heading text-dark mb-1 text-xl font-medium transition-colors duration-200 group-hover:text-primary sm:text-2xl dark:text-white dark:group-hover:text-primary">
@@ -29,41 +36,7 @@ export default function SingleTeam({ team }: { team: Team }) {
               </p>
             </div>
           </Link>
-          <div className="absolute bottom-14 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            <div className="flex items-center justify-center space-x-3">
-              {team?.socialLinks.map((social) => (
-                <SocialButton key={social?.id} social={social} />
-              ))}
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  );
-}
-            <Image
-              src={team?.image}
-              alt={team?.name}
-              fill
-              className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
-            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-              <div className="flex items-center justify-center space-x-3">
-                {team?.socialLinks.map((social) => (
-                  <SocialButton key={social?.id} social={social} />
-                ))}
-              </div>
-            </div>
-          </div>
-          <div>
-            <h3 className="font-heading text-dark mb-1 text-xl font-medium transition-colors duration-200 group-hover:text-primary sm:text-2xl dark:text-white dark:group-hover:text-primary">
-              {team?.name}
-            </h3>
-            <p className="font-heading text-dark-text text-base">
-              {team?.designation}
-            </p>
-          </div>
-        </Link>
       </div>
     </div>
   );
