@@ -20,8 +20,65 @@
     },
     "timeline": {
       "mainTitle": "DIE REISE",
-      "title": "Traditionelle Beratung vs. 58Solutions Ansatz",
+      "title": "Traditionelle Beratung vs. Unit05 Ansatz",
       "description": "Sehen Sie, wie sich unsere transparente, agile Methodik von den typischen Frustrationen bei der Arbeit mit großen Beratungsunternehmen unterscheidet.",
+      "steps": {
+        "week1": {
+          "time": "Woche 1",
+          "painPoint": {
+            "title": "Endlose Entdeckungsmeetings",
+            "description": "Große Beratungsunternehmen planen Meeting nach Meeting und verlängern die 'Entdeckungsphase' wochenlang ohne klare Ergebnisse oder Fortschritte."
+          },
+          "solution": {
+            "title": "Sofortiger Aktionsplan",
+            "description": "Wir beginnen mit einer fokussierten 2-tägigen Bewertung und liefern eine klare Roadmap mit definierten Meilensteinen, Zeitplänen und Ergebnissen."
+          }
+        },
+        "month1": {
+          "time": "Monat 1",
+          "painPoint": {
+            "title": "Vage Fortschrittsupdates",
+            "description": "Statusberichte voller Fachjargon und Prozentsätze, die keinen echten Fortschritt oder greifbare Ergebnisse widerspiegeln."
+          },
+          "solution": {
+            "title": "Transparente wöchentliche Demos",
+            "description": "Live-Demonstrationen funktionierender Features jede Woche, mit klaren Metriken und direktem Zugang zum Entwicklungsteam."
+          }
+        },
+        "month3": {
+          "time": "Monat 3",
+          "painPoint": {
+            "title": "Scope Creep & versteckte Kosten",
+            "description": "Unerwartete Gebühren erscheinen als 'zusätzliche Anforderungen', die im ursprünglichen Umfang enthalten sein sollten."
+          },
+          "solution": {
+            "title": "Festpreis-Transparenz",
+            "description": "Alle Kosten im Voraus definiert mit detaillierten Aufschlüsselungen. Keine Überraschungen, keine versteckten Gebühren und klare Änderungsanfrageprozesse."
+          }
+        },
+        "month6": {
+          "time": "Monat 6",
+          "painPoint": {
+            "title": "Junior-Team-Übergaben",
+            "description": "Senior-Berater verschwinden nach dem Verkauf und überlassen Junior-Entwicklern komplexe Implementierungsherausforderungen."
+          },
+          "solution": {
+            "title": "Senior-Experten-Kontinuität",
+            "description": "Dieselben Senior-Spezialisten, die Ihre Lösung entwerfen, implementieren sie auch und gewährleisten Konsistenz und tiefes Verständnis."
+          }
+        },
+        "month9": {
+          "time": "Monat 9",
+          "painPoint": {
+            "title": "Verzögerter Launch & Ausreden",
+            "description": "Ursprüngliche Zeitpläne werden zu fernen Erinnerungen, während Launch-Termine mit technischen Ausreden und Schuldzuweisungen verschoben werden."
+          },
+          "solution": {
+            "title": "Pünktliche Lieferungsgarantie",
+            "description": "Agile Sprints mit funktionierender Software alle 2 Wochen geliefert. Sie sehen kontinuierlich Fortschritte, nicht nur am Ende."
+          }
+        }
+      },
       "cta": {
         "title": "Bereit für eine andere Erfahrung?",
         "description": "Überspringen Sie die Frustration und arbeiten Sie mit einem Team, das von Tag eins an Transparenz, Expertise und Ergebnisse liefert.",
@@ -43,7 +100,7 @@
         },
         "network": {
           "title": "Netzwerkgestützte Lösungen",
-          "description": "Nutzen Sie nahtlos unser erweiterte Netzwerk von Spezialisten, um Wissenslücken zu schließen und Fähigkeiten genau dann zu skalieren, wenn Sie sie benötigen."
+          "description": "Nutzen Sie nahtlos unser erweitertes Netzwerk von Spezialisten, um Wissenslücken zu schließen und Fähigkeiten genau dann zu skalieren, wenn Sie sie benötigen."
         },
         "partnership": {
           "title": "Langfristiger strategischer Partner",
@@ -117,17 +174,128 @@
     "trustSignals": {
       "mainTitle": "TESTIMONIALS",
       "title": "Was unsere Partner sagen",
-      "description": "Glauben Sie nicht nur uns. Hier ist, was unsere Kunden über die Arbeit mit Unit05 sagen."
+      "description": "Glauben Sie nicht nur uns. Hier ist, was unsere Kunden über die Arbeit mit Unit05 sagen.",
+      "testimonials": {
+        "sarah": {
+          "quote": "Das Unit05-Team verstand schnell unsere komplexen Bedürfnisse und lieferte eine außergewöhnliche Lösung mit bemerkenswerter Effizienz. Ihre Transparenz und direkte Kommunikation waren eine wohltuende Abwechslung im Vergleich zu unseren früheren Erfahrungen mit großen Beratungsunternehmen.",
+          "name": "Sarah M.",
+          "role": "Leiterin Operations",
+          "company": "Europäischer Logistikanbieter"
+        },
+        "marcus": {
+          "quote": "Die Arbeit mit Unit05 transformierte unseren gesamten Entwicklungsprozess. Ihre Expertise in DevSecOps und ihr direkter, praktischer Ansatz halfen uns, das zu erreichen, was wir für Jahre hielten, in nur wenigen Monaten.",
+          "name": "Marcus W.",
+          "role": "CTO",
+          "company": "FinTech Startup"
+        },
+        "lisa": {
+          "quote": "Die Cloud-Migration war nahtlos und die Kosteneinsparungen waren sofort spürbar. Unit05 lieferte genau das, was sie versprachen, wann sie es versprachen, mit vollständiger Transparenz während des gesamten Prozesses.",
+          "name": "Lisa C.",
+          "role": "IT-Direktorin",
+          "company": "Enterprise SaaS-Anbieter"
+        }
+      }
     },
     "about": {
       "mainTitle": "ÜBER UNS",
       "title": "Ihr agiler Partner für digitale Exzellenz",
-      "description": "Wir sind ein engagiertes Team hocherfahrener Software- und IT-Experten, vereint durch die Leidenschaft, komplexe Herausforderungen zu lösen und greifbare Ergebnisse zu liefern."
+      "description": "Wir sind ein engagiertes Team hocherfahrener Software- und IT-Experten, vereint durch die Leidenschaft, komplexe Herausforderungen zu lösen und greifbare Ergebnisse zu liefern.",
+      "content": {
+        "section1": {
+          "title": "Ihr agiler Partner für digitale Exzellenz",
+          "paragraphs": [
+            "Bei Unit05 glauben wir, dass außergewöhnliche IT-Beratung keine aufgeblähte Organisation erfordert. Sie erfordert tiefe Expertise, agile Ausführung und eine transparente Partnerschaft, die auf Vertrauen basiert. Wir sind ein engagiertes Team hocherfahrener Software- und IT-Experten, vereint durch die Leidenschaft, komplexe Herausforderungen zu lösen und greifbare Ergebnisse zu liefern.",
+            "Unsere Reise begann mit einer klaren Vision: eine überlegene Alternative zu traditionellen großen Beratungsunternehmen zu bieten. Wir sahen eine Gelegenheit, das gleiche (oder sogar höhere) Niveau an Senior-Expertise und strategischen Einblicken zu bieten, aber mit der Geschwindigkeit, Effizienz und persönlichen Verpflichtung, die nur ein fokussiertes, schlankes Team bieten kann.",
+            "Wir sind nicht nur Berater; wir sind Architekten, Entwickler und Problemlöser, die sich in Ihre Herausforderungen vertiefen, um zukunftssichere Lösungen zu schaffen."
+          ],
+          "highlights": [
+            {
+              "title": "Direkter Zugang zu Senior-Talenten",
+              "description": "Arbeiten Sie direkt mit erfahrenen Profis"
+            },
+            {
+              "title": "Agiler & transparenter Workflow",
+              "description": "Schnellere Lieferung mit vollständiger Sichtbarkeit"
+            },
+            {
+              "title": "Netzwerkgestützte Lösungen",
+              "description": "Umfangreiches Netzwerk von Spezialisten bei Bedarf"
+            },
+            {
+              "title": "Faire Preise, außergewöhnlicher Wert",
+              "description": "Wettbewerbsfähige Preise mit maximalem ROI"
+            }
+          ]
+        },
+        "section2": {
+          "title": "Weniger Scheinarbeit, mehr Wert",
+          "paragraphs": [
+            "Wir alle haben es erlebt: das große Beratungsmodell, bei dem Junior-Mitarbeiter den Großteil der schweren Arbeit leisten, die Kommunikation ein Labyrinth ist und die Kosten mysteriös zu steigen scheinen. Wir sind anders.",
+            "Unsere effizienten Prozesse bedeuten schnellere Lieferung, klare Kommunikation und vollständige Sichtbarkeit des Projektfortschritts. Sie sind immer im Bilde. Während wir ein schlankes Kernteam sind, nutzen wir ein umfangreiches, vertrauensvolles Netzwerk von Spezialisten, um Wissenslücken zu schließen und Fähigkeiten genau dann zu skalieren, wenn Ihr Projekt es erfordert.",
+            "Das bedeutet umfassende Lösungen ohne unnötigen Overhead. Wir suchen nicht nur nach Projekten; wir suchen dauerhafte Beziehungen aufzubauen. Ihr nachhaltiger Erfolg ist unser ultimatives Maß für Leistung."
+          ],
+          "pillars": [
+            {
+              "title": "Direkter Zugang zu Senior-Talenten",
+              "description": "Kein Mittelsmann oder Bürokratieebenen"
+            },
+            {
+              "title": "Netzwerkgestützte Lösungen",
+              "description": "Umfassende Lösungen ohne unnötigen Overhead"
+            },
+            {
+              "title": "Langfristige Partnerschaft",
+              "description": "Aufbau dauerhafter Beziehungen mit Fokus auf Ihren Erfolg"
+            }
+          ]
+        },
+        "section3": {
+          "title": "Ihre digitale Zukunft, verwirklicht",
+          "paragraphs": [
+            "Wir sind angetrieben von der Möglichkeit, Unternehmen wie Ihres zu befähigen, im digitalen Zeitalter zu gedeihen. Ob es darum geht, maßgeschneiderte Software zur Optimierung von Kernprozessen zu entwickeln, sichere DevSecOps-Plattformen zu bauen, komplexe Cloud-Migrationen zu navigieren oder KI zu nutzen, um mühsame Aufgaben zu automatisieren, unser Ziel ist es, Lösungen zu liefern, die nicht nur technisch solide, sondern strategisch wirkungsvoll sind.",
+            "Wir bevorzugen Effizienz, Zusammenarbeit und langfristige Partnerschaft gegenüber einmaligen Projekten. Dieser Ansatz ermöglicht es unseren Kunden, schnell zu innovieren, nachhaltig zu skalieren und Erfahrungen zu liefern, die Benutzer zu Fans machen."
+          ],
+          "services": [
+            "Maßgeschneiderte Softwareentwicklung",
+            "DevSecOps-Plattformen",
+            "Cloud-Migrationen",
+            "KI-Prozessoptimierung"
+          ],
+          "quote": "Erleben Sie den Unterschied eines echten IT-Partners, der sich Ihrem Erfolg verpflichtet hat"
+        }
+      }
     },
     "team": {
       "mainTitle": "UNSER TEAM",
       "title": "Treffen Sie unser kreatives und engagiertes Team",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+      "description": "Unser schlankes Team hocherfahrener IT-Profis bringt tiefe Expertise und Leidenschaft in jedes Projekt ein und gewährleistet außergewöhnliche Ergebnisse durch direkte Zusammenarbeit.",
+      "members": {
+        "dominik": {
+          "name": "Dominik H.",
+          "role": "DevOps Engineer",
+          "skills": ["Docker", "Kubernetes", "CI/CD"]
+        },
+        "martin": {
+          "name": "Martin P.",
+          "role": "Technical Lead",
+          "skills": ["Leadership", "Strategy", "DevOps"]
+        },
+        "toyah": {
+          "name": "Toyah G.",
+          "role": "UX/UI Designer",
+          "skills": ["Figma", "UI/UX", "Design Systems"]
+        },
+        "bilal": {
+          "name": "Bilal E.",
+          "role": "Senior Software Engineer",
+          "skills": ["React", "Node.js", "AWS"]
+        },
+        "jeremias": {
+          "name": "Jeremias B.",
+          "role": "Cloud Architect",
+          "skills": ["AWS", "Terraform", "Architecture"]
+        }
+      }
     },
     "contact": {
       "mainTitle": "KONTAKT AUFNEHMEN",
@@ -193,7 +361,20 @@
         "meetExperts": "Unsere Experten kennenlernen",
         "footer": "Kostenlose Beratung • Keine Verpflichtung • Expertenberatung"
       },
-      "backToAll": "Zurück zu allen Fallstudien"
+      "backToAll": "Zurück zu allen Fallstudien",
+      "detail": {
+        "clientChallenge": "Der Kunde & seine Herausforderung",
+        "clientProfile": "Kundenprofil",
+        "theProblem": "Das Problem",
+        "ourSolution": "Unsere agile Lösung",
+        "ourApproach": "Unser Ansatz",
+        "keyTechnologies": "Verwendete Schlüsseltechnologien",
+        "specificActions": "Spezifische durchgeführte Maßnahmen",
+        "resultsImpact": "Die greifbaren Auswirkungen & Ergebnisse",
+        "measurableSuccess": "Messbarer Erfolg",
+        "additionalBenefits": "Zusätzliche Vorteile",
+        "readFullStory": "Die ganze Geschichte lesen"
+      }
     },
     "services": {
       "customSoftware": {
@@ -201,13 +382,186 @@
         "subtitle": "Die Zukunft bauen: Maßgeschneiderte Software & Digitalisierung",
         "description": "Standard-Lösungen können Sie nur so weit bringen. Wenn Ihre Geschäftsprozesse einzigartig sind oder Ihre Legacy-Systeme Sie zurückhalten, sind maßgeschneiderte Softwareentwicklung und Digitalisierung die Schlüssel zur Erschließung wahrer Effizienz und Innovation.",
         "cta": "Ihre digitale Transformation starten",
-        "seeIfThisIsYou": "Sehen Sie, ob das auf Sie zutrifft"
+        "seeIfThisIsYou": "Sehen Sie, ob das auf Sie zutrifft",
+        "challenges": {
+          "title": "Sind Sie das? Ihre Herausforderungen",
+          "description": "Wenn Ihnen etwas davon bekannt vorkommt, sind Sie hier richtig",
+          "items": [
+            {
+              "title": "Ineffiziente manuelle Prozesse",
+              "description": "Sie kämpfen mit ineffizienten manuellen Prozessen, die Zeit und Ressourcen verschwenden",
+              "impact": "Täglich verlorene Stunden"
+            },
+            {
+              "title": "Starre Legacy-Systeme",
+              "description": "Ihre bestehenden Legacy-Systeme sind starr, schwer zu warten und verhindern agile Reaktionen auf Marktveränderungen",
+              "impact": "Innovation blockiert"
+            },
+            {
+              "title": "Keine perfekte Standard-Lösung",
+              "description": "Sie können keine Standard-Lösung finden, die wirklich Ihren spezifischen Geschäftsanforderungen entspricht",
+              "impact": "Kompromisse bei Features"
+            },
+            {
+              "title": "Isolierte Daten",
+              "description": "Daten sind isoliert, was es unmöglich macht, umsetzbare Erkenntnisse zu gewinnen oder fundierte Entscheidungen zu treffen",
+              "impact": "Verpasste Gelegenheiten"
+            },
+            {
+              "title": "Digitalisierungslücke",
+              "description": "Sie müssen Kerngeschäftsfunktionen digitalisieren, haben aber nicht die interne Expertise oder Kapazität",
+              "impact": "Hinter Konkurrenten zurückfallen"
+            }
+          ]
+        },
+        "approach": {
+          "title": "Wie wir helfen: Unser 5-Schritte-Ansatz",
+          "description": "Vom Konzept bis zur Bereitstellung begleiten wir Sie bei jedem Schritt",
+          "steps": [
+            {
+              "title": "Tiefe Entdeckung & Analyse",
+              "description": "Wir beginnen damit, Ihre aktuellen Prozesse, Schmerzpunkte und strategischen Ziele gründlich zu verstehen und komplexe Geschäftsanforderungen in klare technische Spezifikationen zu übersetzen.",
+              "duration": "1-2 Wochen",
+              "deliverables": ["Prozessmapping", "Anforderungsdokument", "Technische Spezifikationen"]
+            },
+            {
+              "title": "Maßgeschneidertes Lösungsdesign",
+              "description": "Unsere Architekten entwerfen intuitive, skalierbare und sichere Softwarelösungen von Grund auf und nutzen moderne Technologien, um Ihre Investition zukunftssicher zu machen.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Systemarchitektur", "UI/UX-Designs", "Technische Roadmap"]
+            },
+            {
+              "title": "Agile Entwicklung & Iteration",
+              "description": "Wir verwenden eine agile Methodik, liefern funktionierende Inkremente, sammeln Feedback und passen uns schnell an, um sicherzustellen, dass das Endprodukt perfekt mit Ihren sich entwickelnden Bedürfnissen übereinstimmt.",
+              "duration": "8-16 Wochen",
+              "deliverables": ["Funktionierende Software", "Regelmäßige Demos", "Kontinuierliches Feedback"]
+            },
+            {
+              "title": "Nahtlose Integration & Bereitstellung",
+              "description": "Wir stellen sicher, dass Ihre neue maßgeschneiderte Software reibungslos in Ihre bestehende IT-Landschaft integriert wird, gefolgt von robuster Bereitstellung und gründlichen Tests.",
+              "duration": "1-2 Wochen",
+              "deliverables": ["Systemintegration", "Bereitstellung", "Testberichte"]
+            },
+            {
+              "title": "Laufende Unterstützung & Optimierung",
+              "description": "Unsere Partnerschaft erstreckt sich über den Launch hinaus und bietet Support, Wartung und kontinuierliche Optimierung, um Ihre Systeme auf Höchstleistung zu halten.",
+              "duration": "Laufend",
+              "deliverables": ["24/7 Support", "Leistungsüberwachung", "Regelmäßige Updates"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Wichtige Vorteile, die Sie erreichen werden",
+          "description": "Transformieren Sie Ihr Unternehmen mit messbaren Ergebnissen",
+          "items": [
+            {
+              "title": "Erhöhte operative Effizienz",
+              "description": "Automatisieren Sie wiederkehrende Aufgaben, reduzieren Sie Fehler und befreien Sie Ihr Team für wertvollere Arbeit.",
+              "metric": "Bis zu 70% Zeitersparnis"
+            },
+            {
+              "title": "Wettbewerbsvorteil",
+              "description": "Entwickeln Sie einzigartige digitale Produkte oder Dienstleistungen, die Sie im Markt differenzieren.",
+              "metric": "Marktführerschaft"
+            },
+            {
+              "title": "Skalierbarkeit & Flexibilität",
+              "description": "Bauen Sie Systeme, die mit Ihrem Unternehmen wachsen und sich an zukünftige Anforderungen anpassen.",
+              "metric": "10x Wachstumskapazität"
+            },
+            {
+              "title": "Verbesserte Entscheidungsfindung",
+              "description": "Erhalten Sie Echtzeit-Zugang zu kritischen Daten und Erkenntnissen.",
+              "metric": "Echtzeit-Analytik"
+            },
+            {
+              "title": "Verbesserte Benutzererfahrung",
+              "description": "Erstellen Sie intuitive interne Tools oder ansprechende kundenorientierte Anwendungen.",
+              "metric": "95% Benutzerzufriedenheit"
+            },
+            {
+              "title": "Kosteneinsparungen",
+              "description": "Reduzieren Sie die Abhängigkeit von teuren, generischen Softwarelizenzen und optimieren Sie die Ressourcenzuteilung.",
+              "metric": "40% Kostenreduzierung"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Warum Unit05 wählen?",
+          "description": "Wir heben uns ab, indem wir die Expertise eines großen Unternehmens mit der Agilität, Transparenz und persönlichen Note eines engagierten Partners bieten. Unser schlankes Team von Senior-Experten gewährleistet direkten Zugang zu Entscheidungsträgern und schnellen Fortschritt. Wir nutzen unser umfangreiches Netzwerk, um spezialisiertes Wissen bei Bedarf einzubringen. Keine typischen Overheads, keine \"Scheinarbeit\" – nur hochwertige Lösungen zu fairen, transparenten Preisen.",
+          "stats": [
+            { "value": "100%", "label": "Senior-Experten" },
+            { "value": "0", "label": "Scheinarbeit" },
+            { "value": "24/7", "label": "Support" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologien & Expertise",
+          "description": "Modernste Tools und Frameworks für moderne Lösungen",
+          "categories": [
+            {
+              "name": "Programmiersprachen",
+              "items": ["Java", "Spring", "JavaScript", "TypeScript", "Rust", "Python"]
+            },
+            {
+              "name": "Frameworks",
+              "items": ["Spring Boot", "React", "Angular", "Node.js"]
+            },
+            {
+              "name": "Datenbanken",
+              "items": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB"]
+            },
+            {
+              "name": "Cloud-Plattformen",
+              "items": ["AWS", "GCP", "Azure"]
+            },
+            {
+              "name": "Architekturen",
+              "items": ["Microservices", "Event-Driven", "Serverless"]
+            },
+            {
+              "name": "Tools",
+              "items": ["Git", "Jira", "Confluence"]
+            }
+          ]
+        }
       },
       "devsecops": {
         "title": "DevSecOps-Plattformlösungen",
         "subtitle": "Sichern Sie Ihre Zukunft: Fortgeschrittene DevSecOps-Plattformlösungen",
         "description": "In der heutigen wettbewerbsintensiven Landschaft ist schnelle und sichere Softwarebereitstellung nicht nur ein Vorteil—sie ist eine Notwendigkeit. DevSecOps-Plattformlösungen transformieren Ihren Entwicklungslebenszyklus durch Integration von Sicherheit von Grund auf, Automatisierung von Workflows und Aufbau widerstandsfähiger Cloud-nativer Architekturen.",
-        "cta": "Ihre Lieferungen beschleunigen"
+        "cta": "Ihre Lieferungen beschleunigen",
+        "challenges": {
+          "title": "Sind Sie das? Ihre Herausforderungen",
+          "description": "Wenn Ihnen etwas davon bekannt vorkommt, sind Sie hier richtig",
+          "items": [
+            {
+              "title": "Langsame Software-Release-Zyklen",
+              "description": "Ihre Software-Release-Zyklen sind langsam und fehleranfällig, was die Markteinführungszeit verzögert",
+              "impact": "Verzögerte Releases"
+            },
+            {
+              "title": "Sicherheitsschwachstellen",
+              "description": "Sie stehen vor Sicherheitsschwachstellen oder Verstößen aufgrund fragmentierter Prozesse und später Sicherheitsintegration",
+              "impact": "Sicherheitsrisiken"
+            },
+            {
+              "title": "Inkonsistente Umgebungen",
+              "description": "Ihre Teams kämpfen mit inkonsistenten Umgebungen und komplexen Bereitstellungen über verschiedene Phasen hinweg",
+              "impact": "Bereitstellungsfehler"
+            },
+            {
+              "title": "Skalierungsherausforderungen",
+              "description": "Sie müssen Ihre Anwendungen schnell skalieren, haben aber nicht die zugrunde liegende Infrastruktur und Automatisierung",
+              "impact": "Begrenztes Wachstum"
+            },
+            {
+              "title": "Team-Silos",
+              "description": "Es gibt ein Silo zwischen Entwicklung, Sicherheit und Betrieb, was zu Ineffizienzen und Kommunikationslücken führt",
+              "impact": "Reduzierte Produktivität"
+            }
+          ]
+        }
       },
       "cloudMigrations": {
         "title": "Cloud-Migrationen & Beratung",
@@ -249,6 +603,80 @@
     "meta": {
       "title": "Unit05 - Digitale Lösungen für Ihre Vision, Markteinführung & Wachstum",
       "description": "Unit05 spezialisiert sich auf maßgeschneiderte Softwareentwicklung, skalierbare SaaS-Lösungen und Unternehmensanwendungen. Wir liefern modernste Webanwendungen und digitale Transformationsstrategien, die messbares Geschäftswachstum fördern."
+    },
+    "errors": {
+      "404": {
+        "title": "Entschuldigung, die Seite kann nicht gefunden werden",
+        "description": "Die Seite, die Sie gesucht haben, scheint verschoben, gelöscht worden zu sein oder existiert nicht.",
+        "backToHome": "Zurück zur Startseite"
+      }
+    },
+    "legal": {
+      "imprint": {
+        "title": "Impressum",
+        "subtitle": "Rechtliche Informationen nach deutschem Recht",
+        "companyInfo": "Unternehmensinformationen",
+        "contact": "Kontakt",
+        "registerEntry": "Registereintrag",
+        "registeringCourt": "Registergericht",
+        "registrationNumber": "Registernummer",
+        "vat": "Umsatzsteuer",
+        "vatIdNumber": "Umsatzsteuer-Identifikationsnummer nach § 27 a Umsatzsteuergesetz",
+        "responsibleForContents": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+        "disputeResolution": "Streitschlichtung",
+        "disputeText": "Wir nehmen nicht an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.",
+        "liabilityForContents": "Haftung für Inhalte",
+        "liabilityForLinks": "Haftung für Links",
+        "copyright": "Urheberrecht"
+      },
+      "privacy": {
+        "title": "Datenschutzerklärung",
+        "subtitle": "Datenschutz- und Privatsphäre-Informationen",
+        "lastUpdated": "Unsere Datenschutzerklärung wurde zuletzt aktualisiert am",
+        "yourPrivacy": "Ihr Datenschutz",
+        "definitions": "Definitionen",
+        "informationCollection": "Informationssammlung und -verwendung",
+        "typesOfData": "Arten der gesammelten Daten",
+        "personalData": "Personenbezogene Daten",
+        "usageData": "Nutzungsdaten",
+        "trackingCookies": "Tracking & Cookies-Daten",
+        "useOfData": "Verwendung von Daten",
+        "retentionOfData": "Aufbewahrung von Daten",
+        "transferOfData": "Übertragung von Daten",
+        "disclosureOfData": "Offenlegung von Daten",
+        "securityOfData": "Sicherheit von Daten",
+        "gdprBasis": "Rechtsgrundlage für die Verarbeitung personenbezogener Daten unter der Datenschutz-Grundverordnung (DSGVO)",
+        "gdprRights": "Ihre Datenschutzrechte unter der Datenschutz-Grundverordnung (DSGVO)",
+        "serviceProviders": "Dienstleister",
+        "cookieConsent": "Einwilligung zur Verwendung von Cookies",
+        "dataProcessingAgreement": "Datenverarbeitungsvereinbarung",
+        "serverLogFiles": "Server-Log-Dateien",
+        "linksToOtherSites": "Links zu anderen Websites",
+        "childrensPrivacy": "Datenschutz für Kinder",
+        "changesToPolicy": "Änderungen an dieser Datenschutzerklärung",
+        "contactUs": "Kontaktieren Sie uns"
+      },
+      "terms": {
+        "title": "Allgemeine Geschäftsbedingungen",
+        "subtitle": "Allgemeine Geschäftsbedingungen für IT- und Beratungsdienstleistungen",
+        "introduction": "Wir, die 58agents GmbH (nachfolgend \"58agents\" oder \"wir\") freuen uns, Sie auf unserer Website begrüßen zu dürfen. 58agents ist ein Beratungs- und IT-Dienstleistungsunternehmen. Diese allgemeinen Geschäftsbedingungen sind die ausschließliche Vertragsgrundlage für alle von 58agents angebotenen und erbrachten IT- und Beratungsdienstleistungen.",
+        "contents": "Inhaltsverzeichnis",
+        "sections": {
+          "general": "Allgemeine Informationen und Geltungsbereich",
+          "conclusion": "Vertragsabschluss und -durchführung",
+          "payment": "Vergütung",
+          "externalCosts": "Externe und Nebenkosten",
+          "paymentTerms": "Zahlungsbedingungen",
+          "delays": "Leistungsverzögerungen und höhere Gewalt",
+          "scopeChanges": "Umfangsänderungen",
+          "cancellation": "Kündigung durch den Kunden und Ausfallregelung",
+          "obligations": "Mitwirkungspflichten des Kunden",
+          "liability": "Haftung",
+          "rightsOfUse": "Nutzungsrechte",
+          "miscellaneous": "Sonstiges",
+          "finalProvisions": "Schlussbestimmungen"
+        }
+      }
     }
   }
 }

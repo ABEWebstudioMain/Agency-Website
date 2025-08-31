@@ -20,8 +20,65 @@
     },
     "timeline": {
       "mainTitle": "THE JOURNEY",
-      "title": "Traditional Consultancy vs. 58Solutions Approach",
+      "title": "Traditional Consultancy vs. Unit05 Approach",
       "description": "See how our transparent, agile methodology contrasts with the typical frustrations of working with large consultancies.",
+      "steps": {
+        "week1": {
+          "time": "Week 1",
+          "painPoint": {
+            "title": "Endless Discovery Meetings",
+            "description": "Large consultancies schedule meeting after meeting, extending the 'discovery phase' for weeks without clear deliverables or progress."
+          },
+          "solution": {
+            "title": "Immediate Action Plan",
+            "description": "We start with a focused 2-day assessment and deliver a clear roadmap with defined milestones, timelines, and deliverables."
+          }
+        },
+        "month1": {
+          "time": "Month 1",
+          "painPoint": {
+            "title": "Vague Progress Updates",
+            "description": "Status reports filled with jargon and percentages that don't reflect real progress or tangible outcomes."
+          },
+          "solution": {
+            "title": "Transparent Weekly Demos",
+            "description": "Live demonstrations of working features every week, with clear metrics and direct access to the development team."
+          }
+        },
+        "month3": {
+          "time": "Month 3",
+          "painPoint": {
+            "title": "Scope Creep & Hidden Costs",
+            "description": "Unexpected charges appear as 'additional requirements' that should have been included in the original scope."
+          },
+          "solution": {
+            "title": "Fixed-Price Transparency",
+            "description": "All costs defined upfront with detailed breakdowns. No surprises, no hidden fees, and clear change request processes."
+          }
+        },
+        "month6": {
+          "time": "Month 6",
+          "painPoint": {
+            "title": "Junior Team Handoffs",
+            "description": "Senior consultants disappear after the sale, leaving junior developers to handle complex implementation challenges."
+          },
+          "solution": {
+            "title": "Senior Expert Continuity",
+            "description": "The same senior specialists who design your solution also implement it, ensuring consistency and deep understanding throughout."
+          }
+        },
+        "month9": {
+          "time": "Month 9",
+          "painPoint": {
+            "title": "Delayed Launch & Excuses",
+            "description": "Original timelines become distant memories as launch dates slip with technical excuses and blame-shifting."
+          },
+          "solution": {
+            "title": "On-Time Delivery Guarantee",
+            "description": "Agile sprints with working software delivered every 2 weeks. You see progress continuously, not just at the end."
+          }
+        }
+      },
       "cta": {
         "title": "Ready for a Different Experience?",
         "description": "Skip the frustration and work with a team that delivers transparency, expertise, and results from day one.",
@@ -117,17 +174,128 @@
     "trustSignals": {
       "mainTitle": "TESTIMONIALS",
       "title": "What Our Partners Say",
-      "description": "Don't just take our word for it. Here's what our clients say about working with Unit05."
+      "description": "Don't just take our word for it. Here's what our clients say about working with Unit05.",
+      "testimonials": {
+        "sarah": {
+          "quote": "The Unit05 team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.",
+          "name": "Sarah M.",
+          "role": "Head of Operations",
+          "company": "European Logistics Provider"
+        },
+        "marcus": {
+          "quote": "Working with Unit05 transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.",
+          "name": "Marcus W.",
+          "role": "CTO",
+          "company": "FinTech Startup"
+        },
+        "lisa": {
+          "quote": "The cloud migration was seamless and the cost savings were immediate. Unit05 delivered exactly what they promised, when they promised it, with complete transparency throughout the process.",
+          "name": "Lisa C.",
+          "role": "IT Director",
+          "company": "Enterprise SaaS Provider"
+        }
+      }
     },
     "about": {
       "mainTitle": "ABOUT US",
       "title": "Your Agile Partner for Digital Excellence",
-      "description": "We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results."
+      "description": "We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results.",
+      "content": {
+        "section1": {
+          "title": "Your Agile Partner for Digital Excellence",
+          "paragraphs": [
+            "At Unit05, we believe that exceptional IT consulting doesn't require a bloated organization. It demands deep expertise, agile execution, and a transparent partnership built on trust. We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results.",
+            "Our journey began with a clear vision: to offer a superior alternative to traditional large-scale consultancies. We saw an opportunity to provide the same (or even higher) level of senior expertise and strategic insight, but with the speed, efficiency, and personal commitment that only a focused, lean team can offer.",
+            "We're not just consultants; we're architects, developers, and problem-solvers who immerse ourselves in your challenges to craft future-proof solutions."
+          ],
+          "highlights": [
+            {
+              "title": "Direct Access to Senior Talent",
+              "description": "Work directly with experienced professionals"
+            },
+            {
+              "title": "Agile & Transparent Workflow",
+              "description": "Faster delivery with complete visibility"
+            },
+            {
+              "title": "Network-Powered Solutions",
+              "description": "Extensive network of specialists when needed"
+            },
+            {
+              "title": "Fair Pricing, Exceptional Value",
+              "description": "Competitive rates with maximum ROI"
+            }
+          ]
+        },
+        "section2": {
+          "title": "Less Ghost Work, More Value",
+          "paragraphs": [
+            "We've all experienced it: the large consultancy model where junior staff do much of the heavy lifting, communication is a maze, and costs seem to mysteriously inflate. We're different.",
+            "Our efficient processes mean faster delivery, clear communication, and complete visibility into project progress. You're always in the loop. While we're a lean core team, we leverage an extensive, trusted network of specialists to bridge any knowledge gaps and scale capabilities precisely when your project demands it.",
+            "This means comprehensive solutions without unnecessary overhead. We're not just looking for projects; we're looking to build lasting relationships. Your sustained success is our ultimate measure of achievement."
+          ],
+          "pillars": [
+            {
+              "title": "Direct Access to Senior Talent",
+              "description": "No middle-man or layers of bureaucracy"
+            },
+            {
+              "title": "Network-Powered Solutions",
+              "description": "Comprehensive solutions without unnecessary overhead"
+            },
+            {
+              "title": "Long-Term Partnership",
+              "description": "Building lasting relationships focused on your success"
+            }
+          ]
+        },
+        "section3": {
+          "title": "Your Digital Future, Realized",
+          "paragraphs": [
+            "We're driven by the opportunity to empower businesses like yours to thrive in the digital age. Whether it's crafting custom software to optimize core processes, building secure DevSecOps platforms, navigating complex cloud migrations, or leveraging AI to automate tedious tasks, our goal is to deliver solutions that are not just technically sound, but strategically impactful.",
+            "We favor efficiency, collaboration, and long-term partnership over one-off projects. This approach enables our clients to innovate rapidly, scale sustainably, and deliver experiences that turn users into fans."
+          ],
+          "services": [
+            "Custom Software Development",
+            "DevSecOps Platforms",
+            "Cloud Migrations",
+            "AI Process Optimization"
+          ],
+          "quote": "Experience the difference of a true IT partner committed to your success"
+        }
+      }
     },
     "team": {
       "mainTitle": "OUR TEAM",
       "title": "Meet With Our Creative Dedicated Team",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus."
+      "description": "Our lean team of highly experienced IT professionals brings deep expertise and passion to every project, ensuring exceptional results through direct collaboration.",
+      "members": {
+        "dominik": {
+          "name": "Dominik H.",
+          "role": "DevOps Engineer",
+          "skills": ["Docker", "Kubernetes", "CI/CD"]
+        },
+        "martin": {
+          "name": "Martin P.",
+          "role": "Technical Lead",
+          "skills": ["Leadership", "Strategy", "DevOps"]
+        },
+        "toyah": {
+          "name": "Toyah G.",
+          "role": "UX/UI Designer",
+          "skills": ["Figma", "UI/UX", "Design Systems"]
+        },
+        "bilal": {
+          "name": "Bilal E.",
+          "role": "Senior Software Engineer",
+          "skills": ["React", "Node.js", "AWS"]
+        },
+        "jeremias": {
+          "name": "Jeremias B.",
+          "role": "Cloud Architect",
+          "skills": ["AWS", "Terraform", "Architecture"]
+        }
+      }
     },
     "contact": {
       "mainTitle": "GET IN TOUCH",
@@ -193,7 +361,20 @@
         "meetExperts": "Meet Our Experts",
         "footer": "Free consultation • No commitment • Expert advice"
       },
-      "backToAll": "Back to All Case Studies"
+      "backToAll": "Back to All Case Studies",
+      "detail": {
+        "clientChallenge": "The Client & Their Challenge",
+        "clientProfile": "Client Profile",
+        "theProblem": "The Problem",
+        "ourSolution": "Our Agile Solution",
+        "ourApproach": "Our Approach",
+        "keyTechnologies": "Key Technologies Used",
+        "specificActions": "Specific Actions Taken",
+        "resultsImpact": "The Tangible Impact & Results",
+        "measurableSuccess": "Measurable Success",
+        "additionalBenefits": "Additional Benefits",
+        "readFullStory": "Read the Full Story"
+      }
     },
     "services": {
       "customSoftware": {
@@ -201,13 +382,186 @@
         "subtitle": "Build the Future: Custom Software & Digitalization",
         "description": "Off-the-shelf solutions can only take you so far. When your business processes are unique, or your legacy systems are holding you back, custom software development and digitalization are the keys to unlocking true efficiency and innovation.",
         "cta": "Start Your Digital Transformation",
-        "seeIfThisIsYou": "See If This Is You"
+        "seeIfThisIsYou": "See If This Is You",
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "description": "If any of these sound familiar, you're in the right place",
+          "items": [
+            {
+              "title": "Inefficient Manual Processes",
+              "description": "You're struggling with inefficient manual processes that waste time and resources",
+              "impact": "Hours lost daily"
+            },
+            {
+              "title": "Rigid Legacy Systems",
+              "description": "Your existing legacy systems are rigid, difficult to maintain, and prevent agile responses to market changes",
+              "impact": "Blocking innovation"
+            },
+            {
+              "title": "No Perfect Off-the-Shelf Solution",
+              "description": "You can't find an off-the-shelf solution that truly meets your specific business requirements",
+              "impact": "Compromising on features"
+            },
+            {
+              "title": "Siloed Data",
+              "description": "Data is siloed, making it impossible to gain actionable insights or make informed decisions",
+              "impact": "Missing opportunities"
+            },
+            {
+              "title": "Digitalization Gap",
+              "description": "You need to digitalize core business functions but lack the in-house expertise or capacity",
+              "impact": "Falling behind competitors"
+            }
+          ]
+        },
+        "approach": {
+          "title": "How We Help: Our 5-Step Approach",
+          "description": "From concept to deployment, we partner with you every step of the way",
+          "steps": [
+            {
+              "title": "Deep Discovery & Analysis",
+              "description": "We start by thoroughly understanding your current processes, pain points, and strategic goals, translating complex business requirements into clear technical specifications.",
+              "duration": "1-2 weeks",
+              "deliverables": ["Process mapping", "Requirements document", "Technical specifications"]
+            },
+            {
+              "title": "Custom Solution Design",
+              "description": "Our architects design intuitive, scalable, and secure software solutions from the ground up, leveraging modern technologies to future-proof your investment.",
+              "duration": "2-3 weeks",
+              "deliverables": ["System architecture", "UI/UX designs", "Technical roadmap"]
+            },
+            {
+              "title": "Agile Development & Iteration",
+              "description": "We adopt an agile methodology, delivering working increments, gathering feedback, and adapting quickly to ensure the final product perfectly aligns with your evolving needs.",
+              "duration": "8-16 weeks",
+              "deliverables": ["Working software", "Regular demos", "Continuous feedback"]
+            },
+            {
+              "title": "Seamless Integration & Deployment",
+              "description": "We ensure your new custom software integrates smoothly with your existing IT landscape, followed by robust deployment and thorough testing.",
+              "duration": "1-2 weeks",
+              "deliverables": ["System integration", "Deployment", "Testing reports"]
+            },
+            {
+              "title": "Ongoing Support & Optimization",
+              "description": "Our partnership extends beyond launch, offering support, maintenance, and continuous optimization to keep your systems performing at their peak.",
+              "duration": "Ongoing",
+              "deliverables": ["24/7 support", "Performance monitoring", "Regular updates"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Key Benefits You'll Achieve",
+          "description": "Transform your business with measurable results",
+          "items": [
+            {
+              "title": "Increased Operational Efficiency",
+              "description": "Automate repetitive tasks, reduce errors, and free up your team for higher-value work.",
+              "metric": "Up to 70% time savings"
+            },
+            {
+              "title": "Competitive Advantage",
+              "description": "Develop unique digital products or services that differentiate you in the marketplace.",
+              "metric": "Market leadership"
+            },
+            {
+              "title": "Scalability & Flexibility",
+              "description": "Build systems that grow with your business and adapt to future demands.",
+              "metric": "10x growth capacity"
+            },
+            {
+              "title": "Enhanced Decision-Making",
+              "description": "Gain real-time access to critical data and insights.",
+              "metric": "Real-time analytics"
+            },
+            {
+              "title": "Improved User Experience",
+              "description": "Create intuitive internal tools or engaging customer-facing applications.",
+              "metric": "95% user satisfaction"
+            },
+            {
+              "title": "Cost Savings",
+              "description": "Reduce reliance on expensive, generic software licenses and streamline resource allocation.",
+              "metric": "40% cost reduction"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Why Choose Unit05?",
+          "description": "We stand apart by offering the expertise of a large firm with the agility, transparency, and personal touch of a dedicated partner. Our lean team of senior experts ensures direct access to decision-makers and rapid progress. We leverage our extensive network to incorporate specialized knowledge whenever needed. No typical overheads, no \"ghost work\" – just high-value solutions at fair, transparent prices.",
+          "stats": [
+            { "value": "100%", "label": "Senior Experts" },
+            { "value": "0", "label": "Ghost Work" },
+            { "value": "24/7", "label": "Support" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologies & Expertise",
+          "description": "Cutting-edge tools and frameworks for modern solutions",
+          "categories": [
+            {
+              "name": "Programming Languages",
+              "items": ["Java", "Spring", "JavaScript", "TypeScript", "Rust", "Python"]
+            },
+            {
+              "name": "Frameworks",
+              "items": ["Spring Boot", "React", "Angular", "Node.js"]
+            },
+            {
+              "name": "Databases",
+              "items": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB"]
+            },
+            {
+              "name": "Cloud Platforms",
+              "items": ["AWS", "GCP", "Azure"]
+            },
+            {
+              "name": "Architectures",
+              "items": ["Microservices", "Event-Driven", "Serverless"]
+            },
+            {
+              "name": "Tools",
+              "items": ["Git", "Jira", "Confluence"]
+            }
+          ]
+        }
       },
       "devsecops": {
         "title": "DevSecOps Platform Solutions",
         "subtitle": "Secure Your Future: Advanced DevSecOps Platform Solutions",
         "description": "In today's competitive landscape, rapid and secure software delivery isn't just an advantage—it's a necessity. DevSecOps Platform Solutions transform your development lifecycle by integrating security from the ground up, automating workflows, and building resilient cloud-native architectures.",
-        "cta": "Accelerate Your Deliveries"
+        "cta": "Accelerate Your Deliveries",
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "description": "If any of these sound familiar, you're in the right place",
+          "items": [
+            {
+              "title": "Slow Software Release Cycles",
+              "description": "Your software release cycles are slow and prone to manual errors, delaying time-to-market",
+              "impact": "Delayed releases"
+            },
+            {
+              "title": "Security Vulnerabilities",
+              "description": "You're facing security vulnerabilities or breaches due to fragmented processes and late security integration",
+              "impact": "Security risks"
+            },
+            {
+              "title": "Inconsistent Environments",
+              "description": "Your teams struggle with inconsistent environments and complex deployments across different stages",
+              "impact": "Deployment failures"
+            },
+            {
+              "title": "Scaling Challenges",
+              "description": "You need to scale your applications quickly but lack the underlying infrastructure and automation",
+              "impact": "Limited growth"
+            },
+            {
+              "title": "Team Silos",
+              "description": "There's a silo between development, security, and operations, leading to inefficiencies and communication gaps",
+              "impact": "Reduced productivity"
+            }
+          ]
+        }
       },
       "cloudMigrations": {
         "title": "Cloud Migrations & Consultation",
@@ -249,6 +603,80 @@
     "meta": {
       "title": "Unit05 - Digital Solutions for Your Vision, Launch & Growth",
       "description": "Unit05 specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth."
+    },
+    "errors": {
+      "404": {
+        "title": "Sorry, the page can't be found",
+        "description": "The page you were looking for appears to have been moved, deleted or does not exist.",
+        "backToHome": "Back to Home"
+      }
+    },
+    "legal": {
+      "imprint": {
+        "title": "Imprint",
+        "subtitle": "Legal information according to German law",
+        "companyInfo": "Company Information",
+        "contact": "Contact",
+        "registerEntry": "Register entry",
+        "registeringCourt": "Registering court",
+        "registrationNumber": "Registration number",
+        "vat": "VAT",
+        "vatIdNumber": "VAT Id number according to Sec. 27 a German Value Added Tax Act",
+        "responsibleForContents": "Responsible for contents acc. to Sec. 55, para. 2 German Federal Broadcasting Agreement (RstV)",
+        "disputeResolution": "Dispute resolution",
+        "disputeText": "We do not take part in online dispute resolutions at consumer arbitration boards.",
+        "liabilityForContents": "Liability for Contents",
+        "liabilityForLinks": "Liability for Links",
+        "copyright": "Copyright"
+      },
+      "privacy": {
+        "title": "Privacy Policy",
+        "subtitle": "Data protection and privacy information",
+        "lastUpdated": "Our Privacy Policy was last updated on",
+        "yourPrivacy": "Your Privacy",
+        "definitions": "Definitions",
+        "informationCollection": "Information Collection And Use",
+        "typesOfData": "Types of Data Collected",
+        "personalData": "Personal Data",
+        "usageData": "Usage Data",
+        "trackingCookies": "Tracking & Cookies Data",
+        "useOfData": "Use of Data",
+        "retentionOfData": "Retention of Data",
+        "transferOfData": "Transfer Of Data",
+        "disclosureOfData": "Disclosure Of Data",
+        "securityOfData": "Security Of Data",
+        "gdprBasis": "Legal Basis for Processing Personal Data Under General Data Protection Regulation (GDPR)",
+        "gdprRights": "Your Data Protection Rights Under General Data Protection Regulation (GDPR)",
+        "serviceProviders": "Service Providers",
+        "cookieConsent": "Consent to the use of cookies",
+        "dataProcessingAgreement": "Data processing agreement",
+        "serverLogFiles": "Server log files",
+        "linksToOtherSites": "Links To Other Sites",
+        "childrensPrivacy": "Children's Privacy",
+        "changesToPolicy": "Changes To This Privacy Policy",
+        "contactUs": "Contact Us"
+      },
+      "terms": {
+        "title": "Terms and Conditions",
+        "subtitle": "General terms and conditions for IT and consulting services",
+        "introduction": "We, the 58agents GmbH (hereinafter \"58agents\" or \"we\") are pleased to welcome you to our website. 58agents is a consulting and IT services provider company. These general terms and conditions are the exclusive contractual basis for all IT and consulting services offered and provided by 58agents.",
+        "contents": "Contents",
+        "sections": {
+          "general": "General Information and Scope",
+          "conclusion": "Conclusion and Implementation of the Contract",
+          "payment": "Payment",
+          "externalCosts": "External and Incidental Costs",
+          "paymentTerms": "Terms of Payment",
+          "delays": "Performance Delays and Force Majeure",
+          "scopeChanges": "Scope Changes",
+          "cancellation": "Cancellation by the Customer and Failure Regulation",
+          "obligations": "Obligations of the Customer to Participate",
+          "liability": "Liability",
+          "rightsOfUse": "Rights of use",
+          "miscellaneous": "Miscellaneous",
+          "finalProvisions": "Final Provisions"
+        }
+      }
     }
   }
 }

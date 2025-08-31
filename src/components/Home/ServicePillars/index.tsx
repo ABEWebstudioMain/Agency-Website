@@ -18,13 +18,9 @@ export default function ServicePillars() {
           <path d="M10 22h4v4h-4zM18 22h16v2H18zM18 26h12v2H18zM10 30h4v4h-4zM18 30h16v2H18zM18 34h8v2h-8z"/>
         </svg>
       ),
-      title: "Custom Software Development & Digitalization",
-      benefit: "Streamline operations and unlock new revenue with bespoke digital solutions.",
-      problems: [
-        "Eliminate manual workflows",
-        "Replace legacy systems", 
-        "Adapt quickly to market changes"
-      ],
+      title: t('common.servicePillars.pillars.customSoftware.title'),
+      benefit: t('common.servicePillars.pillars.customSoftware.benefit'),
+      problems: t('common.servicePillars.pillars.customSoftware.problems'),
       link: "/services/custom-software-development"
     },
     {
@@ -37,13 +33,9 @@ export default function ServicePillars() {
           <circle cx="24" cy="24" r="2"/>
         </svg>
       ),
-      title: "DevSecOps Platform Solutions",
-      benefit: "Faster delivery with built-in security through automated DevSecOps pipelines.",
-      problems: [
-        "Speed up deployments",
-        "Close security gaps",
-        "Scale consistently"
-      ],
+      title: t('common.servicePillars.pillars.devsecops.title'),
+      benefit: t('common.servicePillars.pillars.devsecops.benefit'),
+      problems: t('common.servicePillars.pillars.devsecops.problems'),
       link: "/services/devsecops-platforms"
     },
     {
@@ -54,13 +46,9 @@ export default function ServicePillars() {
           <path d="M24 26c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"/>
         </svg>
       ),
-      title: "Cloud Migrations & Consultation",
-      benefit: "Seamless, secure migration to scalable cloud environments.",
-      problems: [
-        "Reduce on-premise costs",
-        "Increase flexibility",
-        "Simplify disaster recovery"
-      ],
+      title: t('common.servicePillars.pillars.cloudMigrations.title'),
+      benefit: t('common.servicePillars.pillars.cloudMigrations.benefit'),
+      problems: t('common.servicePillars.pillars.cloudMigrations.problems'),
       link: "/services/cloud-migrations"
     },
     {
@@ -75,13 +63,9 @@ export default function ServicePillars() {
           <circle cx="18" cy="28" r="1"/>
         </svg>
       ),
-      title: "AI-Powered Process Optimization & Automation",
-      benefit: "Automate repetitive tasks and make smarter decisions with practical AI solutions.",
-      problems: [
-        "Reduce manual workloads",
-        "Improve workflow efficiency",
-        "Unlock data insights"
-      ],
+      title: t('common.servicePillars.pillars.aiOptimization.title'),
+      benefit: t('common.servicePillars.pillars.aiOptimization.benefit'),
+      problems: t('common.servicePillars.pillars.aiOptimization.problems'),
       link: "/services/ai-optimization"
     }
   ];
@@ -90,12 +74,12 @@ export default function ServicePillars() {
     <section id="services" className="py-16 sm:py-20 lg:py-[100px]">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
-          <span className="title">OUR 4 PILLARS OF IMPACT</span>
+          <span className="title">{t('common.servicePillars.mainTitle')}</span>
           <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Solutions Designed to Solve Your Biggest Challenges
+            {t('common.servicePillars.title')}
           </h2>
           <p className="text-base text-dark-text">
-            Each service pillar targets critical pain points with tailored strategies and senior expertise.
+            {t('common.servicePillars.description')}
           </p>
         </div>
 
@@ -118,7 +102,7 @@ export default function ServicePillars() {
               </p>
               
               <ul className="mb-8 flex-grow space-y-3">
-                {pillar.problems.map((problem, index) => (
+                {pillar.problems.map((problem: string, index: number) => (
                   <li key={index} className="flex items-start text-sm text-dark-text">
                     <svg width="16" height="16" viewBox="0 0 16 16" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
@@ -138,7 +122,7 @@ export default function ServicePillars() {
                   }
                   className="inline-flex items-center font-heading text-base font-medium text-primary transition-colors hover:text-primary/80"
                 >
-                  Learn More
+                  {t('common.servicePillars.learnMore')}
                   <svg
                     width="16"
                     height="16"
@@ -156,13 +140,13 @@ export default function ServicePillars() {
         {/* Optional Footer CTA */}
         <div className="mt-16 text-center lg:mt-20">
           <p className="mb-6 text-base text-dark-text">
-            Not sure which pillar fits best? We can combine them into a tailored solution.
+            {t('common.servicePillars.cta.description')}
           </p>
           <Link
             href={`/${locale}/contact`}
             className="inline-flex items-center rounded-sm bg-primary px-8 py-3 font-heading text-base font-medium text-white transition-colors hover:bg-primary/90"
           >
-            Get Custom Solution
+            {t('common.servicePillars.cta.button')}
             <svg
               width="16"
               height="16"

@@ -12,26 +12,26 @@ export default function TrustSignals() {
   const testimonials = [
     {
       id: 1,
-      quote: "The Unit05 team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.",
-      name: "Sarah M.",
-      role: "Head of Operations",
-      company: "European Logistics Provider",
+      quote: t('common.trustSignals.testimonials.sarah.quote'),
+      name: t('common.trustSignals.testimonials.sarah.name'),
+      role: t('common.trustSignals.testimonials.sarah.role'),
+      company: t('common.trustSignals.testimonials.sarah.company'),
       avatar: "/images/illustrations/undraw_cool-girl-avatar_fifz.svg"
     },
     {
       id: 2,
-      quote: "Working with Unit05 transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.",
-      name: "Marcus W.",
-      role: "CTO",
-      company: "FinTech Startup",
+      quote: t('common.trustSignals.testimonials.marcus.quote'),
+      name: t('common.trustSignals.testimonials.marcus.name'),
+      role: t('common.trustSignals.testimonials.marcus.role'),
+      company: t('common.trustSignals.testimonials.marcus.company'),
       avatar: "/images/illustrations/undraw_professor-avatar_y9ai.svg"
     },
     {
       id: 3,
-      quote: "The cloud migration was seamless and the cost savings were immediate. Unit05 delivered exactly what they promised, when they promised it, with complete transparency throughout the process.",
-      name: "Lisa C.",
-      role: "IT Director",
-      company: "Enterprise SaaS Provider",
+      quote: t('common.trustSignals.testimonials.lisa.quote'),
+      name: t('common.trustSignals.testimonials.lisa.name'),
+      role: t('common.trustSignals.testimonials.lisa.role'),
+      company: t('common.trustSignals.testimonials.lisa.company'),
       avatar: "/images/illustrations/undraw_cool-girl-avatar_fifz.svg"
     }
   ];
