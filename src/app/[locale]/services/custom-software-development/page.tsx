@@ -11,8 +11,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const siteName = process.env.SITE_NAME || "58Solutions";
 
   const titles = {
-    en: "Custom Software Development & Digitalization | 58Solutions",
-    de: "Maßgeschneiderte Softwareentwicklung & Digitalisierung | 58Solutions"
+    en: "Custom Software Development & Digitalization | Unit05",
+    de: "Maßgeschneiderte Softwareentwicklung & Digitalisierung | Unit05"
   };
 
   const descriptions = {

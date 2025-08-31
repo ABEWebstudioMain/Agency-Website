@@ -30,7 +30,7 @@ export default function FooterAbout() {
       </Link>
 
       <p className="mb-10 text-base text-dark-text leading-relaxed max-w-[280px]">
-        58agents GmbH - Your strategic partner for digital transformation and innovative software solutions.
+        Unit05 GmbH - Your strategic partner for digital transformation and innovative software solutions.
       </p>
       <div className="flex items-center space-x-5">
         <a

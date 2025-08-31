@@ -88,7 +88,7 @@ export const caseStudies: CaseStudy[] = [
         'Positioned for accelerated digital transformation across other departments'
       ],
       clientEndorsement: {
-        quote: 'The 58agents team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.',
+        quote: 'The Unit05 team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.',
         author: 'Sarah Mitchell',
         position: 'Head of Operations',
         company: 'European Logistics Provider'
@@ -151,7 +151,7 @@ export const caseStudies: CaseStudy[] = [
         'Regulatory compliance became automated rather than manual overhead'
       ],
       clientEndorsement: {
-        quote: 'Working with 58agents transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.',
+        quote: 'Working with Unit05 transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.',
         author: 'Marcus Weber',
         position: 'CTO',
         company: 'FinTech Startup'
@@ -214,7 +214,7 @@ export const caseStudies: CaseStudy[] = [
         'Improved ability to experiment and innovate with new features'
       ],
       clientEndorsement: {
-        quote: 'The cloud migration was seamless and the cost savings were immediate. 58agents delivered exactly what they promised, when they promised it, with complete transparency throughout the process.',
+        quote: 'The cloud migration was seamless and the cost savings were immediate. Unit05 delivered exactly what they promised, when they promised it, with complete transparency throughout the process.',
         author: 'Lisa Chen',
         position: 'IT Director',
         company: 'Enterprise SaaS Provider'

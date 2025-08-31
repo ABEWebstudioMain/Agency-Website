@@ -270,7 +270,7 @@ export default function CustomSoftwareService() {
                 Off-the-shelf solutions can only take you so far. When your business processes are unique, or your legacy systems are holding you back, <strong className="text-primary">custom software development and digitalization</strong> are the keys to unlocking true efficiency and innovation.
               </p>
               <p>
-                At <strong className="text-dark dark:text-white">58agents</strong>, we don&apos;t just build code; we craft tailor-made digital solutions that perfectly fit your operational needs, streamline workflows, and create competitive advantages.
+                At <strong className="text-dark dark:text-white">Unit05</strong>, we don&apos;t just build code; we craft tailor-made digital solutions that perfectly fit your operational needs, streamline workflows, and create competitive advantages.
               </p>
             </div>
             
@@ -484,7 +484,7 @@ export default function CustomSoftwareService() {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-              Why Choose <span className="text-primary">58agents</span>?
+              Why Choose <span className="text-primary">Unit05</span>?
             </h2>
             
             <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">

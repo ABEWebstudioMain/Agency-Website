@@ -61,7 +61,7 @@ export default function TeamOverview({ employees }: TeamOverviewProps) {
         <SectionTitle
           mainTitle="OUR TEAM"
           title="Meet Our Expert Team Members"
-          paragraph="Discover the talented professionals behind 58Solutions. Each team member brings unique expertise and passion to deliver exceptional digital solutions."
+          paragraph="Discover the talented professionals behind Unit05. Each team member brings unique expertise and passion to deliver exceptional digital solutions."
         />
 
         <TeamFilters

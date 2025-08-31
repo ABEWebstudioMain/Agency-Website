@@ -10,13 +10,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const siteName = process.env.SITE_NAME || "58Solutions";
 
   const titles = {
-    en: "Imprint - Legal Information | 58Solutions",
-    de: "Impressum - Rechtliche Informationen | 58Solutions"
+    en: "Imprint - Legal Information | Unit05",
+    de: "Impressum - Rechtliche Informationen | Unit05"
   };
 
   const descriptions = {
-    en: "Legal information and imprint for 58Solutions GmbH according to German Telemedia Act (TMG).",
-    de: "Rechtliche Informationen und Impressum für 58Solutions GmbH gemäß Telemediengesetz (TMG)."
+    en: "Legal information and imprint for Unit05 GmbH according to German Telemedia Act (TMG).",
+    de: "Rechtliche Informationen und Impressum für Unit05 GmbH gemäß Telemediengesetz (TMG)."
   };
 
   return {

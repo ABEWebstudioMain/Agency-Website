@@ -11,13 +11,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const siteName = process.env.SITE_NAME || "58Solutions";
 
   const titles = {
-    en: "Case Studies - Real-World Solutions & Results | 58Solutions",
-    de: "Fallstudien - Reale Lösungen & Ergebnisse | 58Solutions"
+    en: "Case Studies - Real-World Solutions & Results | Unit05",
+    de: "Fallstudien - Reale Lösungen & Ergebnisse | Unit05"
   };
 
   const descriptions = {
-    en: "Explore our success stories and case studies. See how 58Solutions has helped businesses achieve digital transformation through custom software, DevSecOps, cloud migrations, and AI automation.",
-    de: "Entdecken Sie unsere Erfolgsgeschichten und Fallstudien. Sehen Sie, wie 58Solutions Unternehmen bei der digitalen Transformation durch maßgeschneiderte Software, DevSecOps, Cloud-Migrationen und KI-Automatisierung geholfen hat."
+    en: "Explore our success stories and case studies. See how Unit05 has helped businesses achieve digital transformation through custom software, DevSecOps, cloud migrations, and AI automation.",
+    de: "Entdecken Sie unsere Erfolgsgeschichten und Fallstudien. Sehen Sie, wie Unit05 Unternehmen bei der digitalen Transformation durch maßgeschneiderte Software, DevSecOps, Cloud-Migrationen und KI-Automatisierung geholfen hat."
   };
 
   return {

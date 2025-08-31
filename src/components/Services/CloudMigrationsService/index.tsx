@@ -299,7 +299,7 @@ export default function CloudMigrationsService() {
             </h1>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-dark-text leading-relaxed">
               <p>
-                The cloud offers unparalleled scalability, flexibility, and cost efficiency, but migrating effectively requires expertise and a strategic approach. At <strong className="text-dark dark:text-white">58agents</strong>, we provide <strong className="text-primary">expert cloud migration and consultation services</strong>, guiding your business through every stage of its cloud journey.
+                The cloud offers unparalleled scalability, flexibility, and cost efficiency, but migrating effectively requires expertise and a strategic approach. At <strong className="text-dark dark:text-white">Unit05</strong>, we provide <strong className="text-primary">expert cloud migration and consultation services</strong>, guiding your business through every stage of its cloud journey.
               </p>
               <p>
                 Our highly experienced team ensures a secure, efficient, and cost-optimized transition with minimal disruption, positioning your business for sustainable growth and innovation in the cloud.
@@ -516,7 +516,7 @@ export default function CloudMigrationsService() {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-              Why Choose <span className="text-primary">58agents</span>?
+              Why Choose <span className="text-primary">Unit05</span>?
             </h2>
             
             <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">

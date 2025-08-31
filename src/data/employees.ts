@@ -79,11 +79,11 @@ export const employees: Employee[] = [
     ],
     experience: [
       {
-        id: 'senior-dev-58solutions',
-        company: '58Solutions',
+        id: 'senior-dev-unit05',
+        company: 'Unit05',
         position: 'Senior Full-Stack Developer',
         startDate: '2022-01',
-        description: 'Leading development of enterprise web applications and mentoring junior developers at 58agents.',
+        description: 'Leading development of enterprise web applications and mentoring junior developers at Unit05.',
         achievements: [
           'Led development of 5+ major client projects',
           'Improved application performance by 45% on average',
@@ -252,11 +252,11 @@ export const employees: Employee[] = [
     ],
     experience: [
       {
-        id: 'cloud-architect-58solutions',
-        company: '58Solutions',
+        id: 'cloud-architect-unit05',
+        company: 'Unit05',
         position: 'DevOps Engineer & Cloud Architect',
         startDate: '2021-06',
-        description: 'Designing and implementing cloud infrastructure solutions for enterprise clients at 58agents.',
+        description: 'Designing and implementing cloud infrastructure solutions for enterprise clients at Unit05.',
         achievements: [
           'Architected cloud solutions for 20+ enterprise clients',
           'Reduced infrastructure costs by 40% on average',
@@ -433,11 +433,11 @@ export const employees: Employee[] = [
     ],
     experience: [
       {
-        id: 'ux-designer-58solutions',
-        company: '58Solutions',
+        id: 'ux-designer-unit05',
+        company: 'Unit05',
         position: 'UX/UI Designer & Frontend Developer',
         startDate: '2022-03',
-        description: 'Leading design and frontend development for client projects at 58agents, focusing on user experience and conversion optimization.',
+        description: 'Leading design and frontend development for client projects at Unit05, focusing on user experience and conversion optimization.',
         achievements: [
           'Designed interfaces for 15+ client projects',
           'Improved average conversion rates by 35%',

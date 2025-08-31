@@ -21,7 +21,7 @@ export default function AboutContent() {
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
-          At 58agents, we believe that exceptional IT consulting doesn&apos;t require a bloated organization. It demands deep expertise, agile execution, and a transparent partnership built on trust. We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results.
+          At Unit05, we believe that exceptional IT consulting doesn&apos;t require a bloated organization. It demands deep expertise, agile execution, and a transparent partnership built on trust. We are a dedicated team of highly experienced software and IT experts, united by a passion for solving complex challenges and delivering tangible results.
         </p>
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
           Our journey began with a clear vision: to offer a superior alternative to traditional large-scale consultancies. We saw an opportunity to provide the same (or even higher) level of senior expertise and strategic insight, but with the speed, efficiency, and personal commitment that only a focused, lean team can offer.

@@ -234,7 +234,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               Ready to See Similar Results?
             </h2>
             <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-              Discover how 58agents can drive digital transformation for your business.
+              Discover how Unit05 can drive digital transformation for your business.
             </p>
             
             <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">

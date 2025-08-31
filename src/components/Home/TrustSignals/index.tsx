@@ -53,7 +53,7 @@ export default function TrustSignals() {
             What Our Partners Say
           </h2>
           <p className="text-base text-dark-text">
-            Don&apos;t just take our word for it. Here&apos;s what our clients say about working with 58Solutions.
+            Don&apos;t just take our word for it. Here&apos;s what our clients say about working with Unit05.
           </p>
         </div>
 

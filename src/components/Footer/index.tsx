@@ -85,7 +85,7 @@ export default function Footer() {
                     Address
                   </p>
                   <div className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary">
-                    58agents GmbH<br />
+                    Unit05 GmbH<br />
                     Kleiner Hirschgraben 8<br />
                     60311 Frankfurt am Main
                   </div>

@@ -10,13 +10,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const siteName = process.env.SITE_NAME || "58Solutions";
 
   const titles = {
-    en: "Privacy Policy - Data Protection & Privacy | 58Solutions",
-    de: "Datenschutzerklärung - Datenschutz & Privatsphäre | 58Solutions"
+    en: "Privacy Policy - Data Protection & Privacy | Unit05",
+    de: "Datenschutzerklärung - Datenschutz & Privatsphäre | Unit05"
   };
 
   const descriptions = {
-    en: "Privacy policy for 58Solutions GmbH. Learn how we collect, use, and protect your personal data in accordance with GDPR and German data protection laws.",
-    de: "Datenschutzerklärung für 58Solutions GmbH. Erfahren Sie, wie wir Ihre personenbezogenen Daten gemäß DSGVO und deutschem Datenschutzrecht sammeln, verwenden und schützen."
+    en: "Privacy policy for Unit05 GmbH. Learn how we collect, use, and protect your personal data in accordance with GDPR and German data protection laws.",
+    de: "Datenschutzerklärung für Unit05 GmbH. Erfahren Sie, wie wir Ihre personenbezogenen Daten gemäß DSGVO und deutschem Datenschutzrecht sammeln, verwenden und schützen."
   };
 
   return {

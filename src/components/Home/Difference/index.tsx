@@ -74,9 +74,9 @@ export default function Difference() {
     <section className="py-16 sm:py-20 lg:py-[100px]">
       <div className="px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
-          <span className="title">THE 58SOLUTIONS DIFFERENCE</span>
+          <span className="title">THE UNIT05 DIFFERENCE</span>
           <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
-            Why Choose 58Solutions? Agile Expertise, Transparent Partnership.
+            Why Choose Unit05? Agile Expertise, Transparent Partnership.
           </h2>
           <p className="text-base text-dark-text">
             We combine deep technical expertise with transparent communication and agile delivery to become your trusted technology partner.

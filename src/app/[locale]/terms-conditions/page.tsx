@@ -10,13 +10,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const siteName = process.env.SITE_NAME || "58Solutions";
 
   const titles = {
-    en: "Terms and Conditions - Legal Terms | 58Solutions",
-    de: "Allgemeine Geschäftsbedingungen - Rechtliche Bedingungen | 58Solutions"
+    en: "Terms and Conditions - Legal Terms | Unit05",
+    de: "Allgemeine Geschäftsbedingungen - Rechtliche Bedingungen | Unit05"
   };
 
   const descriptions = {
-    en: "Terms and conditions for 58agents GmbH. Legal terms governing our IT consulting and software development services.",
-    de: "Allgemeine Geschäftsbedingungen für 58agents GmbH. Rechtliche Bedingungen für unsere IT-Beratung und Softwareentwicklungsdienstleistungen."
+    en: "Terms and conditions for Unit05 GmbH. Legal terms governing our IT consulting and software development services.",
+    de: "Allgemeine Geschäftsbedingungen für Unit05 GmbH. Rechtliche Bedingungen für unsere IT-Beratung und Softwareentwicklungsdienstleistungen."
   };
 
   return {

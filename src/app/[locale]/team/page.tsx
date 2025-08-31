@@ -6,8 +6,8 @@ const siteName = process.env.SITE_NAME;
 
 export const metadata: Metadata = {
   title: `Our Team | ${siteName}`,
-  description: "Meet our talented team of developers, designers, and engineers at 58Solutions. Discover their expertise and experience in building digital solutions.",
-  keywords: "team, developers, designers, engineers, 58Solutions, expertise, experience",
+  description: "Meet our talented team of developers, designers, and engineers at Unit05. Discover their expertise and experience in building digital solutions.",
+  keywords: "team, developers, designers, engineers, Unit05, expertise, experience",
 };
 
 export default function TeamPage() {

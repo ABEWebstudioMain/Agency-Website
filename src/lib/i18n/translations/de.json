@@ -15,7 +15,7 @@
       "signOut": "Abmelden"
     },
     "hero": {
-      "badge": "58Solutions - Digitale Lösungsagentur",
+      "badge": "Unit05 - Digitale Lösungsagentur",
       "title": "Digitale Lösungen für Ihre",
       "rotatingWords": ["Vision", "Markteinführung", "Wachstum"],
       "description": "Wir spezialisieren uns auf maßgeschneiderte Softwareentwicklung, skalierbare SaaS-Lösungen und Unternehmensanwendungen. Unser Expertenteam liefert modernste Webanwendungen und digitale Transformationsstrategien, die messbares Geschäftswachstum fördern.",
@@ -83,7 +83,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
       "overview": {
         "title": "Lernen Sie unsere Experten-Teammitglieder kennen",
-        "description": "Entdecken Sie die talentierten Fachkräfte hinter 58Solutions. Jedes Teammitglied bringt einzigartige Expertise und Leidenschaft mit, um außergewöhnliche digitale Lösungen zu liefern.",
+        "description": "Entdecken Sie die talentierten Fachkräfte hinter Unit05. Jedes Teammitglied bringt einzigartige Expertise und Leidenschaft mit, um außergewöhnliche digitale Lösungen zu liefern.",
         "filterTitle": "Teammitglieder filtern",
         "clearFilters": "Alle Filter löschen",
         "skills": "Fähigkeiten",
@@ -156,8 +156,8 @@
       "copyright": "Alle Rechte vorbehalten"
     },
     "meta": {
-      "title": "58Solutions - Digitale Lösungen für Ihre Vision, Markteinführung & Wachstum",
-      "description": "58Solutions spezialisiert sich auf maßgeschneiderte Softwareentwicklung, skalierbare SaaS-Lösungen und Unternehmensanwendungen. Wir liefern modernste Webanwendungen und digitale Transformationsstrategien, die messbares Geschäftswachstum fördern."
+      "title": "Unit05 - Digitale Lösungen für Ihre Vision, Markteinführung & Wachstum",
+      "description": "Unit05 spezialisiert sich auf maßgeschneiderte Softwareentwicklung, skalierbare SaaS-Lösungen und Unternehmensanwendungen. Wir liefern modernste Webanwendungen und digitale Transformationsstrategien, die messbares Geschäftswachstum fördern."
     }
   }
 }

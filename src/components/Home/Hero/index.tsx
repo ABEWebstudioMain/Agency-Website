@@ -26,10 +26,10 @@ export default function Hero() {
             <div className='mx-auto mb-12 max-w-[530px] text-center lg:mb-0 lg:ml-0 lg:text-left'>
               <span className='bg-primary/5 font-heading text-primary mb-8 inline-block rounded-full px-5 py-[10px] text-base dark:bg-white/10 dark:text-white'>
                 <span className='bg-primary mr-2 inline-block h-2 w-2 rounded-full'></span>
-                58Solutions - IT Experts
+                Unit05 - IT Experts
               </span>
               <h1 className='font-heading mb-5 text-2xl font-semibold sm:text-4xl md:text-[50px] md:leading-[60px] dark:text-white'>
-                We are 58Solutions. We Deliver{" "}
+                We are Unit05. We Deliver{" "}
                 <span className="text-primary">
                   <DynamicTypewriter
                     words={["Transparency", "Results", "Expertise"]}

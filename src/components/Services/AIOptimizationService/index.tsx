@@ -282,7 +282,7 @@ export default function AIOptimizationService() {
                 Many businesses are held back by repetitive, time-consuming tasks that drain resources and stifle innovation. <strong className="text-primary">AI-Powered Process Optimization and Automation</strong> offers a transformative solution, freeing your team from the mundane and enabling them to focus on higher-value work.
               </p>
               <p>
-                At <strong className="text-dark dark:text-white">58agents</strong>, we specialize in identifying and implementing practical AI solutions that tighten operational gaps, enhance accuracy, and drive significant efficiencies – with a strategic focus on human-reviewed AI to ensure both reliability and peace of mind.
+                At <strong className="text-dark dark:text-white">Unit05</strong>, we specialize in identifying and implementing practical AI solutions that tighten operational gaps, enhance accuracy, and drive significant efficiencies – with a strategic focus on human-reviewed AI to ensure both reliability and peace of mind.
               </p>
             </div>
             
@@ -496,7 +496,7 @@ export default function AIOptimizationService() {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-              Why Choose <span className="text-primary">58agents</span>?
+              Why Choose <span className="text-primary">Unit05</span>?
             </h2>
             
             <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">

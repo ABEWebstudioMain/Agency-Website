@@ -49,7 +49,7 @@ export default function FooterBottom() {
         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
           <div>
             <p className="text-center font-heading text-base text-dark-text lg:text-right">
-              © {new Date().getFullYear()} 58Solutions. {t('common.footer.copyright')}
+              © {new Date().getFullYear()} Unit05. {t('common.footer.copyright')}
             </p>
           </div>
         </div>

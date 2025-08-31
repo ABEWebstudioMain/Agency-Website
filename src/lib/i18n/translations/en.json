@@ -15,7 +15,7 @@
       "signOut": "Sign Out"
     },
     "hero": {
-      "badge": "58Solutions - Digital Solutions Agency",
+      "badge": "Unit05 - Digital Solutions Agency",
       "title": "Digital Solutions for Your",
       "rotatingWords": ["Vision", "Launch", "Growth"],
       "description": "We specialize in custom software development, scalable SaaS solutions, and enterprise applications. Our expert team delivers cutting-edge web applications and digital transformation strategies that drive measurable business growth.",
@@ -83,7 +83,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.",
       "overview": {
         "title": "Meet Our Expert Team Members",
-        "description": "Discover the talented professionals behind 58Solutions. Each team member brings unique expertise and passion to deliver exceptional digital solutions.",
+        "description": "Discover the talented professionals behind Unit05. Each team member brings unique expertise and passion to deliver exceptional digital solutions.",
         "filterTitle": "Filter Team Members",
         "clearFilters": "Clear All Filters",
         "skills": "Skills",
@@ -156,8 +156,8 @@
       "copyright": "All rights reserved"
     },
     "meta": {
-      "title": "58Solutions - Digital Solutions for Your Vision, Launch & Growth",
-      "description": "58Solutions specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth."
+      "title": "Unit05 - Digital Solutions for Your Vision, Launch & Growth",
+      "description": "Unit05 specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth."
     }
   }
 }

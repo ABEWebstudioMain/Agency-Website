@@ -11,8 +11,8 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const siteName = process.env.SITE_NAME || "58Solutions";
 
   const titles = {
-    en: "AI-Powered Process Optimization & Automation | 58Solutions",
-    de: "KI-gestützte Prozessoptimierung & Automatisierung | 58Solutions"
+    en: "AI-Powered Process Optimization & Automation | Unit05",
+    de: "KI-gestützte Prozessoptimierung & Automatisierung | Unit05"
   };
 
   const descriptions = {

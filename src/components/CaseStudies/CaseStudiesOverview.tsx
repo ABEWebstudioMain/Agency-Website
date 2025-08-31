@@ -42,7 +42,7 @@ export default function CaseStudiesOverview() {
             </h1>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-dark-text leading-relaxed">
               <p>
-                At <strong className="text-dark dark:text-white">58agents</strong>, we don&apos;t just promise results—we deliver them. Our commitment to <strong className="text-primary">agile expertise, transparent partnership, and efficient execution</strong> translates into tangible value for our clients.
+                At <strong className="text-dark dark:text-white">Unit05</strong>, we don&apos;t just promise results—we deliver them. Our commitment to <strong className="text-primary">agile expertise, transparent partnership, and efficient execution</strong> translates into tangible value for our clients.
               </p>
               <p>
                 Explore how our lean team of highly experienced IT professionals has helped businesses overcome complex challenges and achieve their strategic goals through <strong className="text-primary">custom software, DevSecOps platforms, cloud migrations, and AI optimization</strong>.
@@ -141,7 +141,7 @@ export default function CaseStudiesOverview() {
             </h2>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
               <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-                Discover how 58agents can drive digital transformation for your business.
+                Discover how Unit05 can drive digital transformation for your business.
               </p>
               
               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">

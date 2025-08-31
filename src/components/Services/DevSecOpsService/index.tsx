@@ -293,7 +293,7 @@ export default function DevSecOpsService() {
                 In today&apos;s competitive landscape, rapid and secure software delivery isn&apos;t just an advantage—it&apos;s a necessity. <strong className="text-primary">DevSecOps Platform Solutions</strong> transform your development lifecycle by integrating security from the ground up, automating workflows, and building resilient cloud-native architectures.
               </p>
               <p>
-                At <strong className="text-dark dark:text-white">58agents</strong>, our highly experienced team helps you establish robust, scalable, and secure platforms that accelerate your time-to-market, reduce vulnerabilities, and foster a culture of continuous innovation.
+                At <strong className="text-dark dark:text-white">Unit05</strong>, our highly experienced team helps you establish robust, scalable, and secure platforms that accelerate your time-to-market, reduce vulnerabilities, and foster a culture of continuous innovation.
               </p>
             </div>
             
@@ -507,7 +507,7 @@ export default function DevSecOpsService() {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-              Why Choose <span className="text-primary">58agents</span>?
+              Why Choose <span className="text-primary">Unit05</span>?
             </h2>
             
             <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">
