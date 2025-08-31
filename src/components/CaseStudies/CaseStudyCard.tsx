@@ -67,47 +67,47 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
   if (featured) {
     return (
       <div className="group">
-        <div className="rounded-sm bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D] lg:p-12">
-          <div className="mb-4 flex items-center space-x-3">
+        <div className="rounded-lg bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D] lg:p-12">
+          <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
               <span className="ml-2">{study.industry}</span>
             </span>
-            <span className="text-sm text-dark-text">{study.duration}</span>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{study.duration}</span>
           </div>
           
           <Link href={`/${locale}/case-studies/${study.slug}`}>
-            <h3 className="mb-4 font-heading text-2xl font-bold text-dark transition-colors group-hover:text-primary dark:text-white lg:text-3xl">
+            <h3 className="mb-4 font-heading text-2xl font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white lg:text-3xl lg:leading-tight">
               {study.title}
             </h3>
-            <h4 className="mb-4 font-heading text-lg font-medium text-primary">
+            <h4 className="mb-6 font-heading text-lg font-medium leading-relaxed text-primary lg:text-xl">
               {study.subtitle}
             </h4>
           </Link>
           
-          <div className="mb-6 space-y-4">
+          <div className="mb-8 space-y-6">
             <div>
-              <h5 className="mb-2 font-heading text-sm font-medium text-dark dark:text-white">Challenge:</h5>
-              <p className="text-base text-dark-text">{study.challengeSnapshot}</p>
+              <h5 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">Challenge:</h5>
+              <p className="text-base leading-relaxed text-dark-text">{study.challengeSnapshot}</p>
             </div>
             <div>
-              <h5 className="mb-2 font-heading text-sm font-medium text-dark dark:text-white">Solution:</h5>
-              <p className="text-base text-dark-text">{study.solutionSnapshot}</p>
+              <h5 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">Solution:</h5>
+              <p className="text-base leading-relaxed text-dark-text">{study.solutionSnapshot}</p>
             </div>
             <div>
-              <h5 className="mb-2 font-heading text-sm font-medium text-dark dark:text-white">Impact:</h5>
-              <p className="text-base font-medium text-primary">{study.impactSnapshot}</p>
+              <h5 className="mb-3 font-heading text-sm font-semibold uppercase tracking-wide text-gray-600 dark:text-gray-400">Impact:</h5>
+              <p className="text-base font-semibold leading-relaxed text-primary">{study.impactSnapshot}</p>
             </div>
           </div>
           
-          <div className="mb-6 flex flex-wrap gap-2">
-            <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+          <div className="mb-8 flex flex-wrap gap-3">
+            <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
               {study.metrics.primaryMetric}
             </span>
             {study.metrics.secondaryMetrics.slice(0, 2).map((metric, index) => (
               <span
                 key={index}
-                className="rounded-full bg-stroke/50 px-3 py-1 text-sm font-medium text-dark-text"
+                className="rounded-full bg-gray-200 px-3 py-2 text-sm font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300"
               >
                 {metric}
               </span>
@@ -116,7 +116,7 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           
           <Link
             href={`/${locale}/case-studies/${study.slug}`}
-            className="inline-flex items-center font-heading text-base font-medium text-primary transition-colors hover:text-primary/80"
+            className="group inline-flex items-center font-heading text-base font-semibold text-primary transition-all hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30"
           >
             Read the Full Story
             <svg
@@ -136,37 +136,37 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
   return (
     <div className="group">
       <Link href={`/${locale}/case-studies/${study.slug}`} className="block">
-        <div className="rounded-sm bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md dark:bg-[#2C3443] lg:p-8">
-          <div className="mb-4 flex items-center justify-between">
+        <div className="h-full rounded-lg bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:bg-[#2C3443] lg:p-8">
+          <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
               <span className="ml-2">{study.industry}</span>
             </span>
-            <span className="text-sm text-dark-text">{study.duration}</span>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{study.duration}</span>
           </div>
           
-          <h3 className="mb-2 font-heading text-xl font-bold text-dark transition-colors group-hover:text-primary dark:text-white">
+          <h3 className="mb-3 font-heading text-xl font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white lg:text-2xl lg:leading-tight">
             {study.title}
           </h3>
-          <h4 className="mb-4 font-heading text-base font-medium text-primary">
+          <h4 className="mb-5 font-heading text-base font-medium leading-relaxed text-primary lg:text-lg">
             {study.subtitle}
           </h4>
           
-          <p className="mb-4 text-sm text-dark-text line-clamp-2">
+          <p className="mb-6 text-sm leading-relaxed text-dark-text line-clamp-3 lg:text-base">
             {study.challengeSnapshot}
           </p>
           
-          <div className="mb-4 rounded-sm bg-primary/5 p-4 dark:bg-primary/10">
-            <p className="text-sm font-medium text-primary">
+          <div className="mb-6 rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
+            <p className="text-sm font-semibold leading-relaxed text-primary lg:text-base">
               {study.impactSnapshot}
             </p>
           </div>
           
-          <div className="flex items-center justify-between">
-            <span className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+          <div className="flex items-center justify-between gap-4">
+            <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
               {study.metrics.primaryMetric}
             </span>
-            <span className="text-primary group-hover:text-primary/80">
+            <span className="font-medium text-primary transition-colors group-hover:text-primary/80">
               Read More →
             </span>
           </div>

@@ -34,22 +34,22 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       <section className="relative overflow-hidden bg-gradient-to-r from-primary/5 to-primary/10 py-20 dark:from-primary/10 dark:to-primary/20">
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
-            <div className="mb-6 flex flex-wrap items-center justify-center gap-4">
+            <div className="mb-8 flex flex-wrap items-center justify-center gap-3">
               <span className={`inline-flex items-center rounded-full px-4 py-2 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
                 {study.industry}
               </span>
-              <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/80 dark:text-white">
+              <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/90 dark:text-white">
                 {study.duration}
               </span>
-              <span className="rounded-full bg-white/80 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/80 dark:text-white">
+              <span className="rounded-full bg-white/90 px-4 py-2 text-sm font-medium text-dark dark:bg-[#1D232D]/90 dark:text-white">
                 {study.teamSize}
               </span>
             </div>
             
-            <h1 className="mb-4 font-heading text-3xl font-bold text-dark sm:text-4xl md:text-5xl dark:text-white">
+            <h1 className="mb-6 font-heading text-3xl font-bold leading-tight text-dark sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight dark:text-white">
               {study.title}
             </h1>
-            <h2 className="mb-8 font-heading text-xl font-medium text-primary sm:text-2xl">
+            <h2 className="mb-8 font-heading text-xl font-medium leading-relaxed text-primary sm:text-2xl sm:leading-relaxed">
               {study.subtitle}
             </h2>
           </div>
@@ -57,29 +57,29 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       </section>
 
       {/* Client & Challenge */}
-      <section className="py-16 sm:py-20 lg:py-24">
+      <section className="py-20 sm:py-24 lg:py-32">
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl">
-            <div className="mb-16">
-              <h2 className="mb-8 font-heading text-3xl font-bold text-dark dark:text-white">
+            <div className="mb-20">
+              <h2 className="mb-10 font-heading text-3xl font-bold leading-tight text-dark dark:text-white lg:text-4xl lg:leading-tight">
                 The Client & Their Challenge
               </h2>
               
-              <div className="grid gap-8 lg:grid-cols-2">
+              <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
                 <div>
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                  <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                     Client Profile
                   </h3>
-                  <p className="text-base text-dark-text leading-relaxed">
+                  <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
                     {study.fullContent.clientProfile}
                   </p>
                 </div>
                 
                 <div>
-                  <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+                  <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                     The Problem
                   </h3>
-                  <p className="text-base text-dark-text leading-relaxed">
+                  <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
                     {study.fullContent.problemDescription}
                   </p>
                 </div>
@@ -90,30 +90,30 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       </section>
 
       {/* Our Solution */}
-      <section className="bg-stroke/5 py-16 sm:py-20 lg:py-24 dark:bg-[#1D232D]">
+      <section className="bg-gray-50 py-20 sm:py-24 lg:py-32 dark:bg-[#1A1D23]">
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 font-heading text-3xl font-bold text-dark dark:text-white">
+            <h2 className="mb-10 font-heading text-3xl font-bold leading-tight text-dark dark:text-white lg:text-4xl lg:leading-tight">
               Our Agile Solution
             </h2>
             
-            <div className="mb-8">
-              <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+            <div className="mb-10">
+              <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                 Our Approach
               </h3>
-              <p className="mb-6 text-base text-dark-text leading-relaxed">
+              <p className="mb-8 text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
                 {study.fullContent.approach}
               </p>
               
-              <div className="mb-6">
-                <h4 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white">
+              <div className="mb-8">
+                <h4 className="mb-4 font-heading text-lg font-semibold leading-tight text-dark dark:text-white">
                   Key Technologies Used
                 </h4>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {study.fullContent.keyTechnologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary"
+                      className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25"
                     >
                       {tech}
                     </span>
@@ -123,7 +123,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             </div>
             
             <div>
-              <h3 className="mb-4 font-heading text-xl font-medium text-dark dark:text-white">
+              <h3 className="mb-6 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                 Specific Actions Taken
               </h3>
               <ul className="space-y-3">
@@ -132,7 +132,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
-                    {action}
+                    <span className="leading-relaxed lg:text-lg">{action}</span>
                   </li>
                 ))}
               </ul>
@@ -142,25 +142,25 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       </section>
 
       {/* Results & Impact */}
-      <section className="py-16 sm:py-20 lg:py-24">
+      <section className="py-20 sm:py-24 lg:py-32">
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl">
-            <h2 className="mb-8 font-heading text-3xl font-bold text-dark dark:text-white">
+            <h2 className="mb-10 font-heading text-3xl font-bold leading-tight text-dark dark:text-white lg:text-4xl lg:leading-tight">
               The Tangible Impact & Results
             </h2>
             
             {/* Quantifiable Results */}
-            <div className="mb-12">
-              <h3 className="mb-6 font-heading text-xl font-medium text-dark dark:text-white">
+            <div className="mb-16">
+              <h3 className="mb-8 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                 Measurable Success
               </h3>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 {study.fullContent.quantifiableResults.map((result, index) => (
-                  <div key={index} className="rounded-sm bg-primary/5 p-6 dark:bg-primary/10">
-                    <div className="mb-2 font-heading text-2xl font-bold text-primary">
+                  <div key={index} className="rounded-lg bg-primary/8 p-6 dark:bg-primary/15 lg:p-8">
+                    <div className="mb-3 font-heading text-2xl font-bold leading-tight text-primary lg:text-3xl">
                       {result.metric}
                     </div>
-                    <p className="text-base text-dark-text">
+                    <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
                       {result.description}
                     </p>
                   </div>
@@ -169,13 +169,13 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             </div>
             
             {/* Qualitative Benefits */}
-            <div className="mb-12">
-              <h3 className="mb-6 font-heading text-xl font-medium text-dark dark:text-white">
+            <div className="mb-16">
+              <h3 className="mb-8 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                 Additional Benefits
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-4">
                 {study.fullContent.qualitativeBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start text-base text-dark-text">
+                  <li key={index} className="flex items-start text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
@@ -187,8 +187,8 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             
             {/* Client Endorsement */}
             {study.fullContent.clientEndorsement && (
-              <div className="rounded-sm bg-white p-8 shadow-sm dark:bg-[#2C3443]">
-                <div className="mb-6">
+              <div className="rounded-lg bg-white p-8 shadow-sm dark:bg-[#2C3443] lg:p-10">
+                <div className="mb-8">
                   <svg
                     width="32"
                     height="32"
@@ -199,7 +199,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                   </svg>
                 </div>
                 
-                <blockquote className="mb-6 text-lg text-dark-text leading-relaxed">
+                <blockquote className="mb-8 text-lg leading-relaxed text-dark-text lg:text-xl lg:leading-relaxed">
                   &quot;{study.fullContent.clientEndorsement.quote}&quot;
                 </blockquote>
                 
@@ -221,22 +221,22 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-20 sm:py-24">
+      <section className="relative overflow-hidden bg-gradient-to-r from-primary to-primary/80 py-24 sm:py-28 lg:py-32">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
         
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
-            <h2 className="mb-6 font-heading text-3xl font-bold text-white sm:text-4xl">
+            <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
               Ready to See Similar Results?
             </h2>
-            <p className="mb-8 text-lg text-white/90">
+            <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
               Discover how 58agents can drive digital transformation for your business.
             </p>
             
-            <div className="flex flex-wrap items-center justify-center gap-4">
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
               <a
                 href={`/${locale}#contact`}
-                className="group inline-flex items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg"
+                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-semibold text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 Schedule Your Free Consultation
                 <svg
@@ -250,7 +250,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </a>
               <a
                 href={`/${locale}/team`}
-                className="group inline-flex items-center rounded-sm border-2 border-white/20 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/40 hover:bg-white/10"
+                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-semibold text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
                 Meet Our Experts
                 <svg
@@ -264,7 +264,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </a>
             </div>
             
-            <div className="mt-8 text-sm text-white/80">
+            <div className="mt-8 text-sm leading-relaxed text-white/80">
               Free consultation • No commitment • Expert advice
             </div>
           </div>
@@ -272,12 +272,12 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
       </section>
 
       {/* Back Navigation */}
-      <section className="border-t py-12 dark:border-[#2E333D]">
+      <section className="border-t py-16 dark:border-[#2E333D]">
         <div className="px-4 xl:container">
           <div className="text-center">
             <Link
               href={`/${locale}/case-studies`}
-              className="inline-flex items-center rounded-sm bg-stroke/20 px-6 py-3 font-heading text-base text-dark transition-all hover:bg-stroke/40 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+              className="inline-flex min-h-[44px] items-center rounded-sm bg-gray-100 px-6 py-3 font-heading text-base font-medium text-dark transition-all hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-primary/30 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
                 <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
