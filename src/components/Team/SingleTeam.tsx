@@ -2,30 +2,33 @@ import { SocialLink, Team } from "@/types/team";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { getEmployeeBySlug } from "@/data/employees";
 
 export default function SingleTeam({ team }: { team: Team }) {
   const params = useParams();
   const locale = params.locale as string;
 
-  // Mock skills data for team members (you can replace this with real data)
-  const getSkillsForTeam = (teamId: string) => {
-    const skillsMap: { [key: string]: string[] } = {
-      "team-member-bilal": ["React", "Node.js", "AWS"],
-      "team-member-dominik": ["Docker", "Kubernetes", "CI/CD"],
-      "team-member-jeremias": ["AWS", "Terraform", "Architecture"],
-      "team-member-martin": ["Leadership", "Strategy", "DevOps"],
-      "team-member-toyah": ["Figma", "UI/UX", "Design Systems"]
+  // Map team members to employee profiles
+  const getEmployeeSlugForTeam = (teamId: string) => {
+    const slugMap: { [key: string]: string } = {
+      "team-member-bilal": "sarah-johnson", // Using existing employee data
+      "team-member-dominik": "michael-chen", // Using existing employee data
+      "team-member-jeremias": "emily-rodriguez", // Using existing employee data
+      "team-member-martin": "sarah-johnson", // Fallback to existing
+      "team-member-toyah": "emily-rodriguez" // Fallback to existing
     };
-    return skillsMap[teamId] || ["Expertise", "Innovation", "Excellence"];
+    return slugMap[teamId] || "sarah-johnson";
   };
 
-  const skills = getSkillsForTeam(team.id as string);
+  const employeeSlug = getEmployeeSlugForTeam(team.id as string);
+  const employee = getEmployeeBySlug(employeeSlug);
+  const skills = employee ? employee.skills.slice(0, 3).map(skill => skill.name) : ["Expertise", "Innovation", "Excellence"];
 
   return (
     <div className="w-full px-4 md:w-1/2 lg:w-1/4">
       <div className="xs:max-w-[370px] group mx-auto mb-10 max-w-[300px] text-center">
         <div className="relative">
-          <Link href={`/${locale}/team/toyah-g`} className="block">
+          <Link href={`/${locale}/team/${employeeSlug}`} className="block">
             <div className="aspect-360/370 relative mb-8 overflow-hidden rounded-sm">
               <Image
                 src={team?.image}
@@ -38,7 +41,7 @@ export default function SingleTeam({ team }: { team: Team }) {
               {/* Skills Preview */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 translate-y-10 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <div className="flex flex-wrap justify-center gap-2">
-                  {skills.slice(0, 3).map((skill, index) => (
+                  {skills.map((skill, index) => (
                     <span
                       key={index}
                       className="rounded-full bg-white/90 px-3 py-1 text-xs font-medium text-dark backdrop-blur-sm"
