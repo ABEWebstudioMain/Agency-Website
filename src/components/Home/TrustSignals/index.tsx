@@ -12,27 +12,27 @@ export default function TrustSignals() {
   const testimonials = [
     {
       id: 1,
-      quote: "The 58agents team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.",
+      quote: "The Unit05 team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.",
       name: "Sarah M.",
       role: "Head of Operations",
       company: "European Logistics Provider",
-      avatar: "/images/illustrations/undraw_profile_pic.svg"
+      avatar: "/images/illustrations/undraw_cool-girl-avatar_fifz.svg"
     },
     {
       id: 2,
-      quote: "Working with 58agents transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.",
+      quote: "Working with Unit05 transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.",
       name: "Marcus W.",
       role: "CTO",
       company: "FinTech Startup",
-      avatar: "/images/illustrations/undraw_profile_pic.svg"
+      avatar: "/images/illustrations/undraw_professor-avatar_y9ai.svg"
     },
     {
       id: 3,
-      quote: "The cloud migration was seamless and the cost savings were immediate. 58agents delivered exactly what they promised, when they promised it, with complete transparency throughout the process.",
+      quote: "The cloud migration was seamless and the cost savings were immediate. Unit05 delivered exactly what they promised, when they promised it, with complete transparency throughout the process.",
       name: "Lisa C.",
       role: "IT Director",
       company: "Enterprise SaaS Provider",
-      avatar: "/images/illustrations/undraw_profile_pic.svg"
+      avatar: "/images/illustrations/undraw_cool-girl-avatar_fifz.svg"
     }
   ];
 

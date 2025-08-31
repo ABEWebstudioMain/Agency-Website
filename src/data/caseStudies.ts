@@ -89,7 +89,7 @@ export const caseStudies: CaseStudy[] = [
       ],
       clientEndorsement: {
         quote: 'The Unit05 team quickly understood our complex needs and delivered an exceptional solution with remarkable efficiency. Their transparency and direct communication were a breath of fresh air compared to our previous experiences with large consultancies.',
-        author: 'Sarah Mitchell',
+        author: 'Sarah M.',
         position: 'Head of Operations',
         company: 'European Logistics Provider'
       }
@@ -152,7 +152,7 @@ export const caseStudies: CaseStudy[] = [
       ],
       clientEndorsement: {
         quote: 'Working with Unit05 transformed our entire development process. Their expertise in DevSecOps and direct, hands-on approach helped us achieve what we thought would take years in just a few months.',
-        author: 'Marcus Weber',
+        author: 'Marcus W.',
         position: 'CTO',
         company: 'FinTech Startup'
       }
@@ -215,7 +215,7 @@ export const caseStudies: CaseStudy[] = [
       ],
       clientEndorsement: {
         quote: 'The cloud migration was seamless and the cost savings were immediate. Unit05 delivered exactly what they promised, when they promised it, with complete transparency throughout the process.',
-        author: 'Lisa Chen',
+        author: 'Lisa C.',
         position: 'IT Director',
         company: 'Enterprise SaaS Provider'
       }
