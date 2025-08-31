@@ -80,7 +80,7 @@ export default function TrustSignals() {
               </blockquote>
               
               <div className="flex items-center">
-                <div className="text-center">
+                <div className="w-full text-center">
                   <div className="font-heading text-base font-medium text-dark dark:text-white">
                     {testimonial.name}
                   </div>
