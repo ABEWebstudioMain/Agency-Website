@@ -15,9 +15,9 @@ export default function AboutContent() {
       <TabPanel
         title="Your Agile Partner for Digital Excellence"
         image1='/images/about/image-1.jpg'
-        image1Alt='Team collaboration illustration'
+        image1Alt='about image 1'
         image2='/images/about/image-2.jpg'
-        image2Alt='Business planning illustration'
+        image2Alt='about image 2'
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
@@ -85,10 +85,10 @@ export default function AboutContent() {
       {/* Mission Section - Right Aligned */}
       <TabPanel
         title="Less Ghost Work, More Value"
-        image1='/images/about/image-3.jpg'
-        image1Alt='Agile development illustration'
-        image2='/images/about/image-4.jpg'
-        image2Alt='Efficient process illustration'
+        image1='/images/about/image-1.jpg'
+        image1Alt='about image 1'
+        image2='/images/about/image-2.jpg'
+        image2Alt='about image 2'
         leftContent={true}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
@@ -123,10 +123,10 @@ export default function AboutContent() {
       {/* Vision Section - Left Aligned */}
       <TabPanel
         title="Your Digital Future, Realized"
-        image1='/images/about/image-5.jpg'
-        image1Alt='Innovation illustration'
-        image2='/images/about/image-6.jpg'
-        image2Alt='Business growth illustration'
+        image1='/images/about/image-1.jpg'
+        image1Alt='about image 1'
+        image2='/images/about/image-2.jpg'
+        image2Alt='about image 2'
         leftContent={false}
       >
         <p className='mb-6 text-base text-dark-text leading-relaxed'>
