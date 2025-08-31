@@ -135,7 +135,7 @@ export default function CaseStudiesOverview() {
                   </svg>
                 </a>
                 <a
-                  href={`/${locale}/team`}
+                  href={`/${locale}#team`}
                   className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
                 >
                   {t('common.caseStudies.cta.meetExperts')}
