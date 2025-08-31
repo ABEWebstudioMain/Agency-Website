@@ -70,7 +70,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                   <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                     Client Profile
                   </h3>
-                  <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
+                  <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-[1.6]">
                     {study.fullContent.clientProfile}
                   </p>
                 </div>
@@ -79,7 +79,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                   <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                     The Problem
                   </h3>
-                  <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
+                  <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-[1.6]">
                     {study.fullContent.problemDescription}
                   </p>
                 </div>
@@ -101,7 +101,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               <h3 className="mb-5 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                 Our Approach
               </h3>
-              <p className="mb-8 text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
+              <p className="mb-8 text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
                 {study.fullContent.approach}
               </p>
               
@@ -113,7 +113,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                   {study.fullContent.keyTechnologies.map((tech) => (
                     <span
                       key={tech}
-                      className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25"
+                      className="rounded-full bg-primary/15 px-4 py-2 text-center text-sm font-semibold text-primary dark:bg-primary/25"
                     >
                       {tech}
                     </span>
@@ -128,11 +128,11 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </h3>
               <ul className="space-y-3">
                 {study.fullContent.specificActions.map((action, index) => (
-                  <li key={index} className="flex items-start text-base text-dark-text">
+                  <li key={index} className="flex items-start text-base text-dark-text leading-[1.5]">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
-                    <span className="leading-relaxed lg:text-lg">{action}</span>
+                    <span className="leading-[1.5] lg:text-lg lg:leading-[1.6]">{action}</span>
                   </li>
                 ))}
               </ul>
@@ -154,13 +154,13 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               <h3 className="mb-8 font-heading text-xl font-semibold leading-tight text-dark dark:text-white lg:text-2xl">
                 Measurable Success
               </h3>
-              <div className="grid gap-8 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
                 {study.fullContent.quantifiableResults.map((result, index) => (
-                  <div key={index} className="rounded-lg bg-primary/8 p-6 dark:bg-primary/15 lg:p-8">
-                    <div className="mb-3 font-heading text-2xl font-bold leading-tight text-primary lg:text-3xl">
+                  <div key={index} className="text-center rounded-lg bg-primary/8 p-6 dark:bg-primary/15 lg:p-8">
+                    <div className="mb-4 font-heading text-2xl font-bold leading-tight text-primary lg:text-3xl lg:leading-tight">
                       {result.metric}
                     </div>
-                    <p className="text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
+                    <p className="text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
                       {result.description}
                     </p>
                   </div>
@@ -175,7 +175,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </h3>
               <ul className="space-y-4">
                 {study.fullContent.qualitativeBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start text-base leading-relaxed text-dark-text lg:text-lg lg:leading-relaxed">
+                  <li key={index} className="flex items-start text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
@@ -203,7 +203,7 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                   &quot;{study.fullContent.clientEndorsement.quote}&quot;
                 </blockquote>
                 
-                <div>
+                <div className="text-center">
                   <div className="font-heading text-base font-medium text-dark dark:text-white">
                     {study.fullContent.clientEndorsement.author}
                   </div>

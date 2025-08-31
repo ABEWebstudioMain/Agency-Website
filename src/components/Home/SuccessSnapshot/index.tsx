@@ -125,47 +125,47 @@ export default function SuccessSnapshot() {
                       {/* Three-column layout for Challenge/Solution/Impact */}
                       <div className="mb-8 grid gap-6 lg:grid-cols-3">
                         <div className="rounded-sm bg-orange-50 p-4 dark:bg-orange-900/10">
-                          <div className="mb-2 flex items-center">
+                          <div className="mb-3 flex items-center justify-center text-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current text-orange-600">
                               <path d="M8 1C4.134 1 1 4.134 1 8s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/>
                               <path d="M8 4v4l3 1.5"/>
                             </svg>
                             <h5 className="font-heading text-sm font-medium text-orange-800 dark:text-orange-200">Challenge</h5>
                           </div>
-                          <p className="text-sm text-dark-text leading-relaxed">{study.challengeSnapshot}</p>
+                          <p className="text-center text-sm text-dark-text leading-relaxed">{study.challengeSnapshot}</p>
                         </div>
                         
                         <div className="rounded-sm bg-blue-50 p-4 dark:bg-blue-900/10">
-                          <div className="mb-2 flex items-center">
+                          <div className="mb-3 flex items-center justify-center text-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current text-blue-600">
                               <path d="M8 1C4.134 1 1 4.134 1 8s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/>
                               <path d="M11.354 5.646L7 10l-2.354-2.354.708-.708L7 8.586l3.646-3.647.708.707z"/>
                             </svg>
                             <h5 className="font-heading text-sm font-medium text-blue-800 dark:text-blue-200">Solution</h5>
                           </div>
-                          <p className="text-sm text-dark-text leading-relaxed">{study.solutionSnapshot}</p>
+                          <p className="text-center text-sm text-dark-text leading-relaxed">{study.solutionSnapshot}</p>
                         </div>
                         
                         <div className="rounded-sm bg-green-50 p-4 dark:bg-green-900/10">
-                          <div className="mb-2 flex items-center">
+                          <div className="mb-3 flex items-center justify-center text-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current text-green-600">
                               <path d="M8 1l3.5 7L19 9.27l-5 4.87 1.18 6.88L8 17.77l-7.18 3.25L2 14.14-3 9.27l7.5-1.23L8 1z"/>
                             </svg>
                             <h5 className="font-heading text-sm font-medium text-green-800 dark:text-green-200">Impact</h5>
                           </div>
-                          <p className="text-sm font-medium text-primary leading-relaxed">{study.impactSnapshot}</p>
+                          <p className="text-center text-sm font-medium text-primary leading-relaxed">{study.impactSnapshot}</p>
                         </div>
                       </div>
                       
                       {/* Metrics Row */}
-                      <div className="mb-8 flex flex-wrap gap-3">
-                        <span className="rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                      <div className="mb-8 flex flex-wrap justify-center gap-3">
+                        <span className="rounded-full bg-primary/10 px-4 py-2 text-center text-sm font-medium text-primary">
                           {study.metrics.primaryMetric}
                         </span>
                         {study.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
                           <span
                             key={metricIndex}
-                            className="rounded-full bg-stroke/30 px-3 py-1 text-sm font-medium text-dark-text dark:bg-white/10"
+                            className="rounded-full bg-stroke/30 px-3 py-1 text-center text-sm font-medium text-dark-text dark:bg-white/10"
                           >
                             {metric}
                           </span>
