@@ -84,12 +84,12 @@ export default function Navbar() {
             <div className="relative h-[70px] w-[320px] lg:h-[90px] lg:w-[380px]">
             <Link href="/">
               <img
-                src="/images/logo/unit05_logo_white_tighter.svg"
+                src="/images/logo/unit05-logo-white.svg"
                 alt="Unit05 Logo"
                 className="hidden dark:block h-full w-full object-contain object-left transition-all duration-200 hover:scale-105"
               />
               <img
-                src="/images/logo/unit05_logo_black_tighter.svg"
+                src="/images/logo/unit05-logo-black.svg"
                 alt="Unit05 Logo"
                 className="dark:hidden h-full w-full object-contain object-left transition-all duration-200 hover:scale-105"
               />
