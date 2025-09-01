@@ -145,10 +145,10 @@ export default function Timeline() {
               {/* Timeline dot */}
               <div className="absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 hidden md:block"></div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Pain Point */}
-                <div className="flex flex-col h-full">
-                  <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-800">
+                <div className="h-full">
+                  <div className="h-full flex flex-col bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-800">
                     <div className="flex items-center gap-3 mb-4">
                       {step.painPoint.icon}
                       <span className="text-sm font-medium text-orange-600 dark:text-orange-400">
@@ -158,15 +158,15 @@ export default function Timeline() {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                       {step.painPoint.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                       {step.painPoint.description}
                     </p>
                   </div>
                 </div>
 
                 {/* Solution */}
-                <div className="flex flex-col h-full">
-                  <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-800">
+                <div className="h-full">
+                  <div className="h-full flex flex-col bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-800">
                     <div className="flex items-center gap-3 mb-4">
                       {step.solution.icon}
                       <span className="text-sm font-medium text-primary">
@@ -176,7 +176,7 @@ export default function Timeline() {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                       {step.solution.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                       {step.solution.description}
                     </p>
                   </div>
