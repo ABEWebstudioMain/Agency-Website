@@ -141,13 +141,13 @@ export default function Timeline() {
           <div className="absolute left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-primary/20 via-primary to-primary/20 transform -translate-x-1/2 hidden md:block"></div>
           
           {timelineSteps.map((step, index) => (
-            <div key={step.id} className={`relative mb-16 md:mb-20 ${index % 2 === 0 ? 'md:pr-1/2' : 'md:pl-1/2'}`}>
+            <div key={step.id} className="relative mb-16 md:mb-20">
               {/* Timeline dot */}
               <div className="absolute left-1/2 top-8 w-4 h-4 bg-primary rounded-full transform -translate-x-1/2 z-10 hidden md:block"></div>
               
-              <div className={`flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
                 {/* Pain Point */}
-                <div className="flex-1">
+                <div className="flex flex-col h-full">
                   <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-6 rounded-xl border border-orange-200 dark:border-orange-800">
                     <div className="flex items-center gap-3 mb-4">
                       {step.painPoint.icon}
@@ -165,7 +165,7 @@ export default function Timeline() {
                 </div>
 
                 {/* Solution */}
-                <div className="flex-1">
+                <div className="flex flex-col h-full">
                   <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-800">
                     <div className="flex items-center gap-3 mb-4">
                       {step.solution.icon}
