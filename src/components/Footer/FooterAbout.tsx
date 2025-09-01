@@ -11,42 +11,42 @@ export default function FooterAbout() {
   const { t } = useTranslation(locale as any);
 
   return (
-    <div className="mb-20">
+    <div className="mb-8 lg:mb-20">
       <Link href={`/${locale}`} className="mb-6 inline-block">
         <Image
           src="/images/logo/unit05-logo-white.svg"
           alt="Unit05 Logo"
-          width={240}
-          height={60}
-          className="hidden dark:block object-contain object-left transition-all duration-200 hover:scale-105"
+          width={200}
+          height={50}
+          className="hidden h-auto w-auto max-w-[200px] dark:block object-contain object-left transition-all duration-200 hover:scale-105 lg:max-w-[240px]"
         />
         <Image
           src="/images/logo/unit05-logo-black.svg"
           alt="Unit05 Logo"
-          width={240}
-          height={60}
-          className="dark:hidden object-contain object-left transition-all duration-200 hover:scale-105"
+          width={200}
+          height={50}
+          className="h-auto w-auto max-w-[200px] dark:hidden object-contain object-left transition-all duration-200 hover:scale-105 lg:max-w-[240px]"
         />
       </Link>
 
-      <p className="mb-10 text-base text-dark-text leading-relaxed max-w-[280px]">
+      <p className="mb-6 text-sm leading-relaxed text-dark-text lg:mb-10 lg:text-base lg:max-w-[280px]">
         Unit05 - Your strategic partner for digital transformation and innovative software solutions.
       </p>
-      <div className="flex items-center space-x-5">
+      <div className="flex items-center space-x-4">
         <a
           href="https://www.linkedin.com/company/58agents"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="social-link"
-          className="text-dark-text hover:text-primary dark:hover:text-white"
+          className="flex h-10 w-10 items-center justify-center rounded-full bg-stroke/20 text-dark-text transition-all duration-200 hover:bg-primary hover:text-white dark:bg-white/10 dark:hover:bg-primary"
         >
           <svg
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
             className="fill-current"
           >
-            <path d="M5.78328 4.16677C5.78306 4.6088 5.60726 5.03263 5.29454 5.34504C4.98182 5.65744 4.55781 5.83282 4.11578 5.8326C3.67376 5.83238 3.24992 5.65657 2.93752 5.34386C2.62511 5.03114 2.44973 4.60713 2.44995 4.1651C2.45017 3.72307 2.62598 3.29924 2.9387 2.98683C3.25141 2.67443 3.67542 2.49905 4.11745 2.49927C4.55948 2.49949 4.98331 2.6753 5.29572 2.98801C5.60812 3.30073 5.78351 3.72474 5.78328 4.16677ZM5.83328 7.06677H2.49995V17.5001H5.83328V7.06677ZM11.1 7.06677H7.78328V17.5001H11.0666V12.0251C11.0666 8.9751 15.0416 8.69177 15.0416 12.0251V17.5001H18.3333V10.8918C18.3333 5.7501 12.45 5.94177 11.0666 8.46677L11.1 7.06677Z" />
+            <path d="M3.58 1.33C3.58 2.07 3.01 2.67 2.29 2.67C1.57 2.67 1 2.07 1 1.33C1 0.59 1.57 0 2.29 0C3.01 0 3.58 0.59 3.58 1.33ZM3.67 4H1V15H3.67V4ZM8.67 4H6V15H8.67V9.33C8.67 6.67 12 6.33 12 9.33V15H14.67V8.33C14.67 4 10.33 4.33 8.67 6.67V4Z" />
           </svg>
         </a>
       </div>

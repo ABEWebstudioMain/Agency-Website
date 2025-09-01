@@ -16,18 +16,20 @@ export default function Footer() {
   return (
     <footer className="pt-16 sm:pt-20 lg:pt-[100px]">
       <div className="px-4 xl:container">
-        <div className="-mx-4 flex flex-wrap justify-between">
-          <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
+        <div className="grid gap-8 lg:grid-cols-12 lg:gap-12">
+          {/* Company Info - Takes more space on desktop */}
+          <div className="lg:col-span-5">
             <FooterAbout />
           </div>
 
-          <div className="w-1/2 px-4 sm:w-1/3 lg:w-2/12">
-            <div className="mb-20">
+          {/* Navigation Links */}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:col-span-4 lg:grid-cols-2">
+            <div className="mb-8 lg:mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
                 {t('common.footer.company')}
               </h3>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {footerLinks.map((link) => (
                   <FooterLinkItem key={link?.id} linkItem={link} />
                 ))}
@@ -35,13 +37,12 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-1/2 px-4 sm:w-1/3 lg:w-2/12">
-            <div className="mb-20">
+            <div className="mb-8 lg:mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
                 {t('common.footer.support')}
               </h3>
 
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {footerLinksTwo.map((link) => (
                   <FooterLinkItem key={link?.id} linkItem={link} />
                 ))}
@@ -49,51 +50,50 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="w-full px-4 sm:w-1/3 lg:w-3/12">
-            <div className="mb-20">
+          {/* Contact Info */}
+          <div className="lg:col-span-3">
+            <div className="mb-8 lg:mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
                 {t('common.footer.getInTouch')}
               </h3>
 
-              <div className="space-y-7">
+              <div className="space-y-4 lg:space-y-6">
                 <div>
-                  <p className="font-heading text-base text-dark-text">
+                  <p className="mb-1 font-heading text-sm font-medium text-dark-text lg:text-base">
                     {t('common.footer.phone')}
                   </p>
                   <a
                     href="tel:+4915737262541"
-                    className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+                    className="inline-block min-h-[44px] py-2 font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
                   >
-                    {" "}
-                    +49 157 37262541{" "}
+                    +49 157 37262541
                   </a>
                 </div>
                 <div>
-                  <p className="font-heading text-base text-dark-text">
+                  <p className="mb-1 font-heading text-sm font-medium text-dark-text lg:text-base">
                     {t('common.footer.email')}
                   </p>
                   <a
                     href="mailto:hey@58agents.com"
-                    className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+                    className="inline-block min-h-[44px] py-2 font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
                   >
-                    {" "}
-                    hey@58agents.com{" "}
+                    hey@58agents.com
                   </a>
                 </div>
                 <div>
-                  <p className="font-heading text-base text-dark-text">
+                  <p className="mb-2 font-heading text-sm font-medium text-dark-text lg:text-base">
                     {t('common.footer.address')}
                   </p>
-                  <div className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary">
+                  <div className="font-heading text-sm leading-relaxed text-dark dark:text-white lg:text-base">
                     Unit05 GmbH<br />
                     Kleiner Hirschgraben 8<br />
                     60311 Frankfurt am Main
                   </div>
                 </div>
-                <div>
+                <div className="pt-2">
                   <a
                     href={`/${locale}/imprint`}
-                    className="font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
+                    className="inline-block min-h-[44px] py-2 font-heading text-base text-dark hover:text-primary dark:text-white dark:hover:text-primary"
                   >
                     {t('common.footer.imprint')}
                   </a>
@@ -101,6 +101,7 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
         </div>
 
         <FooterBottom />

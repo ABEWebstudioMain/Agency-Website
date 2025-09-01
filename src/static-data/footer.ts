@@ -2,57 +2,48 @@ import { FooterLink } from "@/types/footer";
 
 export const footerLinks: FooterLink[] = [
   {
-    id: "footer-link-1",
-    title: "Home",
-    href: "/",
+    id: "footer-link-about",
+    title: "About",
+    href: "#about",
     external: false
   },
   {
-    id: "footer-link-2",
-    title: "Products",
-    href: "/",
+    id: "footer-link-services",
+    title: "Services",
+    href: "#services",
     external: false
   },
   {
-    id: "footer-link-3",
-    title: "Careers",
-    href: "/",
-    external: false,
-    badge: {
-      text: "Hiring"
-    }
+    id: "footer-link-case-studies",
+    title: "Case Studies",
+    href: "/case-studies",
+    external: false
   },
   {
-    id: "footer-link-4",
-    title: "Pricing",
-    href: "/",
+    id: "footer-link-team",
+    title: "Team",
+    href: "/team",
     external: false
   }
 ];
 
 export const footerLinksTwo: FooterLink[] = [
   {
-    id: "footer-link-two-1",
-    title: "Company",
-    href: "/",
+    id: "footer-link-contact",
+    title: "Contact",
+    href: "#contact",
     external: false
   },
   {
-    id: "footer-link-two-2",
-    title: "Press Media",
-    href: "/",
+    id: "footer-link-docs",
+    title: "Documentation",
+    href: "/docs",
     external: false
   },
   {
-    id: "footer-link-two-3",
-    title: "Our Blog",
-    href: "/blog",
-    external: false
-  },
-  {
-    id: "footer-link-two-4",
-    title: "Account",
-    href: "/auth/signin",
+    id: "footer-link-support",
+    title: "Support",
+    href: "/support",
     external: false
   }
 ];

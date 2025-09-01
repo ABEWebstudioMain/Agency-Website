@@ -28,48 +28,49 @@ export default function FooterBottom() {
   };
 
   return (
-    <div className="dark:border-[#2E333D] md:border-t">
-      <div className="-mx-4 flex flex-wrap py-5 md:py-7">
-        <div className="w-full px-4 md:w-1/2 lg:w-2/3">
-          <div className="mb-5 flex items-center justify-center space-x-5 border-b pb-5 dark:border-[#2E333D] md:mb-0 md:justify-start md:border-0 md:pb-0">
+    <div className="border-t pt-8 dark:border-[#2E333D]">
+      <div className="flex flex-col space-y-6 lg:flex-row lg:items-center lg:justify-between lg:space-y-0">
+        {/* Legal Links */}
+        <div className="order-2 lg:order-1">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 lg:justify-start">
             <a
               href="#"
-              className="font-heading text-base text-dark-text hover:text-primary"
+              className="inline-block min-h-[44px] py-2 font-heading text-sm text-dark-text hover:text-primary transition-colors duration-200 lg:text-base"
             >
               {locale === 'de' ? 'Deutsch' : 'English'}
             </a>
             <Link
               href={`/${locale}/privacy-policy`}
-              className="font-heading text-base text-dark-text hover:text-primary"
+              className="inline-block min-h-[44px] py-2 font-heading text-sm text-dark-text hover:text-primary transition-colors duration-200 lg:text-base"
             >
               {getLocalizedText('Privacy Policy')}
             </Link>
             <a
               href={`/${locale}/terms-conditions`}
-              className="font-heading text-base text-dark-text hover:text-primary"
+              className="inline-block min-h-[44px] py-2 font-heading text-sm text-dark-text hover:text-primary transition-colors duration-200 lg:text-base"
             >
               {getLocalizedText('Terms & Conditions')}
             </a>
             <a
               href="#"
-              className="font-heading text-base text-dark-text hover:text-primary"
+              className="inline-block min-h-[44px] py-2 font-heading text-sm text-dark-text hover:text-primary transition-colors duration-200 lg:text-base"
             >
               {getLocalizedText('Support')}
             </a>
             <a
               href={`/${locale}/imprint`}
-              className="font-heading text-base text-dark-text hover:text-primary"
+              className="inline-block min-h-[44px] py-2 font-heading text-sm text-dark-text hover:text-primary transition-colors duration-200 lg:text-base"
             >
               {getLocalizedText('Imprint')}
             </a>
           </div>
         </div>
-        <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div>
-            <p className="text-center font-heading text-base text-dark-text lg:text-right">
-              © {new Date().getFullYear()} Unit05. {t('common.footer.copyright')}
-            </p>
-          </div>
+        
+        {/* Copyright */}
+        <div className="order-1 lg:order-2">
+          <p className="text-center font-heading text-sm text-dark-text lg:text-right lg:text-base">
+            © {new Date().getFullYear()} Unit05. {t('common.footer.copyright')}
+          </p>
         </div>
       </div>
     </div>
