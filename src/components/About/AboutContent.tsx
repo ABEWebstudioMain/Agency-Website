@@ -11,6 +11,7 @@ export default function AboutContent() {
 
   return (
     <div className="space-y-24 lg:space-y-32">
+      <TabPanel
         title={t('common.about.content.section1.title')}
         image1='/images/illustrations/undraw_global-team_8jok.svg'
         image1Alt='Global team collaboration illustration'
@@ -19,6 +20,9 @@ export default function AboutContent() {
         leftContent={false}
       >
         {(t('common.about.content.section1.paragraphs', { returnObjects: true }) as string[]).map((paragraph: string, index: number) => (
+          <p key={index} className='mb-6 text-base text-dark-text leading-relaxed'>
+            {paragraph}
+          </p>
         ))}
         
         {/* Key Highlights */}
@@ -39,6 +43,7 @@ export default function AboutContent() {
         </div>
       </TabPanel>
 
+      <TabPanel
         title={t('common.about.content.section2.title')}
         image1='/images/illustrations/undraw_mind-map_i9bv.svg'
         image1Alt='Strategic planning and process optimization illustration'
