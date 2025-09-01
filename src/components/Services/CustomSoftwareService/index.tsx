@@ -36,7 +36,6 @@ export default function CustomSoftwareService() {
     return () => clearTimeout(timer);
   }, []);
 
-  const challenges = t('common.servicePages.customSoftware.challenges.items').map((item: any, index: number) => ({
   const challenges = (t('common.servicePages.customSoftware.challenges.items', { returnObjects: true }) as any[]).map((item: any, index: number) => ({
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
@@ -52,7 +51,6 @@ export default function CustomSoftwareService() {
     impact: item.impact
   }));
 
-  const approachSteps = t('common.servicePages.customSoftware.approach.steps').map((step: any, index: number) => ({
   const approachSteps = (t('common.servicePages.customSoftware.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
@@ -69,7 +67,6 @@ export default function CustomSoftwareService() {
     deliverables: step.deliverables
   }));
 
-  const benefits = t('common.servicePages.customSoftware.benefits.items').map((benefit: any, index: number) => ({
   const benefits = (t('common.servicePages.customSoftware.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
     title: benefit.title,
     description: benefit.description,
@@ -226,7 +223,6 @@ export default function CustomSoftwareService() {
             <div className="relative">
               <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 md:left-1/2"></div>
               
-              {approachSteps.map((step: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; duration: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; deliverables: any[]; }, index: Key | null | undefined) => (
               {approachSteps.map((step: any, index: number) => (
                 <div 
                   key={index} 
@@ -370,7 +366,6 @@ export default function CustomSoftwareService() {
               </div>
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {t('common.servicePages.customSoftware.whyChooseUs.stats').map((stat: any, index: number) => (
                 {(t('common.servicePages.customSoftware.whyChooseUs.stats', { returnObjects: true }) as any[]).map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
