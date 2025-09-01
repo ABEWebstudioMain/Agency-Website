@@ -1,51 +1,502 @@
-import { GetStaticPropsContext } from 'next';
-import { i18n, type Locale } from './config';
+"use client";
 
-// Translation data
-import enTranslations from './translations/en.json';
-import deTranslations from './translations/de.json';
+import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 
-const translations = {
-  en: enTranslations,
-  de: deTranslations,
-};
+export default function CustomSoftwareService() {
+  const params = useParams();
+  const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
+  const [activeStep, setActiveStep] = useState(0);
+  const [visibleBenefits, setVisibleBenefits] = useState(0);
 
-export function getI18nProps(locale: string = i18n.defaultLocale) {
-  const currentLocale = locale as Locale;
-  
-  return {
-    locale: currentLocale,
-    translations: translations[currentLocale] || translations[i18n.defaultLocale],
-  };
-}
+  // Auto-advance timeline steps
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % 5);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
 
-export function getStaticPropsWithI18n(context: GetStaticPropsContext) {
-  const locale = context.locale || i18n.defaultLocale;
-  
-  return {
-    props: {
-      ...getI18nProps(locale),
+  // Animate benefits on scroll
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const interval = setInterval(() => {
+        setVisibleBenefits((prev) => {
+          if (prev < 6) return prev + 1;
+          clearInterval(interval);
+          return prev;
+        });
+      }, 300);
+      return () => clearInterval(interval);
+    }, 500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const challenges = t('common.servicePages.customSoftware.challenges.items').map((item: any, index: number) => ({
+  const challenges = (t('common.servicePages.customSoftware.challenges.items', { returnObjects: true }) as any[]).map((item: any, index: number) => ({
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
+        {index === 0 && <><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" /><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" /></>}
+        {index === 1 && <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>}
+        {index === 2 && <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>}
+        {index === 3 && <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>}
+        {index === 4 && <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>}
+      </svg>
+    ),
+    title: item.title,
+    description: item.description,
+    impact: item.impact
+  }));
+
+  const approachSteps = t('common.servicePages.customSoftware.approach.steps').map((step: any, index: number) => ({
+  const approachSteps = (t('common.servicePages.customSoftware.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
+    title: step.title,
+    description: step.description,
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
+        {index === 0 && <><path d="M19.427 13.427l-3.396-3.396a.25.25 0 00-.354 0l-3.396 3.396A.25.25 0 0012.459 14H14v7a1 1 0 001 1h2a1 1 0 001-1v-7h1.541a.25.25 0 00.177-.427z" /><path d="M16 2a14 14 0 1014 14A14.016 14.016 0 0016 2zm0 26a12 12 0 1112-12 12.013 12.013 0 01-12 12z" /></>}
+        {index === 1 && <><path d="M27 4.002H5a3 3 0 00-3 3v18a3 3 0 003 3h22a3 3 0 003-3v-18a3 3 0 00-3-3zM5 6.002h22a1 1 0 011 1v3H4v-3a1 1 0 011-1zm22 20H5a1 1 0 01-1-1v-13h24v13a1 1 0 01-1 1z" /><path d="M7 14.002h4v4H7zM13 14.002h10v2H13zM13 18.002h8v2h-8z" /></>}
+        {index === 2 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M21.293 10.293L16 15.586l-2.293-2.293-1.414 1.414L16 18.414l6.707-6.707z" /></>}
+        {index === 3 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M20 12h-3V9a1 1 0 00-2 0v3h-3a1 1 0 000 2h3v3a1 1 0 002 0v-3h3a1 1 0 000-2z" /></>}
+        {index === 4 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M16 8a1 1 0 00-1 1v6.586l-2.293-2.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L17 15.586V9a1 1 0 00-1-1z" /></>}
+      </svg>
+    ),
+    duration: step.duration,
+    deliverables: step.deliverables
+  }));
+
+  const benefits = t('common.servicePages.customSoftware.benefits.items').map((benefit: any, index: number) => ({
+  const benefits = (t('common.servicePages.customSoftware.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
+    title: benefit.title,
+    description: benefit.description,
+    metric: benefit.metric,
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
+        {index === 0 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M22.707 12.293l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L14 18.172l7.293-7.293a1 1 0 011.414 1.414z" /></>}
+        {index === 1 && <path d="M16 2l4.12 8.36L30 12.24l-7 6.82 1.65 9.54L16 24.77l-8.65 3.83L9 18.06l-7-6.82 9.88-1.88L16 2z"/>}
+        {index === 2 && <><path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z" /><path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z" /></>}
+        {index === 3 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M16 8v8l5.66 3.39-1.32 2.22L15 18V8h1z" /></>}
+        {index === 4 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z" /></>}
+        {index === 5 && <><path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z" /><path d="M16 6v4.17c1.83.45 3.17 2.09 3.17 4.08 0 .55-.45 1-1 1s-1-.45-1-1c0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2 2.21 0 4 1.79 4 4 0 1.99-1.34 3.63-3.17 4.08V26h-2v-1.75C12.34 23.8 11 22.16 11 20.25c0-.55.45-1 1-1s1 .45 1 1c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2-2.21 0-4-1.79-4-4 0-1.99 1.34-3.63 3.17-4.08V6h2z" /></>}
+      </svg>
+    )
+  }));
+
+  const technologies = [
+    {
+      category: locale === 'de' ? "Programmiersprachen" : "Programming Languages",
+      items: ["Java", "Spring", "JavaScript", "TypeScript", "Rust", "Python"],
+      color: "bg-blue-500"
     },
-  };
-}
-
-export function useTranslation(locale: Locale = 'en') {
-  const t = (key: string, options?: { returnObjects?: boolean }): any => {
-    const keys = key.split('.');
-    let value: any = translations[locale];
-    
-    for (const k of keys) {
-      value = value?.[k];
+    {
+      category: "Frameworks",
+      items: ["Spring Boot", "React", "Angular", "Node.js"],
+      color: "bg-green-500"
+    },
+    {
+      category: locale === 'de' ? "Datenbanken" : "Databases",
+      items: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB"],
+      color: "bg-purple-500"
+    },
+    {
+      category: locale === 'de' ? "Cloud-Plattformen" : "Cloud Platforms",
+      items: ["AWS", "GCP", "Azure"],
+      color: "bg-orange-500"
+    },
+    {
+      category: locale === 'de' ? "Architekturen" : "Architectures",
+      items: ["Microservices", "Event-Driven", "Serverless"],
+      color: "bg-red-500"
+    },
+    {
+      category: "Tools",
+      items: ["Git", "Jira", "Confluence"],
+      color: "bg-indigo-500"
     }
-    
-    if (options?.returnObjects && Array.isArray(value)) {
-      return value;
-    }
-    
-    return value || key;
-  };
+  ];
 
-  return { t, locale };
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-white to-primary/10 pt-32 pb-20 sm:pt-36 sm:pb-24 lg:pt-44 lg:pb-32 dark:from-primary/10 dark:via-dark dark:to-primary/20">
+        <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
+        
+        <div className="px-4 xl:container">
+          <div className="relative mx-auto max-w-4xl text-center">
+            <div className="mb-6 inline-block rounded-full bg-primary/10 px-6 py-2 text-sm font-medium text-primary dark:bg-primary/20">
+              {t('common.servicePages.customSoftware.hero.badge')}
+            </div>
+            <h1 className="mb-8 font-heading text-4xl font-bold text-dark sm:text-5xl md:text-6xl dark:text-white">
+              {t('common.servicePages.customSoftware.hero.title').split(':')[0]}: <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{t('common.servicePages.customSoftware.hero.title').split(':')[1]}</span>
+            </h1>
+            <div className="mx-auto max-w-3xl space-y-6 text-lg text-dark-text leading-relaxed">
+              <p>
+                {t('common.servicePages.customSoftware.hero.description1')}
+              </p>
+              <p>
+                {t('common.servicePages.customSoftware.hero.description2')}
+              </p>
+            </div>
+            
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+              <Link
+                href={`/${locale}#contact`}
+                className="group inline-flex items-center rounded-sm bg-primary px-8 py-4 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg"
+              >
+                {t('common.servicePages.customSoftware.hero.cta')}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                >
+                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                </svg>
+              </Link>
+              <Link
+                href="#challenges"
+                className="inline-flex items-center rounded-sm border-2 border-primary/20 px-8 py-4 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
+              >
+                {t('common.servicePages.customSoftware.hero.seeIfYou')}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Challenges Section */}
+      <section id="challenges" className="py-16 sm:py-20 lg:py-24">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
+                {t('common.servicePages.customSoftware.challenges.title')}
+              </h2>
+              <p className="text-lg text-dark-text">
+                {t('common.servicePages.customSoftware.challenges.subtitle')}
+              </p>
+            </div>
+            
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {challenges.map((challenge: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; impact: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; }, index: Key | null | undefined) => (
+                <div 
+                  key={index} 
+                  className="group relative overflow-hidden rounded-sm bg-gradient-to-br from-orange-50 to-orange-100/50 p-6 transition-all duration-300 hover:shadow-lg dark:from-orange-900/10 dark:to-orange-800/5"
+                >
+                  <div className="absolute -right-4 -top-4 h-20 w-20 rounded-full bg-orange-200/30 transition-all group-hover:scale-110 dark:bg-orange-800/20"></div>
+                  
+                  <div className="relative">
+                    <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-orange-100 dark:bg-orange-900/30">
+                      {challenge.icon}
+                    </div>
+                    <h3 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white">
+                      {challenge.title}
+                    </h3>
+                    <p className="mb-4 text-sm text-dark-text leading-relaxed">
+                      {challenge.description}
+                    </p>
+                    <div className="inline-block rounded-full bg-orange-200 px-3 py-1 text-xs font-medium text-orange-800 dark:bg-orange-800/30 dark:text-orange-200">
+                      {challenge.impact}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Approach Timeline */}
+      <section className="bg-stroke/5 py-16 sm:py-20 lg:py-24 dark:bg-[#1D232D]">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
+                {t('common.servicePages.customSoftware.approach.title')}
+              </h2>
+              <p className="text-lg text-dark-text">
+                {t('common.servicePages.customSoftware.approach.subtitle')}
+              </p>
+            </div>
+
+            <div className="relative">
+              <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 md:left-1/2"></div>
+              
+              {approachSteps.map((step: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; duration: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; deliverables: any[]; }, index: Key | null | undefined) => (
+              {approachSteps.map((step: any, index: number) => (
+                <div 
+                  key={index} 
+                  className={`relative mb-12 transition-all duration-500 ${
+                    index % 2 === 0 ? 'md:pr-8' : 'md:ml-auto md:pl-8'
+                  } ${activeStep === index ? 'scale-105' : 'scale-100'} md:w-1/2`}
+                >
+                  <div className={`absolute top-6 size-6 rounded-full transition-all duration-300 ${
+                    activeStep === index 
+                      ? 'bg-primary shadow-lg shadow-primary/50 scale-125' 
+                      : 'bg-primary/60'
+                  } ${index % 2 === 0 ? 'left-5 md:-right-3' : 'left-5 md:-left-3'}`}>
+                    <div className={`absolute inset-0 rounded-full ${
+                      activeStep === index ? 'animate-ping bg-primary/75' : ''
+                    }`}></div>
+                  </div>
+                  
+                  <div className={`ml-16 rounded-sm p-6 shadow-sm transition-all duration-300 md:ml-0 ${
+                    activeStep === index 
+                      ? 'bg-white shadow-lg dark:bg-[#2C3443]' 
+                      : 'bg-white/80 dark:bg-[#2C3443]/80'
+                  }`}>
+                    <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+                      <div className="flex items-center">
+                        <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                          {step.icon}
+                        </div>
+                        <div className="text-sm font-medium text-primary whitespace-nowrap">
+                          Step {index + 1}
+                        </div>
+                      </div>
+                      <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary whitespace-nowrap">
+                        {step.duration}
+                      </span>
+                    </div>
+                    
+                    <h3 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white lg:text-xl">
+                      {step.title}
+                    </h3>
+                    <p className="mb-4 text-sm text-dark-text leading-relaxed lg:text-base">
+                      {step.description}
+                    </p>
+                    
+                    <div className="space-y-2">
+                      <h4 className="text-xs font-medium text-dark dark:text-white lg:text-sm">Key Deliverables:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {step.deliverables.map((deliverable: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined, i: Key | null | undefined) => (
+                        {step.deliverables.map((deliverable: string, i: number) => (
+                          <span
+                            key={i}
+                            className="rounded-full bg-primary/5 px-2 py-1 text-xs font-medium text-primary border border-primary/20 lg:px-3"
+                          >
+                            {deliverable}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Grid */}
+      <section className="py-16 sm:py-20 lg:py-24">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
+                {t('common.servicePages.customSoftware.benefits.title')}
+              </h2>
+              <p className="text-lg text-dark-text">
+                {t('common.servicePages.customSoftware.benefits.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {benefits.map((benefit: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; metric: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; }, index: number) => (
+                <div 
+                  key={index} 
+                  className={`group relative overflow-hidden rounded-sm bg-white p-6 shadow-sm transition-all duration-500 hover:shadow-lg dark:bg-[#1D232D] ${
+                    index < visibleBenefits ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                  }`}
+                >
+                  <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-primary/10 to-primary/5 transition-all group-hover:scale-110"></div>
+                  
+                  <div className="relative">
+                    <div className="mb-4 flex items-center justify-between">
+                      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+                        {benefit.icon}
+                      </div>
+                      <span className="rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200">
+                        {benefit.metric}
+                      </span>
+                    </div>
+                    
+                    <h3 className="mb-3 font-heading text-lg font-medium text-dark dark:text-white">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-base text-dark-text leading-relaxed">
+                      {benefit.description}
+                    </p>
+                    
+                    <div className="mt-4 h-1 w-full bg-stroke/20 rounded-full overflow-hidden">
+                      <div 
+                        className="h-full bg-gradient-to-r from-primary to-primary/70 transition-all duration-1000 ease-out"
+                        style={{ 
+                          width: index < visibleBenefits ? '100%' : '0%',
+                          transitionDelay: `${index * 0.2}s`
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="bg-gradient-to-r from-primary/5 to-primary/10 py-16 sm:py-20 lg:py-24 dark:from-primary/10 dark:to-primary/20">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-4xl text-center">
+            <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
+              {t('common.servicePages.customSoftware.whyChooseUs.title')}
+            </h2>
+            
+            <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">
+              <div className="relative space-y-6 text-lg text-dark-text leading-relaxed">
+                <p>
+                  {t('common.servicePages.customSoftware.whyChooseUs.description1')}
+                </p>
+                <p>
+                  {t('common.servicePages.customSoftware.whyChooseUs.description2')}
+                </p>
+                <p>
+                  {t('common.servicePages.customSoftware.whyChooseUs.description3')}
+                </p>
+              </div>
+              
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                {t('common.servicePages.customSoftware.whyChooseUs.stats').map((stat: any, index: number) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                    <div className="text-sm text-dark-text">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Technologies Section */}
+      <section className="py-16 sm:py-20 lg:py-24">
+        <div className="px-4 xl:container">
+          <div className="mx-auto max-w-6xl">
+            <div className="mb-16 text-center">
+              <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
+                {t('common.servicePages.customSoftware.technologies.title')}
+              </h2>
+              <p className="text-lg text-dark-text">
+                {t('common.servicePages.customSoftware.technologies.subtitle')}
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {technologies.map((tech, index) => (
+                <div 
+                  key={index} 
+                  className="group relative overflow-hidden rounded-sm bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D]"
+                >
+                  <div className={`absolute -right-4 -top-4 h-16 w-16 rounded-full ${tech.color} opacity-10 transition-all group-hover:scale-110 group-hover:opacity-20`}></div>
+                  
+                  <div className="relative">
+                    <h3 className="mb-4 font-heading text-lg font-medium text-dark dark:text-white">
+                      {tech.category}
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {tech.items.map((item, itemIndex) => (
+                        <span
+                          key={itemIndex}
+                          className="rounded-full bg-primary/10 px-3 py-1 text-sm font-medium text-primary transition-all hover:bg-primary hover:text-white"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-24 sm:py-28 lg:py-32">
+        <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
+        
+        <div className="px-4 xl:container">
+          <div className="relative mx-auto max-w-4xl text-center">
+            <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
+              <span className="tracking-wide">{t('common.servicePages.customSoftware.cta.badge')}</span>
+            </div>
+            <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
+              {t('common.servicePages.customSoftware.cta.title')}
+            </h2>
+            <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
+              <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
+                {t('common.servicePages.customSoftware.cta.description')}
+              </p>
+            </div>
+            
+            <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+              <Link
+                href={`/${locale}#contact`}
+                className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+              >
+                {t('common.servicePages.customSoftware.cta.consultation')}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                >
+                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                </svg>
+              </Link>
+              <Link
+                href={`/${locale}/team`}
+                className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+              >
+                {t('common.servicePages.customSoftware.cta.meetExperts')}
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 16 16"
+                  className="ml-2 fill-current transition-transform group-hover:translate-x-1"
+                >
+                  <path d="M12.172 7L6.808 1.636L8.222 0.222L16 8L8.222 15.778L6.808 14.364L12.172 9H0V7H12.172Z" />
+                </svg>
+              </Link>
+            </div>
+            
+            <div className="mt-8 text-sm leading-relaxed text-white/80">
+              {t('common.servicePages.customSoftware.cta.footer')}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Back Navigation */}
+      <section className="border-t py-12 dark:border-[#2E333D]">
+        <div className="px-4 xl:container">
+          <div className="text-center">
+            <Link
+              href={`/${locale}#services`}
+              className="inline-flex items-center rounded-sm bg-stroke/20 px-6 py-3 font-heading text-base text-dark transition-all hover:bg-stroke/40 dark:bg-white/10 dark:text-white dark:hover:bg-white/20"
+            >
+              <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
+                <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
+              </svg>
+              {t('common.services.common.backToServices')}
+            </Link>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
-
-export * from './config';
