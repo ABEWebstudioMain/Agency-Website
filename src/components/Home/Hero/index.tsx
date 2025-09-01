@@ -20,10 +20,10 @@ export default function Hero() {
       id='home'
       className='relative z-40 overflow-hidden pb-24 pt-28 sm:pt-36 lg:pb-[120px] lg:pt-[170px]'
     >
-      <div className='px-4 xl:container'>
+      <div className='w-full max-w-full px-4 xl:container'>
         <div className='-mx-4 flex flex-wrap items-center'>
           <div className='w-full px-3 lg:w-1/2'>
-            <div className='mx-auto mb-12 max-w-[530px] text-center lg:mb-0 lg:ml-0 lg:text-left'>
+            <div className='mx-auto mb-12 w-full max-w-[530px] text-center lg:mb-0 lg:ml-0 lg:text-left'>
               <span className='bg-primary/5 font-heading text-primary mb-8 inline-block rounded-full px-5 py-[10px] text-base dark:bg-white/10 dark:text-white'>
                 <span className='bg-primary mr-2 inline-block h-2 w-2 rounded-full'></span>
                 {t('common.hero.badge')}
@@ -45,10 +45,10 @@ export default function Hero() {
               <p className='text-dark-text mb-12 text-base lg:text-lg leading-relaxed'>
                 {t('common.hero.description')}
               </p>
-              <div className='flex flex-wrap items-center justify-center lg:justify-start'>
+              <div className='flex flex-col gap-4 items-center justify-center sm:flex-row sm:flex-wrap lg:justify-start'>
                 <a
                   href='#contact'
-                  className='bg-primary font-heading hover:bg-primary/90 inline-flex items-center rounded-sm px-6 py-[10px] text-base text-white md:px-8 md:py-[14px]'
+                  className='bg-primary font-heading hover:bg-primary/90 inline-flex w-full sm:w-auto items-center justify-center rounded-sm px-6 py-[10px] text-base text-white md:px-8 md:py-[14px]'
                 >
                   {t('common.hero.getStarted')}
                   <span className='pl-3'>
@@ -68,7 +68,7 @@ export default function Hero() {
                 </a>
                 <a
                   href='#services'
-                  className='font-heading text-dark hover:text-primary dark:hover:text-primary inline-flex items-center rounded-sm px-8 py-[14px] text-base dark:text-white'
+                  className='font-heading text-dark hover:text-primary dark:hover:text-primary inline-flex w-full sm:w-auto items-center justify-center rounded-sm px-8 py-[14px] text-base dark:text-white'
                 >
                   <span className='pr-3'>
                     <svg

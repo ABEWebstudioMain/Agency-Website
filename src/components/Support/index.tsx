@@ -25,22 +25,22 @@ export default function Support() {
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-5"></div>
       
-      <div className="px-4 xl:container">
+      <div className="w-full max-w-full px-4 xl:container">
         {/* Header Section */}
-        <div className="relative mx-auto mb-16 max-w-4xl text-center">
+        <div className="relative mx-auto mb-16 w-full max-w-4xl text-center">
           <span className="mb-4 inline-block rounded-full bg-primary/10 px-6 py-2 text-sm font-medium text-primary dark:bg-primary/20">
             {t('common.contact.mainTitle')}
           </span>
-          <h2 className="mb-6 font-heading text-4xl font-bold text-dark sm:text-5xl md:text-6xl dark:text-white">
+          <h2 className="mb-6 font-heading text-2xl font-bold text-dark sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">
             {t('common.contact.title')}
           </h2>
-          <p className="mx-auto max-w-2xl text-lg text-dark-text leading-relaxed">
+          <p className="mx-auto w-full max-w-2xl text-base sm:text-lg text-dark-text leading-relaxed">
             {t('common.contact.description')}
           </p>
         </div>
 
         {/* Contact Cards */}
-        <div className="mb-16 grid gap-8 md:grid-cols-3">
+        <div className="mb-16 grid w-full gap-6 sm:gap-8 md:grid-cols-3">
           <div className="group rounded-sm bg-white/80 p-8 text-center shadow-sm backdrop-blur-sm transition-all hover:shadow-lg dark:bg-[#1D232D]/80">
             <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 transition-colors group-hover:bg-primary/20">
               <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-primary">

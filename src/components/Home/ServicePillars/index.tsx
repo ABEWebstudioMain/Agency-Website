@@ -72,10 +72,10 @@ export default function ServicePillars() {
 
   return (
     <section id="services" className="py-16 sm:py-20 lg:py-[100px]">
-      <div className="px-4 xl:container">
+      <div className="w-full max-w-full px-4 xl:container">
         <div className="mx-auto mb-12 max-w-[620px] text-center md:mb-16 lg:mb-20">
           <span className="title">{t('common.servicePillars.mainTitle')}</span>
-          <h2 className="mb-5 font-heading text-3xl font-semibold text-dark dark:text-white sm:text-4xl md:text-[50px] md:leading-[60px]">
+          <h2 className="mb-5 font-heading text-2xl font-semibold text-dark dark:text-white sm:text-3xl md:text-4xl lg:text-[50px] lg:leading-[60px]">
             {t('common.servicePillars.title')}
           </h2>
           <p className="text-base text-dark-text">
@@ -83,11 +83,11 @@ export default function ServicePillars() {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
+        <div className="w-full grid gap-6 sm:gap-8 md:grid-cols-2 lg:gap-10">
           {pillars.map((pillar) => (
             <div
               key={pillar.id}
-              className="group flex flex-col rounded-sm bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-md dark:bg-[#1D232D] lg:p-10"
+              className="group flex w-full flex-col rounded-sm bg-white p-6 sm:p-8 shadow-sm transition-all duration-300 hover:shadow-md dark:bg-[#1D232D] lg:p-10"
             >
               <div className="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/5 transition-all duration-300 group-hover:bg-primary/10 dark:bg-white/5 dark:group-hover:bg-white/10">
                 {pillar.icon}
@@ -97,13 +97,13 @@ export default function ServicePillars() {
                 {pillar.title}
               </h3>
               
-              <p className="mb-6 text-base text-dark-text leading-relaxed">
+              <p className="mb-6 text-sm sm:text-base text-dark-text leading-relaxed">
                 {pillar.benefit}
               </p>
               
               <ul className="mb-8 flex-grow space-y-3">
                 {pillar.problems.map((problem: string, index: number) => (
-                  <li key={index} className="flex items-start text-sm text-dark-text">
+                  <li key={index} className="flex items-start text-xs sm:text-sm text-dark-text">
                     <svg width="16" height="16" viewBox="0 0 16 16" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                     </svg>
