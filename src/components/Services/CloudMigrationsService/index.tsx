@@ -35,7 +35,7 @@ export default function CloudMigrationsService() {
     return () => clearTimeout(timer);
   }, []);
 
-  const challenges = t('common.servicePages.cloudMigrations.challenges.items').map((item: any, index: number) => ({
+  const challenges = (t('common.servicePages.cloudMigrations.challenges.items', { returnObjects: true }) as any[]).map((item: any, index: number) => ({
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
         {index === 0 && <><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" /><path d="M11 7h2v2h-2zM11 11h2v6h-2z" /></>}
@@ -51,7 +51,7 @@ export default function CloudMigrationsService() {
     impact: item.impact
   }));
 
-  const approachSteps = t('common.servicePages.cloudMigrations.approach.steps').map((step: any, index: number) => ({
+  const approachSteps = (t('common.servicePages.cloudMigrations.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
     icon: (
@@ -68,7 +68,7 @@ export default function CloudMigrationsService() {
     deliverables: step.deliverables
   }));
 
-  const benefits = t('common.servicePages.cloudMigrations.benefits.items').map((benefit: any, index: number) => ({
+  const benefits = (t('common.servicePages.cloudMigrations.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
     title: benefit.title,
     description: benefit.description,
     metric: benefit.metric,
@@ -312,11 +312,11 @@ export default function CloudMigrationsService() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {benefits.map((benefit: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; metric: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; }, index: Key | null | undefined) => (
+              {benefits.map((benefit: any, index: number) => (
                 <div 
                   key={index} 
                   className={`group relative overflow-hidden rounded-sm bg-white p-6 shadow-sm transition-all duration-500 hover:shadow-lg dark:bg-[#1D232D] ${
-                    index < visibleBenefits ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+                    (index as number) < visibleBenefits ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
                   }`}
                 >
                   <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gradient-to-br from-primary/10 to-primary/5 transition-all group-hover:scale-110"></div>
@@ -342,8 +342,8 @@ export default function CloudMigrationsService() {
                       <div 
                         className="h-full bg-gradient-to-r from-primary to-primary/70 transition-all duration-1000 ease-out"
                         style={{ 
-                          width: index < visibleBenefits ? '100%' : '0%',
-                          transitionDelay: `${index * 0.2}s`
+                          width: (index as number) < visibleBenefits ? '100%' : '0%',
+                          transitionDelay: `${(index as number) * 0.2}s`
                         }}
                       ></div>
                     </div>
@@ -374,7 +374,7 @@ export default function CloudMigrationsService() {
               </div>
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {t('common.servicePages.cloudMigrations.whyChooseUs.stats').map((stat: any, index: number) => (
+                {(t('common.servicePages.cloudMigrations.whyChooseUs.stats', { returnObjects: true }) as any[]).map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
                     <div className="text-sm text-dark-text">{stat.label}</div>

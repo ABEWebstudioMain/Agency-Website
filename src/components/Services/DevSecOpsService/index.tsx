@@ -36,6 +36,7 @@ export default function DevSecOpsService() {
   }, []);
 
   const challenges = t('common.servicePages.devsecops.challenges.items').map((item: any, index: number) => ({
+  const challenges = (t('common.servicePages.devsecops.challenges.items', { returnObjects: true }) as any[]).map((item: any, index: number) => ({
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
         {index === 0 && <><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" /><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" /></>}
@@ -51,6 +52,7 @@ export default function DevSecOpsService() {
   }));
 
   const approachSteps = t('common.servicePages.devsecops.approach.steps').map((step: any, index: number) => ({
+  const approachSteps = (t('common.servicePages.devsecops.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
     icon: (
@@ -68,6 +70,7 @@ export default function DevSecOpsService() {
   }));
 
   const benefits = t('common.servicePages.devsecops.benefits.items').map((benefit: any, index: number) => ({
+  const benefits = (t('common.servicePages.devsecops.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
     title: benefit.title,
     description: benefit.description,
     metric: benefit.metric,
@@ -189,7 +192,7 @@ export default function DevSecOpsService() {
             </div>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {challenges.map((challenge, index) => (
+              {challenges.map((challenge: any, index: number) => (
                 <div 
                   key={index} 
                   className="group relative overflow-hidden rounded-sm bg-gradient-to-br from-orange-50 to-orange-100/50 p-6 transition-all duration-300 hover:shadow-lg dark:from-orange-900/10 dark:to-orange-800/5"
@@ -234,6 +237,7 @@ export default function DevSecOpsService() {
               <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 md:left-1/2"></div>
               
               {approachSteps.map((step, index) => (
+              {approachSteps.map((step: any, index: number) => (
                 <div 
                   key={index} 
                   className={`relative mb-12 transition-all duration-500 ${
@@ -279,7 +283,7 @@ export default function DevSecOpsService() {
                     <div className="space-y-2">
                       <h4 className="text-xs font-medium text-dark dark:text-white lg:text-sm">Key Deliverables:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {step.deliverables.map((deliverable, i) => (
+                        {step.deliverables.map((deliverable: string, i: number) => (
                           <span
                             key={i}
                             className="rounded-full bg-primary/5 px-2 py-1 text-xs font-medium text-primary border border-primary/20 lg:px-3"
@@ -311,7 +315,7 @@ export default function DevSecOpsService() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit: any, index: number) => (
                 <div 
                   key={index} 
                   className={`group relative overflow-hidden rounded-sm bg-white p-6 shadow-sm transition-all duration-500 hover:shadow-lg dark:bg-[#1D232D] ${
@@ -377,6 +381,7 @@ export default function DevSecOpsService() {
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {t('common.servicePages.devsecops.whyChooseUs.stats').map((stat: any, index: number) => (
+                {(t('common.servicePages.devsecops.whyChooseUs.stats', { returnObjects: true }) as any[]).map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
                     <div className="text-sm text-dark-text">{stat.label}</div>
