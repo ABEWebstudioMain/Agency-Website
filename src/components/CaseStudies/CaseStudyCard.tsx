@@ -92,43 +92,43 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
 
   if (featured) {
     return (
-      <div className="group h-full w-full">
-        <div className="flex h-full w-full flex-col rounded-lg bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D] sm:p-6 lg:p-8 xl:p-12">
-          <div className="mb-4 flex flex-wrap items-center gap-2 sm:mb-6 sm:gap-3">
+      <div className="group h-full">
+        <div className="flex h-full flex-col rounded-lg bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg dark:bg-[#1D232D] lg:p-12">
+          <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
-              <span className="ml-1 sm:ml-2">{localizedStudy.industry}</span>
+              <span className="ml-2">{localizedStudy.industry}</span>
             </span>
-            <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300 sm:px-3 sm:text-sm">{localizedStudy.duration}</span>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{localizedStudy.duration}</span>
           </div>
           
           <Link href={`/${locale}/case-studies/${study.slug}`}>
-            <h3 className="mb-3 font-heading text-lg font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white sm:mb-4 sm:text-xl lg:text-2xl xl:text-3xl xl:leading-tight">
+            <h3 className="mb-4 font-heading text-2xl font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white lg:text-3xl lg:leading-tight">
               {localizedStudy.title}
             </h3>
-            <h4 className="mb-4 font-heading text-base font-medium leading-relaxed text-primary sm:mb-6 sm:text-lg lg:text-xl">
+            <h4 className="mb-6 font-heading text-lg font-medium leading-relaxed text-primary lg:text-xl">
               {localizedStudy.subtitle}
             </h4>
           </Link>
 
-          <p className="mb-4 flex-grow text-sm leading-relaxed text-dark-text line-clamp-3 sm:mb-6 sm:text-base">
+          <p className="mb-6 flex-grow text-base leading-relaxed text-dark-text line-clamp-3">
             {localizedStudy.challengeSnapshot}
           </p>
           
-          <div className="mb-4 mt-auto rounded-lg bg-primary/8 p-3 dark:bg-primary/15 sm:mb-6 sm:p-4">
-            <p className="text-center text-xs font-semibold leading-relaxed text-primary sm:text-sm">
+          <div className="mb-6 mt-auto rounded-lg bg-primary/8 p-4 dark:bg-primary/15">
+            <p className="text-center text-sm font-semibold leading-relaxed text-primary">
               {localizedStudy.impactSnapshot}
             </p>
           </div>
           
-          <div className="mb-4 flex flex-wrap justify-center gap-2 sm:mb-6 sm:gap-3">
-            <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/25 sm:px-4 sm:py-2 sm:text-sm">
+          <div className="mb-6 flex flex-wrap justify-center gap-3">
+            <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
               {localizedStudy.metrics.primaryMetric}
             </span>
             {localizedStudy.metrics.secondaryMetrics.slice(0, 1).map((metric, index) => (
               <span
                 key={index}
-                className="rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200 sm:px-3 sm:py-2 sm:text-sm"
+                className="rounded-full bg-green-100 px-3 py-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200"
               >
                 {metric}
               </span>
@@ -138,7 +138,7 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
           <div className="mt-auto">
             <Link
               href={`/${locale}/case-studies/${study.slug}`}
-              className="group inline-flex min-h-[44px] items-center font-heading text-sm font-semibold text-primary transition-all hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30 sm:text-base"
+              className="group inline-flex items-center font-heading text-base font-semibold text-primary transition-all hover:text-primary/80 focus:outline-none focus:ring-2 focus:ring-primary/30"
             >
               {locale === 'de' ? 'Die ganze Geschichte lesen' : 'Read the Full Story'}
               <svg
@@ -157,39 +157,39 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
   }
 
   return (
-    <div className="group h-full w-full">
+    <div className="group h-full">
       <Link href={`/${locale}/case-studies/${study.slug}`} className="block">
-        <div className="flex h-full w-full flex-col rounded-lg bg-white p-4 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:bg-[#2C3443] sm:p-6 lg:p-8">
-          <div className="mb-4 flex flex-wrap items-center gap-2 sm:mb-6 sm:gap-3">
+        <div className="flex h-full flex-col rounded-lg bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1 dark:bg-[#2C3443] lg:p-8">
+          <div className="mb-6 flex flex-wrap items-center gap-3">
             <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
               {getCategoryIcon(study.serviceCategory)}
-              <span className="ml-1 sm:ml-2">{localizedStudy.industry}</span>
+              <span className="ml-2">{localizedStudy.industry}</span>
             </span>
-            <span className="rounded-full bg-gray-100 px-2 py-1 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300 sm:px-3 sm:text-sm">{localizedStudy.duration}</span>
+            <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300">{localizedStudy.duration}</span>
           </div>
           
-          <h3 className="mb-2 font-heading text-lg font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white sm:mb-3 sm:text-xl lg:text-2xl lg:leading-tight">
+          <h3 className="mb-3 font-heading text-xl font-bold leading-tight text-dark transition-colors group-hover:text-primary dark:text-white lg:text-2xl lg:leading-tight">
             {localizedStudy.title}
           </h3>
-          <h4 className="mb-3 font-heading text-sm font-medium leading-relaxed text-primary sm:mb-5 sm:text-base lg:text-lg">
+          <h4 className="mb-5 font-heading text-base font-medium leading-relaxed text-primary lg:text-lg">
             {localizedStudy.subtitle}
           </h4>
 
-          <p className="mb-4 flex-grow text-xs leading-relaxed text-dark-text line-clamp-2 sm:mb-6 sm:text-sm lg:text-base">
+          <p className="mb-6 flex-grow text-sm leading-relaxed text-dark-text line-clamp-2 lg:text-base">
             {localizedStudy.challengeSnapshot}
           </p>
 
-          <div className="mb-4 mt-auto rounded-lg bg-green-50 p-3 dark:bg-green-900/15 sm:mb-6 sm:p-4">
-            <p className="text-center text-xs font-semibold leading-relaxed text-green-700 dark:text-green-300 sm:text-sm">
+          <div className="mb-6 mt-auto rounded-lg bg-green-50 p-4 dark:bg-green-900/15">
+            <p className="text-center text-sm font-semibold leading-relaxed text-green-700 dark:text-green-300">
               {localizedStudy.impactSnapshot}
             </p>
           </div>
 
-          <div className="mt-auto flex flex-col items-center gap-3 sm:flex-row sm:justify-between sm:gap-4">
-            <span className="rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary dark:bg-primary/25 sm:px-4 sm:py-2 sm:text-sm">
+          <div className="mt-auto flex flex-wrap items-center justify-between gap-4">
+            <span className="rounded-full bg-primary/15 px-4 py-2 text-sm font-semibold text-primary dark:bg-primary/25">
               {localizedStudy.metrics.primaryMetric}
             </span>
-            <span className="min-h-[44px] flex items-center font-medium text-primary transition-colors group-hover:text-primary/80 text-xs sm:text-sm">
+            <span className="font-medium text-primary transition-colors group-hover:text-primary/80 text-sm">
               {locale === 'de' ? 'Mehr lesen →' : 'Read More →'}
             </span>
           </div>
