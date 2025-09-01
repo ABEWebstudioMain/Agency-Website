@@ -3,7 +3,8 @@
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import Link from "next/link";
-import { useState, useEffect, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from "react";
+import { useState, useEffect } from "react";
+import type { JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from "react";
 
 export default function CustomSoftwareService() {
   const params = useParams();
@@ -36,6 +37,7 @@ export default function CustomSoftwareService() {
   }, []);
 
   const challenges = t('common.servicePages.customSoftware.challenges.items').map((item: any, index: number) => ({
+  const challenges = (t('common.servicePages.customSoftware.challenges.items', { returnObjects: true }) as any[]).map((item: any, index: number) => ({
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
         {index === 0 && <><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" /><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" /></>}
@@ -51,6 +53,7 @@ export default function CustomSoftwareService() {
   }));
 
   const approachSteps = t('common.servicePages.customSoftware.approach.steps').map((step: any, index: number) => ({
+  const approachSteps = (t('common.servicePages.customSoftware.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
     icon: (
@@ -67,6 +70,7 @@ export default function CustomSoftwareService() {
   }));
 
   const benefits = t('common.servicePages.customSoftware.benefits.items').map((benefit: any, index: number) => ({
+  const benefits = (t('common.servicePages.customSoftware.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
     title: benefit.title,
     description: benefit.description,
     metric: benefit.metric,
@@ -223,6 +227,7 @@ export default function CustomSoftwareService() {
               <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 md:left-1/2"></div>
               
               {approachSteps.map((step: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; duration: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; deliverables: any[]; }, index: Key | null | undefined) => (
+              {approachSteps.map((step: any, index: number) => (
                 <div 
                   key={index} 
                   className={`relative mb-12 transition-all duration-500 ${
@@ -250,7 +255,7 @@ export default function CustomSoftwareService() {
                           {step.icon}
                         </div>
                         <div className="text-sm font-medium text-primary whitespace-nowrap">
-                          Step {index + 1}
+                          Step {(index as number) + 1}
                         </div>
                       </div>
                       <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary whitespace-nowrap">
@@ -268,7 +273,7 @@ export default function CustomSoftwareService() {
                     <div className="space-y-2">
                       <h4 className="text-xs font-medium text-dark dark:text-white lg:text-sm">Key Deliverables:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {step.deliverables.map((deliverable: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined, i: Key | null | undefined) => (
+                        {step.deliverables.map((deliverable: string, i: number) => (
                           <span
                             key={i}
                             className="rounded-full bg-primary/5 px-2 py-1 text-xs font-medium text-primary border border-primary/20 lg:px-3"
@@ -366,6 +371,7 @@ export default function CustomSoftwareService() {
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {t('common.servicePages.customSoftware.whyChooseUs.stats').map((stat: any, index: number) => (
+                {(t('common.servicePages.customSoftware.whyChooseUs.stats', { returnObjects: true }) as any[]).map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
                     <div className="text-sm text-dark-text">{stat.label}</div>

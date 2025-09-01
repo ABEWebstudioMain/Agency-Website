@@ -51,6 +51,7 @@ export default function AIOptimizationService() {
   }));
 
   const approachSteps = t('common.servicePages.aiOptimization.approach.steps', { returnObjects: true }).map((step: any, index: number) => ({
+  const approachSteps = (t('common.servicePages.aiOptimization.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
     icon: (
@@ -68,6 +69,7 @@ export default function AIOptimizationService() {
   }));
 
   const benefits = t('common.servicePages.aiOptimization.benefits.items').map((benefit: any, index: number) => ({
+  const benefits = (t('common.servicePages.aiOptimization.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
     title: benefit.title,
     description: benefit.description,
     metric: benefit.metric,
@@ -367,6 +369,7 @@ export default function AIOptimizationService() {
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 {t('common.servicePages.aiOptimization.whyChooseUs.stats').map((stat: any, index: number) => (
+                {(t('common.servicePages.aiOptimization.whyChooseUs.stats', { returnObjects: true }) as any[]).map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
                     <div className="text-sm text-dark-text">{stat.label}</div>
@@ -489,8 +492,7 @@ export default function AIOptimizationService() {
                 <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
               </svg>
               {t('common.services.common.backToServices', {
-                returnObjects: false
-              })}
+              {t('common.services.common.backToServices')}
             </Link>
           </div>
         </div>
