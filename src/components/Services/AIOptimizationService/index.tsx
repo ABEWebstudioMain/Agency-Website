@@ -3,7 +3,7 @@
 import { useParams } from "next/navigation";
 import { useTranslation } from "@/lib/i18n";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, JSXElementConstructor, Key, ReactElement, ReactNode, ReactPortal } from "react";
 
 export default function AIOptimizationService() {
   const params = useParams();
@@ -35,7 +35,7 @@ export default function AIOptimizationService() {
     return () => clearTimeout(timer);
   }, []);
 
-  const challenges = t('common.servicePages.aiOptimization.challenges.items').map((item: any, index: number) => ({
+  const challenges = (t('common.servicePages.aiOptimization.challenges.items', { returnObjects: true }) as unknown as any[]).map((item: any, index: number) => ({
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
         {index === 0 && <><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" /><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z" /></>}
@@ -50,7 +50,7 @@ export default function AIOptimizationService() {
     impact: item.impact
   }));
 
-  const approachSteps = t('common.servicePages.aiOptimization.approach.steps').map((step: any, index: number) => ({
+  const approachSteps = t('common.servicePages.aiOptimization.approach.steps', { returnObjects: true }).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
     icon: (
@@ -179,7 +179,7 @@ export default function AIOptimizationService() {
             </div>
             
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {challenges.map((challenge, index) => (
+              {challenges.map((challenge: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; impact: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; }, index: Key | null | undefined) => (
                 <div 
                   key={index} 
                   className="group relative overflow-hidden rounded-sm bg-gradient-to-br from-orange-50 to-orange-100/50 p-6 transition-all duration-300 hover:shadow-lg dark:from-orange-900/10 dark:to-orange-800/5"
@@ -223,7 +223,7 @@ export default function AIOptimizationService() {
             <div className="relative">
               <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 md:left-1/2"></div>
               
-              {approachSteps.map((step, index) => (
+              {approachSteps.map((step: { icon: ReactNode; duration: ReactNode; title: ReactNode; description: ReactNode; deliverables: any[] }, index: number) => (
                 <div 
                   key={index} 
                   className={`relative mb-12 transition-all duration-500 ${
@@ -269,7 +269,7 @@ export default function AIOptimizationService() {
                     <div className="space-y-2">
                       <h4 className="text-xs font-medium text-dark dark:text-white lg:text-sm">Key Deliverables:</h4>
                       <div className="flex flex-wrap gap-2">
-                        {step.deliverables.map((deliverable, i) => (
+                        {step.deliverables.map((deliverable: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined, i: Key | null | undefined) => (
                           <span
                             key={i}
                             className="rounded-full bg-primary/5 px-2 py-1 text-xs font-medium text-primary border border-primary/20 lg:px-3"
@@ -301,7 +301,7 @@ export default function AIOptimizationService() {
             </div>
 
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit: { icon: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; metric: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; title: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; description: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | Iterable<ReactNode> | null | undefined; }, index: number) => (
                 <div 
                   key={index} 
                   className={`group relative overflow-hidden rounded-sm bg-white p-6 shadow-sm transition-all duration-500 hover:shadow-lg dark:bg-[#1D232D] ${
@@ -488,7 +488,9 @@ export default function AIOptimizationService() {
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
                 <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
               </svg>
-              {t('common.services.common.backToServices')}
+              {t('common.services.common.backToServices', {
+                returnObjects: false
+              })}
             </Link>
           </div>
         </div>

@@ -13,14 +13,19 @@ export default function AboutContent() {
     <div className="space-y-24 lg:space-y-32">
       {/* About Section - Left Aligned */}
       <TabPanel
-        title={t('common.about.content.section1.title')}
+        title={t('common.about.content.section1.title', {
+          returnObjects: false
+        })}
         image1='/images/illustrations/undraw_global-team_8jok.svg'
         image1Alt='Global team collaboration illustration'
         image2='/images/illustrations/undraw_lightbulb-moment_16av.svg'
         image2Alt='Innovation and ideas illustration'
         leftContent={false}
       >
-        {t('common.about.content.section1.paragraphs').map((paragraph: string, index: number) => (
+        {(Array.isArray(t('common.about.content.section1.paragraphs', { returnObjects: true }))
+          ? t('common.about.content.section1.paragraphs', { returnObjects: true })
+          : [t('common.about.content.section1.paragraphs', { returnObjects: true })]
+        ).map((paragraph: string, index: number) => (
           <p key={index} className='mb-6 text-base text-dark-text leading-relaxed'>
             {paragraph}
           </p>
@@ -28,7 +33,7 @@ export default function AboutContent() {
         
         {/* Key Highlights */}
         <div className='mt-8 grid gap-4 sm:grid-cols-2'>
-          {t('common.about.content.section1.highlights').map((highlight: any, index: number) => (
+          {t('common.about.content.section1.highlights', { returnObjects: true }).map((highlight: any, index: number) => (
             <div key={index} className='flex items-start space-x-3'>
               <div className='flex h-8 w-8 items-center justify-center rounded-full bg-primary/10'>
                 <svg width="16" height="16" viewBox="0 0 16 16" className="fill-current text-primary">
@@ -46,14 +51,16 @@ export default function AboutContent() {
 
       {/* Mission Section - Right Aligned */}
       <TabPanel
-        title={t('common.about.content.section2.title')}
+        title={t('common.about.content.section2.title', {
+          returnObjects: false
+        })}
         image1='/images/illustrations/undraw_mind-map_i9bv.svg'
         image1Alt='Strategic planning and process optimization illustration'
         image2='/images/illustrations/undraw_designing-components_kb05.svg'
         image2Alt='Efficient workflow and component design illustration'
         leftContent={true}
       >
-        {t('common.about.content.section2.paragraphs').map((paragraph: string, index: number) => (
+        {t('common.about.content.section2.paragraphs', { returnObjects: true }).map((paragraph: string, index: number) => (
           <p key={index} className='mb-6 text-base text-dark-text leading-relaxed'>
             {paragraph}
           </p>
@@ -61,7 +68,7 @@ export default function AboutContent() {
         
         {/* Philosophy Pillars */}
         <div className='mt-8 space-y-4'>
-          {t('common.about.content.section2.pillars').map((pillar: any, index: number) => (
+          {t('common.about.content.section2.pillars', { returnObjects: true }).map((pillar: any, index: number) => (
             <div key={index} className='border-l-4 border-primary/30 pl-4'>
               <h4 className='font-heading text-base font-medium text-dark dark:text-white mb-2'>{pillar.title}</h4>
               <p className='text-sm text-dark-text'>{pillar.description}</p>
@@ -72,7 +79,9 @@ export default function AboutContent() {
 
       {/* Vision Section - Left Aligned */}
       <TabPanel
-        title={t('common.about.content.section3.title')}
+        title={t('common.about.content.section3.title', {
+          returnObjects: false
+        })}
         image1='/images/illustrations/undraw_data-analysis_b7cp.svg'
         image1Alt='Data analysis and digital transformation illustration'
         image2='/images/illustrations/undraw_metrics_5v8d.svg'

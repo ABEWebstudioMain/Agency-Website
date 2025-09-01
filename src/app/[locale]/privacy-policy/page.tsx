@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { Metadata } from "next";
 
 type Props = {
@@ -485,6 +486,16 @@ export default async function PrivacyPolicyPage(props: Props) {
                     We use the collected data for various purposes:
                   </p>
                   <ul className="space-y-2 text-base text-dark-text">
-                    <li className="flex
-  )
+                    <li className="flex">
+                      {/* Add your list items here or complete the list as needed */}
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
