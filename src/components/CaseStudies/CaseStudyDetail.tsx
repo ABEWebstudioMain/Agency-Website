@@ -142,10 +142,10 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
                 <div className="flex flex-wrap gap-3">
                   {localizedStudy.fullContent.keyTechnologies.map((tech) => (
                     <span
-                      key={tech}
+                      key={tech as string}
                       className="rounded-full bg-primary/15 px-4 py-2 text-center text-sm font-semibold text-primary dark:bg-primary/25"
                     >
-                      {tech}
+                      {tech as string}
                     </span>
                   ))}
                 </div>
@@ -158,11 +158,11 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </h3>
               <ul className="space-y-3">
                 {localizedStudy.fullContent.specificActions.map((action, index) => (
-                  <li key={index} className="flex items-start text-base text-dark-text leading-[1.5]">
+                  <li key={index as number} className="flex items-start text-base text-dark-text leading-[1.5]">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
-                    <span className="leading-[1.5] lg:text-lg lg:leading-[1.6]">{action}</span>
+                    <span className="leading-[1.5] lg:text-lg lg:leading-[1.6]">{action as string}</span>
                   </li>
                 ))}
               </ul>
@@ -186,15 +186,15 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </h3>
               <div className="grid gap-8 md:grid-cols-2 lg:gap-10">
                 {localizedStudy.fullContent.quantifiableResults.map((result, index) => (
-                  <div key={index} className="rounded-lg bg-green-50 p-6 dark:bg-green-900/15 lg:p-8">
+                  <div key={index as number} className="rounded-lg bg-green-50 p-6 dark:bg-green-900/15 lg:p-8">
                     <div className="mb-4">
                       <div className="font-heading text-2xl font-bold text-green-700 dark:text-green-300 lg:text-3xl">
-                        {result.metric}
+                        {(result as any).metric}
                       </div>
                     </div>
                     <div className="flex items-center min-h-[60px]">
                       <p className="text-base text-dark-text lg:text-lg">
-                        {result.description}
+                        {(result as any).description}
                       </p>
                     </div>
                   </div>
@@ -209,11 +209,11 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
               </h3>
               <ul className="space-y-4">
                 {localizedStudy.fullContent.qualitativeBenefits.map((benefit, index) => (
-                  <li key={index} className="flex items-start text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
+                  <li key={index as number} className="flex items-start text-base leading-[1.6] text-dark-text lg:text-lg lg:leading-[1.6]">
                     <svg width="20" height="20" viewBox="0 0 20 20" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                     </svg>
-                    {benefit}
+                    {benefit as string}
                   </li>
                 ))}
               </ul>

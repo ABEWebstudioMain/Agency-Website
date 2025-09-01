@@ -32,7 +32,7 @@ export default function Hero() {
                 {t('common.hero.title')}{" "}
                 <span className="text-primary">
                   <DynamicTypewriter
-                    words={t('common.hero.rotatingWords')}
+                    words={t('common.hero.rotatingWords', { returnObjects: true }) as string[]}
                     cursor
                     loop={0}
                     cursorStyle='|'

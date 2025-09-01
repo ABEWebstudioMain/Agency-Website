@@ -102,7 +102,7 @@ export default function ServicePillars() {
               </p>
               
               <ul className="mb-8 flex-grow space-y-3">
-                {pillar.problems.map((problem: string, index: number) => (
+                {(pillar.problems as string[]).map((problem: string, index: number) => (
                   <li key={index} className="flex items-start text-sm text-dark-text">
                     <svg width="16" height="16" viewBox="0 0 16 16" className="mr-3 mt-0.5 shrink-0 fill-current text-primary">
                       <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>

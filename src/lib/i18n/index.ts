@@ -30,12 +30,16 @@ export function getStaticPropsWithI18n(context: GetStaticPropsContext) {
 }
 
 export function useTranslation(locale: Locale = 'en') {
-  const t = (key: string): string => {
+  const t = (key: string, options?: { returnObjects?: boolean }): any => {
     const keys = key.split('.');
     let value: any = translations[locale];
     
     for (const k of keys) {
       value = value?.[k];
+    }
+    
+    if (options?.returnObjects && Array.isArray(value)) {
+      return value;
     }
     
     return value || key;

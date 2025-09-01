@@ -6,7 +6,7 @@ import { useTranslation } from '@/lib/i18n';
 export default function Timeline() {
   const params = useParams();
   const locale = params?.locale as string || 'en';
-  const { t } = useTranslation(locale);
+  const { t } = useTranslation(locale as Locale);
 
   const timelineSteps = [
     {

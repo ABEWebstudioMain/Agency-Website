@@ -222,11 +222,11 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                         </div>
                         {localizedStudy.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
                           <div
-                            key={metricIndex}
+                            key={metricIndex as number}
                             className="flex items-center justify-center min-h-[40px] rounded-full bg-green-100 px-3 py-1 dark:bg-green-900/30"
                           >
                             <span className="text-center text-sm font-medium text-green-800 dark:text-green-200">
-                              {metric}
+                              {metric as string}
                             </span>
                           </div>
                         ))}

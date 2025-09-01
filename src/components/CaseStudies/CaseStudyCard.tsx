@@ -127,10 +127,10 @@ export default function CaseStudyCard({ study, featured = false, reverse = false
             </span>
             {localizedStudy.metrics.secondaryMetrics.slice(0, 1).map((metric, index) => (
               <span
-                key={index}
+                key={index as number}
                 className="rounded-full bg-green-100 px-3 py-2 text-sm font-medium text-green-800 dark:bg-green-900/30 dark:text-green-200"
               >
-                {metric}
+                {metric as string}
               </span>
             ))}
           </div>
