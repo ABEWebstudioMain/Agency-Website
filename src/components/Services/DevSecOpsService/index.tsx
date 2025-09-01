@@ -35,7 +35,6 @@ export default function DevSecOpsService() {
     return () => clearTimeout(timer);
   }, []);
 
-  const challenges = t('common.servicePages.devsecops.challenges.items').map((item: any, index: number) => ({
   const challenges = (t('common.servicePages.devsecops.challenges.items', { returnObjects: true }) as any[]).map((item: any, index: number) => ({
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
@@ -51,7 +50,6 @@ export default function DevSecOpsService() {
     impact: item.impact
   }));
 
-  const approachSteps = t('common.servicePages.devsecops.approach.steps').map((step: any, index: number) => ({
   const approachSteps = (t('common.servicePages.devsecops.approach.steps', { returnObjects: true }) as any[]).map((step: any, index: number) => ({
     title: step.title,
     description: step.description,
@@ -69,7 +67,6 @@ export default function DevSecOpsService() {
     deliverables: step.deliverables
   }));
 
-  const benefits = t('common.servicePages.devsecops.benefits.items').map((benefit: any, index: number) => ({
   const benefits = (t('common.servicePages.devsecops.benefits.items', { returnObjects: true }) as any[]).map((benefit: any, index: number) => ({
     title: benefit.title,
     description: benefit.description,
@@ -236,7 +233,6 @@ export default function DevSecOpsService() {
             <div className="relative">
               <div className="absolute left-8 top-0 h-full w-1 bg-gradient-to-b from-primary/20 via-primary/40 to-primary/20 md:left-1/2"></div>
               
-              {approachSteps.map((step, index) => (
               {approachSteps.map((step: any, index: number) => (
                 <div 
                   key={index} 
@@ -380,7 +376,6 @@ export default function DevSecOpsService() {
               </div>
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                {t('common.servicePages.devsecops.whyChooseUs.stats').map((stat: any, index: number) => (
                 {(t('common.servicePages.devsecops.whyChooseUs.stats', { returnObjects: true }) as any[]).map((stat: any, index: number) => (
                   <div key={index} className="text-center">
                     <div className="text-2xl font-bold text-primary">{stat.value}</div>
