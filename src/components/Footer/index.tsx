@@ -6,7 +6,6 @@ import { useTranslation } from "@/lib/i18n";
 import FooterAbout from "./FooterAbout";
 import FooterBottom from "./FooterBottom";
 import FooterLinkItem from "./FooterLinkItem";
-import FooterNewsletter from "./FooterNewsletter";
 
 export default function Footer() {
   const params = useParams();
@@ -35,7 +34,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-          </div>
 
             <div className="mb-8 lg:mb-20">
               <h3 className="mb-9 font-heading text-2xl font-medium text-dark dark:text-white">
@@ -101,7 +99,6 @@ export default function Footer() {
               </div>
             </div>
           </div>
-        </div>
         </div>
 
         <FooterBottom />
