@@ -71,6 +71,8 @@ export default function AboutContent() {
       {/* Vision Section - Left Aligned */}
       <TabPanel
         title={t('common.about.content.section3.title')}
+        image1='/images/illustrations/undraw_visionary-technology_f6b3.svg'
+        image1Alt='Visionary technology illustration'
         image2='/images/illustrations/undraw_metrics_5v8d.svg'
         image2Alt='Performance metrics and growth illustration'
         leftContent={false}
