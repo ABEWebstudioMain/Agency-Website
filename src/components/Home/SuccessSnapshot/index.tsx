@@ -133,99 +133,103 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
         </div>
 
         {/* Horizontal Slider */}
-        <div className="relative mx-auto w-full max-w-6xl">
+        <div className="relative mx-auto w-full max-w-4xl">
           <div className="overflow-hidden rounded-sm">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
             >
-              {featuredStudies.map((study, index) => (
-                <div key={study.id} className="w-full flex-shrink-0">
-                  <div className="mx-2 sm:mx-4">
-                    {(() => {
-                      const localizedStudy = getLocalizedStudy(study);
-                      return (
-                    <div className="relative w-full overflow-hidden rounded-sm bg-white p-4 shadow-lg dark:bg-[#1D232D] sm:p-6 lg:p-8 xl:p-12">
+              {featuredStudies.map((study) => {
+                const localizedStudy = getLocalizedStudy(study);
+                return (
+                  <div key={study.id} className="w-full flex-shrink-0 px-2 sm:px-4">
+                    <div className="relative w-full overflow-hidden rounded-sm bg-white p-6 shadow-lg dark:bg-[#1D232D] sm:p-8 lg:p-10 xl:p-12">
                       {/* Background Pattern */}
-                      <div className="absolute right-0 top-0 h-32 w-32 opacity-5">
+                      <div className="absolute right-0 top-0 h-24 w-24 opacity-5 sm:h-32 sm:w-32">
                         <div className="h-full w-full rounded-full bg-gradient-to-br from-primary to-primary/50"></div>
                       </div>
                       
                       {/* Header */}
-                      <div className="mb-3 flex flex-wrap items-center gap-2 sm:mb-4 sm:gap-3">
+                      <div className="relative mb-4 flex flex-wrap items-center gap-2 sm:mb-6 sm:gap-3">
                         <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-medium ${getCategoryColor(study.serviceCategory)}`}>
                           {getCategoryIcon(study.serviceCategory)}
-                          <span className="ml-1 sm:ml-2">{localizedStudy.industry}</span>
+                          <span className="ml-2">{localizedStudy.industry}</span>
                         </span>
-                        <span className="rounded-full bg-stroke/20 px-2 py-1 text-xs font-medium text-dark-text dark:bg-white/10 sm:px-3 sm:text-sm">
+                        <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300 sm:text-sm">
                           {localizedStudy.duration}
                         </span>
-                        <span className="rounded-full bg-stroke/20 px-2 py-1 text-xs font-medium text-dark-text dark:bg-white/10 sm:px-3 sm:text-sm">
+                        <span className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-800 dark:text-gray-300 sm:text-sm">
                           {localizedStudy.teamSize}
                         </span>
                       </div>
                       
-                      <h3 className="mb-2 font-heading text-lg font-bold text-dark dark:text-white sm:text-xl lg:text-2xl xl:text-3xl">
+                      <h3 className="relative mb-3 font-heading text-xl font-bold leading-tight text-dark dark:text-white sm:mb-4 sm:text-2xl lg:text-3xl xl:text-4xl">
                         {localizedStudy.title}
                       </h3>
-                      <h4 className="mb-3 font-heading text-base font-medium text-primary sm:mb-4 sm:text-lg">
+                      <h4 className="relative mb-4 font-heading text-lg font-medium leading-relaxed text-primary sm:mb-6 sm:text-xl lg:text-2xl">
                         {localizedStudy.subtitle}
                       </h4>
                       
                       {/* Three-column layout for Challenge/Solution/Impact */}
-                      <div className="mb-6 grid w-full gap-4 sm:mb-8 sm:gap-6 lg:grid-cols-3">
-                        <div className="w-full rounded-sm bg-orange-50 p-3 dark:bg-orange-900/10 sm:p-4">
-                          <div className="mb-3 flex items-center justify-center text-center">
+                      <div className="relative mb-6 grid w-full gap-4 sm:mb-8 sm:gap-6 lg:grid-cols-3">
+                        <div className="w-full rounded-lg bg-orange-50 p-4 dark:bg-orange-900/10 sm:p-5">
+                          <div className="mb-3 flex items-center justify-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current text-orange-600">
                               <path d="M8 1C4.134 1 1 4.134 1 8s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/>
                               <path d="M8 4v4l3 1.5"/>
                             </svg>
-                            <h5 className="font-heading text-xs font-medium text-orange-800 dark:text-orange-200 sm:text-sm">Challenge</h5>
+                            <h5 className="font-heading text-sm font-semibold text-orange-800 dark:text-orange-200">
+                              {locale === 'de' ? 'Herausforderung' : 'Challenge'}
+                            </h5>
                           </div>
-                          <div className="flex items-center min-h-[50px] sm:min-h-[60px]">
-                            <p className="text-center text-xs text-dark-text leading-relaxed sm:text-sm">{localizedStudy.challengeSnapshot}</p>
+                          <div className="flex items-center min-h-[60px] sm:min-h-[80px]">
+                            <p className="text-center text-sm text-dark-text leading-relaxed">{localizedStudy.challengeSnapshot}</p>
                           </div>
                         </div>
                         
-                        <div className="w-full rounded-sm bg-blue-50 p-3 dark:bg-blue-900/10 sm:p-4">
-                          <div className="mb-3 flex items-center justify-center text-center">
+                        <div className="w-full rounded-lg bg-blue-50 p-4 dark:bg-blue-900/10 sm:p-5">
+                          <div className="mb-3 flex items-center justify-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current text-blue-600">
                               <path d="M8 1C4.134 1 1 4.134 1 8s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7zm0 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5z"/>
                               <path d="M11.354 5.646L7 10l-2.354-2.354.708-.708L7 8.586l3.646-3.647.708.707z"/>
                             </svg>
-                            <h5 className="font-heading text-xs font-medium text-blue-800 dark:text-blue-200 sm:text-sm">Solution</h5>
+                            <h5 className="font-heading text-sm font-semibold text-blue-800 dark:text-blue-200">
+                              {locale === 'de' ? 'Lösung' : 'Solution'}
+                            </h5>
                           </div>
-                          <div className="flex items-center min-h-[50px] sm:min-h-[60px]">
-                            <p className="text-center text-xs text-dark-text leading-relaxed sm:text-sm">{localizedStudy.solutionSnapshot}</p>
+                          <div className="flex items-center min-h-[60px] sm:min-h-[80px]">
+                            <p className="text-center text-sm text-dark-text leading-relaxed">{localizedStudy.solutionSnapshot}</p>
                           </div>
                         </div>
                         
-                        <div className="w-full rounded-sm bg-green-50 p-3 dark:bg-green-900/10 sm:p-4">
-                          <div className="mb-3 flex items-center justify-center text-center">
+                        <div className="w-full rounded-lg bg-green-50 p-4 dark:bg-green-900/10 sm:p-5">
+                          <div className="mb-3 flex items-center justify-center">
                             <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current text-green-600">
                               <path d="M8 1l3.5 7L19 9.27l-5 4.87 1.18 6.88L8 17.77l-7.18 3.25L2 14.14-3 9.27l7.5-1.23L8 1z"/>
                             </svg>
-                            <h5 className="font-heading text-xs font-medium text-green-800 dark:text-green-200 sm:text-sm">Impact</h5>
+                            <h5 className="font-heading text-sm font-semibold text-green-800 dark:text-green-200">
+                              {locale === 'de' ? 'Auswirkung' : 'Impact'}
+                            </h5>
                           </div>
-                          <div className="flex items-center min-h-[50px] sm:min-h-[60px]">
-                            <p className="text-center text-xs font-medium text-primary leading-relaxed sm:text-sm">{localizedStudy.impactSnapshot}</p>
+                          <div className="flex items-center min-h-[60px] sm:min-h-[80px]">
+                            <p className="text-center text-sm font-medium text-primary leading-relaxed">{localizedStudy.impactSnapshot}</p>
                           </div>
                         </div>
                       </div>
                       
                       {/* Metrics Row */}
-                      <div className="mb-6 flex w-full flex-wrap justify-center gap-2 sm:mb-8 sm:gap-3">
-                        <div className="flex items-center justify-center min-h-[36px] rounded-full bg-primary/15 px-3 py-1 sm:min-h-[40px] sm:px-4 sm:py-2">
-                          <span className="text-center text-xs font-medium text-primary sm:text-sm">
+                      <div className="relative mb-6 flex w-full flex-wrap justify-center gap-2 sm:mb-8 sm:gap-3">
+                        <div className="flex items-center justify-center min-h-[40px] rounded-full bg-primary/15 px-4 py-2 sm:min-h-[44px] sm:px-5">
+                          <span className="text-center text-sm font-semibold text-primary">
                             {localizedStudy.metrics.primaryMetric}
                           </span>
                         </div>
                         {localizedStudy.metrics.secondaryMetrics.slice(0, 3).map((metric, metricIndex) => (
                           <div
                             key={metricIndex}
-                            className="flex items-center justify-center min-h-[36px] rounded-full bg-green-100 px-2 py-1 dark:bg-green-900/30 sm:min-h-[40px] sm:px-3"
+                            className="flex items-center justify-center min-h-[40px] rounded-full bg-green-100 px-3 py-2 dark:bg-green-900/30 sm:min-h-[44px] sm:px-4"
                           >
-                            <span className="text-center text-xs font-medium text-green-800 dark:text-green-200 sm:text-sm">
+                            <span className="text-center text-sm font-medium text-green-800 dark:text-green-200">
                               {metric}
                             </span>
                           </div>
@@ -233,10 +237,10 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                       </div>
                       
                       {/* CTA Buttons */}
-                      <div className="flex w-full flex-col gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
+                      <div className="relative flex w-full flex-col gap-4 sm:flex-row sm:justify-center sm:gap-6">
                         <Link
                           href={`/${locale}/case-studies/${study.slug}`}
-                          className="group inline-flex min-h-[44px] w-full items-center justify-center rounded-sm bg-primary px-6 py-3 font-heading text-sm font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg sm:w-auto sm:text-base"
+                          className="group inline-flex min-h-[48px] w-full items-center justify-center rounded-sm bg-primary px-8 py-4 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg sm:w-auto"
                         >
                           {t('common.successSnapshot.readFullStory')}
                           <svg
@@ -250,27 +254,25 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
                         </Link>
                         <Link
                           href={`/${locale}#contact`}
-                          className="inline-flex min-h-[44px] w-full items-center justify-center rounded-sm border-2 border-primary/20 px-6 py-3 font-heading text-sm font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white sm:w-auto sm:text-base"
+                          className="inline-flex min-h-[48px] w-full items-center justify-center rounded-sm border-2 border-primary/20 px-8 py-4 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white sm:w-auto"
                         >
                           {t('common.successSnapshot.getSimilarResults')}
                         </Link>
                       </div>
                     </div>
-                      );
-                    })()}
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
           {/* Navigation Dots */}
-          <div className="mt-6 flex justify-center space-x-2 sm:mt-8 sm:space-x-3">
+          <div className="mt-8 flex justify-center space-x-3">
             {featuredStudies.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-2 w-2 rounded-full transition-all duration-300 sm:h-3 sm:w-3 ${
+                className={`h-3 w-3 rounded-full transition-all duration-300 ${
                   currentSlide === index 
                     ? 'bg-primary scale-125' 
                     : 'bg-stroke hover:bg-primary/50 dark:bg-[#2E333D]'
@@ -283,33 +285,33 @@ export default function SuccessSnapshot({ featuredStudies }: SuccessSnapshotProp
           {/* Navigation Arrows */}
           <button
             onClick={() => setCurrentSlide(currentSlide === 0 ? featuredStudies.length - 1 : currentSlide - 1)}
-            className="absolute left-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-dark shadow-lg transition-all hover:bg-white hover:shadow-xl dark:bg-[#1D232D]/90 dark:text-white dark:hover:bg-[#1D232D] sm:left-4 sm:h-12 sm:w-12"
+            className="absolute left-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-dark shadow-lg transition-all hover:bg-white hover:shadow-xl dark:bg-[#1D232D]/90 dark:text-white dark:hover:bg-[#1D232D]"
             aria-label="Previous slide"
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" className="fill-current">
+            <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
               <path d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"/>
             </svg>
           </button>
 
           <button
             onClick={() => setCurrentSlide((currentSlide + 1) % featuredStudies.length)}
-            className="absolute right-2 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-dark shadow-lg transition-all hover:bg-white hover:shadow-xl dark:bg-[#1D232D]/90 dark:text-white dark:hover:bg-[#1D232D] sm:right-4 sm:h-12 sm:w-12"
+            className="absolute right-4 top-1/2 -translate-y-1/2 flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-dark shadow-lg transition-all hover:bg-white hover:shadow-xl dark:bg-[#1D232D]/90 dark:text-white dark:hover:bg-[#1D232D]"
             aria-label="Next slide"
           >
-            <svg width="20" height="20" viewBox="0 0 20 20" className="fill-current">
+            <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
               <path d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"/>
             </svg>
           </button>
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-12 text-center sm:mt-16 lg:mt-20">
-          <p className="mb-4 text-sm text-dark-text sm:mb-6 sm:text-base">
+        <div className="mt-16 text-center lg:mt-20">
+          <p className="mb-6 text-base text-dark-text">
             {t('common.successSnapshot.cta.description')}
           </p>
           <Link
             href={`/${locale}/case-studies`}
-            className="inline-flex min-h-[44px] items-center rounded-sm border-2 border-primary/20 px-6 py-3 font-heading text-sm font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white sm:px-8 sm:text-base"
+            className="inline-flex min-h-[48px] items-center rounded-sm border-2 border-primary/20 px-8 py-4 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
           >
             {t('common.successSnapshot.cta.button')}
             <svg
