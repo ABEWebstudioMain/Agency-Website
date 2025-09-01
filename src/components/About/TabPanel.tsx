@@ -10,32 +10,31 @@ export default function TabPanel({
   children,
 }: any) {
   return (
-    <div className={`w-full max-w-full flex flex-col lg:flex-row lg:-mx-4 lg:flex-wrap items-center ${leftContent ? "lg:flex-row-reverse" : ""}`}>
+    <div className={`-mx-4 flex w-full flex-wrap items-center ${leftContent ? "flex-row-reverse" : ""}`}>
       <div className="w-full px-4 lg:w-1/2">
-        <div className="relative z-30 mb-14 h-[300px] sm:h-[400px] lg:h-[490px] w-full max-w-[600px] lg:mb-0 mx-auto lg:mx-0">
-          <div className="aspect-86/121 absolute left-0 top-0 w-3/5 sm:w-full max-w-[344px]">
+        <div className="relative z-30 mb-14 h-[490px] max-w-[600px] lg:mb-0 mx-auto lg:mx-0">
+          <div className="aspect-86/121 absolute left-0 top-0 w-full max-w-[344px]">
             <Image 
               src={image1}
               alt={image1Alt || "image alt text"}
               fill
-              className="object-contain w-full h-full"
+              className="object-contain"
             />
           </div>
 
-          <div className="aspect-53/66 absolute right-0 top-1/2 z-10 w-2/5 sm:w-full max-w-[315px] -translate-y-1/2">
+          <div className="aspect-53/66 absolute right-0 top-1/2 z-10 w-full max-w-[315px] -translate-y-1/2">
             <Image 
               src={image2}
               alt={image2Alt || "image alt text"}
               fill
-              className="object-contain w-full h-full"
+              className="object-contain"
             />
           </div>
-          <div className="absolute right-0 top-12 sm:top-24 z-40">
+          <div className="absolute right-0 top-24 z-40">
             <svg
-              width="48"
-              height="26"
+              width="72"
+              height="38"
               viewBox="0 0 72 38"
-              className="w-12 h-7 sm:w-18 sm:h-10"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >

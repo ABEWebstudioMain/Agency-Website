@@ -30,9 +30,6 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale || 'en'} suppressHydrationWarning>
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
-      </head>
       <body className={inter.className}>
         <NextTopLoader
           color="#006BFF"
