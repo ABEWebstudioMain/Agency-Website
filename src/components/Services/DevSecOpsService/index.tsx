@@ -1,12 +1,14 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function DevSecOpsService() {
   const params = useParams();
   const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
   const [activeStep, setActiveStep] = useState(0);
   const [visibleBenefits, setVisibleBenefits] = useState(0);
 
@@ -33,212 +35,62 @@ export default function DevSecOpsService() {
     return () => clearTimeout(timer);
   }, []);
 
-  const challenges = [
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-          <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
-        </svg>
-      ),
-      title: "Slow Software Release Cycles",
-      description: "Your software release cycles are slow and prone to manual errors, delaying time-to-market",
-      impact: "Delayed releases"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-          <path d="M12 7c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2V9c0-1.1-.9-2-2-2z"/>
-        </svg>
-      ),
-      title: "Security Vulnerabilities",
-      description: "You're facing security vulnerabilities or breaches due to fragmented processes and late security integration",
-      impact: "Security risks"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-        </svg>
-      ),
-      title: "Inconsistent Environments",
-      description: "Your teams struggle with inconsistent environments and complex deployments across different stages",
-      impact: "Deployment failures"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      ),
-      title: "Scaling Challenges",
-      description: "You need to scale your applications quickly but lack the underlying infrastructure and automation",
-      impact: "Limited growth"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-        </svg>
-      ),
-      title: "Team Silos",
-      description: "There's a silo between development, security, and operations, leading to inefficiencies and communication gaps",
-      impact: "Reduced productivity"
-    }
-  ];
+  const challenges = t('common.servicePages.devsecops.challenges.items').map((item: any, index: number) => ({
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
+        {index === 0 && <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>}
+        {index === 1 && <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/><path d="M12 7c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2s2-.9 2-2V9c0-1.1-.9-2-2-2z"/>}
+        {index === 2 && <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>}
+        {index === 3 && <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>}
+        {index === 4 && <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>}
+      </svg>
+    ),
+    title: item.title,
+    description: item.description,
+    impact: item.impact
+  }));
 
-  const approachSteps = [
-    {
-      title: "Current State Assessment & Strategy",
-      description: "We analyze your existing pipelines, security posture, and infrastructure to identify bottlenecks and define a clear roadmap for your DevSecOps transformation.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M16 8v8l5.66 3.39-1.32 2.22L15 18V8h1z"/>
-        </svg>
-      ),
-      duration: "1-2 weeks",
-      deliverables: ["Current state analysis", "Security assessment", "Transformation roadmap"]
-    },
-    {
-      title: "Architecture Design & Implementation",
-      description: "Our experts design and build secure, scalable cloud-native platforms, leveraging microservices, containerization, and infrastructure as code.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M27 4.002H5a3 3 0 00-3 3v18a3 3 0 003 3h22a3 3 0 003-3v-18a3 3 0 00-3-3zM5 6.002h22a1 1 0 011 1v3H4v-3a1 1 0 011-1zm22 20H5a1 1 0 01-1-1v-13h24v13a1 1 0 01-1 1z"/>
-          <path d="M7 14.002h4v4H7zM13 14.002h10v2H13zM13 18.002h8v2h-8z"/>
-        </svg>
-      ),
-      duration: "3-4 weeks",
-      deliverables: ["Platform architecture", "Infrastructure design", "Security framework"]
-    },
-    {
-      title: "CI/CD Pipeline Automation",
-      description: "We implement end-to-end automation for continuous integration, delivery, and deployment, ensuring fast, reliable, and repeatable releases.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M21.293 10.293L16 15.586l-2.293-2.293-1.414 1.414L16 18.414l6.707-6.707z"/>
-        </svg>
-      ),
-      duration: "4-6 weeks",
-      deliverables: ["Automated pipelines", "Testing automation", "Deployment strategies"]
-    },
-    {
-      title: "Security Integration (SecOps)",
-      description: "We embed security practices and tools throughout your entire development lifecycle, from code commit to production, ensuring security by design.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2l-8 3v6c0 4.99 3.84 9.64 8 10.5 4.16-.86 8-5.51 8-10.5V5l-8-3z"/>
-          <path d="M14 18l-3-3 1.41-1.41L14 15.17l5.59-5.58L21 11l-7 7z"/>
-        </svg>
-      ),
-      duration: "2-3 weeks",
-      deliverables: ["Security scanning", "Compliance checks", "Vulnerability management"]
-    },
-    {
-      title: "Monitoring, Logging & Alerting",
-      description: "We set up comprehensive observability solutions to give you real-time insights into application performance and security, enabling proactive issue resolution.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z"/>
-          <path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z"/>
-        </svg>
-      ),
-      duration: "2-3 weeks",
-      deliverables: ["Monitoring setup", "Alerting rules", "Dashboards"]
-    },
-    {
-      title: "Team Enablement & Mentoring",
-      description: "We empower your internal teams with the knowledge and best practices to maintain and evolve your DevSecOps culture effectively.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z"/>
-        </svg>
-      ),
-      duration: "Ongoing",
-      deliverables: ["Training programs", "Best practices", "Knowledge transfer"]
-    }
-  ];
+  const approachSteps = t('common.servicePages.devsecops.approach.steps').map((step: any, index: number) => ({
+    title: step.title,
+    description: step.description,
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
+        {index === 0 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M16 8v8l5.66 3.39-1.32 2.22L15 18V8h1z"/>}
+        {index === 1 && <path d="M27 4.002H5a3 3 0 00-3 3v18a3 3 0 003 3h22a3 3 0 003-3v-18a3 3 0 00-3-3zM5 6.002h22a1 1 0 011 1v3H4v-3a1 1 0 011-1zm22 20H5a1 1 0 01-1-1v-13h24v13a1 1 0 01-1 1z"/><path d="M7 14.002h4v4H7zM13 14.002h10v2H13zM13 18.002h8v2h-8z"/>}
+        {index === 2 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M21.293 10.293L16 15.586l-2.293-2.293-1.414 1.414L16 18.414l6.707-6.707z"/>}
+        {index === 3 && <path d="M16 2l-8 3v6c0 4.99 3.84 9.64 8 10.5 4.16-.86 8-5.51 8-10.5V5l-8-3z"/><path d="M14 18l-3-3 1.41-1.41L14 15.17l5.59-5.58L21 11l-7 7z"/>}
+        {index === 4 && <path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z"/><path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z"/>}
+        {index === 5 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z"/>}
+      </svg>
+    ),
+    duration: step.duration,
+    deliverables: step.deliverables
+  }));
 
-  const benefits = [
-    {
-      title: "Accelerated Time-to-Market",
-      description: "Deliver new features and updates faster and more frequently with automated pipelines.",
-      metric: "Up to 10x faster",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M22.707 12.293l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L14 18.172l7.293-7.293a1 1 0 011.414 1.414z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Enhanced Security Posture",
-      description: "Integrate security checks throughout the pipeline, reducing risks and vulnerabilities.",
-      metric: "99.9% security coverage",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2l-8 3v6c0 4.99 3.84 9.64 8 10.5 4.16-.86 8-5.51 8-10.5V5l-8-3z"/>
-          <path d="M14 18l-3-3 1.41-1.41L14 15.17l5.59-5.58L21 11l-7 7z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Improved System Stability",
-      description: "Minimize deployment errors and ensure consistent environments across all stages.",
-      metric: "99.9% uptime",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2l4.12 8.36L30 12.24l-7 6.82 1.65 9.54L16 24.77l-8.65 3.83L9 18.06l-7-6.82 9.88-1.88L16 2z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Cost Efficiency",
-      description: "Automate repetitive tasks, optimize resource utilization, and reduce operational overhead.",
-      metric: "50% cost reduction",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M16 6v4.17c1.83.45 3.17 2.09 3.17 4.08 0 .55-.45 1-1 1s-1-.45-1-1c0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2 2.21 0 4 1.79 4 4 0 1.99-1.34 3.63-3.17 4.08V26h-2v-1.75C12.34 23.8 11 22.16 11 20.25c0-.55.45-1 1-1s1 .45 1 1c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2-2.21 0-4-1.79-4-4 0-1.99 1.34-3.63 3.17-4.08V6h2z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Increased Developer Productivity",
-      description: "Free your teams to focus on innovation, not infrastructure headaches.",
-      metric: "3x productivity gain",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Scalability & Agility",
-      description: "Build platforms that easily adapt to changing demands and future growth.",
-      metric: "Unlimited scale",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z"/>
-          <path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z"/>
-        </svg>
-      )
-    }
-  ];
+  const benefits = t('common.servicePages.devsecops.benefits.items').map((benefit: any, index: number) => ({
+    title: benefit.title,
+    description: benefit.description,
+    metric: benefit.metric,
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
+        {index === 0 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M22.707 12.293l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L14 18.172l7.293-7.293a1 1 0 011.414 1.414z"/>}
+        {index === 1 && <path d="M16 2l-8 3v6c0 4.99 3.84 9.64 8 10.5 4.16-.86 8-5.51 8-10.5V5l-8-3z"/><path d="M14 18l-3-3 1.41-1.41L14 15.17l5.59-5.58L21 11l-7 7z"/>}
+        {index === 2 && <path d="M16 2l4.12 8.36L30 12.24l-7 6.82 1.65 9.54L16 24.77l-8.65 3.83L9 18.06l-7-6.82 9.88-1.88L16 2z"/>}
+        {index === 3 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M16 6v4.17c1.83.45 3.17 2.09 3.17 4.08 0 .55-.45 1-1 1s-1-.45-1-1c0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2 2.21 0 4 1.79 4 4 0 1.99-1.34 3.63-3.17 4.08V26h-2v-1.75C12.34 23.8 11 22.16 11 20.25c0-.55.45-1 1-1s1 .45 1 1c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2-2.21 0-4-1.79-4-4 0-1.99 1.34-3.63 3.17-4.08V6h2z"/>}
+        {index === 4 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z"/>}
+        {index === 5 && <path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z"/><path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z"/>}
+      </svg>
+    )
+  }));
 
   const technologies = [
     {
-      category: "Cloud Platforms",
+      category: locale === 'de' ? "Cloud-Plattformen" : "Cloud Platforms",
       items: ["AWS", "GCP", "Azure"],
       color: "bg-blue-500"
     },
     {
-      category: "Container Orchestration",
+      category: locale === 'de' ? "Container-Orchestrierung" : "Container Orchestration",
       items: ["Kubernetes", "OpenShift", "Docker"],
       color: "bg-green-500"
     },
@@ -253,22 +105,22 @@ export default function DevSecOpsService() {
       color: "bg-orange-500"
     },
     {
-      category: "Monitoring & Logging",
+      category: locale === 'de' ? "Überwachung & Protokollierung" : "Monitoring & Logging",
       items: ["Prometheus", "Grafana", "ELK Stack", "Splunk"],
       color: "bg-red-500"
     },
     {
-      category: "Security Tools",
+      category: locale === 'de' ? "Sicherheits-Tools" : "Security Tools",
       items: ["SonarQube", "Snyk", "Aqua Security", "Vault"],
       color: "bg-indigo-500"
     },
     {
-      category: "Architectures",
+      category: locale === 'de' ? "Architekturen" : "Architectures",
       items: ["Microservices", "Serverless", "Event-Driven"],
       color: "bg-pink-500"
     },
     {
-      category: "Programming Languages",
+      category: locale === 'de' ? "Programmiersprachen" : "Programming Languages",
       items: ["Go", "Python", "Java", "Rust"],
       color: "bg-teal-500"
     }
@@ -283,17 +135,17 @@ export default function DevSecOpsService() {
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-block rounded-full bg-primary/10 px-6 py-2 text-sm font-medium text-primary dark:bg-primary/20">
-              Service Pillar 2
+              {t('common.servicePages.devsecops.hero.badge')}
             </div>
             <h1 className="mb-8 font-heading text-4xl font-bold text-dark sm:text-5xl md:text-6xl dark:text-white">
-              Secure Your Future: <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Advanced DevSecOps</span> Platform Solutions
+              {t('common.servicePages.devsecops.hero.title').split(':')[0]}: <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{t('common.servicePages.devsecops.hero.title').split(':')[1]}</span>
             </h1>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-dark-text leading-relaxed">
               <p>
-                In today&apos;s competitive landscape, rapid and secure software delivery isn&apos;t just an advantage—it&apos;s a necessity. <strong className="text-primary">DevSecOps Platform Solutions</strong> transform your development lifecycle by integrating security from the ground up, automating workflows, and building resilient cloud-native architectures.
+                {t('common.servicePages.devsecops.hero.description1')}
               </p>
               <p>
-                At <strong className="text-dark dark:text-white">Unit05</strong>, our highly experienced team helps you establish robust, scalable, and secure platforms that accelerate your time-to-market, reduce vulnerabilities, and foster a culture of continuous innovation.
+                {t('common.servicePages.devsecops.hero.description2')}
               </p>
             </div>
             
@@ -302,7 +154,7 @@ export default function DevSecOpsService() {
                 href={`/${locale}#contact`}
                 className="group inline-flex items-center rounded-sm bg-primary px-8 py-4 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg"
               >
-                Accelerate Your Deliveries
+                {t('common.servicePages.devsecops.hero.cta')}
                 <svg
                   width="16"
                   height="16"
@@ -316,7 +168,7 @@ export default function DevSecOpsService() {
                 href="#challenges"
                 className="inline-flex items-center rounded-sm border-2 border-primary/20 px-8 py-4 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
               >
-                See If This Is You
+                {t('common.servicePages.devsecops.hero.seeIfYou')}
               </Link>
             </div>
           </div>
@@ -329,10 +181,10 @@ export default function DevSecOpsService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                Is This You? <span className="text-primary">Your Challenges</span>
+                {t('common.servicePages.devsecops.challenges.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                If any of these sound familiar, you&apos;re in the right place
+                {t('common.servicePages.devsecops.challenges.subtitle')}
               </p>
             </div>
             
@@ -371,10 +223,10 @@ export default function DevSecOpsService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                How We Help: <span className="text-primary">Our 6-Step DevSecOps Approach</span>
+                {t('common.servicePages.devsecops.approach.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                From assessment to team enablement, we build secure and scalable platforms
+                {t('common.servicePages.devsecops.approach.subtitle')}
               </p>
             </div>
 
@@ -451,10 +303,10 @@ export default function DevSecOpsService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                Key Benefits <span className="text-primary">You&apos;ll Achieve</span>
+                {t('common.servicePages.devsecops.benefits.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                Transform your software delivery with measurable results
+                {t('common.servicePages.devsecops.benefits.subtitle')}
               </p>
             </div>
 
@@ -507,35 +359,29 @@ export default function DevSecOpsService() {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-              Why Choose <span className="text-primary">Unit05</span>?
+              {t('common.servicePages.devsecops.whyChooseUs.title')}
             </h2>
             
             <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">
               <div className="relative space-y-6 text-lg text-dark-text leading-relaxed">
                 <p>
-                  Our <strong className="text-primary">small, dedicated team</strong> brings deep, hands-on expertise in complex DevSecOps environments, honed in challenging European markets.
+                  {t('common.servicePages.devsecops.whyChooseUs.description1')}
                 </p>
                 <p>
-                  We provide <strong className="text-primary">direct, transparent partnership</strong>—cutting out the inefficiencies and &quot;ghost work&quot; often associated with larger consultancies. We leverage our <strong className="text-dark dark:text-white">extensive network</strong> to bring in niche specialists when needed, ensuring comprehensive solutions.
+                  {t('common.servicePages.devsecops.whyChooseUs.description2')}
                 </p>
                 <p>
-                  You get a <strong className="text-primary">fast-paced, reliable partner</strong> focused on building you a future-proof, secure, and highly efficient software delivery platform.
+                  {t('common.servicePages.devsecops.whyChooseUs.description3')}
                 </p>
               </div>
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-dark-text">Senior DevOps Experts</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">0</div>
-                  <div className="text-sm text-dark-text">Ghost Work</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">24/7</div>
-                  <div className="text-sm text-dark-text">Platform Monitoring</div>
-                </div>
+                {t('common.servicePages.devsecops.whyChooseUs.stats').map((stat: any, index: number) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                    <div className="text-sm text-dark-text">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -548,10 +394,10 @@ export default function DevSecOpsService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                Technologies & <span className="text-primary">Expertise</span>
+                {t('common.servicePages.devsecops.technologies.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                Industry-leading tools and platforms for modern DevSecOps
+                {t('common.servicePages.devsecops.technologies.subtitle')}
               </p>
             </div>
 
@@ -592,14 +438,14 @@ export default function DevSecOpsService() {
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
-              <span className="tracking-wide">DEVSECOPS TRANSFORMATION</span>
+              <span className="tracking-wide">{t('common.servicePages.devsecops.cta.badge')}</span>
             </div>
             <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
-              Ready to Revolutionize Your Software Delivery?
+              {t('common.servicePages.devsecops.cta.title')}
             </h2>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
               <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-              Let&apos;s build a DevSecOps platform that empowers your teams and secures your future.
+                {t('common.servicePages.devsecops.cta.description')}
               </p>
             </div>
             
@@ -608,7 +454,7 @@ export default function DevSecOpsService() {
                 href={`/${locale}#contact`}
                 className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                Schedule a Free Consultation
+                {t('common.servicePages.devsecops.cta.consultation')}
                 <svg
                   width="16"
                   height="16"
@@ -622,7 +468,7 @@ export default function DevSecOpsService() {
                 href={`/${locale}/team`}
                 className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                Meet Our DevOps Experts
+                {t('common.servicePages.devsecops.cta.meetExperts')}
                 <svg
                   width="16"
                   height="16"
@@ -635,7 +481,7 @@ export default function DevSecOpsService() {
             </div>
             
             <div className="mt-8 text-sm leading-relaxed text-white/80">
-              Free consultation • No commitment • Expert DevSecOps advice
+              {t('common.servicePages.devsecops.cta.footer')}
             </div>
           </div>
         </div>
@@ -652,7 +498,7 @@ export default function DevSecOpsService() {
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
                 <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
               </svg>
-              Back to All Services
+              {t('common.services.common.backToServices')}
             </Link>
           </div>
         </div>

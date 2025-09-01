@@ -600,6 +600,574 @@
         "backToServices": "Back to All Services"
       }
     },
+    "servicePages": {
+      "customSoftware": {
+        "hero": {
+          "badge": "Service Pillar 1",
+          "title": "Build the Future: Custom Software & Digitalization",
+          "description1": "Off-the-shelf solutions can only take you so far. When your business processes are unique, or your legacy systems are holding you back, custom software development and digitalization are the keys to unlocking true efficiency and innovation.",
+          "description2": "At Unit05, we don't just build code; we craft tailor-made digital solutions that perfectly fit your operational needs, streamline workflows, and create competitive advantages.",
+          "cta": "Start Your Digital Transformation",
+          "seeIfYou": "See If This Is You"
+        },
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "subtitle": "If any of these sound familiar, you're in the right place",
+          "items": [
+            {
+              "title": "Inefficient Manual Processes",
+              "description": "You're struggling with inefficient manual processes that waste time and resources",
+              "impact": "Hours lost daily"
+            },
+            {
+              "title": "Rigid Legacy Systems",
+              "description": "Your existing legacy systems are rigid, difficult to maintain, and prevent agile responses to market changes",
+              "impact": "Blocking innovation"
+            },
+            {
+              "title": "No Perfect Off-the-Shelf Solution",
+              "description": "You can't find an off-the-shelf solution that truly meets your specific business requirements",
+              "impact": "Compromising on features"
+            },
+            {
+              "title": "Siloed Data",
+              "description": "Data is siloed, making it impossible to gain actionable insights or make informed decisions",
+              "impact": "Missing opportunities"
+            },
+            {
+              "title": "Digitalization Gap",
+              "description": "You need to digitalize core business functions but lack the in-house expertise or capacity",
+              "impact": "Falling behind competitors"
+            }
+          ]
+        },
+        "approach": {
+          "title": "How We Help: Our 5-Step Approach",
+          "subtitle": "From concept to deployment, we partner with you every step of the way",
+          "steps": [
+            {
+              "title": "Deep Discovery & Analysis",
+              "description": "We start by thoroughly understanding your current processes, pain points, and strategic goals, translating complex business requirements into clear technical specifications.",
+              "duration": "1-2 weeks",
+              "deliverables": ["Process mapping", "Requirements document", "Technical specifications"]
+            },
+            {
+              "title": "Custom Solution Design",
+              "description": "Our architects design intuitive, scalable, and secure software solutions from the ground up, leveraging modern technologies to future-proof your investment.",
+              "duration": "2-3 weeks",
+              "deliverables": ["System architecture", "UI/UX designs", "Technical roadmap"]
+            },
+            {
+              "title": "Agile Development & Iteration",
+              "description": "We adopt an agile methodology, delivering working increments, gathering feedback, and adapting quickly to ensure the final product perfectly aligns with your evolving needs.",
+              "duration": "8-16 weeks",
+              "deliverables": ["Working software", "Regular demos", "Continuous feedback"]
+            },
+            {
+              "title": "Seamless Integration & Deployment",
+              "description": "We ensure your new custom software integrates smoothly with your existing IT landscape, followed by robust deployment and thorough testing.",
+              "duration": "1-2 weeks",
+              "deliverables": ["System integration", "Deployment", "Testing reports"]
+            },
+            {
+              "title": "Ongoing Support & Optimization",
+              "description": "Our partnership extends beyond launch, offering support, maintenance, and continuous optimization to keep your systems performing at their peak.",
+              "duration": "Ongoing",
+              "deliverables": ["24/7 support", "Performance monitoring", "Regular updates"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Key Benefits You'll Achieve",
+          "subtitle": "Transform your business with measurable results",
+          "items": [
+            {
+              "title": "Increased Operational Efficiency",
+              "description": "Automate repetitive tasks, reduce errors, and free up your team for higher-value work.",
+              "metric": "Up to 70% time savings"
+            },
+            {
+              "title": "Competitive Advantage",
+              "description": "Develop unique digital products or services that differentiate you in the marketplace.",
+              "metric": "Market leadership"
+            },
+            {
+              "title": "Scalability & Flexibility",
+              "description": "Build systems that grow with your business and adapt to future demands.",
+              "metric": "10x growth capacity"
+            },
+            {
+              "title": "Enhanced Decision-Making",
+              "description": "Gain real-time access to critical data and insights.",
+              "metric": "Real-time analytics"
+            },
+            {
+              "title": "Improved User Experience",
+              "description": "Create intuitive internal tools or engaging customer-facing applications.",
+              "metric": "95% user satisfaction"
+            },
+            {
+              "title": "Cost Savings",
+              "description": "Reduce reliance on expensive, generic software licenses and streamline resource allocation.",
+              "metric": "40% cost reduction"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Why Choose Unit05?",
+          "description1": "We stand apart by offering the expertise of a large firm with the agility, transparency, and personal touch of a dedicated partner.",
+          "description2": "Our lean team of senior experts ensures direct access to decision-makers and rapid progress. We leverage our extensive network to incorporate specialized knowledge whenever needed.",
+          "description3": "No typical overheads, no \"ghost work\" – just high-value solutions at fair, transparent prices.",
+          "stats": [
+            { "value": "100%", "label": "Senior Experts" },
+            { "value": "0", "label": "Ghost Work" },
+            { "value": "24/7", "label": "Support" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologies & Expertise",
+          "subtitle": "Cutting-edge tools and frameworks for modern solutions"
+        },
+        "cta": {
+          "badge": "DIGITAL TRANSFORMATION",
+          "title": "Ready to Digitalize Your Business?",
+          "description": "Let's discuss how custom software can transform your operations and drive your success.",
+          "consultation": "Schedule a Free Consultation",
+          "meetExperts": "Meet Our Experts",
+          "footer": "Free consultation • No commitment • Expert advice"
+        }
+      },
+      "devsecops": {
+        "hero": {
+          "badge": "Service Pillar 2",
+          "title": "Secure Your Future: Advanced DevSecOps Platform Solutions",
+          "description1": "In today's competitive landscape, rapid and secure software delivery isn't just an advantage—it's a necessity. DevSecOps Platform Solutions transform your development lifecycle by integrating security from the ground up, automating workflows, and building resilient cloud-native architectures.",
+          "description2": "At Unit05, our highly experienced team helps you establish robust, scalable, and secure platforms that accelerate your time-to-market, reduce vulnerabilities, and foster a culture of continuous innovation.",
+          "cta": "Accelerate Your Deliveries",
+          "seeIfYou": "See If This Is You"
+        },
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "subtitle": "If any of these sound familiar, you're in the right place",
+          "items": [
+            {
+              "title": "Slow Software Release Cycles",
+              "description": "Your software release cycles are slow and prone to manual errors, delaying time-to-market",
+              "impact": "Delayed releases"
+            },
+            {
+              "title": "Security Vulnerabilities",
+              "description": "You're facing security vulnerabilities or breaches due to fragmented processes and late security integration",
+              "impact": "Security risks"
+            },
+            {
+              "title": "Inconsistent Environments",
+              "description": "Your teams struggle with inconsistent environments and complex deployments across different stages",
+              "impact": "Deployment failures"
+            },
+            {
+              "title": "Scaling Challenges",
+              "description": "You need to scale your applications quickly but lack the underlying infrastructure and automation",
+              "impact": "Limited growth"
+            },
+            {
+              "title": "Team Silos",
+              "description": "There's a silo between development, security, and operations, leading to inefficiencies and communication gaps",
+              "impact": "Reduced productivity"
+            }
+          ]
+        },
+        "approach": {
+          "title": "How We Help: Our 6-Step DevSecOps Approach",
+          "subtitle": "From assessment to team enablement, we build secure and scalable platforms",
+          "steps": [
+            {
+              "title": "Current State Assessment & Strategy",
+              "description": "We analyze your existing pipelines, security posture, and infrastructure to identify bottlenecks and define a clear roadmap for your DevSecOps transformation.",
+              "duration": "1-2 weeks",
+              "deliverables": ["Current state analysis", "Security assessment", "Transformation roadmap"]
+            },
+            {
+              "title": "Architecture Design & Implementation",
+              "description": "Our experts design and build secure, scalable cloud-native platforms, leveraging microservices, containerization, and infrastructure as code.",
+              "duration": "3-4 weeks",
+              "deliverables": ["Platform architecture", "Infrastructure design", "Security framework"]
+            },
+            {
+              "title": "CI/CD Pipeline Automation",
+              "description": "We implement end-to-end automation for continuous integration, delivery, and deployment, ensuring fast, reliable, and repeatable releases.",
+              "duration": "4-6 weeks",
+              "deliverables": ["Automated pipelines", "Testing automation", "Deployment strategies"]
+            },
+            {
+              "title": "Security Integration (SecOps)",
+              "description": "We embed security practices and tools throughout your entire development lifecycle, from code commit to production, ensuring security by design.",
+              "duration": "2-3 weeks",
+              "deliverables": ["Security scanning", "Compliance checks", "Vulnerability management"]
+            },
+            {
+              "title": "Monitoring, Logging & Alerting",
+              "description": "We set up comprehensive observability solutions to give you real-time insights into application performance and security, enabling proactive issue resolution.",
+              "duration": "2-3 weeks",
+              "deliverables": ["Monitoring setup", "Alerting rules", "Dashboards"]
+            },
+            {
+              "title": "Team Enablement & Mentoring",
+              "description": "We empower your internal teams with the knowledge and best practices to maintain and evolve your DevSecOps culture effectively.",
+              "duration": "Ongoing",
+              "deliverables": ["Training programs", "Best practices", "Knowledge transfer"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Key Benefits You'll Achieve",
+          "subtitle": "Transform your software delivery with measurable results",
+          "items": [
+            {
+              "title": "Accelerated Time-to-Market",
+              "description": "Deliver new features and updates faster and more frequently with automated pipelines.",
+              "metric": "Up to 10x faster"
+            },
+            {
+              "title": "Enhanced Security Posture",
+              "description": "Integrate security checks throughout the pipeline, reducing risks and vulnerabilities.",
+              "metric": "99.9% security coverage"
+            },
+            {
+              "title": "Improved System Stability",
+              "description": "Minimize deployment errors and ensure consistent environments across all stages.",
+              "metric": "99.9% uptime"
+            },
+            {
+              "title": "Cost Efficiency",
+              "description": "Automate repetitive tasks, optimize resource utilization, and reduce operational overhead.",
+              "metric": "50% cost reduction"
+            },
+            {
+              "title": "Increased Developer Productivity",
+              "description": "Free your teams to focus on innovation, not infrastructure headaches.",
+              "metric": "3x productivity gain"
+            },
+            {
+              "title": "Scalability & Agility",
+              "description": "Build platforms that easily adapt to changing demands and future growth.",
+              "metric": "Unlimited scale"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Why Choose Unit05?",
+          "description1": "Our small, dedicated team brings deep, hands-on expertise in complex DevSecOps environments, honed in challenging European markets.",
+          "description2": "We provide direct, transparent partnership—cutting out the inefficiencies and \"ghost work\" often associated with larger consultancies. We leverage our extensive network to bring in niche specialists when needed, ensuring comprehensive solutions.",
+          "description3": "You get a fast-paced, reliable partner focused on building you a future-proof, secure, and highly efficient software delivery platform.",
+          "stats": [
+            { "value": "100%", "label": "Senior DevOps Experts" },
+            { "value": "0", "label": "Ghost Work" },
+            { "value": "24/7", "label": "Platform Monitoring" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologies & Expertise",
+          "subtitle": "Industry-leading tools and platforms for modern DevSecOps"
+        },
+        "cta": {
+          "badge": "DEVSECOPS TRANSFORMATION",
+          "title": "Ready to Revolutionize Your Software Delivery?",
+          "description": "Let's build a DevSecOps platform that empowers your teams and secures your future.",
+          "consultation": "Schedule a Free Consultation",
+          "meetExperts": "Meet Our DevOps Experts",
+          "footer": "Free consultation • No commitment • Expert DevSecOps advice"
+        }
+      },
+      "cloudMigrations": {
+        "hero": {
+          "badge": "Service Pillar 3",
+          "title": "Navigate Your Cloud Journey: Seamless Migrations & Expert Consultation",
+          "description1": "The cloud offers unparalleled scalability, flexibility, and cost efficiency, but migrating effectively requires expertise and a strategic approach. At Unit05, we provide expert cloud migration and consultation services, guiding your business through every stage of its cloud journey.",
+          "description2": "Our highly experienced team ensures a secure, efficient, and cost-optimized transition with minimal disruption, positioning your business for sustainable growth and innovation in the cloud.",
+          "cta": "Start Your Cloud Journey",
+          "seeIfYou": "See If This Is You"
+        },
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "subtitle": "If any of these sound familiar, you're in the right place",
+          "items": [
+            {
+              "title": "High On-Premise Infrastructure Costs",
+              "description": "You're burdened by the high maintenance costs and rigidity of on-premise infrastructure that limits your operational flexibility.",
+              "impact": "Expensive overhead"
+            },
+            {
+              "title": "Limited Scalability & Flexibility",
+              "description": "Your current systems lack the scalability and flexibility to meet fluctuating demands or support rapid business growth.",
+              "impact": "Growth bottlenecks"
+            },
+            {
+              "title": "Complex Disaster Recovery Challenges",
+              "description": "You face complex disaster recovery challenges and want improved business continuity with reliable backup solutions.",
+              "impact": "Business risk"
+            },
+            {
+              "title": "Missing Cloud-Native Opportunities",
+              "description": "You're eager to leverage modern cloud-native services but are unsure where to start or how to implement them effectively.",
+              "impact": "Missed innovation"
+            },
+            {
+              "title": "Security & Compliance Concerns",
+              "description": "You're concerned about the security implications of moving data and applications to the cloud and ensuring compliance.",
+              "impact": "Security risks"
+            },
+            {
+              "title": "Migration Complexity Overwhelm",
+              "description": "The thought of planning and executing a complex migration without disruption feels overwhelming and risky.",
+              "impact": "Project paralysis"
+            }
+          ]
+        },
+        "approach": {
+          "title": "How We Help: Our 6-Step Cloud Transformation",
+          "subtitle": "From assessment to modernization, we guide your complete cloud journey",
+          "steps": [
+            {
+              "title": "Strategic Cloud Assessment & Roadmap",
+              "description": "We evaluate your current IT landscape, identify optimal cloud solutions (public, private, hybrid), and develop a phased migration roadmap aligned with your business objectives.",
+              "duration": "2-3 weeks",
+              "deliverables": ["Cloud readiness assessment", "Migration strategy", "Cost analysis", "Risk evaluation"]
+            },
+            {
+              "title": "Architecture & Design",
+              "description": "Our architects design robust, secure, and cost-effective cloud infrastructures, leveraging best practices for resilience and performance on your chosen cloud provider.",
+              "duration": "3-4 weeks",
+              "deliverables": ["Cloud architecture design", "Security framework", "Network topology", "Compliance mapping"]
+            },
+            {
+              "title": "Seamless Migration Execution",
+              "description": "We handle the end-to-end migration process, from data transfer and application re-platforming to rigorous testing, ensuring minimal downtime and business disruption.",
+              "duration": "6-12 weeks",
+              "deliverables": ["Data migration", "Application deployment", "Testing validation", "Performance optimization"]
+            },
+            {
+              "title": "Cost Optimization & Governance",
+              "description": "We implement strategies for cloud cost management and governance, ensuring you maximize value and avoid unexpected expenses post-migration.",
+              "duration": "2-3 weeks",
+              "deliverables": ["Cost monitoring setup", "Resource optimization", "Governance policies", "Budget controls"]
+            },
+            {
+              "title": "Security & Compliance",
+              "description": "We embed robust security measures and ensure compliance with relevant industry standards and regulations throughout your cloud environment.",
+              "duration": "2-4 weeks",
+              "deliverables": ["Security implementation", "Compliance validation", "Access controls", "Audit trails"]
+            },
+            {
+              "title": "Cloud-Native Adoption & Modernization",
+              "description": "We guide you in leveraging cloud-native services (serverless, containers, managed databases) to modernize applications and unlock further efficiencies.",
+              "duration": "Ongoing",
+              "deliverables": ["Modernization roadmap", "Cloud-native services", "Performance optimization", "Best practices"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Key Benefits You'll Achieve",
+          "subtitle": "Transform your infrastructure with measurable cloud advantages",
+          "items": [
+            {
+              "title": "Reduced Operational Costs",
+              "description": "Lower infrastructure maintenance expenses and optimize resource utilization with pay-as-you-use models.",
+              "metric": "Up to 50% cost savings"
+            },
+            {
+              "title": "Enhanced Scalability & Agility",
+              "description": "Respond rapidly to market changes and scale resources up or down as needed with elastic cloud infrastructure.",
+              "metric": "Instant scaling"
+            },
+            {
+              "title": "Improved Business Continuity",
+              "description": "Strengthen disaster recovery capabilities and ensure higher availability with cloud-native backup and recovery solutions.",
+              "metric": "99.9% uptime"
+            },
+            {
+              "title": "Access to Innovation",
+              "description": "Leverage cutting-edge cloud services for competitive advantage including AI, ML, and advanced analytics capabilities.",
+              "metric": "Latest technologies"
+            },
+            {
+              "title": "Robust Security",
+              "description": "Implement advanced cloud security features and compliance frameworks with enterprise-grade protection.",
+              "metric": "Enterprise security"
+            },
+            {
+              "title": "Future-Proof Infrastructure",
+              "description": "Build a resilient foundation for long-term digital growth that adapts to emerging technologies and business needs.",
+              "metric": "Future-ready"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Why Choose Unit05?",
+          "description1": "Our lean team of highly experienced cloud architects and engineers specializes in navigating the complexities of cloud transformation. We offer a direct, transparent partnership, providing clear communication and avoiding the \"ghost work\" often associated with larger firms.",
+          "description2": "By leveraging our extensive network, we can seamlessly integrate niche expertise for any specific cloud challenge. You gain a fast-paced, reliable partner committed to delivering a secure, efficient, and value-driven cloud migration that propels your business forward.",
+          "stats": [
+            { "value": "100%", "label": "Cloud Certified Experts" },
+            { "value": "0", "label": "Downtime Tolerance" },
+            { "value": "24/7", "label": "Migration Support" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologies & Expertise",
+          "subtitle": "Comprehensive cloud migration tools and platforms"
+        },
+        "cta": {
+          "badge": "CLOUD TRANSFORMATION",
+          "title": "Ready to Unlock the Power of the Cloud?",
+          "description": "Let's design a strategic cloud roadmap tailored for your business.",
+          "consultation": "Schedule a Free Consultation",
+          "meetExperts": "Meet Our Cloud Experts",
+          "footer": "Free consultation • No commitment • Expert cloud advice"
+        }
+      },
+      "aiOptimization": {
+        "hero": {
+          "badge": "Service Pillar 4",
+          "title": "Smart Efficiency: AI Solutions that Automate Tedious Tasks and Empower Your Team",
+          "description1": "Many businesses are held back by repetitive, time-consuming tasks that drain resources and stifle innovation. AI-Powered Process Optimization and Automation offers a transformative solution, freeing your team from the mundane and enabling them to focus on higher-value work.",
+          "description2": "At Unit05, we specialize in identifying and implementing practical AI solutions that tighten operational gaps, enhance accuracy, and drive significant efficiencies – with a strategic focus on human-reviewed AI to ensure both reliability and peace of mind.",
+          "cta": "Unlock Your AI Potential",
+          "seeIfYou": "See If This Is You"
+        },
+        "challenges": {
+          "title": "Is This You? Your Challenges",
+          "subtitle": "If any of these sound familiar, you're in the right place",
+          "items": [
+            {
+              "title": "Repetitive Manual Tasks",
+              "description": "Your team spends too much time on repetitive, manual data entry or administrative tasks that drain productivity and morale.",
+              "impact": "Hours lost daily"
+            },
+            {
+              "title": "Workflow Bottlenecks",
+              "description": "You're looking for ways to streamline internal workflows and reduce operational bottlenecks that slow down your business processes.",
+              "impact": "Delayed operations"
+            },
+            {
+              "title": "Data Insights Gap",
+              "description": "You struggle to extract actionable insights from large volumes of unstructured data, missing opportunities for informed decision-making.",
+              "impact": "Missing opportunities"
+            },
+            {
+              "title": "Underutilized Talent",
+              "description": "Employee potential is underutilized because they're stuck doing tedious work that could be automated, preventing them from contributing strategically.",
+              "impact": "Wasted potential"
+            },
+            {
+              "title": "AI Implementation Uncertainty",
+              "description": "You're curious about AI's potential but unsure where to start or how to implement it safely and effectively within your organization.",
+              "impact": "Missed innovation"
+            }
+          ]
+        },
+        "approach": {
+          "title": "How We Help: Our 6-Step AI Implementation",
+          "subtitle": "From assessment to team enablement, we bring AI from concept to reality",
+          "steps": [
+            {
+              "title": "Process Identification & AI Opportunity Assessment",
+              "description": "We work closely with your teams to pinpoint high-impact, repetitive processes that are ripe for AI automation, ensuring a clear return on investment.",
+              "duration": "1-2 weeks",
+              "deliverables": ["Process analysis", "ROI assessment", "AI opportunity mapping", "Implementation roadmap"]
+            },
+            {
+              "title": "Tailored AI Solution Design",
+              "description": "Based on your specific needs, we design custom AI models and integrations, whether it's for natural language processing, intelligent document processing, data classification, or predictive analytics.",
+              "duration": "3-4 weeks",
+              "deliverables": ["AI model design", "Solution architecture", "Integration plan", "Security framework"]
+            },
+            {
+              "title": "Secure Development & Integration",
+              "description": "Our experts develop robust AI solutions and seamlessly integrate them into your existing systems, ensuring data security and system compatibility.",
+              "duration": "4-8 weeks",
+              "deliverables": ["AI model development", "System integration", "Security implementation", "Testing validation"]
+            },
+            {
+              "title": "Human-in-the-Loop Implementation",
+              "description": "We prioritize solutions where AI augments human capabilities. Critical AI outputs can be reviewed and validated by your team, combining efficiency with accuracy and control.",
+              "duration": "2-3 weeks",
+              "deliverables": ["Human review workflows", "Validation processes", "Quality controls", "User interfaces"]
+            },
+            {
+              "title": "Performance Monitoring & Optimization",
+              "description": "We establish metrics and monitoring to track the AI's performance, continuously optimizing it for greater efficiency and effectiveness over time.",
+              "duration": "2-3 weeks",
+              "deliverables": ["Performance metrics", "Monitoring dashboards", "Optimization reports", "Continuous improvement"]
+            },
+            {
+              "title": "Team Training & Adoption",
+              "description": "We ensure your team understands how to work effectively with the new AI tools, maximizing adoption and long-term success.",
+              "duration": "Ongoing",
+              "deliverables": ["Training programs", "User documentation", "Best practices", "Support materials"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Key Benefits You'll Achieve",
+          "subtitle": "Transform your operations with practical AI automation",
+          "items": [
+            {
+              "title": "Significant Time & Cost Savings",
+              "description": "Automate repetitive tasks, reducing manual labor and operational expenses while increasing overall productivity.",
+              "metric": "Up to 80% time savings"
+            },
+            {
+              "title": "Increased Accuracy & Consistency",
+              "description": "Minimize human error in high-volume, data-intensive processes with AI-powered validation and processing.",
+              "metric": "99.5% accuracy rate"
+            },
+            {
+              "title": "Enhanced Employee Productivity",
+              "description": "Free up your team to focus on strategic, creative, and fulfilling work by automating mundane tasks.",
+              "metric": "5x productivity boost"
+            },
+            {
+              "title": "Faster Data Processing & Insights",
+              "description": "Quickly extract valuable information from large datasets, enabling better and faster decision-making processes.",
+              "metric": "Real-time insights"
+            },
+            {
+              "title": "Scalable Operations",
+              "description": "Handle increasing workloads without linearly increasing headcount, enabling sustainable business growth.",
+              "metric": "Unlimited scaling"
+            },
+            {
+              "title": "Competitive Edge",
+              "description": "Leverage cutting-edge AI technology to innovate and outperform competitors in your market.",
+              "metric": "Market advantage"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Why Choose Unit05?",
+          "description1": "Our small team of highly experienced AI and software experts understands how to translate complex AI concepts into practical, deployable solutions that deliver real business value.",
+          "description2": "We offer a transparent, direct partnership, avoiding the \"ghost work\" and bureaucratic overhead common with larger firms. By tapping into our extensive network, we can bring in specialized AI knowledge precisely when needed.",
+          "description3": "We're your reliable, fast-paced partner committed to implementing AI solutions that provide tangible results and empower your workforce.",
+          "stats": [
+            { "value": "100%", "label": "AI Specialists" },
+            { "value": "0", "label": "Ghost Work" },
+            { "value": "24/7", "label": "AI Monitoring" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologies & Expertise",
+          "subtitle": "Cutting-edge AI and machine learning tools for practical automation"
+        },
+        "cta": {
+          "badge": "AI TRANSFORMATION",
+          "title": "Ready to Unlock Your Business's AI Potential?",
+          "description": "Let's explore how smart automation can transform your operations.",
+          "consultation": "Schedule a Free Consultation",
+          "meetExperts": "Meet Our AI Experts",
+          "footer": "Free consultation • No commitment • Expert AI advice"
+        }
+      }
+    },
     "meta": {
       "title": "Unit05 - Digital Solutions for Your Vision, Launch & Growth",
       "description": "Unit05 specializes in custom software development, scalable SaaS solutions, and enterprise applications. We deliver cutting-edge web applications and digital transformation strategies that drive measurable business growth."

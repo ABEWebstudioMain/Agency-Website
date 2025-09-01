@@ -1,12 +1,14 @@
 "use client";
 
 import { useParams } from "next/navigation";
+import { useTranslation } from "@/lib/i18n";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
 export default function CustomSoftwareService() {
   const params = useParams();
   const locale = params.locale as string;
+  const { t } = useTranslation(locale as any);
   const [activeStep, setActiveStep] = useState(0);
   const [visibleBenefits, setVisibleBenefits] = useState(0);
 
@@ -33,194 +35,56 @@ export default function CustomSoftwareService() {
     return () => clearTimeout(timer);
   }, []);
 
-  const challenges = [
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-          <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>
-        </svg>
-      ),
-      title: "Inefficient Manual Processes",
-      description: "You're struggling with inefficient manual processes that waste time and resources",
-      impact: "Hours lost daily"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      ),
-      title: "Rigid Legacy Systems",
-      description: "Your existing legacy systems are rigid, difficult to maintain, and prevent agile responses to market changes",
-      impact: "Blocking innovation"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>
-        </svg>
-      ),
-      title: "No Perfect Off-the-Shelf Solution",
-      description: "You can't find an off-the-shelf solution that truly meets your specific business requirements",
-      impact: "Compromising on features"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-        </svg>
-      ),
-      title: "Siloed Data",
-      description: "Data is siloed, making it impossible to gain actionable insights or make informed decisions",
-      impact: "Missing opportunities"
-    },
-    {
-      icon: (
-        <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
-          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-        </svg>
-      ),
-      title: "Digitalization Gap",
-      description: "You need to digitalize core business functions but lack the in-house expertise or capacity",
-      impact: "Falling behind competitors"
-    }
-  ];
+  const challenges = t('common.servicePages.customSoftware.challenges.items').map((item: any, index: number) => ({
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current text-orange-600">
+        {index === 0 && <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/>}
+        {index === 1 && <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>}
+        {index === 2 && <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/>}
+        {index === 3 && <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>}
+        {index === 4 && <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>}
+      </svg>
+    ),
+    title: item.title,
+    description: item.description,
+    impact: item.impact
+  }));
 
-  const approachSteps = [
-    {
-      title: "Deep Discovery & Analysis",
-      description: "We start by thoroughly understanding your current processes, pain points, and strategic goals, translating complex business requirements into clear technical specifications.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M19.427 13.427l-3.396-3.396a.25.25 0 00-.354 0l-3.396 3.396A.25.25 0 0012.459 14H14v7a1 1 0 001 1h2a1 1 0 001-1v-7h1.541a.25.25 0 00.177-.427z"/>
-          <path d="M16 2a14 14 0 1014 14A14.016 14.016 0 0016 2zm0 26a12 12 0 1112-12 12.013 12.013 0 01-12 12z"/>
-        </svg>
-      ),
-      duration: "1-2 weeks",
-      deliverables: ["Process mapping", "Requirements document", "Technical specifications"]
-    },
-    {
-      title: "Custom Solution Design",
-      description: "Our architects design intuitive, scalable, and secure software solutions from the ground up, leveraging modern technologies to future-proof your investment.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M27 4.002H5a3 3 0 00-3 3v18a3 3 0 003 3h22a3 3 0 003-3v-18a3 3 0 00-3-3zM5 6.002h22a1 1 0 011 1v3H4v-3a1 1 0 011-1zm22 20H5a1 1 0 01-1-1v-13h24v13a1 1 0 01-1 1z"/>
-          <path d="M7 14.002h4v4H7zM13 14.002h10v2H13zM13 18.002h8v2h-8z"/>
-        </svg>
-      ),
-      duration: "2-3 weeks",
-      deliverables: ["System architecture", "UI/UX designs", "Technical roadmap"]
-    },
-    {
-      title: "Agile Development & Iteration",
-      description: "We adopt an agile methodology, delivering working increments, gathering feedback, and adapting quickly to ensure the final product perfectly aligns with your evolving needs.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M21.293 10.293L16 15.586l-2.293-2.293-1.414 1.414L16 18.414l6.707-6.707z"/>
-        </svg>
-      ),
-      duration: "8-16 weeks",
-      deliverables: ["Working software", "Regular demos", "Continuous feedback"]
-    },
-    {
-      title: "Seamless Integration & Deployment",
-      description: "We ensure your new custom software integrates smoothly with your existing IT landscape, followed by robust deployment and thorough testing.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M20 12h-3V9a1 1 0 00-2 0v3h-3a1 1 0 000 2h3v3a1 1 0 002 0v-3h3a1 1 0 000-2z"/>
-        </svg>
-      ),
-      duration: "1-2 weeks",
-      deliverables: ["System integration", "Deployment", "Testing reports"]
-    },
-    {
-      title: "Ongoing Support & Optimization",
-      description: "Our partnership extends beyond launch, offering support, maintenance, and continuous optimization to keep your systems performing at their peak.",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M16 8a1 1 0 00-1 1v6.586l-2.293-2.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L17 15.586V9a1 1 0 00-1-1z"/>
-        </svg>
-      ),
-      duration: "Ongoing",
-      deliverables: ["24/7 support", "Performance monitoring", "Regular updates"]
-    }
-  ];
+  const approachSteps = t('common.servicePages.customSoftware.approach.steps').map((step: any, index: number) => ({
+    title: step.title,
+    description: step.description,
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
+        {index === 0 && <path d="M19.427 13.427l-3.396-3.396a.25.25 0 00-.354 0l-3.396 3.396A.25.25 0 0012.459 14H14v7a1 1 0 001 1h2a1 1 0 001-1v-7h1.541a.25.25 0 00.177-.427z"/><path d="M16 2a14 14 0 1014 14A14.016 14.016 0 0016 2zm0 26a12 12 0 1112-12 12.013 12.013 0 01-12 12z"/>}
+        {index === 1 && <path d="M27 4.002H5a3 3 0 00-3 3v18a3 3 0 003 3h22a3 3 0 003-3v-18a3 3 0 00-3-3zM5 6.002h22a1 1 0 011 1v3H4v-3a1 1 0 011-1zm22 20H5a1 1 0 01-1-1v-13h24v13a1 1 0 01-1 1z"/><path d="M7 14.002h4v4H7zM13 14.002h10v2H13zM13 18.002h8v2h-8z"/>}
+        {index === 2 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M21.293 10.293L16 15.586l-2.293-2.293-1.414 1.414L16 18.414l6.707-6.707z"/>}
+        {index === 3 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M20 12h-3V9a1 1 0 00-2 0v3h-3a1 1 0 000 2h3v3a1 1 0 002 0v-3h3a1 1 0 000-2z"/>}
+        {index === 4 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M16 8a1 1 0 00-1 1v6.586l-2.293-2.293a1 1 0 00-1.414 1.414l4 4a1 1 0 001.414 0l4-4a1 1 0 00-1.414-1.414L17 15.586V9a1 1 0 00-1-1z"/>}
+      </svg>
+    ),
+    duration: step.duration,
+    deliverables: step.deliverables
+  }));
 
-  const benefits = [
-    {
-      title: "Increased Operational Efficiency",
-      description: "Automate repetitive tasks, reduce errors, and free up your team for higher-value work.",
-      metric: "Up to 70% time savings",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M22.707 12.293l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L14 18.172l7.293-7.293a1 1 0 011.414 1.414z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Competitive Advantage",
-      description: "Develop unique digital products or services that differentiate you in the marketplace.",
-      metric: "Market leadership",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2l4.12 8.36L30 12.24l-7 6.82 1.65 9.54L16 24.77l-8.65 3.83L9 18.06l-7-6.82 9.88-1.88L16 2z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Scalability & Flexibility",
-      description: "Build systems that grow with your business and adapt to future demands.",
-      metric: "10x growth capacity",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z"/>
-          <path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Enhanced Decision-Making",
-      description: "Gain real-time access to critical data and insights.",
-      metric: "Real-time analytics",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M16 8v8l5.66 3.39-1.32 2.22L15 18V8h1z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Improved User Experience",
-      description: "Create intuitive internal tools or engaging customer-facing applications.",
-      metric: "95% user satisfaction",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z"/>
-        </svg>
-      )
-    },
-    {
-      title: "Cost Savings",
-      description: "Reduce reliance on expensive, generic software licenses and streamline resource allocation.",
-      metric: "40% cost reduction",
-      icon: (
-        <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
-          <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/>
-          <path d="M16 6v4.17c1.83.45 3.17 2.09 3.17 4.08 0 .55-.45 1-1 1s-1-.45-1-1c0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2 2.21 0 4 1.79 4 4 0 1.99-1.34 3.63-3.17 4.08V26h-2v-1.75C12.34 23.8 11 22.16 11 20.25c0-.55.45-1 1-1s1 .45 1 1c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2-2.21 0-4-1.79-4-4 0-1.99 1.34-3.63 3.17-4.08V6h2z"/>
-        </svg>
-      )
-    }
-  ];
+  const benefits = t('common.servicePages.customSoftware.benefits.items').map((benefit: any, index: number) => ({
+    title: benefit.title,
+    description: benefit.description,
+    metric: benefit.metric,
+    icon: (
+      <svg width="32" height="32" viewBox="0 0 32 32" className="fill-current text-primary">
+        {index === 0 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M22.707 12.293l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L14 18.172l7.293-7.293a1 1 0 011.414 1.414z"/>}
+        {index === 1 && <path d="M16 2l4.12 8.36L30 12.24l-7 6.82 1.65 9.54L16 24.77l-8.65 3.83L9 18.06l-7-6.82 9.88-1.88L16 2z"/>}
+        {index === 2 && <path d="M26 4H6a2 2 0 00-2 2v20a2 2 0 002 2h20a2 2 0 002-2V6a2 2 0 00-2-2zM6 26V6h20v20z"/><path d="M8 22h3v-8H8zM13 22h3v-12h-3zM18 22h3v-6h-3zM23 22h1v-10h-1z"/>}
+        {index === 3 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M16 8v8l5.66 3.39-1.32 2.22L15 18V8h1z"/>}
+        {index === 4 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M12 14a2 2 0 100-4 2 2 0 000 4zM20 14a2 2 0 100-4 2 2 0 000 4zM16 24c4.418 0 8-2.686 8-6H8c0 3.314 3.582 6 8 6z"/>}
+        {index === 5 && <path d="M16 2C8.268 2 2 8.268 2 16s6.268 14 14 14 14-6.268 14-14S23.732 2 16 2zm0 26C9.373 28 4 22.627 4 16S9.373 4 16 4s12 5.373 12 12-5.373 12-12 12z"/><path d="M16 6v4.17c1.83.45 3.17 2.09 3.17 4.08 0 .55-.45 1-1 1s-1-.45-1-1c0-1.1-.9-2-2-2s-2 .9-2 2c0 1.1.9 2 2 2 2.21 0 4 1.79 4 4 0 1.99-1.34 3.63-3.17 4.08V26h-2v-1.75C12.34 23.8 11 22.16 11 20.25c0-.55.45-1 1-1s1 .45 1 1c0 1.1.9 2 2 2s2-.9 2-2c0-1.1-.9-2-2-2-2.21 0-4-1.79-4-4 0-1.99 1.34-3.63 3.17-4.08V6h2z"/>}
+      </svg>
+    )
+  }));
 
   const technologies = [
     {
-      category: "Programming Languages",
+      category: locale === 'de' ? "Programmiersprachen" : "Programming Languages",
       items: ["Java", "Spring", "JavaScript", "TypeScript", "Rust", "Python"],
       color: "bg-blue-500"
     },
@@ -230,17 +94,17 @@ export default function CustomSoftwareService() {
       color: "bg-green-500"
     },
     {
-      category: "Databases",
+      category: locale === 'de' ? "Datenbanken" : "Databases",
       items: ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB"],
       color: "bg-purple-500"
     },
     {
-      category: "Cloud Platforms",
+      category: locale === 'de' ? "Cloud-Plattformen" : "Cloud Platforms",
       items: ["AWS", "GCP", "Azure"],
       color: "bg-orange-500"
     },
     {
-      category: "Architectures",
+      category: locale === 'de' ? "Architekturen" : "Architectures",
       items: ["Microservices", "Event-Driven", "Serverless"],
       color: "bg-red-500"
     },
@@ -260,17 +124,17 @@ export default function CustomSoftwareService() {
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-block rounded-full bg-primary/10 px-6 py-2 text-sm font-medium text-primary dark:bg-primary/20">
-              Service Pillar 1
+              {t('common.servicePages.customSoftware.hero.badge')}
             </div>
             <h1 className="mb-8 font-heading text-4xl font-bold text-dark sm:text-5xl md:text-6xl dark:text-white">
-              Build the Future: <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">Custom Software</span> & Digitalization
+              {t('common.servicePages.customSoftware.hero.title').split(':')[0]}: <span className="bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">{t('common.servicePages.customSoftware.hero.title').split(':')[1]}</span>
             </h1>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-dark-text leading-relaxed">
               <p>
-                Off-the-shelf solutions can only take you so far. When your business processes are unique, or your legacy systems are holding you back, <strong className="text-primary">custom software development and digitalization</strong> are the keys to unlocking true efficiency and innovation.
+                {t('common.servicePages.customSoftware.hero.description1')}
               </p>
               <p>
-                At <strong className="text-dark dark:text-white">Unit05</strong>, we don&apos;t just build code; we craft tailor-made digital solutions that perfectly fit your operational needs, streamline workflows, and create competitive advantages.
+                {t('common.servicePages.customSoftware.hero.description2')}
               </p>
             </div>
             
@@ -279,7 +143,7 @@ export default function CustomSoftwareService() {
                 href={`/${locale}#contact`}
                 className="group inline-flex items-center rounded-sm bg-primary px-8 py-4 font-heading text-base font-medium text-white transition-all hover:bg-primary/90 hover:shadow-lg"
               >
-                Start Your Digital Transformation
+                {t('common.servicePages.customSoftware.hero.cta')}
                 <svg
                   width="16"
                   height="16"
@@ -293,7 +157,7 @@ export default function CustomSoftwareService() {
                 href="#challenges"
                 className="inline-flex items-center rounded-sm border-2 border-primary/20 px-8 py-4 font-heading text-base font-medium text-dark transition-all hover:border-primary/40 hover:bg-primary/5 dark:text-white"
               >
-                See If This Is You
+                {t('common.servicePages.customSoftware.hero.seeIfYou')}
               </Link>
             </div>
           </div>
@@ -306,10 +170,10 @@ export default function CustomSoftwareService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                Is This You? <span className="text-primary">Your Challenges</span>
+                {t('common.servicePages.customSoftware.challenges.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                If any of these sound familiar, you&apos;re in the right place
+                {t('common.servicePages.customSoftware.challenges.subtitle')}
               </p>
             </div>
             
@@ -348,10 +212,10 @@ export default function CustomSoftwareService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                How We Help: <span className="text-primary">Our 5-Step Approach</span>
+                {t('common.servicePages.customSoftware.approach.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                From concept to deployment, we partner with you every step of the way
+                {t('common.servicePages.customSoftware.approach.subtitle')}
               </p>
             </div>
 
@@ -428,10 +292,10 @@ export default function CustomSoftwareService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                Key Benefits <span className="text-primary">You&apos;ll Achieve</span>
+                {t('common.servicePages.customSoftware.benefits.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                Transform your business with measurable results
+                {t('common.servicePages.customSoftware.benefits.subtitle')}
               </p>
             </div>
 
@@ -484,35 +348,29 @@ export default function CustomSoftwareService() {
         <div className="px-4 xl:container">
           <div className="mx-auto max-w-4xl text-center">
             <h2 className="mb-8 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-              Why Choose <span className="text-primary">Unit05</span>?
+              {t('common.servicePages.customSoftware.whyChooseUs.title')}
             </h2>
             
             <div className="relative overflow-hidden rounded-sm bg-white/90 p-8 shadow-lg backdrop-blur-sm dark:bg-[#1D232D]/90 lg:p-12">
               <div className="relative space-y-6 text-lg text-dark-text leading-relaxed">
                 <p>
-                  We stand apart by offering the <strong className="text-primary">expertise of a large firm</strong> with the <strong className="text-primary">agility, transparency, and personal touch</strong> of a dedicated partner.
+                  {t('common.servicePages.customSoftware.whyChooseUs.description1')}
                 </p>
                 <p>
-                  Our <strong className="text-dark dark:text-white">lean team of senior experts</strong> ensures direct access to decision-makers and rapid progress. We leverage our <strong className="text-dark dark:text-white">extensive network</strong> to incorporate specialized knowledge whenever needed.
+                  {t('common.servicePages.customSoftware.whyChooseUs.description2')}
                 </p>
                 <p>
-                  No typical overheads, no &quot;ghost work&quot; – just <strong className="text-primary">high-value solutions at fair, transparent prices</strong>.
+                  {t('common.servicePages.customSoftware.whyChooseUs.description3')}
                 </p>
               </div>
               
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">100%</div>
-                  <div className="text-sm text-dark-text">Senior Experts</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">0</div>
-                  <div className="text-sm text-dark-text">Ghost Work</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-primary">24/7</div>
-                  <div className="text-sm text-dark-text">Support</div>
-                </div>
+                {t('common.servicePages.customSoftware.whyChooseUs.stats').map((stat: any, index: number) => (
+                  <div key={index} className="text-center">
+                    <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                    <div className="text-sm text-dark-text">{stat.label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -525,10 +383,10 @@ export default function CustomSoftwareService() {
           <div className="mx-auto max-w-6xl">
             <div className="mb-16 text-center">
               <h2 className="mb-6 font-heading text-3xl font-bold text-dark sm:text-4xl dark:text-white">
-                Technologies & <span className="text-primary">Expertise</span>
+                {t('common.servicePages.customSoftware.technologies.title')}
               </h2>
               <p className="text-lg text-dark-text">
-                Cutting-edge tools and frameworks for modern solutions
+                {t('common.servicePages.customSoftware.technologies.subtitle')}
               </p>
             </div>
 
@@ -569,14 +427,14 @@ export default function CustomSoftwareService() {
         <div className="px-4 xl:container">
           <div className="relative mx-auto max-w-4xl text-center">
             <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
-              <span className="tracking-wide">DIGITAL TRANSFORMATION</span>
+              <span className="tracking-wide">{t('common.servicePages.customSoftware.cta.badge')}</span>
             </div>
             <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
-              Ready to Digitalize Your Business?
+              {t('common.servicePages.customSoftware.cta.title')}
             </h2>
             <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
               <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
-              Let&apos;s discuss how custom software can transform your operations and drive your success.
+                {t('common.servicePages.customSoftware.cta.description')}
               </p>
             </div>
             
@@ -585,7 +443,7 @@ export default function CustomSoftwareService() {
                 href={`/${locale}#contact`}
                 className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                Schedule a Free Consultation
+                {t('common.servicePages.customSoftware.cta.consultation')}
                 <svg
                   width="16"
                   height="16"
@@ -599,7 +457,7 @@ export default function CustomSoftwareService() {
                 href={`/${locale}/team`}
                 className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
               >
-                Meet Our Experts
+                {t('common.servicePages.customSoftware.cta.meetExperts')}
                 <svg
                   width="16"
                   height="16"
@@ -612,7 +470,7 @@ export default function CustomSoftwareService() {
             </div>
             
             <div className="mt-8 text-sm leading-relaxed text-white/80">
-              Free consultation • No commitment • Expert advice
+              {t('common.servicePages.customSoftware.cta.footer')}
             </div>
           </div>
         </div>
@@ -629,7 +487,7 @@ export default function CustomSoftwareService() {
               <svg width="16" height="16" viewBox="0 0 16 16" className="mr-2 fill-current">
                 <path d="M3.828 7L7.172 3.656L6.515 3L2 7.5L6.515 12L7.172 11.344L3.828 8H14V7H3.828Z" />
               </svg>
-              Back to All Services
+              {t('common.services.common.backToServices')}
             </Link>
           </div>
         </div>

@@ -600,6 +600,574 @@
         "backToServices": "Zurück zu allen Dienstleistungen"
       }
     },
+    "servicePages": {
+      "customSoftware": {
+        "hero": {
+          "badge": "Service-Säule 1",
+          "title": "Die Zukunft bauen: Maßgeschneiderte Software & Digitalisierung",
+          "description1": "Standard-Lösungen können Sie nur so weit bringen. Wenn Ihre Geschäftsprozesse einzigartig sind oder Ihre Legacy-Systeme Sie zurückhalten, sind maßgeschneiderte Softwareentwicklung und Digitalisierung die Schlüssel zur Erschließung wahrer Effizienz und Innovation.",
+          "description2": "Bei Unit05 schreiben wir nicht nur Code; wir entwickeln maßgeschneiderte digitale Lösungen, die perfekt zu Ihren operativen Bedürfnissen passen, Arbeitsabläufe optimieren und Wettbewerbsvorteile schaffen.",
+          "cta": "Ihre digitale Transformation starten",
+          "seeIfYou": "Sehen Sie, ob das auf Sie zutrifft"
+        },
+        "challenges": {
+          "title": "Sind Sie das? Ihre Herausforderungen",
+          "subtitle": "Wenn Ihnen etwas davon bekannt vorkommt, sind Sie hier richtig",
+          "items": [
+            {
+              "title": "Ineffiziente manuelle Prozesse",
+              "description": "Sie kämpfen mit ineffizienten manuellen Prozessen, die Zeit und Ressourcen verschwenden",
+              "impact": "Täglich verlorene Stunden"
+            },
+            {
+              "title": "Starre Legacy-Systeme",
+              "description": "Ihre bestehenden Legacy-Systeme sind starr, schwer zu warten und verhindern agile Reaktionen auf Marktveränderungen",
+              "impact": "Innovation blockiert"
+            },
+            {
+              "title": "Keine perfekte Standard-Lösung",
+              "description": "Sie können keine Standard-Lösung finden, die wirklich Ihren spezifischen Geschäftsanforderungen entspricht",
+              "impact": "Kompromisse bei Features"
+            },
+            {
+              "title": "Isolierte Daten",
+              "description": "Daten sind isoliert, was es unmöglich macht, umsetzbare Erkenntnisse zu gewinnen oder fundierte Entscheidungen zu treffen",
+              "impact": "Verpasste Gelegenheiten"
+            },
+            {
+              "title": "Digitalisierungslücke",
+              "description": "Sie müssen Kerngeschäftsfunktionen digitalisieren, haben aber nicht die interne Expertise oder Kapazität",
+              "impact": "Hinter Konkurrenten zurückfallen"
+            }
+          ]
+        },
+        "approach": {
+          "title": "Wie wir helfen: Unser 5-Schritte-Ansatz",
+          "subtitle": "Vom Konzept bis zur Bereitstellung begleiten wir Sie bei jedem Schritt",
+          "steps": [
+            {
+              "title": "Tiefe Entdeckung & Analyse",
+              "description": "Wir beginnen damit, Ihre aktuellen Prozesse, Schmerzpunkte und strategischen Ziele gründlich zu verstehen und komplexe Geschäftsanforderungen in klare technische Spezifikationen zu übersetzen.",
+              "duration": "1-2 Wochen",
+              "deliverables": ["Prozessmapping", "Anforderungsdokument", "Technische Spezifikationen"]
+            },
+            {
+              "title": "Maßgeschneidertes Lösungsdesign",
+              "description": "Unsere Architekten entwerfen intuitive, skalierbare und sichere Softwarelösungen von Grund auf und nutzen moderne Technologien, um Ihre Investition zukunftssicher zu machen.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Systemarchitektur", "UI/UX-Designs", "Technische Roadmap"]
+            },
+            {
+              "title": "Agile Entwicklung & Iteration",
+              "description": "Wir verwenden eine agile Methodik, liefern funktionierende Inkremente, sammeln Feedback und passen uns schnell an, um sicherzustellen, dass das Endprodukt perfekt mit Ihren sich entwickelnden Bedürfnissen übereinstimmt.",
+              "duration": "8-16 Wochen",
+              "deliverables": ["Funktionierende Software", "Regelmäßige Demos", "Kontinuierliches Feedback"]
+            },
+            {
+              "title": "Nahtlose Integration & Bereitstellung",
+              "description": "Wir stellen sicher, dass Ihre neue maßgeschneiderte Software reibungslos in Ihre bestehende IT-Landschaft integriert wird, gefolgt von robuster Bereitstellung und gründlichen Tests.",
+              "duration": "1-2 Wochen",
+              "deliverables": ["Systemintegration", "Bereitstellung", "Testberichte"]
+            },
+            {
+              "title": "Laufende Unterstützung & Optimierung",
+              "description": "Unsere Partnerschaft erstreckt sich über den Launch hinaus und bietet Support, Wartung und kontinuierliche Optimierung, um Ihre Systeme auf Höchstleistung zu halten.",
+              "duration": "Laufend",
+              "deliverables": ["24/7 Support", "Leistungsüberwachung", "Regelmäßige Updates"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Wichtige Vorteile, die Sie erreichen werden",
+          "subtitle": "Transformieren Sie Ihr Unternehmen mit messbaren Ergebnissen",
+          "items": [
+            {
+              "title": "Erhöhte operative Effizienz",
+              "description": "Automatisieren Sie wiederkehrende Aufgaben, reduzieren Sie Fehler und befreien Sie Ihr Team für wertvollere Arbeit.",
+              "metric": "Bis zu 70% Zeitersparnis"
+            },
+            {
+              "title": "Wettbewerbsvorteil",
+              "description": "Entwickeln Sie einzigartige digitale Produkte oder Dienstleistungen, die Sie im Markt differenzieren.",
+              "metric": "Marktführerschaft"
+            },
+            {
+              "title": "Skalierbarkeit & Flexibilität",
+              "description": "Bauen Sie Systeme, die mit Ihrem Unternehmen wachsen und sich an zukünftige Anforderungen anpassen.",
+              "metric": "10x Wachstumskapazität"
+            },
+            {
+              "title": "Verbesserte Entscheidungsfindung",
+              "description": "Erhalten Sie Echtzeit-Zugang zu kritischen Daten und Erkenntnissen.",
+              "metric": "Echtzeit-Analytik"
+            },
+            {
+              "title": "Verbesserte Benutzererfahrung",
+              "description": "Erstellen Sie intuitive interne Tools oder ansprechende kundenorientierte Anwendungen.",
+              "metric": "95% Benutzerzufriedenheit"
+            },
+            {
+              "title": "Kosteneinsparungen",
+              "description": "Reduzieren Sie die Abhängigkeit von teuren, generischen Softwarelizenzen und optimieren Sie die Ressourcenzuteilung.",
+              "metric": "40% Kostenreduzierung"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Warum Unit05 wählen?",
+          "description1": "Wir heben uns ab, indem wir die Expertise eines großen Unternehmens mit der Agilität, Transparenz und persönlichen Note eines engagierten Partners bieten.",
+          "description2": "Unser schlankes Team von Senior-Experten gewährleistet direkten Zugang zu Entscheidungsträgern und schnellen Fortschritt. Wir nutzen unser umfangreiches Netzwerk, um spezialisiertes Wissen bei Bedarf einzubringen.",
+          "description3": "Keine typischen Overheads, keine \"Scheinarbeit\" – nur hochwertige Lösungen zu fairen, transparenten Preisen.",
+          "stats": [
+            { "value": "100%", "label": "Senior-Experten" },
+            { "value": "0", "label": "Scheinarbeit" },
+            { "value": "24/7", "label": "Support" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologien & Expertise",
+          "subtitle": "Modernste Tools und Frameworks für moderne Lösungen"
+        },
+        "cta": {
+          "badge": "DIGITALE TRANSFORMATION",
+          "title": "Bereit, Ihr Unternehmen zu digitalisieren?",
+          "description": "Lassen Sie uns besprechen, wie maßgeschneiderte Software Ihre Abläufe transformieren und Ihren Erfolg vorantreiben kann.",
+          "consultation": "Kostenlose Beratung vereinbaren",
+          "meetExperts": "Unsere Experten kennenlernen",
+          "footer": "Kostenlose Beratung • Keine Verpflichtung • Expertenberatung"
+        }
+      },
+      "devsecops": {
+        "hero": {
+          "badge": "Service-Säule 2",
+          "title": "Sichern Sie Ihre Zukunft: Fortgeschrittene DevSecOps-Plattformlösungen",
+          "description1": "In der heutigen wettbewerbsintensiven Landschaft ist schnelle und sichere Softwarebereitstellung nicht nur ein Vorteil—sie ist eine Notwendigkeit. DevSecOps-Plattformlösungen transformieren Ihren Entwicklungslebenszyklus durch Integration von Sicherheit von Grund auf, Automatisierung von Workflows und Aufbau widerstandsfähiger Cloud-nativer Architekturen.",
+          "description2": "Bei Unit05 hilft unser hocherfahrenes Team Ihnen dabei, robuste, skalierbare und sichere Plattformen zu etablieren, die Ihre Markteinführungszeit beschleunigen, Schwachstellen reduzieren und eine Kultur kontinuierlicher Innovation fördern.",
+          "cta": "Ihre Lieferungen beschleunigen",
+          "seeIfYou": "Sehen Sie, ob das auf Sie zutrifft"
+        },
+        "challenges": {
+          "title": "Sind Sie das? Ihre Herausforderungen",
+          "subtitle": "Wenn Ihnen etwas davon bekannt vorkommt, sind Sie hier richtig",
+          "items": [
+            {
+              "title": "Langsame Software-Release-Zyklen",
+              "description": "Ihre Software-Release-Zyklen sind langsam und fehleranfällig, was die Markteinführungszeit verzögert",
+              "impact": "Verzögerte Releases"
+            },
+            {
+              "title": "Sicherheitsschwachstellen",
+              "description": "Sie stehen vor Sicherheitsschwachstellen oder Verstößen aufgrund fragmentierter Prozesse und später Sicherheitsintegration",
+              "impact": "Sicherheitsrisiken"
+            },
+            {
+              "title": "Inkonsistente Umgebungen",
+              "description": "Ihre Teams kämpfen mit inkonsistenten Umgebungen und komplexen Bereitstellungen über verschiedene Phasen hinweg",
+              "impact": "Bereitstellungsfehler"
+            },
+            {
+              "title": "Skalierungsherausforderungen",
+              "description": "Sie müssen Ihre Anwendungen schnell skalieren, haben aber nicht die zugrunde liegende Infrastruktur und Automatisierung",
+              "impact": "Begrenztes Wachstum"
+            },
+            {
+              "title": "Team-Silos",
+              "description": "Es gibt ein Silo zwischen Entwicklung, Sicherheit und Betrieb, was zu Ineffizienzen und Kommunikationslücken führt",
+              "impact": "Reduzierte Produktivität"
+            }
+          ]
+        },
+        "approach": {
+          "title": "Wie wir helfen: Unser 6-Schritte-DevSecOps-Ansatz",
+          "subtitle": "Von der Bewertung bis zur Team-Befähigung bauen wir sichere und skalierbare Plattformen",
+          "steps": [
+            {
+              "title": "Aktueller Zustand Bewertung & Strategie",
+              "description": "Wir analysieren Ihre bestehenden Pipelines, Sicherheitslage und Infrastruktur, um Engpässe zu identifizieren und eine klare Roadmap für Ihre DevSecOps-Transformation zu definieren.",
+              "duration": "1-2 Wochen",
+              "deliverables": ["Ist-Zustand-Analyse", "Sicherheitsbewertung", "Transformations-Roadmap"]
+            },
+            {
+              "title": "Architektur-Design & Implementierung",
+              "description": "Unsere Experten entwerfen und bauen sichere, skalierbare Cloud-native Plattformen unter Nutzung von Microservices, Containerisierung und Infrastructure as Code.",
+              "duration": "3-4 Wochen",
+              "deliverables": ["Plattform-Architektur", "Infrastruktur-Design", "Sicherheits-Framework"]
+            },
+            {
+              "title": "CI/CD-Pipeline-Automatisierung",
+              "description": "Wir implementieren End-to-End-Automatisierung für kontinuierliche Integration, Bereitstellung und Deployment und gewährleisten schnelle, zuverlässige und wiederholbare Releases.",
+              "duration": "4-6 Wochen",
+              "deliverables": ["Automatisierte Pipelines", "Test-Automatisierung", "Deployment-Strategien"]
+            },
+            {
+              "title": "Sicherheitsintegration (SecOps)",
+              "description": "Wir integrieren Sicherheitspraktiken und -tools in Ihren gesamten Entwicklungslebenszyklus, vom Code-Commit bis zur Produktion, und gewährleisten Security by Design.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Sicherheits-Scanning", "Compliance-Prüfungen", "Schwachstellen-Management"]
+            },
+            {
+              "title": "Überwachung, Protokollierung & Alarmierung",
+              "description": "Wir richten umfassende Observability-Lösungen ein, um Ihnen Echtzeit-Einblicke in Anwendungsleistung und Sicherheit zu geben und proaktive Problemlösung zu ermöglichen.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Überwachungs-Setup", "Alarm-Regeln", "Dashboards"]
+            },
+            {
+              "title": "Team-Befähigung & Mentoring",
+              "description": "Wir befähigen Ihre internen Teams mit dem Wissen und den Best Practices, um Ihre DevSecOps-Kultur effektiv zu pflegen und weiterzuentwickeln.",
+              "duration": "Laufend",
+              "deliverables": ["Schulungsprogramme", "Best Practices", "Wissenstransfer"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Wichtige Vorteile, die Sie erreichen werden",
+          "subtitle": "Transformieren Sie Ihre Software-Bereitstellung mit messbaren Ergebnissen",
+          "items": [
+            {
+              "title": "Beschleunigte Markteinführungszeit",
+              "description": "Liefern Sie neue Features und Updates schneller und häufiger mit automatisierten Pipelines.",
+              "metric": "Bis zu 10x schneller"
+            },
+            {
+              "title": "Verbesserte Sicherheitslage",
+              "description": "Integrieren Sie Sicherheitsprüfungen in die gesamte Pipeline und reduzieren Sie Risiken und Schwachstellen.",
+              "metric": "99,9% Sicherheitsabdeckung"
+            },
+            {
+              "title": "Verbesserte Systemstabilität",
+              "description": "Minimieren Sie Deployment-Fehler und gewährleisten Sie konsistente Umgebungen über alle Phasen hinweg.",
+              "metric": "99,9% Uptime"
+            },
+            {
+              "title": "Kosteneffizienz",
+              "description": "Automatisieren Sie wiederkehrende Aufgaben, optimieren Sie die Ressourcennutzung und reduzieren Sie den operativen Overhead.",
+              "metric": "50% Kostenreduzierung"
+            },
+            {
+              "title": "Erhöhte Entwicklerproduktivität",
+              "description": "Befreien Sie Ihre Teams, sich auf Innovation zu konzentrieren, nicht auf Infrastruktur-Kopfschmerzen.",
+              "metric": "3x Produktivitätssteigerung"
+            },
+            {
+              "title": "Skalierbarkeit & Agilität",
+              "description": "Bauen Sie Plattformen, die sich leicht an verändernde Anforderungen und zukünftiges Wachstum anpassen.",
+              "metric": "Unbegrenzte Skalierung"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Warum Unit05 wählen?",
+          "description1": "Unser kleines, engagiertes Team bringt tiefe, praktische Expertise in komplexen DevSecOps-Umgebungen mit, geschärft in herausfordernden europäischen Märkten.",
+          "description2": "Wir bieten eine direkte, transparente Partnerschaft – ohne die Ineffizienzen und \"Scheinarbeit\", die oft mit größeren Beratungsunternehmen verbunden sind. Wir nutzen unser umfangreiches Netzwerk, um bei Bedarf Nischen-Spezialisten einzubringen und umfassende Lösungen zu gewährleisten.",
+          "description3": "Sie erhalten einen schnellen, zuverlässigen Partner, der sich darauf konzentriert, Ihnen eine zukunftssichere, sichere und hocheffiziente Software-Bereitstellungsplattform zu bauen.",
+          "stats": [
+            { "value": "100%", "label": "Senior DevOps-Experten" },
+            { "value": "0", "label": "Scheinarbeit" },
+            { "value": "24/7", "label": "Plattform-Überwachung" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologien & Expertise",
+          "subtitle": "Branchenführende Tools und Plattformen für moderne DevSecOps"
+        },
+        "cta": {
+          "badge": "DEVSECOPS-TRANSFORMATION",
+          "title": "Bereit, Ihre Software-Bereitstellung zu revolutionieren?",
+          "description": "Lassen Sie uns eine DevSecOps-Plattform bauen, die Ihre Teams befähigt und Ihre Zukunft sichert.",
+          "consultation": "Kostenlose Beratung vereinbaren",
+          "meetExperts": "Unsere DevOps-Experten kennenlernen",
+          "footer": "Kostenlose Beratung • Keine Verpflichtung • Experten-DevSecOps-Beratung"
+        }
+      },
+      "cloudMigrations": {
+        "hero": {
+          "badge": "Service-Säule 3",
+          "title": "Navigieren Sie Ihre Cloud-Reise: Nahtlose Migrationen & Expertenberatung",
+          "description1": "Die Cloud bietet unvergleichliche Skalierbarkeit, Flexibilität und Kosteneffizienz, aber eine effektive Migration erfordert Expertise und einen strategischen Ansatz. Bei Unit05 bieten wir Experten-Cloud-Migration und Beratungsdienstleistungen und begleiten Ihr Unternehmen durch jede Phase seiner Cloud-Reise.",
+          "description2": "Unser hocherfahrenes Team gewährleistet einen sicheren, effizienten und kostenoptimierten Übergang mit minimaler Störung und positioniert Ihr Unternehmen für nachhaltiges Wachstum und Innovation in der Cloud.",
+          "cta": "Ihre Cloud-Reise starten",
+          "seeIfYou": "Sehen Sie, ob das auf Sie zutrifft"
+        },
+        "challenges": {
+          "title": "Sind Sie das? Ihre Herausforderungen",
+          "subtitle": "Wenn Ihnen etwas davon bekannt vorkommt, sind Sie hier richtig",
+          "items": [
+            {
+              "title": "Hohe On-Premise-Infrastrukturkosten",
+              "description": "Sie sind belastet durch die hohen Wartungskosten und Starrheit der On-Premise-Infrastruktur, die Ihre operative Flexibilität einschränkt.",
+              "impact": "Teurer Overhead"
+            },
+            {
+              "title": "Begrenzte Skalierbarkeit & Flexibilität",
+              "description": "Ihre aktuellen Systeme mangeln an Skalierbarkeit und Flexibilität, um schwankende Anforderungen zu erfüllen oder schnelles Geschäftswachstum zu unterstützen.",
+              "impact": "Wachstumsengpässe"
+            },
+            {
+              "title": "Komplexe Disaster-Recovery-Herausforderungen",
+              "description": "Sie stehen vor komplexen Disaster-Recovery-Herausforderungen und wünschen sich verbesserte Geschäftskontinuität mit zuverlässigen Backup-Lösungen.",
+              "impact": "Geschäftsrisiko"
+            },
+            {
+              "title": "Verpasste Cloud-native Möglichkeiten",
+              "description": "Sie sind begierig darauf, moderne Cloud-native Services zu nutzen, sind aber unsicher, wo Sie anfangen oder wie Sie sie effektiv implementieren sollen.",
+              "impact": "Verpasste Innovation"
+            },
+            {
+              "title": "Sicherheits- & Compliance-Bedenken",
+              "description": "Sie sind besorgt über die Sicherheitsimplikationen der Verlagerung von Daten und Anwendungen in die Cloud und die Gewährleistung der Compliance.",
+              "impact": "Sicherheitsrisiken"
+            },
+            {
+              "title": "Migrations-Komplexitäts-Überforderung",
+              "description": "Der Gedanke an die Planung und Durchführung einer komplexen Migration ohne Störung fühlt sich überwältigend und riskant an.",
+              "impact": "Projekt-Lähmung"
+            }
+          ]
+        },
+        "approach": {
+          "title": "Wie wir helfen: Unsere 6-Schritte-Cloud-Transformation",
+          "subtitle": "Von der Bewertung bis zur Modernisierung begleiten wir Ihre komplette Cloud-Reise",
+          "steps": [
+            {
+              "title": "Strategische Cloud-Bewertung & Roadmap",
+              "description": "Wir bewerten Ihre aktuelle IT-Landschaft, identifizieren optimale Cloud-Lösungen (öffentlich, privat, hybrid) und entwickeln eine phasenweise Migrations-Roadmap, die auf Ihre Geschäftsziele abgestimmt ist.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Cloud-Readiness-Bewertung", "Migrationsstrategie", "Kostenanalyse", "Risikobewertung"]
+            },
+            {
+              "title": "Architektur & Design",
+              "description": "Unsere Architekten entwerfen robuste, sichere und kosteneffektive Cloud-Infrastrukturen unter Nutzung von Best Practices für Widerstandsfähigkeit und Leistung auf Ihrem gewählten Cloud-Anbieter.",
+              "duration": "3-4 Wochen",
+              "deliverables": ["Cloud-Architektur-Design", "Sicherheits-Framework", "Netzwerk-Topologie", "Compliance-Mapping"]
+            },
+            {
+              "title": "Nahtlose Migrations-Durchführung",
+              "description": "Wir handhaben den End-to-End-Migrationsprozess, von Datenübertragung und Anwendungs-Re-Platforming bis hin zu rigorosen Tests, und gewährleisten minimale Ausfallzeiten und Geschäftsstörungen.",
+              "duration": "6-12 Wochen",
+              "deliverables": ["Datenmigration", "Anwendungs-Deployment", "Test-Validierung", "Leistungsoptimierung"]
+            },
+            {
+              "title": "Kostenoptimierung & Governance",
+              "description": "Wir implementieren Strategien für Cloud-Kostenmanagement und Governance und stellen sicher, dass Sie den Wert maximieren und unerwartete Ausgaben nach der Migration vermeiden.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Kostenüberwachungs-Setup", "Ressourcenoptimierung", "Governance-Richtlinien", "Budget-Kontrollen"]
+            },
+            {
+              "title": "Sicherheit & Compliance",
+              "description": "Wir integrieren robuste Sicherheitsmaßnahmen und gewährleisten die Einhaltung relevanter Industriestandards und Vorschriften in Ihrer gesamten Cloud-Umgebung.",
+              "duration": "2-4 Wochen",
+              "deliverables": ["Sicherheitsimplementierung", "Compliance-Validierung", "Zugangskontrollen", "Audit-Trails"]
+            },
+            {
+              "title": "Cloud-native Adoption & Modernisierung",
+              "description": "Wir leiten Sie bei der Nutzung von Cloud-nativen Services (Serverless, Container, verwaltete Datenbanken) an, um Anwendungen zu modernisieren und weitere Effizienzsteigerungen zu erschließen.",
+              "duration": "Laufend",
+              "deliverables": ["Modernisierungs-Roadmap", "Cloud-native Services", "Leistungsoptimierung", "Best Practices"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Wichtige Vorteile, die Sie erreichen werden",
+          "subtitle": "Transformieren Sie Ihre Infrastruktur mit messbaren Cloud-Vorteilen",
+          "items": [
+            {
+              "title": "Reduzierte Betriebskosten",
+              "description": "Senken Sie Infrastruktur-Wartungskosten und optimieren Sie die Ressourcennutzung mit Pay-as-you-use-Modellen.",
+              "metric": "Bis zu 50% Kosteneinsparungen"
+            },
+            {
+              "title": "Verbesserte Skalierbarkeit & Agilität",
+              "description": "Reagieren Sie schnell auf Marktveränderungen und skalieren Sie Ressourcen nach Bedarf mit elastischer Cloud-Infrastruktur.",
+              "metric": "Sofortige Skalierung"
+            },
+            {
+              "title": "Verbesserte Geschäftskontinuität",
+              "description": "Stärken Sie Disaster-Recovery-Fähigkeiten und gewährleisten Sie höhere Verfügbarkeit mit Cloud-nativen Backup- und Recovery-Lösungen.",
+              "metric": "99,9% Uptime"
+            },
+            {
+              "title": "Zugang zu Innovation",
+              "description": "Nutzen Sie modernste Cloud-Services für Wettbewerbsvorteile einschließlich KI, ML und fortgeschrittener Analytik-Fähigkeiten.",
+              "metric": "Neueste Technologien"
+            },
+            {
+              "title": "Robuste Sicherheit",
+              "description": "Implementieren Sie fortgeschrittene Cloud-Sicherheitsfeatures und Compliance-Frameworks mit Unternehmens-Schutz.",
+              "metric": "Unternehmens-Sicherheit"
+            },
+            {
+              "title": "Zukunftssichere Infrastruktur",
+              "description": "Bauen Sie eine widerstandsfähige Grundlage für langfristiges digitales Wachstum, die sich an neue Technologien und Geschäftsanforderungen anpasst.",
+              "metric": "Zukunftsbereit"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Warum Unit05 wählen?",
+          "description1": "Unser schlankes Team hocherfahrener Cloud-Architekten und -Ingenieure spezialisiert sich darauf, die Komplexitäten der Cloud-Transformation zu navigieren. Wir bieten eine direkte, transparente Partnerschaft mit klarer Kommunikation und vermeiden die \"Scheinarbeit\", die oft mit größeren Firmen verbunden ist.",
+          "description2": "Durch die Nutzung unseres umfangreichen Netzwerks können wir nahtlos Nischen-Expertise für jede spezifische Cloud-Herausforderung integrieren. Sie erhalten einen schnellen, zuverlässigen Partner, der sich darauf konzentriert, eine sichere, effiziente und wertorientierte Cloud-Migration zu liefern, die Ihr Unternehmen voranbringt.",
+          "stats": [
+            { "value": "100%", "label": "Cloud-zertifizierte Experten" },
+            { "value": "0", "label": "Ausfallzeit-Toleranz" },
+            { "value": "24/7", "label": "Migrations-Support" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologien & Expertise",
+          "subtitle": "Umfassende Cloud-Migrations-Tools und -Plattformen"
+        },
+        "cta": {
+          "badge": "CLOUD-TRANSFORMATION",
+          "title": "Bereit, die Macht der Cloud zu erschließen?",
+          "description": "Lassen Sie uns eine strategische Cloud-Roadmap entwerfen, die auf Ihr Unternehmen zugeschnitten ist.",
+          "consultation": "Kostenlose Beratung vereinbaren",
+          "meetExperts": "Unsere Cloud-Experten kennenlernen",
+          "footer": "Kostenlose Beratung • Keine Verpflichtung • Experten-Cloud-Beratung"
+        }
+      },
+      "aiOptimization": {
+        "hero": {
+          "badge": "Service-Säule 4",
+          "title": "Intelligente Effizienz: KI-Lösungen, die mühsame Aufgaben automatisieren und Ihr Team stärken",
+          "description1": "Viele Unternehmen werden durch repetitive, zeitaufwändige Aufgaben zurückgehalten, die Ressourcen verbrauchen und Innovation ersticken. KI-gestützte Prozessoptimierung und Automatisierung bietet eine transformative Lösung, die Ihr Team von Routinearbeit befreit und es ermöglicht, sich auf wertvollere Arbeit zu konzentrieren.",
+          "description2": "Bei Unit05 spezialisieren wir uns darauf, praktische KI-Lösungen zu identifizieren und zu implementieren, die operative Lücken schließen, die Genauigkeit verbessern und erhebliche Effizienzsteigerungen vorantreiben – mit strategischem Fokus auf menschlich überprüfte KI für Zuverlässigkeit und Seelenfrieden.",
+          "cta": "Ihr KI-Potenzial erschließen",
+          "seeIfYou": "Sehen Sie, ob das auf Sie zutrifft"
+        },
+        "challenges": {
+          "title": "Sind Sie das? Ihre Herausforderungen",
+          "subtitle": "Wenn Ihnen etwas davon bekannt vorkommt, sind Sie hier richtig",
+          "items": [
+            {
+              "title": "Repetitive manuelle Aufgaben",
+              "description": "Ihr Team verbringt zu viel Zeit mit repetitiven, manuellen Dateneingaben oder administrativen Aufgaben, die Produktivität und Moral belasten.",
+              "impact": "Täglich verlorene Stunden"
+            },
+            {
+              "title": "Workflow-Engpässe",
+              "description": "Sie suchen nach Wegen, interne Workflows zu optimieren und operative Engpässe zu reduzieren, die Ihre Geschäftsprozesse verlangsamen.",
+              "impact": "Verzögerte Abläufe"
+            },
+            {
+              "title": "Datenerkenntnisse-Lücke",
+              "description": "Sie kämpfen damit, umsetzbare Erkenntnisse aus großen Mengen unstrukturierter Daten zu extrahieren und verpassen Gelegenheiten für fundierte Entscheidungsfindung.",
+              "impact": "Verpasste Gelegenheiten"
+            },
+            {
+              "title": "Unterausgeschöpftes Talent",
+              "description": "Mitarbeiterpotenzial wird nicht ausgeschöpft, weil sie mit langweiliger Arbeit beschäftigt sind, die automatisiert werden könnte, und sie daran hindert, strategisch beizutragen.",
+              "impact": "Verschwendetes Potenzial"
+            },
+            {
+              "title": "KI-Implementierungs-Unsicherheit",
+              "description": "Sie sind neugierig auf das Potenzial der KI, aber unsicher, wo Sie anfangen oder wie Sie sie sicher und effektiv in Ihrer Organisation implementieren sollen.",
+              "impact": "Verpasste Innovation"
+            }
+          ]
+        },
+        "approach": {
+          "title": "Wie wir helfen: Unsere 6-Schritte-KI-Implementierung",
+          "subtitle": "Von der Bewertung bis zur Team-Befähigung bringen wir KI vom Konzept zur Realität",
+          "steps": [
+            {
+              "title": "Prozessidentifikation & KI-Gelegenheitsbewertung",
+              "description": "Wir arbeiten eng mit Ihren Teams zusammen, um wirkungsvolle, repetitive Prozesse zu identifizieren, die für KI-Automatisierung geeignet sind, und gewährleisten eine klare Kapitalrendite.",
+              "duration": "1-2 Wochen",
+              "deliverables": ["Prozessanalyse", "ROI-Bewertung", "KI-Gelegenheits-Mapping", "Implementierungs-Roadmap"]
+            },
+            {
+              "title": "Maßgeschneidertes KI-Lösungsdesign",
+              "description": "Basierend auf Ihren spezifischen Bedürfnissen entwerfen wir benutzerdefinierte KI-Modelle und Integrationen, sei es für natürliche Sprachverarbeitung, intelligente Dokumentenverarbeitung, Datenklassifikation oder prädiktive Analytik.",
+              "duration": "3-4 Wochen",
+              "deliverables": ["KI-Modell-Design", "Lösungsarchitektur", "Integrationsplan", "Sicherheits-Framework"]
+            },
+            {
+              "title": "Sichere Entwicklung & Integration",
+              "description": "Unsere Experten entwickeln robuste KI-Lösungen und integrieren sie nahtlos in Ihre bestehenden Systeme, wobei Datensicherheit und Systemkompatibilität gewährleistet werden.",
+              "duration": "4-8 Wochen",
+              "deliverables": ["KI-Modell-Entwicklung", "Systemintegration", "Sicherheitsimplementierung", "Test-Validierung"]
+            },
+            {
+              "title": "Human-in-the-Loop-Implementierung",
+              "description": "Wir priorisieren Lösungen, bei denen KI menschliche Fähigkeiten erweitert. Kritische KI-Ausgaben können von Ihrem Team überprüft und validiert werden, wodurch Effizienz mit Genauigkeit und Kontrolle kombiniert wird.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Menschliche Überprüfungs-Workflows", "Validierungsprozesse", "Qualitätskontrollen", "Benutzeroberflächen"]
+            },
+            {
+              "title": "Leistungsüberwachung & Optimierung",
+              "description": "Wir etablieren Metriken und Überwachung, um die Leistung der KI zu verfolgen und sie kontinuierlich für größere Effizienz und Effektivität im Laufe der Zeit zu optimieren.",
+              "duration": "2-3 Wochen",
+              "deliverables": ["Leistungsmetriken", "Überwachungs-Dashboards", "Optimierungsberichte", "Kontinuierliche Verbesserung"]
+            },
+            {
+              "title": "Team-Schulung & Adoption",
+              "description": "Wir stellen sicher, dass Ihr Team versteht, wie es effektiv mit den neuen KI-Tools arbeitet, und maximieren Adoption und langfristigen Erfolg.",
+              "duration": "Laufend",
+              "deliverables": ["Schulungsprogramme", "Benutzerdokumentation", "Best Practices", "Support-Materialien"]
+            }
+          ]
+        },
+        "benefits": {
+          "title": "Wichtige Vorteile, die Sie erreichen werden",
+          "subtitle": "Transformieren Sie Ihre Abläufe mit praktischer KI-Automatisierung",
+          "items": [
+            {
+              "title": "Erhebliche Zeit- & Kosteneinsparungen",
+              "description": "Automatisieren Sie repetitive Aufgaben, reduzieren Sie manuelle Arbeit und Betriebskosten und steigern Sie die Gesamtproduktivität.",
+              "metric": "Bis zu 80% Zeitersparnis"
+            },
+            {
+              "title": "Erhöhte Genauigkeit & Konsistenz",
+              "description": "Minimieren Sie menschliche Fehler in datenintensiven Prozessen mit hohem Volumen durch KI-gestützte Validierung und Verarbeitung.",
+              "metric": "99,5% Genauigkeitsrate"
+            },
+            {
+              "title": "Verbesserte Mitarbeiterproduktivität",
+              "description": "Befreien Sie Ihr Team, sich auf strategische, kreative und erfüllende Arbeit zu konzentrieren, indem Sie alltägliche Aufgaben automatisieren.",
+              "metric": "5x Produktivitätssteigerung"
+            },
+            {
+              "title": "Schnellere Datenverarbeitung & Erkenntnisse",
+              "description": "Extrahieren Sie schnell wertvolle Informationen aus großen Datensätzen und ermöglichen Sie bessere und schnellere Entscheidungsprozesse.",
+              "metric": "Echtzeit-Erkenntnisse"
+            },
+            {
+              "title": "Skalierbare Abläufe",
+              "description": "Bewältigen Sie steigende Arbeitslasten ohne linear steigende Personalkosten und ermöglichen Sie nachhaltiges Geschäftswachstum.",
+              "metric": "Unbegrenzte Skalierung"
+            },
+            {
+              "title": "Wettbewerbsvorteil",
+              "description": "Nutzen Sie modernste KI-Technologie, um zu innovieren und Konkurrenten in Ihrem Markt zu übertreffen.",
+              "metric": "Marktvorteil"
+            }
+          ]
+        },
+        "whyChooseUs": {
+          "title": "Warum Unit05 wählen?",
+          "description1": "Unser kleines Team hocherfahrener KI- und Software-Experten versteht, wie komplexe KI-Konzepte in praktische, einsetzbare Lösungen übersetzt werden, die echten Geschäftswert liefern.",
+          "description2": "Wir bieten eine transparente, direkte Partnerschaft und vermeiden die \"Scheinarbeit\" und bürokratischen Overheads, die bei größeren Firmen üblich sind. Durch die Nutzung unseres umfangreichen Netzwerks können wir spezialisiertes KI-Wissen genau dann einbringen, wenn es benötigt wird.",
+          "description3": "Wir sind Ihr zuverlässiger, schneller Partner, der sich darauf konzentriert, KI-Lösungen zu implementieren, die greifbare Ergebnisse liefern und Ihre Belegschaft stärken.",
+          "stats": [
+            { "value": "100%", "label": "KI-Spezialisten" },
+            { "value": "0", "label": "Scheinarbeit" },
+            { "value": "24/7", "label": "KI-Überwachung" }
+          ]
+        },
+        "technologies": {
+          "title": "Technologien & Expertise",
+          "subtitle": "Modernste KI- und Machine-Learning-Tools für praktische Automatisierung"
+        },
+        "cta": {
+          "badge": "KI-TRANSFORMATION",
+          "title": "Bereit, das KI-Potenzial Ihres Unternehmens zu erschließen?",
+          "description": "Lassen Sie uns erkunden, wie intelligente Automatisierung Ihre Abläufe transformieren kann.",
+          "consultation": "Kostenlose Beratung vereinbaren",
+          "meetExperts": "Unsere KI-Experten kennenlernen",
+          "footer": "Kostenlose Beratung • Keine Verpflichtung • Experten-KI-Beratung"
+        }
+      }
+    },
     "meta": {
       "title": "Unit05 - Digitale Lösungen für Ihre Vision, Markteinführung & Wachstum",
       "description": "Unit05 spezialisiert sich auf maßgeschneiderte Softwareentwicklung, skalierbare SaaS-Lösungen und Unternehmensanwendungen. Wir liefern modernste Webanwendungen und digitale Transformationsstrategien, die messbares Geschäftswachstum fördern."
