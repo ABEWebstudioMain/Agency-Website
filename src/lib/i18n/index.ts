@@ -59,6 +59,30 @@ const translations: Record<Locale, TranslationData> = {
           backToServices: "Back to Services"
         }
       },
+      servicePillars: {
+        pillars: {
+          customSoftware: {
+            title: "Custom Software Development",
+            benefit: "We create custom software solutions.",
+            problems: ["Outdated systems", "Lack of scalability", "Integration issues"]
+          },
+          devsecops: {
+            title: "DevSecOps Platforms",
+            benefit: "We implement secure development practices.",
+            problems: ["Security vulnerabilities", "Slow deployments", "Compliance issues"]
+          },
+          cloudMigrations: {
+            title: "Cloud Migrations",
+            benefit: "We help migrate to cloud platforms.",
+            problems: ["Legacy infrastructure", "Downtime risks", "Cost concerns"]
+          },
+          aiOptimization: {
+            title: "AI Optimization",
+            benefit: "We optimize processes with AI.",
+            problems: ["Manual processes", "Data inefficiencies", "Lack of automation"]
+          }
+        }
+      },
       servicePages: {
         customSoftware: {
           hero: {
@@ -250,6 +274,30 @@ const translations: Record<Locale, TranslationData> = {
       services: {
         common: {
           backToServices: "Zurück zu den Diensten"
+        }
+      },
+      servicePillars: {
+        pillars: {
+          customSoftware: {
+            title: "Individuelle Softwareentwicklung",
+            benefit: "Wir erstellen individuelle Software-Lösungen.",
+            problems: ["Veraltete Systeme", "Mangelnde Skalierbarkeit", "Integrationsprobleme"]
+          },
+          devsecops: {
+            title: "DevSecOps-Plattformen",
+            benefit: "Wir implementieren sichere Entwicklungspraktiken.",
+            problems: ["Sicherheitslücken", "Langsame Bereitstellungen", "Compliance-Probleme"]
+          },
+          cloudMigrations: {
+            title: "Cloud-Migrationen",
+            benefit: "Wir helfen bei der Migration zu Cloud-Plattformen.",
+            problems: ["Legacy-Infrastruktur", "Ausfallzeitrisiken", "Kostenbedenken"]
+          },
+          aiOptimization: {
+            title: "KI-Optimierung",
+            benefit: "Wir optimieren Prozesse mit KI.",
+            problems: ["Manuelle Prozesse", "Datenineffizienzen", "Fehlende Automatisierung"]
+          }
         }
       },
       servicePages: {
