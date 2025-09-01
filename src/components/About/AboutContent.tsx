@@ -11,7 +11,6 @@ export default function AboutContent() {
 
   return (
     <div className="space-y-24 lg:space-y-32">
-      <TabPanel
         title={t('common.about.content.section1.title')}
         image1='/images/illustrations/undraw_global-team_8jok.svg'
         image1Alt='Global team collaboration illustration'
@@ -20,9 +19,6 @@ export default function AboutContent() {
         leftContent={false}
       >
         {(t('common.about.content.section1.paragraphs', { returnObjects: true }) as string[]).map((paragraph: string, index: number) => (
-          <p key={index} className='mb-6 text-base text-dark-text leading-relaxed'>
-            {paragraph}
-          </p>
         ))}
         
         {/* Key Highlights */}
@@ -43,7 +39,6 @@ export default function AboutContent() {
         </div>
       </TabPanel>
 
-      <TabPanel
         title={t('common.about.content.section2.title')}
         image1='/images/illustrations/undraw_mind-map_i9bv.svg'
         image1Alt='Strategic planning and process optimization illustration'
@@ -71,8 +66,6 @@ export default function AboutContent() {
       {/* Vision Section - Left Aligned */}
       <TabPanel
         title={t('common.about.content.section3.title')}
-        image1='/images/illustrations/undraw_visionary-technology_f6b3.svg'
-        image1Alt='Visionary technology illustration'
         image2='/images/illustrations/undraw_metrics_5v8d.svg'
         image2Alt='Performance metrics and growth illustration'
         leftContent={false}
