@@ -73,7 +73,7 @@ export default function CaseStudiesOverview() {
               onCategoryChange={setSelectedCategory}
             />
 
-            <div className="grid gap-8 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
+            <div className="grid w-full gap-4 sm:gap-6 md:grid-cols-2 md:gap-8 lg:gap-10 xl:grid-cols-3">
               {filteredStudies.map((study) => (
                 <CaseStudyCard 
                   key={study.id} 
@@ -84,16 +84,16 @@ export default function CaseStudiesOverview() {
             </div>
 
             {filteredStudies.length === 0 && (
-              <div className="py-24 text-center">
-                <h3 className="mb-6 font-heading text-2xl font-medium leading-tight text-dark dark:text-white">
+              <div className="py-16 text-center sm:py-24">
+                <h3 className="mb-4 font-heading text-xl font-medium leading-tight text-dark dark:text-white sm:mb-6 sm:text-2xl">
                   {t('common.caseStudies.noResults.title')}
                 </h3>
-                <p className="mb-8 text-lg leading-relaxed text-dark-text">
+                <p className="mb-6 text-base leading-relaxed text-dark-text sm:mb-8 sm:text-lg">
                   {t('common.caseStudies.noResults.description')}
                 </p>
                 <button
                   onClick={() => setSelectedCategory('all')}
-                  className="inline-flex items-center rounded-sm bg-primary px-8 py-3 font-heading text-base text-white hover:bg-primary/90"
+                  className="inline-flex min-h-[44px] items-center rounded-sm bg-primary px-6 py-3 font-heading text-sm text-white hover:bg-primary/90 sm:px-8 sm:text-base"
                 >
                   {t('common.caseStudies.noResults.button')}
                 </button>
@@ -104,25 +104,25 @@ export default function CaseStudiesOverview() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-24 sm:py-28 lg:py-32">
+      <section className="relative w-full overflow-hidden bg-gradient-to-br from-slate-800 via-slate-900 to-blue-900 py-16 sm:py-24 lg:py-32">
         <div className="absolute inset-0 bg-noise-pattern bg-cover bg-center opacity-10"></div>
-        <div className="px-4 xl:container">
-          <div className="relative mx-auto max-w-4xl text-center">
+        <div className="w-full px-4 xl:container">
+          <div className="relative mx-auto w-full max-w-4xl text-center">
             <div className="mb-6 inline-block rounded-full bg-white/10 px-6 py-2 text-sm font-medium text-white">
               <span className="tracking-wide">{t('common.caseStudies.mainTitle')}</span>
             </div>
-            <h2 className="mb-8 font-heading text-3xl font-bold leading-tight text-white sm:text-4xl sm:leading-tight lg:text-5xl lg:leading-tight">
+            <h2 className="mb-6 font-heading text-2xl font-bold leading-tight text-white sm:mb-8 sm:text-3xl sm:leading-tight lg:text-4xl xl:text-5xl xl:leading-tight">
               {t('common.caseStudies.cta.title')}
             </h2>
-            <div className="mx-auto max-w-3xl space-y-6 text-lg text-white/90 leading-relaxed lg:text-xl lg:leading-relaxed">
-              <p className="mb-10 text-lg leading-relaxed text-white/90 lg:text-xl lg:leading-relaxed">
+            <div className="mx-auto w-full max-w-3xl space-y-4 text-base text-white/90 leading-relaxed sm:space-y-6 sm:text-lg lg:text-xl lg:leading-relaxed">
+              <p className="mb-8 text-base leading-relaxed text-white/90 sm:mb-10 sm:text-lg lg:text-xl lg:leading-relaxed">
                 {t('common.caseStudies.cta.description')}
               </p>
               
-              <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-6">
+              <div className="flex w-full flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4 lg:gap-6">
                 <a
                   href={`/${locale}#contact`}
-                  className="group inline-flex min-h-[48px] items-center rounded-sm bg-white px-8 py-4 font-heading text-base font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="group inline-flex min-h-[44px] w-full items-center justify-center rounded-sm bg-white px-6 py-3 font-heading text-sm font-medium text-primary transition-all hover:bg-white/90 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/50 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
                 >
                   {t('common.caseStudies.cta.consultation')}
                   <svg
@@ -136,7 +136,7 @@ export default function CaseStudiesOverview() {
                 </a>
                 <a
                   href={`/${locale}#team`}
-                  className="group inline-flex min-h-[48px] items-center rounded-sm border-2 border-white/30 px-8 py-4 font-heading text-base font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="group inline-flex min-h-[44px] w-full items-center justify-center rounded-sm border-2 border-white/30 px-6 py-3 font-heading text-sm font-medium text-white transition-all hover:border-white/50 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/50 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
                 >
                   {t('common.caseStudies.cta.meetExperts')}
                   <svg
@@ -150,7 +150,7 @@ export default function CaseStudiesOverview() {
                 </a>
               </div>
               
-              <div className="mt-8 text-sm leading-relaxed text-white/80">
+              <div className="mt-6 text-xs leading-relaxed text-white/80 sm:mt-8 sm:text-sm">
                 {t('common.caseStudies.cta.footer')}
               </div>
             </div>
